@@ -25,9 +25,10 @@ input[type="search"]
   &::-webkit-search-results-button,
   &::-webkit-search-results-decoration
     display: none
-  /* Remove the stupid outer glow in Webkit
+  // Remove the stupid outer glow in Webkit
   &:focus
     outline: 0
+
 
 @mixin awesome-searchbox($config)
   .#{$config}
@@ -53,6 +54,14 @@ input[type="search"]
       &:focus
         background: $search-input-focus-background
         border-color: $search-input-focus-border-color
+      &::-webkit-input-placeholder
+        color: $search-placeholder-color
+      &::-moz-placeholder
+        color: $search-placeholder-color
+      &:-ms-input-placeholder
+        color: $search-placeholder-color
+      &:-moz-placeholder
+        color: $search-placeholder-color
     .ui-icon-input
       position: absolute
       #{$search-icon-position}: 0
@@ -63,14 +72,13 @@ input[type="search"]
       border-radius: if($search-icon-position == 'right',0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius)
       text-align: center
       background-color: $search-icon-background
-      /* Helper for vertical alignement of the icon
+      // Helper for vertical alignement of the icon
       &:before
         content: ''
         display: inline-block
         height: 100%
         margin-right: -4px
         vertical-align: middle
-        background: orange
       &:hover
         cursor: pointer
         background-color: lighten($search-icon-background,10%)
@@ -111,21 +119,20 @@ $search-icon-size: $search-input-height - ($search-input-height / 2)
 $search-input-background: white
 $search-input-focus-background: white
 $search-icon-position: right
+$search-placeholder-color: #aaa
 
 +awesome-searchbox($config-name)
 
 
 $config-name: 'ui-search'
 $search-input-height: 40px
-$search-input-width: 300px
-$search-clear-size: 12px
-$search-border-width: 1px
-$search-border-radius: 25px
+$search-input-width: 500px
+$search-border-radius: 30px
 $search-icon-color: white
 $search-icon-background: transparent
-$search-font-size: 13px
+$search-font-size: 14px
 $search-input-background: #F5F8FA
-$search-icon-size: 12px
+$search-icon-size: 18px
 $search-icon-position: right
 $search-input-border-color: #D6DEE3
 $search-input-focus-border-color: #D6DEE3
