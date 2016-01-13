@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>search-icon-dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-498.000000, -1740.000000)" fill="#71828C">
+            <g id="twitter-+-TWITTER" sketch:type="MSLayerGroup" transform="translate(254.000000, 1701.000000)">
+                <g id="twitter" transform="translate(50.000000, 30.000000)" sketch:type="MSShapeGroup">
+                    <path d="M199.384615,19.7692308 C202.358456,19.7692308 204.769231,17.3584563 204.769231,14.3846154 C204.769231,11.4107744 202.358456,9 199.384615,9 C196.410774,9 194,11.4107744 194,14.3846154 C194,17.3584563 196.410774,19.7692308 199.384615,19.7692308 Z M199.384615,17.8307692 C201.287874,17.8307692 202.830769,16.2878736 202.830769,14.3846154 C202.830769,12.4813572 201.287874,10.9384615 199.384615,10.9384615 C197.481357,10.9384615 195.938462,12.4813572 195.938462,14.3846154 C195.938462,16.2878736 197.481357,17.8307692 199.384615,17.8307692 Z M203.476198,20.0396498 C203.044863,19.6083149 203.046066,18.9077799 203.476923,18.4769231 C203.908658,18.0451878 204.609733,18.0462809 205.03965,18.4761979 L207.139187,20.5757349 C207.570521,21.0070697 207.569318,21.7076047 207.138462,22.1384615 C206.706726,22.5701968 206.005652,22.5691038 205.575735,22.1391867 L203.476198,20.0396498 Z" id="search-icon-dark"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
