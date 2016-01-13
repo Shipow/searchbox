@@ -1,8 +1,31 @@
 @charset 'utf-8'
 
 //demo
-html
+.demos
   margin: 40px
+  h1
+    text-align: center
+  h2
+    margin: 40px 0 0 0
+    font-size: 16px
+  .demo
+    padding: 28px
+    > div
+      margin: 0 auto
+    &.demo-default
+      background-color: #F1F1F1
+    &.demo-twitter
+      border-top: solid 1px #D6DEE3
+      background-color: white
+    &.demo-amazon
+      background-color: #202F40
+    &.demo-spotify
+      background-color: #272727
+    &.demo-meetup
+      background-color: #505050
+    &.demo-medium
+      border-top: solid 1px #D9D9D9
+      background-color: white
 
 //reset
 input[type="search"]
@@ -35,7 +58,6 @@ input[type="search"]
     position: relative
     height: $search-input-height
     white-space: nowrap
-    margin-bottom: 8px
     width: $search-input-width
     input
       display: inline-block
@@ -99,42 +121,20 @@ input[type="search"]
       img
         height: $search-clear-size
 
-
-$google-blue: #3E82F7
-$amazon: #FFBF58
-
-
-$config-name: 'default'
-$search-input-height: 38px
-$search-input-width: 500px
-$search-clear-size: 12px
-$search-border-width: 1px
-$search-border-radius: 3px
-$search-icon-color: white
-$search-input-border-color: #ccc
-$search-input-focus-border-color: $google-blue
-$search-icon-background: $google-blue
-$search-font-size: 13px
-$search-icon-size: $search-input-height - ($search-input-height / 2)
-$search-input-background: white
-$search-input-focus-background: white
-$search-icon-position: right
-$search-placeholder-color: #aaa
-
+@import "theme-default"
 +awesome-searchbox($config-name)
 
+@import "theme-twitter"
++awesome-searchbox($config-name)
 
-$config-name: 'ui-search'
-$search-input-height: 40px
-$search-input-width: 500px
-$search-border-radius: 30px
-$search-icon-color: white
-$search-icon-background: transparent
-$search-font-size: 14px
-$search-input-background: #F5F8FA
-$search-icon-size: 18px
-$search-icon-position: right
-$search-input-border-color: #D6DEE3
-$search-input-focus-border-color: #D6DEE3
+@import "theme-amazon"
++awesome-searchbox($config-name)
 
+@import "theme-spotify"
++awesome-searchbox($config-name)
+
+@import "theme-meetup"
++awesome-searchbox($config-name)
+
+@import "theme-medium"
 +awesome-searchbox($config-name)

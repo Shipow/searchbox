@@ -4,27 +4,73 @@
     <meta charset='utf-8'>
       <meta content='ie=edge' http-equiv='x-ua-compatible'>
         <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-          <title>Searchbox: Deep dive</title>
+          <title>Searchbox: One mixin to syle them all</title>
           <link href='css/app.css' rel='stylesheet'>
         </meta>
       </meta>
     </meta>
   </head>
-  <body>
+  <body class='demos'>
     <div class='row'>
-      <h1>SearchBox: Deep Dive</h1>
-      <div class='default'><input autocomplete='off' id='q' placeholder='Search for product, category, SKU, …' type='search'><div class='ui-icon-input'>
-          <img src='svg/search-icon.svg'>
-        </div>
-        <div class='hide' id='clear-q'>
-          <img src='svg/clear-icon.svg'>
+      <h1>SearchBox: One mixin to syle them all</h1>
+      <h2>Google (default)</h2>
+      <div class='demo demo-default'>
+        <div class='default'><input autocomplete='off' id='q' placeholder='Search for product, category, SKU, …' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
         </div>
       </div>
-      <div class='ui-search'><input autocomplete='off' id='q' placeholder='Search for product, category, SKU, …' type='search'><div class='ui-icon-input'>
-          <img src='svg/search-icon-dark.svg'>
+      <h2>Twitter</h2>
+      <div class='demo demo-twitter'>
+        <div class='twitter'><input autocomplete='off' id='q' placeholder='Search Twitter' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon-dark.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
         </div>
-        <div class='hide' id='clear-q'>
-          <img src='svg/clear-icon.svg'>
+      </div>
+      <h2>Amazon</h2>
+      <div class='demo demo-amazon'>
+        <div class='amazon'><input autocomplete='off' id='q' placeholder='Search Amazon' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon-dark.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
+        </div>
+      </div>
+      <h2>Spotify</h2>
+      <div class='demo demo-spotify'>
+        <div class='spotify'><input autocomplete='off' id='q' placeholder='Search' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon-dark.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
+        </div>
+      </div>
+      <h2>Meetup</h2>
+      <div class='demo demo-meetup'>
+        <div class='meetup'><input autocomplete='off' id='q' placeholder='Search Meetup' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon-dark.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
+        </div>
+      </div>
+      <h2>Medium</h2>
+      <div class='demo demo-medium'>
+        <div class='medium'><input autocomplete='off' id='q' placeholder='Search Medium' type='search'><div class='ui-icon-input'>
+            <img src='svg/search-icon-dark-thin.svg'>
+          </div>
+          <div class='hide' id='clear-q'>
+            <img src='svg/clear-icon.svg'>
+          </div>
         </div>
       </div>
     </div>

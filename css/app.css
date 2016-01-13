@@ -1,5 +1,28 @@
-html {
+.demos {
   margin: 40px; }
+  .demos h1 {
+    text-align: center; }
+  .demos h2 {
+    margin: 40px 0 0 0;
+    font-size: 16px; }
+  .demos .demo {
+    padding: 28px; }
+    .demos .demo > div {
+      margin: 0 auto; }
+    .demos .demo.demo-default {
+      background-color: #F1F1F1; }
+    .demos .demo.demo-twitter {
+      border-top: solid 1px #D6DEE3;
+      background-color: white; }
+    .demos .demo.demo-amazon {
+      background-color: #202F40; }
+    .demos .demo.demo-spotify {
+      background-color: #272727; }
+    .demos .demo.demo-meetup {
+      background-color: #505050; }
+    .demos .demo.demo-medium {
+      border-top: solid 1px #D9D9D9;
+      background-color: white; }
 
 input[type="search"] {
   margin: 0;
@@ -23,17 +46,16 @@ input[type="search"] {
 
 .default {
   position: relative;
-  height: 38px;
+  height: 40px;
   white-space: nowrap;
-  margin-bottom: 8px;
   width: 500px; }
   .default input {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-size: 13px;
-    padding-left: 13.25px;
-    line-height: 38px;
+    font-size: 14px;
+    padding-left: 13.75px;
+    line-height: 40px;
     border-width: 1px;
     border-color: #ccc;
     border-style: solid;
@@ -57,7 +79,7 @@ input[type="search"] {
     right: 0;
     top: 0;
     height: 100%;
-    width: 38px;
+    width: 40px;
     vertical-align: middle;
     border-radius: 0 3px 3px 0;
     text-align: center;
@@ -72,12 +94,12 @@ input[type="search"] {
       cursor: pointer;
       background-color: #6fa2f9; }
     .default .ui-icon-input img {
-      height: 19px;
+      height: 20px;
       vertical-align: middle; }
   .default #clear-q {
     position: absolute;
-    top: 13px;
-    left: 438px;
+    top: 14px;
+    left: 436px;
     opacity: 0.6;
     line-height: 0;
     height: 12px; }
@@ -88,69 +110,332 @@ input[type="search"] {
     .default #clear-q img {
       height: 12px; }
 
-.ui-search {
+.twitter {
   position: relative;
-  height: 40px;
+  height: 30px;
   white-space: nowrap;
-  margin-bottom: 8px;
-  width: 500px; }
-  .ui-search input {
+  width: 200px; }
+  .twitter input {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-size: 14px;
-    padding-left: 20.5px;
-    line-height: 40px;
+    font-size: 12px;
+    padding-left: 16.5px;
+    line-height: 30px;
     border-width: 1px;
     border-color: #D6DEE3;
     border-style: solid;
     border-radius: 30px;
     background: #F5F8FA; }
-    .ui-search input:hover {
+    .twitter input:hover {
       border-color: #b8c6ce; }
-    .ui-search input:focus {
+    .twitter input:focus {
       background: white;
       border-color: #D6DEE3; }
-    .ui-search input::-webkit-input-placeholder {
+    .twitter input::-webkit-input-placeholder {
       color: #aaa; }
-    .ui-search input::-moz-placeholder {
+    .twitter input::-moz-placeholder {
       color: #aaa; }
-    .ui-search input:-ms-input-placeholder {
+    .twitter input:-ms-input-placeholder {
       color: #aaa; }
-    .ui-search input:-moz-placeholder {
+    .twitter input:-moz-placeholder {
       color: #aaa; }
-  .ui-search .ui-icon-input {
+  .twitter .ui-icon-input {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-    width: 40px;
+    width: 30px;
     vertical-align: middle;
     border-radius: 0 30px 30px 0;
     text-align: center;
     background-color: transparent; }
-    .ui-search .ui-icon-input:before {
+    .twitter .ui-icon-input:before {
       content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .ui-search .ui-icon-input:hover {
+    .twitter .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .ui-search .ui-icon-input img {
-      height: 18px;
+    .twitter .ui-icon-input img {
+      height: 12px;
       vertical-align: middle; }
-  .ui-search #clear-q {
+  .twitter #clear-q {
     position: absolute;
-    top: 14px;
-    left: 436px;
+    top: 9px;
+    left: 146px;
     opacity: 0.6;
     line-height: 0;
     height: 12px; }
-    .ui-search #clear-q:hover {
+    .twitter #clear-q:hover {
       opacity: 1; }
-    .ui-search #clear-q.hide {
+    .twitter #clear-q.hide {
       display: none; }
-    .ui-search #clear-q img {
+    .twitter #clear-q img {
+      height: 12px; }
+
+.amazon {
+  position: relative;
+  height: 38px;
+  white-space: nowrap;
+  width: 500px; }
+  .amazon input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding-left: 12.75px;
+    line-height: 38px;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 3px;
+    background: white; }
+    .amazon input:hover {
+      border-color: #e6e6e6; }
+    .amazon input:focus {
+      background: white;
+      border-color: #FFBF58; }
+    .amazon input::-webkit-input-placeholder {
+      color: #aaa; }
+    .amazon input::-moz-placeholder {
+      color: #aaa; }
+    .amazon input:-ms-input-placeholder {
+      color: #aaa; }
+    .amazon input:-moz-placeholder {
+      color: #aaa; }
+  .amazon .ui-icon-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 38px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: #FFBF58; }
+    .amazon .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .amazon .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: #ffd38b; }
+    .amazon .ui-icon-input img {
+      height: 20px;
+      vertical-align: middle; }
+  .amazon #clear-q {
+    position: absolute;
+    top: 13px;
+    left: 438px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .amazon #clear-q:hover {
+      opacity: 1; }
+    .amazon #clear-q.hide {
+      display: none; }
+    .amazon #clear-q img {
+      height: 12px; }
+
+.spotify {
+  position: relative;
+  height: 24px;
+  white-space: nowrap;
+  width: 200px; }
+  .spotify input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    padding-left: 24px;
+    line-height: 24px;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 12px;
+    background: white; }
+    .spotify input:hover {
+      border-color: #e6e6e6; }
+    .spotify input:focus {
+      background: white;
+      border-color: white; }
+    .spotify input::-webkit-input-placeholder {
+      color: #aaa; }
+    .spotify input::-moz-placeholder {
+      color: #aaa; }
+    .spotify input:-ms-input-placeholder {
+      color: #aaa; }
+    .spotify input:-moz-placeholder {
+      color: #aaa; }
+  .spotify .ui-icon-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 24px;
+    vertical-align: middle;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    background-color: transparent; }
+    .spotify .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .spotify .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: rgba(26, 26, 26, 0); }
+    .spotify .ui-icon-input img {
+      height: 12px;
+      vertical-align: middle; }
+  .spotify #clear-q {
+    position: absolute;
+    top: 6px;
+    left: 176px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .spotify #clear-q:hover {
+      opacity: 1; }
+    .spotify #clear-q.hide {
+      display: none; }
+    .spotify #clear-q img {
+      height: 12px; }
+
+.meetup {
+  position: relative;
+  height: 44px;
+  white-space: nowrap;
+  width: 300px; }
+  .meetup input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 14.75px;
+    line-height: 44px;
+    border-width: 1px;
+    border-color: #D6DEE3;
+    border-style: solid;
+    border-radius: 3px;
+    background: #F5F8FA; }
+    .meetup input:hover {
+      border-color: #b8c6ce; }
+    .meetup input:focus {
+      background: white;
+      border-color: #D6DEE3; }
+    .meetup input::-webkit-input-placeholder {
+      color: #aaa; }
+    .meetup input::-moz-placeholder {
+      color: #aaa; }
+    .meetup input:-ms-input-placeholder {
+      color: #aaa; }
+    .meetup input:-moz-placeholder {
+      color: #aaa; }
+  .meetup .ui-icon-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 44px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: transparent; }
+    .meetup .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .meetup .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: rgba(26, 26, 26, 0); }
+    .meetup .ui-icon-input img {
+      height: 24px;
+      vertical-align: middle; }
+  .meetup #clear-q {
+    position: absolute;
+    top: 16px;
+    left: 232px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .meetup #clear-q:hover {
+      opacity: 1; }
+    .meetup #clear-q.hide {
+      display: none; }
+    .meetup #clear-q img {
+      height: 12px; }
+
+.medium {
+  position: relative;
+  height: 36px;
+  white-space: nowrap;
+  width: 200px; }
+  .medium input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    padding-left: 36px;
+    line-height: 36px;
+    border-width: 1px;
+    border-color: #D9D9D9;
+    border-style: solid;
+    border-radius: 30px;
+    background: white; }
+    .medium input:hover {
+      border-color: silver; }
+    .medium input:focus {
+      background: white;
+      border-color: silver; }
+    .medium input::-webkit-input-placeholder {
+      color: #aaa; }
+    .medium input::-moz-placeholder {
+      color: #aaa; }
+    .medium input:-ms-input-placeholder {
+      color: #aaa; }
+    .medium input:-moz-placeholder {
+      color: #aaa; }
+  .medium .ui-icon-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 36px;
+    vertical-align: middle;
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+    background-color: transparent; }
+    .medium .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .medium .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: rgba(26, 26, 26, 0); }
+    .medium .ui-icon-input img {
+      height: 16px;
+      vertical-align: middle; }
+  .medium #clear-q {
+    position: absolute;
+    top: 12px;
+    left: 176px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .medium #clear-q:hover {
+      opacity: 1; }
+    .medium #clear-q.hide {
+      display: none; }
+    .medium #clear-q img {
       height: 12px; }
