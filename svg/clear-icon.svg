@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>clear-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-54.000000, -991.000000)" stroke-linecap="square" stroke="#000000">
+            <g id="Line-+-Line-Copy-7" sketch:type="MSLayerGroup" transform="translate(54.000000, 991.000000)">
+                <path d="M6.68753228,7.39463906 L0.955970419,1.6630772 L0.602417028,1.30952381 L1.30952381,0.602417028 L1.6630772,0.955970419 L7.39463906,6.68753228 L13.1262009,0.955970419 L13.4797543,0.602417028 L14.1868611,1.30952381 L13.8333077,1.6630772 L8.10174584,7.39463906 L13.8333077,13.1262009 L14.1868611,13.4797543 L13.4797543,14.1868611 L13.1262009,13.8333077 L7.39463906,8.10174584 L1.6630772,13.8333077 L1.30952381,14.1868611 L0.602417028,13.4797543 L0.955970419,13.1262009 L6.68753228,7.39463906 Z" id="clear-icon" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

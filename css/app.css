@@ -1,0 +1,78 @@
+html {
+  margin: 40px; }
+
+input[type="search"] {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: 13px;
+  font-family: Arial;
+  -moz-appearance: none;
+  -moz-box-sizing: padding-box;
+  -webkit-appearance: none;
+  -webkit-box-sizing: padding-box;
+  /* Remove the stupid outer glow in Webkit */ }
+  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+    display: none; }
+  input[type="search"]:focus {
+    outline: 0; }
+
+.ui-search {
+  position: relative;
+  height: 38px;
+  white-space: nowrap; }
+  .ui-search input {
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+    font-size: 13px;
+    padding-left: 10px;
+    line-height: 38px;
+    border-width: 1px 0 1px 1px;
+    border-color: #ccc;
+    border-style: solid;
+    border-radius: 3px 0 0 3px; }
+    .ui-search input:hover {
+      border-color: #b3b3b3; }
+    .ui-search input:focus {
+      border-color: #3E82F7; }
+  .ui-search .ui-icon-input {
+    display: inline-block;
+    height: 100%;
+    width: 38px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: #3E82F7;
+    /* Helper for vertical alignement of the icon */ }
+    .ui-search .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle;
+      background: orange; }
+    .ui-search .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: #6fa2f9; }
+    .ui-search .ui-icon-input img {
+      height: 19px;
+      vertical-align: middle; }
+  .ui-search #clear-q {
+    position: absolute;
+    top: 13px;
+    left: 476px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .ui-search #clear-q:hover {
+      opacity: 1; }
+    .ui-search #clear-q.hide {
+      display: none; }
+    .ui-search #clear-q img {
+      height: 12px; }

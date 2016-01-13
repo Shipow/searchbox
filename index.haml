@@ -1,0 +1,20 @@
+<!doctype html>
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}
+        %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+          %title Searchbox: Deep dive
+          %link{:href => "css/app.css", :rel => "stylesheet"}
+  %body
+    .row
+      %h1 SearchBox: Deep Dive
+      .ui-search
+        %input#q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+        .ui-icon-input
+          %img{:src => "svg/search-icon.svg"}
+        #clear-q
+          %img{:src => "svg/clear-icon.svg"}
+
+
+    %script{:src => "js/min/app-min.js"}

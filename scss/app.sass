@@ -1,0 +1,96 @@
+@charset 'utf-8'
+
+//demo
+html
+  margin: 40px
+
+//reset
+input[type="search"]
+  margin: 0
+  border: 0
+  padding: 0
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+  background: none
+  line-height: 1
+  font-size: 13px
+  font-family: Arial
+  -moz-appearance: none
+  -moz-box-sizing: padding-box
+  -webkit-appearance: none
+  -webkit-box-sizing: padding-box
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration
+    display: none
+  /* Remove the stupid outer glow in Webkit
+  &:focus
+    outline: 0
+
+$google-blue: #3E82F7
+
+$search-input-height: 38px
+$search-input-width: 500px
+$search-clear-size: 12px
+$search-border-width: 1px
+$search-border-radius: 3px
+$search-icon-color: white
+$search-icon-background: $google-blue
+$search-font-size: 13px
+
+.ui-search
+  position: relative
+  height: $search-input-height
+  white-space: nowrap
+  input
+    display: inline-block
+    width: $search-input-width
+    height: 100%
+    font-size: $search-font-size
+    padding-left: 10px
+    line-height: $search-input-height
+    border-width: $search-border-width 0 $search-border-width $search-border-width
+    border-color: #ccc
+    border-style: solid
+    border-radius: $search-border-radius 0 0 $search-border-radius
+    &:hover
+      border-color: darken(#ccc,10%)
+    &:focus
+      border-color: $google-blue
+  .ui-icon-input
+    display: inline-block
+    height: 100%
+    width: $search-input-height
+    vertical-align: middle
+    border-radius: 0 $search-border-radius $search-border-radius 0
+    text-align: center
+    background-color: $search-icon-background
+    /* Helper for vertical alignement of the icon
+    &:before
+      content: ''
+      display: inline-block
+      height: 100%
+      margin-right: -4px
+      vertical-align: middle
+      background: orange
+    &:hover
+      cursor: pointer
+      background-color: lighten($search-icon-background,10%)
+    img
+      height: $search-input-height - ($search-input-height / 2)
+      vertical-align: middle
+  #clear-q
+    position: absolute
+    top: ($search-input-height - $search-clear-size )/2
+    left: $search-input-width - $search-clear-size*2
+    opacity: .6
+    line-height: 0
+    height: $search-clear-size
+    &:hover
+      opacity: 1
+    &.hide
+      display: none
+    img
+      height: $search-clear-size
