@@ -22,33 +22,100 @@ input[type="search"] {
   input[type="search"]:focus {
     outline: 0; }
 
-.ui-search {
+.default {
   position: relative;
   height: 38px;
-  white-space: nowrap; }
-  .ui-search input {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  width: 500px; }
+  .default input {
     display: inline-block;
-    width: 500px;
+    width: 100%;
     height: 100%;
     font-size: 13px;
-    padding-left: 10px;
+    padding-left: 13.25px;
     line-height: 38px;
-    border-width: 1px 0 1px 1px;
+    border-width: 1px;
     border-color: #ccc;
     border-style: solid;
-    border-radius: 3px 0 0 3px; }
-    .ui-search input:hover {
+    border-radius: 3px;
+    background: white; }
+    .default input:hover {
       border-color: #b3b3b3; }
-    .ui-search input:focus {
+    .default input:focus {
+      background: white;
       border-color: #3E82F7; }
-  .ui-search .ui-icon-input {
-    display: inline-block;
+  .default .ui-icon-input {
+    position: absolute;
+    right: 0;
+    top: 0;
     height: 100%;
     width: 38px;
     vertical-align: middle;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: #3E82F7;
+    /* Helper for vertical alignement of the icon */ }
+    .default .ui-icon-input:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle;
+      background: orange; }
+    .default .ui-icon-input:hover {
+      cursor: pointer;
+      background-color: #6fa2f9; }
+    .default .ui-icon-input img {
+      height: 19px;
+      vertical-align: middle; }
+  .default #clear-q {
+    position: absolute;
+    top: 13px;
+    left: 438px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px; }
+    .default #clear-q:hover {
+      opacity: 1; }
+    .default #clear-q.hide {
+      display: none; }
+    .default #clear-q img {
+      height: 12px; }
+
+.ui-search {
+  position: relative;
+  height: 40px;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  width: 300px; }
+  .ui-search input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    padding-left: 19.75px;
+    line-height: 40px;
+    border-width: 1px;
+    border-color: #D6DEE3;
+    border-style: solid;
+    border-radius: 25px;
+    background: #F5F8FA; }
+    .ui-search input:hover {
+      border-color: #b8c6ce; }
+    .ui-search input:focus {
+      background: white;
+      border-color: #D6DEE3; }
+  .ui-search .ui-icon-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    vertical-align: middle;
+    border-radius: 0 25px 25px 0;
+    text-align: center;
+    background-color: transparent;
     /* Helper for vertical alignement of the icon */ }
     .ui-search .ui-icon-input:before {
       content: "";
@@ -59,14 +126,14 @@ input[type="search"] {
       background: orange; }
     .ui-search .ui-icon-input:hover {
       cursor: pointer;
-      background-color: #6fa2f9; }
+      background-color: rgba(26, 26, 26, 0); }
     .ui-search .ui-icon-input img {
-      height: 19px;
+      height: 12px;
       vertical-align: middle; }
   .ui-search #clear-q {
     position: absolute;
-    top: 13px;
-    left: 476px;
+    top: 14px;
+    left: 236px;
     opacity: 0.6;
     line-height: 0;
     height: 12px; }

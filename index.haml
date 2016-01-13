@@ -9,12 +9,22 @@
   %body
     .row
       %h1 SearchBox: Deep Dive
-      .ui-search
+
+      .default
         %input#q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
         .ui-icon-input
           %img{:src => "svg/search-icon.svg"}
         #clear-q.hide
           %img{:src => "svg/clear-icon.svg"}
+
+      .ui-search
+        %input#q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+        .ui-icon-input
+          %img{:src => "svg/search-icon-dark.svg"}
+        #clear-q.hide
+          %img{:src => "svg/clear-icon.svg"}
+
+
 
 
     %script{:src => "js/min/app-min.js"}
