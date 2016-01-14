@@ -1,35 +1,64 @@
 var gulp = require('gulp');
-var svgSymbols = require('gulp-svg-symbols');
-var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
-// var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+var sass = require('gulp-sass');
+var haml = require('gulp-haml');
+var prettify = require('gulp-html-prettify');
+var runSequence = require('run-sequence');
+var del = require('del');
 
-gulp.task('imagemin', function () {
-  return gulp.src('src/images/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-      // use: [pngquant()]
-    }))
-    .pipe(gulp.dest('dist/images'));
+gulp.task('clean', function() {
+  // Return the Promise from del()
+  return del("Build");
 });
 
-//.pipe(inject(svgs, { transform: fileContents }))
-gulp.task('inject', function () {
-  var target = gulp.src('index.html');
-  // It's not necessary to read the files (will speed up things), we're only after their paths:
-  var svgs = gulp.src(['assets/svg-symbols.svg'], {read: false});
-
-  return target.pipe(inject(svgs))
-    .pipe(gulp.dest('build'));
+gulp.task('haml', function () {
+  return gulp.src('*.haml')
+  .pipe(haml())
+  .pipe(gulp.dest('Build'));
 });
 
-gulp.task('sprites', function () {
-  return gulp.src('svg/*.svg')
-    .pipe(svgSymbols())
-    .pipe(gulp.dest('assets'));
+gulp.task('inlineSvg', function () {
+  var svgs = gulp.src('svg/*.svg')
+  .pipe(svgmin(function (file) {
+    var prefix = path.basename(file.relative, path.extname(file.relative));
+    return {
+      plugins: [{
+        cleanupIDs: {
+          prefix: prefix + '-',
+          minify: true
+        }
+      }]
+    }
+  }))
+  .pipe(svgstore({ inlineSvg: true }));
+  function fileContents (filePath, file) {
+    return file.contents.toString();
+  }
+  return gulp
+  .src('Build/index.html')
+  .pipe(inject(svgs, { transform: fileContents }))
+  .pipe(gulp.dest('Build'));
 });
 
-gulp.task('default', function() {
-  // place code for your default task here
+gulp.task('prettify', function(callback) {
+  return gulp.src('Build/*.html')
+  .pipe(prettify({indent_char: ' ', indent_size: 2}))
+  .pipe(gulp.dest('Build'));
+});
+
+gulp.task('build',['clean'], function(callback) {
+  runSequence('haml', 'inlineSvg', 'prettify', callback);
+});
+
+gulp.task('sass', function () {
+  gulp.src('./sass/**/*.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./sass/**/*.scss', ['sass']);
 });

@@ -1,8 +1,15 @@
 {
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-haml": "^0.1.6",
+    "gulp-html-prettify": "0.0.1",
     "gulp-inject": "^3.0.0",
-    "gulp-svg-symbols": "^1.0.0"
+    "gulp-sass": "^2.1.1",
+    "gulp-svgmin": "^1.2.0",
+    "gulp-svgstore": "^5.0.5",
+    "install": "^0.4.1",
+    "npm": "^3.5.3",
+    "run-sequence": "^1.1.5"
   }
 }

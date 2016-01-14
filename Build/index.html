@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="ie=edge" http-equiv="x-ua-compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Searchbox: One mixin to syle them all</title>
+  <link href="css/app.css" rel="stylesheet" />
+</head>
+
+<body class="demos">
+  <!-- inject:svg -->
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="clear-icon" viewBox="0 0 15 15">
+      <title>clear-icon</title>
+      <path d="M6.688 7.395L.956 1.663.602 1.31 1.31.602l.353.354 5.732 5.732 5.73-5.732.355-.354.707.708-.354.353-5.73 5.732 5.73 5.73.354.355-.707.707-.354-.354-5.73-5.73-5.733 5.73-.353.354-.708-.707.354-.354 5.732-5.73z" stroke-linecap="square"
+      stroke="#000" fill="none" fill-rule="evenodd" />
+    </symbol>
+    <symbol id="search-icon-dark-thin" viewBox="0 0 16 16">
+      <title>search-icon-dark-thin</title>
+      <path d="M10.375 11.23c-1.096.905-2.502 1.45-4.035 1.45C2.838 12.68 0 9.84 0 6.34 0 2.838 2.838 0 6.34 0c3.5 0 6.34 2.838 6.34 6.34 0 1.533-.545 2.94-1.45 4.035l4.077 4.078c.235.235.236.615-.002.852-.236.236-.618.236-.852.002l-4.078-4.078zm-4.035.242c2.834 0 5.132-2.298 5.132-5.132 0-2.835-2.298-5.132-5.132-5.132-2.835 0-5.132 2.297-5.132 5.132 0 2.834 2.297 5.132 5.132 5.132z"
+      fill="#666" fill-rule="evenodd" />
+    </symbol>
+    <symbol id="search-icon-dark" viewBox="0 0 14 14">
+      <title>search-icon-dark</title>
+      <path d="M5.385 10.77c2.973 0 5.384-2.412 5.384-5.385C10.77 2.41 8.357 0 5.384 0 2.41 0 0 2.41 0 5.385c0 2.973 2.41 5.384 5.385 5.384zm0-1.94c1.903 0 3.446-1.542 3.446-3.445 0-1.904-1.542-3.447-3.445-3.447-1.904 0-3.447 1.543-3.447 3.447 0 1.903 1.543 3.446 3.447 3.446zm4.09 2.21c-.43-.432-.43-1.132.002-1.563.432-.432 1.133-.43 1.563 0l2.1 2.1c.43.43.43 1.13-.002 1.56-.43.433-1.132.432-1.562.002l-2.1-2.1z"
+      fill="#71828C" fill-rule="evenodd" />
+    </symbol>
+    <symbol id="search-icon" viewBox="0 0 20 20">
+      <title>search-icon</title>
+      <path d="M11.27 12.546C10.09 13.458 8.61 14 7 14c-3.866 0-7-3.134-7-7s3.134-7 7-7 7 3.134 7 7c0 1.607-.542 3.088-1.452 4.27l6.258 6.258c.352.35.353.92-.002 1.275-.353.352-.925.352-1.275.002l-6.26-6.26zM7 12c2.76 0 5-2.24 5-5S9.76 2 7 2 2 4.24 2 7s2.24 5 5 5z"
+      fill="#FFF" fill-rule="evenodd" />
+    </symbol>
+  </svg>
+  <!-- endinject -->
+  <div class="row">
+    <h1>SearchBox: One mixin to syle them all</h1>
+    <svg role="img" class="github">
+      <use xlink:href="#search-icon"></use>
+    </svg>
+    <h2>Google (default)</h2>
+    <div class="demo demo-default">
+      <div class="default">
+        <input type="search" placeholder="Search for product, category, SKU, …" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Twitter</h2>
+    <div class="demo demo-twitter">
+      <div class="twitter">
+        <input type="search" placeholder="Search Twitter" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Amazon</h2>
+    <div class="demo demo-amazon">
+      <div class="amazon">
+        <input type="search" placeholder="Search Amazon" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Spotify</h2>
+    <div class="demo demo-spotify">
+      <div class="spotify">
+        <input type="search" placeholder="Search" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Meetup</h2>
+    <div class="demo demo-meetup">
+      <div class="meetup">
+        <input type="search" placeholder="Search Meetup" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Medium</h2>
+    <div class="demo demo-medium">
+      <div class="medium">
+        <input type="search" placeholder="Search Medium" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark-thin.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+    <h2>Facebook</h2>
+    <div class="demo demo-facebook">
+      <div class="facebook">
+        <input type="search" placeholder="Search Facebook" autocomplete="off" id="q" />
+        <div class="ui-icon-input">
+          <img src="svg/search-icon-dark.svg" />
+        </div>
+        <div class="hide" id="clear-q">
+          <img src="svg/clear-icon.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/min/app-min.js"></script>
+</body>
+
+</html>
