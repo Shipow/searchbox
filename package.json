@@ -5,6 +5,7 @@
     "gulp-haml": "^0.1.6",
     "gulp-html-prettify": "0.0.1",
     "gulp-inject": "^3.0.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.1.1",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",

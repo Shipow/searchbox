@@ -8,6 +8,7 @@ var haml = require('gulp-haml');
 var prettify = require('gulp-html-prettify');
 var runSequence = require('run-sequence');
 var del = require('del');
+var livereload = require('gulp-livereload');
 
 gulp.task('clean', function() {
   // Return the Promise from del()
@@ -54,11 +55,17 @@ gulp.task('build',['clean'], function(callback) {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
+  gulp.src('scss/**/*.sass')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./css'));
+  .pipe(gulp.dest('Build/css'))
+  .pipe(livereload());;
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+// gulp.task('sass:watch', function () {
+//   gulp.watch('./sass/**/*.scss', ['sass']);
+// });
+
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('scss/*.sass', ['sass']);
 });
