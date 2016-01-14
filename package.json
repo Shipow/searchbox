@@ -9,6 +9,7 @@
     "gulp-sass": "^2.1.1",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",
+    "gulp-webserver": "^0.9.1",
     "install": "^0.4.1",
     "npm": "^3.5.3",
     "run-sequence": "^1.1.5"

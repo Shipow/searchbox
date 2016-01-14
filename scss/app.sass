@@ -54,7 +54,6 @@ input[type="search"]
   &:focus
     outline: 0
 
-
 @mixin awesome-searchbox($config)
   .#{$config}
     position: relative
@@ -106,8 +105,9 @@ input[type="search"]
       &:hover
         cursor: pointer
         background-color: lighten($search-icon-background,10%)
-      img
+      svg
         height: $search-icon-size
+        width: $search-icon-size
         vertical-align: middle
     #clear-q
       position: absolute
@@ -120,7 +120,7 @@ input[type="search"]
         opacity: 1
       &.hide
         display: none
-      img
+      svg
         height: $search-clear-size
 
 @import "theme-default"

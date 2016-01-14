@@ -95,8 +95,9 @@ input[type="search"] {
     .default .ui-icon-input:hover {
       cursor: pointer;
       background-color: #6fa2f9; }
-    .default .ui-icon-input img {
+    .default .ui-icon-input svg {
       height: 20px;
+      width: 20px;
       vertical-align: middle; }
   .default #clear-q {
     position: absolute;
@@ -109,7 +110,7 @@ input[type="search"] {
       opacity: 1; }
     .default #clear-q.hide {
       display: none; }
-    .default #clear-q img {
+    .default #clear-q svg {
       height: 12px; }
 
 .twitter {
@@ -161,8 +162,9 @@ input[type="search"] {
     .twitter .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .twitter .ui-icon-input img {
+    .twitter .ui-icon-input svg {
       height: 12px;
+      width: 12px;
       vertical-align: middle; }
   .twitter #clear-q {
     position: absolute;
@@ -175,7 +177,7 @@ input[type="search"] {
       opacity: 1; }
     .twitter #clear-q.hide {
       display: none; }
-    .twitter #clear-q img {
+    .twitter #clear-q svg {
       height: 12px; }
 
 .amazon {
@@ -227,8 +229,9 @@ input[type="search"] {
     .amazon .ui-icon-input:hover {
       cursor: pointer;
       background-color: #ffd38b; }
-    .amazon .ui-icon-input img {
+    .amazon .ui-icon-input svg {
       height: 20px;
+      width: 20px;
       vertical-align: middle; }
   .amazon #clear-q {
     position: absolute;
@@ -241,7 +244,7 @@ input[type="search"] {
       opacity: 1; }
     .amazon #clear-q.hide {
       display: none; }
-    .amazon #clear-q img {
+    .amazon #clear-q svg {
       height: 12px; }
 
 .spotify {
@@ -293,8 +296,9 @@ input[type="search"] {
     .spotify .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .spotify .ui-icon-input img {
+    .spotify .ui-icon-input svg {
       height: 12px;
+      width: 12px;
       vertical-align: middle; }
   .spotify #clear-q {
     position: absolute;
@@ -307,7 +311,7 @@ input[type="search"] {
       opacity: 1; }
     .spotify #clear-q.hide {
       display: none; }
-    .spotify #clear-q img {
+    .spotify #clear-q svg {
       height: 12px; }
 
 .meetup {
@@ -359,8 +363,9 @@ input[type="search"] {
     .meetup .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .meetup .ui-icon-input img {
+    .meetup .ui-icon-input svg {
       height: 24px;
+      width: 24px;
       vertical-align: middle; }
   .meetup #clear-q {
     position: absolute;
@@ -373,7 +378,7 @@ input[type="search"] {
       opacity: 1; }
     .meetup #clear-q.hide {
       display: none; }
-    .meetup #clear-q img {
+    .meetup #clear-q svg {
       height: 12px; }
 
 .medium {
@@ -425,8 +430,9 @@ input[type="search"] {
     .medium .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .medium .ui-icon-input img {
+    .medium .ui-icon-input svg {
       height: 16px;
+      width: 16px;
       vertical-align: middle; }
   .medium #clear-q {
     position: absolute;
@@ -439,7 +445,7 @@ input[type="search"] {
       opacity: 1; }
     .medium #clear-q.hide {
       display: none; }
-    .medium #clear-q img {
+    .medium #clear-q svg {
       height: 12px; }
 
 .facebook {
@@ -491,8 +497,9 @@ input[type="search"] {
     .facebook .ui-icon-input:hover {
       cursor: pointer;
       background-color: white; }
-    .facebook .ui-icon-input img {
+    .facebook .ui-icon-input svg {
       height: 12.5px;
+      width: 12.5px;
       vertical-align: middle; }
   .facebook #clear-q {
     position: absolute;
@@ -505,5 +512,5 @@ input[type="search"] {
       opacity: 1; }
     .facebook #clear-q.hide {
       display: none; }
-    .facebook #clear-q img {
+    .facebook #clear-q svg {
       height: 12px; }
