@@ -18,10 +18,10 @@ gulp.task('imagemin', function () {
 gulp.task('inject', function () {
   var target = gulp.src('index.html');
   // It's not necessary to read the files (will speed up things), we're only after their paths:
-  var sources = gulp.src(['assets/svg-symbols.svg'], {read: false,transform: fileContents});
+  var svgs = gulp.src(['assets/svg-symbols.svg'], {read: false});
 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('/'));
+  return target.pipe(inject(svgs))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('sprites', function () {
