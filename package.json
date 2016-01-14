@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-svg-symbols": "^1.0.0"
+  }
+}

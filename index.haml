@@ -7,8 +7,13 @@
           %title Searchbox: One mixin to syle them all
           %link{:href => "css/app.css", :rel => "stylesheet"}
   %body.demos
+    <!-- inject:svg -->
+    <!-- endinject -->
     .row
       %h1 SearchBox: One mixin to syle them all
+
+      %svg{role:"img", class:"github"}
+        %use{"xlink:href" => "#search-icon"}
 
       %h2 Google (default)
       .demo.demo-default
@@ -72,5 +77,9 @@
             %img{:src => "svg/search-icon-dark.svg"}
           #clear-q.hide
             %img{:src => "svg/clear-icon.svg"}
+
+
+
+
 
     %script{:src => "js/min/app-min.js"}
