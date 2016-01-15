@@ -11,53 +11,61 @@
       try{Typekit.load({ async: false });}catch(e){}
 
   %body.demos
+    %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
     %h1 SearchBox
 
     %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
       <!-- inject:svg --><!-- endinject -->
 
-    .icons
-      %h2 Icons
-      %svg.icon
-        %use{xlink:href:"#search-icon-1"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-2"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-3"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-4"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-5"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-6"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-7"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-8"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-9"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-10"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-11"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-12"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-13"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-14"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-15"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-16"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-17"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-18"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-19"}
-      %svg.icon
-        %use{xlink:href:"#search-icon-20"}
+    .row
+      %h2 Snippet
+    %pre
+      %code.language-markup
+
+
+    .row
+      %h2 Search icons
+      .icons
+        %svg.icon
+          %use{xlink:href:"#search-icon-1"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-2"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-3"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-4"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-5"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-6"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-7"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-8"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-9"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-10"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-11"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-12"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-13"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-14"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-15"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-16"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-17"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-18"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-19"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-20"}
 
     .examples
       %h2 Google (default)

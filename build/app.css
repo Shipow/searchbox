@@ -103,12 +103,13 @@ pre[class*="language-"] {
   cursor: help; }
 
 .demos {
-  margin: 40px; }
+  margin: 20px 40px; }
   .demos h1 {
     text-align: center;
     font-size: 80px;
     font-family: "fatfrank";
-    color: #444; }
+    color: #444;
+    clear: both; }
   .demos h2 {
     margin: 40px 0 8px 0;
     font-size: 14px;
@@ -116,12 +117,17 @@ pre[class*="language-"] {
     color: #888;
     text-transform: uppercase;
     letter-spacing: 1px; }
-  .demos .icons svg {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px  10px 0; }
-    .demos .icons svg use {
-      fill: #444; }
+  .demos .github-source {
+    float: right; }
+  .demos .icons {
+    text-align: center;
+    padding: 18px; }
+    .demos .icons svg {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px  10px 0; }
+      .demos .icons svg use {
+        fill: #444; }
   .demos .examples .demo {
     padding: 14px; }
     .demos .examples .demo > div {

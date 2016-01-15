@@ -26,6 +26,12 @@ gulp.task('haml', function () {
   .pipe(gulp.dest('build'));
 });
 
+gulp.task('prettify', function(callback) {
+  return gulp.src('build/*.html')
+  .pipe(prettify({indent_char: ' ', indent_size: 2}))
+  .pipe(gulp.dest('build'));
+});
+
 gulp.task('inlineSvg', function () {
   var svgs = gulp.src('svg/*.svg')
   .pipe(svgmin(function (file) {
@@ -35,12 +41,6 @@ gulp.task('inlineSvg', function () {
         cleanupIDs: {
           prefix: prefix + '-',
           minify: true
-        // },
-        // cleanupNumericValues: {
-        //   floatPrecision: 2
-        // },
-        // removeAttrs: {
-        //   attrs: '(fill|stroke)'
         }
       }]
     }
@@ -61,14 +61,11 @@ gulp.task('inlineSvg', function () {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('prettify', function(callback) {
-  return gulp.src('build/*.html')
-  .pipe(prettify({indent_char: ' ', indent_size: 2}))
+gulp.task('svgfallback', function () {
+  return gulp
+  .src('svg/*.svg', {base: 'src/icons'})
+  .pipe(svgfallback())
   .pipe(gulp.dest('build'));
-});
-
-gulp.task('build',['clean'], function(callback) {
-  runSequence('haml', 'js', 'sass', 'inlineSvg', 'prettify', callback);
 });
 
 gulp.task('sass', function () {
@@ -84,6 +81,13 @@ gulp.task('js', function () {
   .pipe(livereload());;
 });
 
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('scss/*.sass', ['sass']);
+  gulp.watch('*.haml', ['build']);
+  gulp.watch('js/*.js', ['js']);
+});
+
 gulp.task('webserver', function() {
   gulp.src('build')
     .pipe(webserver({
@@ -94,20 +98,10 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('watch', function() {
-  livereload.listen();
-  gulp.watch('scss/*.sass', ['sass']);
-  gulp.watch('*.haml', ['build']);
-  gulp.watch('js/*.js', ['js']);
+gulp.task('build',['clean'], function(callback) {
+  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass', callback);
 });
 
 gulp.task('dev', function(callback) {
-  runSequence('build', 'webserver','watch', callback);
-});
-
-gulp.task('svgfallback', function () {
-  return gulp
-  .src('svg/*.svg', {base: 'src/icons'})
-  .pipe(svgfallback())
-  .pipe(gulp.dest('build'));
+  runSequence('build', 'watch','webserver', callback);
 });
