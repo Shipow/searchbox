@@ -1,9 +1,7 @@
 @charset 'utf-8'
 
-//prism
 @import "prism"
 
-//demo
 .demos
   margin: 20px 40px
   h1
@@ -12,6 +10,7 @@
     font-family: "fatfrank"
     color: #444
     clear: both
+    text-transform: uppercase
   h2
     margin: 40px 0 8px 0
     font-size: 14px
@@ -52,105 +51,7 @@
     .demo-facebook
       background-color: #3E5DA0
 
-//reset
-@mixin reset
-  margin: 0
-  border: 0
-  padding: 0
-  display: inline-block
-  vertical-align: middle
-  white-space: normal
-  background: none
-  line-height: 1
-  font-size: 13px
-  font-family: Arial
-  -moz-appearance: none
-  -moz-box-sizing: padding-box
-  -webkit-appearance: none
-  -webkit-box-sizing: padding-box
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration
-    display: none
-  // Remove the stupid outer glow in Webkit
-  &:focus
-    outline: 0
-
-@mixin awesome-searchbox($config)
-  .#{$config}
-    position: relative
-    height: $search-input-height
-    white-space: nowrap
-    width: $search-input-width
-    input
-      +reset
-      width: 100%
-      height: 100%
-      font-size: $search-font-size
-      padding-left: if($search-icon-position == 'right',($search-input-height - $search-font-size)/2 + $search-border-radius/4, $search-input-height )
-      line-height: $search-input-height
-      border-width: $search-border-width
-      border-color: $search-input-border-color
-      border-style: solid
-      border-radius: $search-border-radius
-      background: $search-input-background
-      &:hover
-        border-color: darken($search-input-border-color,10%)
-      &:focus
-        background: $search-input-focus-background
-        border-color: $search-input-focus-border-color
-      &::-webkit-input-placeholder
-        color: $search-placeholder-color
-      &::-moz-placeholder
-        color: $search-placeholder-color
-      &:-ms-input-placeholder
-        color: $search-placeholder-color
-      &:-moz-placeholder
-        color: $search-placeholder-color
-    .ui-icon-input
-      position: absolute
-      #{$search-icon-position}: 0
-      top: 0
-      height: 100%
-      width: $search-input-height
-      vertical-align: middle
-      border-radius: if($search-icon-position == 'right',0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius)
-      text-align: center
-      background-color: $search-icon-background
-      // Helper for vertical alignement of the icon
-      &:before
-        content: ''
-        display: inline-block
-        height: 100%
-        margin-right: -4px
-        vertical-align: middle
-      &:hover
-        cursor: pointer
-        background-color: lighten($search-icon-background,10%)
-      svg, img
-        height: $search-icon-size
-        width: $search-icon-size
-        vertical-align: middle
-        use
-          fill: $search-icon-color
-    .clear-q
-      position: absolute
-      top: ($search-input-height - $search-clear-size )/2
-      left: $search-input-width - $search-clear-size*2 - if($search-icon-position == 'right',$search-input-height,0)
-      opacity: .6
-      line-height: 0
-      height: $search-clear-size
-      &:hover
-        opacity: 1
-      &.hide
-        display: none
-      svg, img
-        height: $search-clear-size
-        width: $search-clear-size
-
-@import "theme-default"
-+awesome-searchbox($config-name)
+@import "awesome-searchbox"
 
 @import "theme-twitter"
 +awesome-searchbox($config-name)

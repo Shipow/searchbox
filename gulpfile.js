@@ -61,6 +61,11 @@ gulp.task('inlineSvg', function () {
   .pipe(gulp.dest('build'));
 });
 
+gulp.task('inlineSass', function () {
+  return gulp.src('build/*.html')
+    .pipe(injectfile({pattern: '<!--\\sinject:<filename>-->'}));
+});
+
 gulp.task('svgfallback', function () {
   return gulp
   .src('svg/*.svg', {base: 'src/icons'})
@@ -72,13 +77,18 @@ gulp.task('sass', function () {
   gulp.src('scss/**/*.sass')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('build'))
-  .pipe(livereload());;
+  .pipe(livereload());
 });
 
 gulp.task('js', function () {
-  gulp.src('js/*.js')
+  gulp.src(['js/*.js','js/*.mem'])
   .pipe(gulp.dest('build/js'))
-  .pipe(livereload());;
+  .pipe(livereload());
+});
+
+gulp.task('awesome-searchbox', function () {
+  gulp.src('scss/_awesome-searchbox.scss')
+  .pipe(gulp.dest('build'))
 });
 
 gulp.task('watch', function() {
@@ -99,7 +109,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('build',['clean'], function(callback) {
-  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass', callback);
+  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass','awesome-searchbox', callback);
 });
 
 gulp.task('dev', function(callback) {

@@ -109,7 +109,8 @@ pre[class*="language-"] {
     font-size: 80px;
     font-family: "fatfrank";
     color: #444;
-    clear: both; }
+    clear: both;
+    text-transform: uppercase; }
   .demos h2 {
     margin: 40px 0 8px 0;
     font-size: 14px;
@@ -207,7 +208,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: #3E82F7; }
     .default .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -225,7 +226,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 14px;
     left: 436px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .default .clear-q:hover {
@@ -294,7 +295,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: transparent; }
     .twitter .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -312,7 +313,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 9px;
     left: 146px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .twitter .clear-q:hover {
@@ -381,7 +382,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: #FFBF58; }
     .amazon .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -399,7 +400,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 13px;
     left: 438px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .amazon .clear-q:hover {
@@ -468,7 +469,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: transparent; }
     .spotify .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -486,7 +487,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 6px;
     left: 176px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .spotify .clear-q:hover {
@@ -555,7 +556,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: transparent; }
     .meetup .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -573,7 +574,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 16px;
     left: 232px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .meetup .clear-q:hover {
@@ -642,7 +643,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: transparent; }
     .medium .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -660,7 +661,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 12px;
     left: 176px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .medium .clear-q:hover {
@@ -729,7 +730,7 @@ pre[class*="language-"] {
     text-align: center;
     background-color: #F6F7F8; }
     .facebook .ui-icon-input:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -747,7 +748,7 @@ pre[class*="language-"] {
     position: absolute;
     top: 6.5px;
     left: 451px;
-    opacity: .6;
+    opacity: 0.6;
     line-height: 0;
     height: 12px; }
     .facebook .clear-q:hover {

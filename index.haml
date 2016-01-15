@@ -20,8 +20,7 @@
     .row
       %h2 Snippet
     %pre
-      %code.language-markup
-
+      %code.language-css.snippet
 
     .row
       %h2 Search icons
@@ -145,7 +144,10 @@
             %svg.icon
               %use{xlink:href:"#clear-icon"}
 
-
+    <!-- inject: js/prim.js -->
     %script{src:"js/jquery-2.2.0.min.js"}
+    %script{src:"js/prism.js",data-manual}
+    %script{src:"js/sass.js"}
+    :javascript
+      var scss = "";
     %script{src:"js/app.js"}
-    %script{src:"js/prism.js"}
