@@ -25,25 +25,26 @@
       margin: 0 10px  10px 0
       use
         fill: #444
-  .demo
-    padding: 14px
-    > div
-      margin: 0 auto
-    &.demo-default
+  .examples
+    .demo
+      padding: 14px
+      > div
+        margin: 0 auto
+    .demo-default
       background-color: #F1F1F1
-    &.demo-twitter
+    .demo-twitter
       border-top: solid 1px #D6DEE3
       background-color: white
-    &.demo-amazon
+    .demo-amazon
       background-color: #202F40
-    &.demo-spotify
+    .demo-spotify
       background-color: #272727
-    &.demo-meetup
+    .demo-meetup
       background-color: #505050
-    &.demo-medium
+    .demo-medium
       border-top: solid 1px #D9D9D9
       background-color: white
-    &.demo-facebook
+    .demo-facebook
       background-color: #3E5DA0
 
 //reset
@@ -122,13 +123,13 @@
       &:hover
         cursor: pointer
         background-color: lighten($search-icon-background,10%)
-      svg
+      svg, img
         height: $search-icon-size
         width: $search-icon-size
         vertical-align: middle
         use
           fill: $search-icon-color
-    #clear-q
+    .clear-q
       position: absolute
       top: ($search-input-height - $search-clear-size )/2
       left: $search-input-width - $search-clear-size*2 - if($search-icon-position == 'right',$search-input-height,0)
@@ -139,8 +140,9 @@
         opacity: 1
       &.hide
         display: none
-      svg
+      svg, img
         height: $search-clear-size
+        width: $search-clear-size
 
 @import "theme-default"
 +awesome-searchbox($config-name)

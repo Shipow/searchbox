@@ -122,26 +122,26 @@ pre[class*="language-"] {
     margin: 0 10px  10px 0; }
     .demos .icons svg use {
       fill: #444; }
-  .demos .demo {
+  .demos .examples .demo {
     padding: 14px; }
-    .demos .demo > div {
+    .demos .examples .demo > div {
       margin: 0 auto; }
-    .demos .demo.demo-default {
-      background-color: #F1F1F1; }
-    .demos .demo.demo-twitter {
-      border-top: solid 1px #D6DEE3;
-      background-color: white; }
-    .demos .demo.demo-amazon {
-      background-color: #202F40; }
-    .demos .demo.demo-spotify {
-      background-color: #272727; }
-    .demos .demo.demo-meetup {
-      background-color: #505050; }
-    .demos .demo.demo-medium {
-      border-top: solid 1px #D9D9D9;
-      background-color: white; }
-    .demos .demo.demo-facebook {
-      background-color: #3E5DA0; }
+  .demos .examples .demo-default {
+    background-color: #F1F1F1; }
+  .demos .examples .demo-twitter {
+    border-top: solid 1px #D6DEE3;
+    background-color: white; }
+  .demos .examples .demo-amazon {
+    background-color: #202F40; }
+  .demos .examples .demo-spotify {
+    background-color: #272727; }
+  .demos .examples .demo-meetup {
+    background-color: #505050; }
+  .demos .examples .demo-medium {
+    border-top: solid 1px #D9D9D9;
+    background-color: white; }
+  .demos .examples .demo-facebook {
+    background-color: #3E5DA0; }
 
 .default {
   position: relative;
@@ -209,25 +209,26 @@ pre[class*="language-"] {
     .default .ui-icon-input:hover {
       cursor: pointer;
       background-color: #6fa2f9; }
-    .default .ui-icon-input svg {
+    .default .ui-icon-input svg, .default .ui-icon-input img {
       height: 20px;
       width: 20px;
       vertical-align: middle; }
-      .default .ui-icon-input svg use {
+      .default .ui-icon-input svg use, .default .ui-icon-input img use {
         fill: white; }
-  .default #clear-q {
+  .default .clear-q {
     position: absolute;
     top: 14px;
     left: 436px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .default #clear-q:hover {
+    .default .clear-q:hover {
       opacity: 1; }
-    .default #clear-q.hide {
+    .default .clear-q.hide {
       display: none; }
-    .default #clear-q svg {
-      height: 12px; }
+    .default .clear-q svg, .default .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .twitter {
   position: relative;
@@ -295,25 +296,26 @@ pre[class*="language-"] {
     .twitter .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .twitter .ui-icon-input svg {
+    .twitter .ui-icon-input svg, .twitter .ui-icon-input img {
       height: 12px;
       width: 12px;
       vertical-align: middle; }
-      .twitter .ui-icon-input svg use {
+      .twitter .ui-icon-input svg use, .twitter .ui-icon-input img use {
         fill: #73777A; }
-  .twitter #clear-q {
+  .twitter .clear-q {
     position: absolute;
     top: 9px;
     left: 146px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .twitter #clear-q:hover {
+    .twitter .clear-q:hover {
       opacity: 1; }
-    .twitter #clear-q.hide {
+    .twitter .clear-q.hide {
       display: none; }
-    .twitter #clear-q svg {
-      height: 12px; }
+    .twitter .clear-q svg, .twitter .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .amazon {
   position: relative;
@@ -381,25 +383,26 @@ pre[class*="language-"] {
     .amazon .ui-icon-input:hover {
       cursor: pointer;
       background-color: #ffd38b; }
-    .amazon .ui-icon-input svg {
+    .amazon .ui-icon-input svg, .amazon .ui-icon-input img {
       height: 20px;
       width: 20px;
       vertical-align: middle; }
-      .amazon .ui-icon-input svg use {
+      .amazon .ui-icon-input svg use, .amazon .ui-icon-input img use {
         fill: #202F40; }
-  .amazon #clear-q {
+  .amazon .clear-q {
     position: absolute;
     top: 13px;
     left: 438px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .amazon #clear-q:hover {
+    .amazon .clear-q:hover {
       opacity: 1; }
-    .amazon #clear-q.hide {
+    .amazon .clear-q.hide {
       display: none; }
-    .amazon #clear-q svg {
-      height: 12px; }
+    .amazon .clear-q svg, .amazon .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .spotify {
   position: relative;
@@ -467,25 +470,26 @@ pre[class*="language-"] {
     .spotify .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .spotify .ui-icon-input svg {
+    .spotify .ui-icon-input svg, .spotify .ui-icon-input img {
       height: 12px;
       width: 12px;
       vertical-align: middle; }
-      .spotify .ui-icon-input svg use {
+      .spotify .ui-icon-input svg use, .spotify .ui-icon-input img use {
         fill: #222; }
-  .spotify #clear-q {
+  .spotify .clear-q {
     position: absolute;
     top: 6px;
     left: 176px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .spotify #clear-q:hover {
+    .spotify .clear-q:hover {
       opacity: 1; }
-    .spotify #clear-q.hide {
+    .spotify .clear-q.hide {
       display: none; }
-    .spotify #clear-q svg {
-      height: 12px; }
+    .spotify .clear-q svg, .spotify .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .meetup {
   position: relative;
@@ -553,25 +557,26 @@ pre[class*="language-"] {
     .meetup .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .meetup .ui-icon-input svg {
+    .meetup .ui-icon-input svg, .meetup .ui-icon-input img {
       height: 24px;
       width: 24px;
       vertical-align: middle; }
-      .meetup .ui-icon-input svg use {
+      .meetup .ui-icon-input svg use, .meetup .ui-icon-input img use {
         fill: #505050; }
-  .meetup #clear-q {
+  .meetup .clear-q {
     position: absolute;
     top: 16px;
     left: 232px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .meetup #clear-q:hover {
+    .meetup .clear-q:hover {
       opacity: 1; }
-    .meetup #clear-q.hide {
+    .meetup .clear-q.hide {
       display: none; }
-    .meetup #clear-q svg {
-      height: 12px; }
+    .meetup .clear-q svg, .meetup .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .medium {
   position: relative;
@@ -639,25 +644,26 @@ pre[class*="language-"] {
     .medium .ui-icon-input:hover {
       cursor: pointer;
       background-color: rgba(26, 26, 26, 0); }
-    .medium .ui-icon-input svg {
+    .medium .ui-icon-input svg, .medium .ui-icon-input img {
       height: 16px;
       width: 16px;
       vertical-align: middle; }
-      .medium .ui-icon-input svg use {
+      .medium .ui-icon-input svg use, .medium .ui-icon-input img use {
         fill: #202F40; }
-  .medium #clear-q {
+  .medium .clear-q {
     position: absolute;
     top: 12px;
     left: 176px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .medium #clear-q:hover {
+    .medium .clear-q:hover {
       opacity: 1; }
-    .medium #clear-q.hide {
+    .medium .clear-q.hide {
       display: none; }
-    .medium #clear-q svg {
-      height: 12px; }
+    .medium .clear-q svg, .medium .clear-q img {
+      height: 12px;
+      width: 12px; }
 
 .facebook {
   position: relative;
@@ -725,22 +731,23 @@ pre[class*="language-"] {
     .facebook .ui-icon-input:hover {
       cursor: pointer;
       background-color: white; }
-    .facebook .ui-icon-input svg {
+    .facebook .ui-icon-input svg, .facebook .ui-icon-input img {
       height: 12.5px;
       width: 12.5px;
       vertical-align: middle; }
-      .facebook .ui-icon-input svg use {
+      .facebook .ui-icon-input svg use, .facebook .ui-icon-input img use {
         fill: #3C5BA2; }
-  .facebook #clear-q {
+  .facebook .clear-q {
     position: absolute;
     top: 6.5px;
     left: 451px;
     opacity: .6;
     line-height: 0;
     height: 12px; }
-    .facebook #clear-q:hover {
+    .facebook .clear-q:hover {
       opacity: 1; }
-    .facebook #clear-q.hide {
+    .facebook .clear-q.hide {
       display: none; }
-    .facebook #clear-q svg {
-      height: 12px; }
+    .facebook .clear-q svg, .facebook .clear-q img {
+      height: 12px;
+      width: 12px; }

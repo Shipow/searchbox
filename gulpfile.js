@@ -67,14 +67,20 @@ gulp.task('prettify', function(callback) {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('build',['clean','sass'], function(callback) {
-  runSequence('haml', 'inlineSvg', 'prettify', callback);
+gulp.task('build',['clean'], function(callback) {
+  runSequence('haml', 'js', 'sass', 'inlineSvg', 'prettify', callback);
 });
 
 gulp.task('sass', function () {
   gulp.src('scss/**/*.sass')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('build'))
+  .pipe(livereload());;
+});
+
+gulp.task('js', function () {
+  gulp.src('js/*.js')
+  .pipe(gulp.dest('build/js'))
   .pipe(livereload());;
 });
 
@@ -92,10 +98,11 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('scss/*.sass', ['sass']);
   gulp.watch('*.haml', ['build']);
+  gulp.watch('js/*.js', ['js']);
 });
 
-gulp.task('dev',['watch'], function(callback) {
-  runSequence('build', 'webserver', callback);
+gulp.task('dev', function(callback) {
+  runSequence('build', 'webserver','watch', callback);
 });
 
 gulp.task('svgfallback', function () {
