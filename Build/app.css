@@ -100,7 +100,7 @@ input[type="search"] {
       width: 20px;
       vertical-align: middle; }
       .default .ui-icon-input svg use {
-        fill: red; }
+        fill: white; }
   .default #clear-q {
     position: absolute;
     top: 14px;
@@ -169,7 +169,7 @@ input[type="search"] {
       width: 12px;
       vertical-align: middle; }
       .twitter .ui-icon-input svg use {
-        fill: red; }
+        fill: #73777A; }
   .twitter #clear-q {
     position: absolute;
     top: 9px;
@@ -238,7 +238,7 @@ input[type="search"] {
       width: 20px;
       vertical-align: middle; }
       .amazon .ui-icon-input svg use {
-        fill: red; }
+        fill: #202F40; }
   .amazon #clear-q {
     position: absolute;
     top: 13px;
@@ -307,7 +307,7 @@ input[type="search"] {
       width: 12px;
       vertical-align: middle; }
       .spotify .ui-icon-input svg use {
-        fill: red; }
+        fill: #222; }
   .spotify #clear-q {
     position: absolute;
     top: 6px;
@@ -376,7 +376,7 @@ input[type="search"] {
       width: 24px;
       vertical-align: middle; }
       .meetup .ui-icon-input svg use {
-        fill: red; }
+        fill: #505050; }
   .meetup #clear-q {
     position: absolute;
     top: 16px;
@@ -445,7 +445,7 @@ input[type="search"] {
       width: 16px;
       vertical-align: middle; }
       .medium .ui-icon-input svg use {
-        fill: red; }
+        fill: #202F40; }
   .medium #clear-q {
     position: absolute;
     top: 12px;
@@ -514,7 +514,7 @@ input[type="search"] {
       width: 12.5px;
       vertical-align: middle; }
       .facebook .ui-icon-input svg use {
-        fill: red; }
+        fill: white; }
   .facebook #clear-q {
     position: absolute;
     top: 6.5px;
