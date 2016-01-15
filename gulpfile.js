@@ -1,15 +1,19 @@
 var gulp = require('gulp');
-var inject = require('gulp-inject');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
 var path = require('path');
+var del = require('del');
+var runSequence = require('run-sequence');
+var webserver = require('gulp-webserver');
+var livereload = require('gulp-livereload');
+
 var sass = require('gulp-sass');
 var haml = require('gulp-haml');
 var prettify = require('gulp-html-prettify');
-var runSequence = require('run-sequence');
-var del = require('del');
-var livereload = require('gulp-livereload');
-var webserver = require('gulp-webserver');
+
+var inject = require('gulp-inject');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var cheerio = require('gulp-cheerio');
+var svgfallback = require('gulp-svgfallback');
 
 gulp.task('clean', function() {
   // Return the Promise from del()
@@ -31,9 +35,21 @@ gulp.task('inlineSvg', function () {
         cleanupIDs: {
           prefix: prefix + '-',
           minify: true
+        // },
+        // cleanupNumericValues: {
+        //   floatPrecision: 2
+        // },
+        // removeAttrs: {
+        //   attrs: '(fill|stroke)'
         }
       }]
     }
+  }))
+  .pipe(cheerio({
+    run: function ($) {
+      $('[fill]').removeAttr('fill');
+    },
+    parserOptions: { xmlMode: true }
   }))
   .pipe(svgstore({ inlineSvg: true }));
   function fileContents (filePath, file) {
@@ -58,7 +74,7 @@ gulp.task('build',['clean','sass'], function(callback) {
 gulp.task('sass', function () {
   gulp.src('scss/**/*.sass')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('build'))
   .pipe(livereload());;
 });
 
@@ -69,20 +85,22 @@ gulp.task('webserver', function() {
       livereload: true,
       directoryListing: false,
       open: true
-
     }));
 });
 
-gulp.task('watch:sass', function() {
+gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('scss/*.sass', ['sass']);
-});
-
-gulp.task('watch:haml', function() {
-  livereload.listen();
   gulp.watch('*.haml', ['build']);
 });
 
-gulp.task('watch',['watch:sass','watch:haml'], function() {
+gulp.task('dev',['watch'], function(callback) {
+  runSequence('build', 'webserver', callback);
+});
 
+gulp.task('svgfallback', function () {
+  return gulp
+  .src('svg/*.svg', {base: 'src/icons'})
+  .pipe(svgfallback())
+  .pipe(gulp.dest('build'));
 });

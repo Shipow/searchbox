@@ -5,10 +5,11 @@
     %meta{content: "ie=edge", http-equiv: "x-ua-compatible"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
     %title Searchbox: One mixin to syle them all
-    %link{href: "css/app.css", rel: "stylesheet"}
+    %link{href: "app.css", rel: "stylesheet"}
 
   %body.demos
-    <!-- inject:svg --><!-- endinject -->
+    %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
+      <!-- inject:svg --><!-- endinject -->
     .row
       %h1 SearchBox: One mixin to syle them all
 
@@ -18,7 +19,7 @@
           %input#q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon"}
+              %use{xlink:href:"#search-icon-5"}
           #clear-q.hide
             %svg.icon
               %use{xlink:href:"#clear-icon"}
