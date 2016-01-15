@@ -8,13 +8,21 @@
   margin: 40px
   h1
     text-align: center
+    font-size: 80px
+    font-family: "fatfrank"
+    color: #444
   h2
-    margin: 40px 0 0 0
-    font-size: 16px
+    margin: 40px 0 8px 0
+    font-size: 14px
+    font-family: "fatfrank"
+    color: #888
+    text-transform: uppercase
+    letter-spacing: 1px
   .icons
-    text-align: center
     svg
       width: 40px
+      height: 40px
+      margin: 0 10px  10px 0
       use
         fill: #444
   .demo
@@ -39,7 +47,7 @@
       background-color: #3E5DA0
 
 //reset
-input[type="search"]
+@mixin reset
   margin: 0
   border: 0
   padding: 0
@@ -70,7 +78,7 @@ input[type="search"]
     white-space: nowrap
     width: $search-input-width
     input
-      display: inline-block
+      +reset
       width: 100%
       height: 100%
       font-size: $search-font-size

@@ -105,16 +105,23 @@ pre[class*="language-"] {
 .demos {
   margin: 40px; }
   .demos h1 {
-    text-align: center; }
+    text-align: center;
+    font-size: 80px;
+    font-family: "fatfrank";
+    color: #444; }
   .demos h2 {
-    margin: 40px 0 0 0;
-    font-size: 16px; }
-  .demos .icons {
-    text-align: center; }
-    .demos .icons svg {
-      width: 40px; }
-      .demos .icons svg use {
-        fill: #444; }
+    margin: 40px 0 8px 0;
+    font-size: 14px;
+    font-family: "fatfrank";
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .demos .icons svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px  10px 0; }
+    .demos .icons svg use {
+      fill: #444; }
   .demos .demo {
     padding: 14px; }
     .demos .demo > div {
@@ -136,33 +143,26 @@ pre[class*="language-"] {
     .demos .demo.demo-facebook {
       background-color: #3E5DA0; }
 
-input[type="search"] {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-  background: none;
-  line-height: 1;
-  font-size: 13px;
-  font-family: Arial;
-  -moz-appearance: none;
-  -moz-box-sizing: padding-box;
-  -webkit-appearance: none;
-  -webkit-box-sizing: padding-box; }
-  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
-    display: none; }
-  input[type="search"]:focus {
-    outline: 0; }
-
 .default {
   position: relative;
   height: 40px;
   white-space: nowrap;
   width: 500px; }
   .default input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 14px;
@@ -173,6 +173,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 3px;
     background: white; }
+    .default input::-webkit-search-decoration, .default input::-webkit-search-cancel-button, .default input::-webkit-search-results-button, .default input::-webkit-search-results-decoration {
+      display: none; }
+    .default input:focus {
+      outline: 0; }
     .default input:hover {
       border-color: #b3b3b3; }
     .default input:focus {
@@ -231,7 +235,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 200px; }
   .twitter input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 12px;
@@ -242,6 +259,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 30px;
     background: #F5F8FA; }
+    .twitter input::-webkit-search-decoration, .twitter input::-webkit-search-cancel-button, .twitter input::-webkit-search-results-button, .twitter input::-webkit-search-results-decoration {
+      display: none; }
+    .twitter input:focus {
+      outline: 0; }
     .twitter input:hover {
       border-color: #b8c6ce; }
     .twitter input:focus {
@@ -300,7 +321,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 500px; }
   .amazon input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 14px;
@@ -311,6 +345,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 3px;
     background: white; }
+    .amazon input::-webkit-search-decoration, .amazon input::-webkit-search-cancel-button, .amazon input::-webkit-search-results-button, .amazon input::-webkit-search-results-decoration {
+      display: none; }
+    .amazon input:focus {
+      outline: 0; }
     .amazon input:hover {
       border-color: #e6e6e6; }
     .amazon input:focus {
@@ -369,7 +407,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 200px; }
   .spotify input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 12px;
@@ -380,6 +431,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 12px;
     background: white; }
+    .spotify input::-webkit-search-decoration, .spotify input::-webkit-search-cancel-button, .spotify input::-webkit-search-results-button, .spotify input::-webkit-search-results-decoration {
+      display: none; }
+    .spotify input:focus {
+      outline: 0; }
     .spotify input:hover {
       border-color: #e6e6e6; }
     .spotify input:focus {
@@ -438,7 +493,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 300px; }
   .meetup input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 16px;
@@ -449,6 +517,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 3px;
     background: #F5F8FA; }
+    .meetup input::-webkit-search-decoration, .meetup input::-webkit-search-cancel-button, .meetup input::-webkit-search-results-button, .meetup input::-webkit-search-results-decoration {
+      display: none; }
+    .meetup input:focus {
+      outline: 0; }
     .meetup input:hover {
       border-color: #b8c6ce; }
     .meetup input:focus {
@@ -507,7 +579,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 200px; }
   .medium input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 13px;
@@ -518,6 +603,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 30px;
     background: white; }
+    .medium input::-webkit-search-decoration, .medium input::-webkit-search-cancel-button, .medium input::-webkit-search-results-button, .medium input::-webkit-search-results-decoration {
+      display: none; }
+    .medium input:focus {
+      outline: 0; }
     .medium input:hover {
       border-color: silver; }
     .medium input:focus {
@@ -576,7 +665,20 @@ input[type="search"] {
   white-space: nowrap;
   width: 500px; }
   .facebook input {
+    margin: 0;
+    border: 0;
+    padding: 0;
     display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Arial;
+    -moz-appearance: none;
+    -moz-box-sizing: padding-box;
+    -webkit-appearance: none;
+    -webkit-box-sizing: padding-box;
     width: 100%;
     height: 100%;
     font-size: 13px;
@@ -587,6 +689,10 @@ input[type="search"] {
     border-style: solid;
     border-radius: 3px;
     background: white; }
+    .facebook input::-webkit-search-decoration, .facebook input::-webkit-search-cancel-button, .facebook input::-webkit-search-results-button, .facebook input::-webkit-search-results-decoration {
+      display: none; }
+    .facebook input:focus {
+      outline: 0; }
     .facebook input:hover {
       border-color: #b3b3b3; }
     .facebook input:focus {
@@ -624,7 +730,7 @@ input[type="search"] {
       width: 12.5px;
       vertical-align: middle; }
       .facebook .ui-icon-input svg use {
-        fill: white; }
+        fill: #3C5BA2; }
   .facebook #clear-q {
     position: absolute;
     top: 6.5px;

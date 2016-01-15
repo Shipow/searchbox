@@ -6,11 +6,18 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
     %title Searchbox: One mixin to syle them all
     %link{href: "app.css", rel: "stylesheet"}
+    %script{src: "https://use.typekit.net/rwx3htg.js"}
+    :javascript
+      try{Typekit.load({ async: false });}catch(e){}
 
   %body.demos
+    %h1 SearchBox
+
     %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
       <!-- inject:svg --><!-- endinject -->
+
     .icons
+      %h2 Icons
       %svg.icon
         %use{xlink:href:"#search-icon-1"}
       %svg.icon
@@ -51,9 +58,8 @@
         %use{xlink:href:"#search-icon-19"}
       %svg.icon
         %use{xlink:href:"#search-icon-20"}
-    .row
-      %h1 SearchBox: One mixin to syle them all
 
+    .examples
       %h2 Google (default)
       .demo.demo-default
         .default
