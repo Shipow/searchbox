@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="72px" height="74px" viewBox="0 0 72 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>search-icon-7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-857.000000, -391.000000)" fill="#000000">
+            <path d="M887,451 C903.568542,451 917,437.568542 917,421 C917,404.431458 903.568542,391 887,391 C870.431458,391 857,404.431458 857,421 C857,437.568542 870.431458,451 887,451 Z M887,446 C900.807119,446 912,434.807119 912,421 C912,407.192881 900.807119,396 887,396 C873.192881,396 862,407.192881 862,421 C862,434.807119 873.192881,446 887,446 Z M907,450.071068 L914.071068,443 L928.213203,457.142136 L921.142136,464.213203 L907,450.071068 Z" id="search-icon-7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
