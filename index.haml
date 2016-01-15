@@ -9,10 +9,66 @@
     %script{src: "https://use.typekit.net/rwx3htg.js"}
     :javascript
       try{Typekit.load({ async: false });}catch(e){}
+    :css
+      // tets
 
   %body.demos
     %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
     %h1 SearchBox
+
+    .settings
+      %h2 Settings
+      %form#settings
+        %p
+          %label config-name
+          %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
+        %p
+          %label search-input-width
+          %input{type:"text", name:"$search-input-width", value:"500px"}
+        %p
+          %label search-input-height
+          %input{type:"text", name:"$search-input-height", value:"50px"}
+        %p
+          %label search-clear-size
+          %input{type:"text", name:"$search-clear-size", value:"12px"}
+        %p
+          %label search-border-width
+          %input{type:"text", name:"$search-border-width", value:"2px"}
+        %p
+          %label search-border-radius
+          %input{type:"text", name:"$search-border-radius", value:"25px"}
+        %p
+          %label search-icon-color
+          %input{type:"text", name:"$search-icon-color", value:"#E5186F"}
+        %p
+          %label search-input-border-color
+          %input{type:"text", name:"$search-input-border-color", value:"#ccc"}
+        %p
+          %label search-input-focus-border-color
+          %input{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
+        %p
+          %label search-icon-background
+          %input{type:"text", name:"$search-icon-background", value:"transparent"}
+        %p
+          %label search-font-size
+          %input{type:"text", name:"$search-font-size", value:"14px"}
+        %p
+          %label search-icon-size
+          %input{type:"text", name:"$search-icon-size", value:"26px"}
+        %p
+          %label search-input-background
+          %input{type:"text", name:"$search-input-background", value:"white"}
+        %p
+          %label search-input-focus-background
+          %input{type:"text", name:"$search-input-focus-background", value:"white"}
+        %p
+          %label search-icon-position
+          %input{type:"text", name:"$search-icon-position", value:"right"}
+        %p
+          %label search-placeholder-color
+          %input{type:"text", name:"$search-placeholder-color", value:"#aaa"}
+        %p
+          %button.btn-update{type:"button"} Update
 
     .row
       %h2 Search icons
@@ -64,13 +120,23 @@
           %use{xlink:href:"#search-icon-22"}
 
     .examples
+      %h2 Create yours
+      .demo.demo-custom
+        .awesome-searchbox.awesome-searchbox_custom
+          %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+          .ui-icon-input
+            %svg.icon
+              %use{xlink:href:"#search-icon-10"}
+          .clear-q.hide
+            %svg.icon
+              %use{xlink:href:"#clear-icon"}
       %h2 Google (default)
       .demo.demo-default
         .awesome-searchbox
           %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-5"}
+              %use{xlink:href:"#search-icon-13"}
           .clear-q.hide
             %svg.icon
               %use{xlink:href:"#clear-icon"}

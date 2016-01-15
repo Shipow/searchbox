@@ -1,3 +1,22 @@
+//settings
+$google-blue: #3E82F7 !default;
+$config-name: 'awesome-searchbox' !default; 
+$search-input-height: 40px !default;
+$search-input-width: 500px !default;
+$search-clear-size: 12px !default;
+$search-border-width: 1px !default;
+$search-border-radius: 3px !default;
+$search-icon-color: white !default;
+$search-input-border-color: #ccc !default;
+$search-input-focus-border-color: $google-blue !default;
+$search-icon-background: $google-blue !default;
+$search-font-size: 14px !default;
+$search-icon-size: $search-input-height - ($search-input-height / 2) !default;
+$search-input-background: white !default;
+$search-input-focus-background: white !default;
+$search-icon-position: right !default;
+$search-placeholder-color: #aaa !default;
+
 //reset
 @mixin reset {
   margin: 0;
@@ -115,25 +134,5 @@
     }
   }
 }
-
-$google-blue: #3E82F7;
-$amazon-yellow: #FFBF58;
-
-$config-name: 'awesome-searchbox';
-$search-input-height: 40px;
-$search-input-width: 500px;
-$search-clear-size: 12px;
-$search-border-width: 1px;
-$search-border-radius: 3px;
-$search-icon-color: white;
-$search-input-border-color: #ccc;
-$search-input-focus-border-color: $google-blue;
-$search-icon-background: $google-blue;
-$search-font-size: 14px;
-$search-icon-size: $search-input-height - ($search-input-height / 2);
-$search-input-background: white;
-$search-input-focus-background: white;
-$search-icon-position: right;
-$search-placeholder-color: #aaa;
 
 @include awesome-searchbox($config-name);

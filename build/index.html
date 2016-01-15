@@ -11,13 +11,87 @@
   <script type="text/javascript">
     //<![CDATA[
     try{Typekit.load({ async: false });}catch(e){}
-    
     //]]>
   </script>
+  <style type="text/css">
+    // tets
+  </style>
 </head>
 
 <body class="demos"><a href="https://github.com/Shipow/searchbox" class="github-source">Source on Github</a>
   <h1>SearchBox</h1>
+  <div class="settings">
+    <h2>Settings</h2>
+    <form id="settings">
+      <p>
+        <label>config-name</label>
+        <input type="text" name="$config-name" value="awesome-searchbox_custom" />
+      </p>
+      <p>
+        <label>search-input-width</label>
+        <input type="text" name="$search-input-width" value="500px" />
+      </p>
+      <p>
+        <label>search-input-height</label>
+        <input type="text" name="$search-input-height" value="50px" />
+      </p>
+      <p>
+        <label>search-clear-size</label>
+        <input type="text" name="$search-clear-size" value="12px" />
+      </p>
+      <p>
+        <label>search-border-width</label>
+        <input type="text" name="$search-border-width" value="2px" />
+      </p>
+      <p>
+        <label>search-border-radius</label>
+        <input type="text" name="$search-border-radius" value="25px" />
+      </p>
+      <p>
+        <label>search-icon-color</label>
+        <input type="text" name="$search-icon-color" value="#E5186F" />
+      </p>
+      <p>
+        <label>search-input-border-color</label>
+        <input type="text" name="$search-input-border-color" value="#ccc" />
+      </p>
+      <p>
+        <label>search-input-focus-border-color</label>
+        <input type="text" name="$search-input-focus-border-color" value="#E5186F" />
+      </p>
+      <p>
+        <label>search-icon-background</label>
+        <input type="text" name="$search-icon-background" value="transparent" />
+      </p>
+      <p>
+        <label>search-font-size</label>
+        <input type="text" name="$search-font-size" value="14px" />
+      </p>
+      <p>
+        <label>search-icon-size</label>
+        <input type="text" name="$search-icon-size" value="26px" />
+      </p>
+      <p>
+        <label>search-input-background</label>
+        <input type="text" name="$search-input-background" value="white" />
+      </p>
+      <p>
+        <label>search-input-focus-background</label>
+        <input type="text" name="$search-input-focus-background" value="white" />
+      </p>
+      <p>
+        <label>search-icon-position</label>
+        <input type="text" name="$search-icon-position" value="right" />
+      </p>
+      <p>
+        <label>search-placeholder-color</label>
+        <input type="text" name="$search-placeholder-color" value="#aaa" />
+      </p>
+      <p>
+        <button type="button" class="btn-update">Update</button>
+      </p>
+    </form>
+  </div>
   <div class="row">
     <h2>Search icons</h2>
     <div class="icons">
@@ -91,13 +165,29 @@
     </div>
   </div>
   <div class="examples">
+    <h2>Create yours</h2>
+    <div class="demo demo-custom">
+      <div class="awesome-searchbox awesome-searchbox_custom">
+        <input type="search" placeholder="Search for product, category, SKU, …" autocomplete="off" class="q" />
+        <div class="ui-icon-input">
+          <svg class="icon">
+            <use xlink:href="#search-icon-10"></use>
+          </svg>
+        </div>
+        <div class="clear-q hide">
+          <svg class="icon">
+            <use xlink:href="#clear-icon"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <h2>Google (default)</h2>
     <div class="demo demo-default">
       <div class="awesome-searchbox">
         <input type="search" placeholder="Search for product, category, SKU, …" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-5"></use>
+            <use xlink:href="#search-icon-13"></use>
           </svg>
         </div>
         <div class="clear-q hide">
