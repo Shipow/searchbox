@@ -10,9 +10,11 @@ $('.clear-q').on('click', function() {
 
 var Sass = new Sass();
 
+$('.snippet code.language-markup').text($('.awesome-searchbox').parent().html());
+
 $.get('_awesome-searchbox.scss', function(data){
   Sass.compile(data, function(result) {
-    $('.snippet').text(result.text);
+    $('.snippet code.language-css').text(result.text);
     Prism.highlightAll(false);
   });
 });

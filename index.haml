@@ -14,14 +14,6 @@
     %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
     %h1 SearchBox
 
-    %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
-      <!-- inject:svg --><!-- endinject -->
-
-    .row
-      %h2 Snippet
-    %pre
-      %code.language-css.snippet
-
     .row
       %h2 Search icons
       .icons
@@ -47,6 +39,7 @@
           %use{xlink:href:"#search-icon-10"}
         %svg.icon
           %use{xlink:href:"#search-icon-11"}
+        %br
         %svg.icon
           %use{xlink:href:"#search-icon-12"}
         %svg.icon
@@ -65,11 +58,15 @@
           %use{xlink:href:"#search-icon-19"}
         %svg.icon
           %use{xlink:href:"#search-icon-20"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-21"}
+        %svg.icon
+          %use{xlink:href:"#search-icon-22"}
 
     .examples
       %h2 Google (default)
       .demo.demo-default
-        .default.awesome-searchbox
+        .awesome-searchbox
           %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -80,7 +77,7 @@
 
       %h2 Twitter
       .demo.demo-twitter
-        .twitter.awesome-searchbox
+        .awesome-searchbox_twitter
           %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -91,7 +88,7 @@
 
       %h2 Amazon
       .demo.demo-amazon
-        .amazon.awesome-searchbox
+        .awesome-searchbox_amazon
           %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -102,7 +99,7 @@
 
       %h2 Spotify
       .demo.demo-spotify
-        .spotify.awesome-searchbox
+        .awesome-searchbox_spotify
           %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -113,7 +110,7 @@
 
       %h2 Meetup
       .demo.demo-meetup
-        .meetup.awesome-searchbox
+        .awesome-searchbox_meetup
           %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -124,7 +121,7 @@
 
       %h2 Medium
       .demo.demo-medium
-        .medium.awesome-searchbox
+        .awesome-searchbox_medium
           %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -135,7 +132,7 @@
 
       %h2 Facebook
       .demo.demo-facebook
-        .facebook.awesome-searchbox
+        .awesome-searchbox_facebook
           %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
@@ -144,7 +141,19 @@
             %svg.icon
               %use{xlink:href:"#clear-icon"}
 
-    <!-- inject: js/prim.js -->
+
+    .row
+      %h2 Snippet Css
+    %pre.snippet
+      %code.language-css
+    .row
+      %h2 Snippet HTML
+    %pre.snippet
+      %code.language-markup
+
+    %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
+    <!-- inject:svg --><!-- endinject -->
+
     %script{src:"js/jquery-2.2.0.min.js"}
     %script{src:"js/prism.js",data-manual}
     %script{src:"js/sass.js"}
