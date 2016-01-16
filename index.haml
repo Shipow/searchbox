@@ -116,7 +116,7 @@
             %svg.icon
               %use{xlink:href:"#clear-icon-4"}
 
-      %h2 Custom
+      %h2 Custom - Build your own
       .demo.demo-custom
         .awesome-searchbox.awesome-searchbox_custom
           %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
@@ -129,7 +129,7 @@
     .settings
       %form#settings
         .col-6
-          %h2 Apparence
+          %h2 Appearence
           -# %p
           -#   %label namespace
           %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
@@ -152,7 +152,7 @@
             %label border-color
             %input.jscolor{type:"text", name:"$search-input-border-color", value:"#ccc"}
           %p
-            %label background-color
+            %label bg-color
             %input.jscolor{type:"text", name:"$search-input-background", value:"white"}
           %p
             %label placeholder-color
@@ -164,13 +164,35 @@
             %label focus-border-color
             %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
           %p
-            %label focus-background-color
+            %label focus-bg-color
             %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
         .col-6
           %h2 Search icon
           %p
             %label icon-img
-            %input{type:"text", name:"$search-icon", value:"12"}
+            %select.jselectric{name:"$search-icon"}
+              %option{value:"search-icon-1"} 1
+              %option{value:"search-icon-2"} 2
+              %option{value:"search-icon-3"} 3
+              %option{value:"search-icon-4"} 4
+              %option{value:"search-icon-5"} 5
+              %option{value:"search-icon-6"} 6
+              %option{value:"search-icon-7"} 7
+              %option{value:"search-icon-8"} 8
+              %option{value:"search-icon-9"} 9
+              %option{value:"search-icon-10"} 10
+              %option{value:"search-icon-11"} 11
+              %option{value:"search-icon-12"} 12
+              %option{value:"search-icon-13"} 13
+              %option{value:"search-icon-14"} 14
+              %option{value:"search-icon-15"} 15
+              %option{value:"search-icon-16"} 16
+              %option{value:"search-icon-17"} 17
+              %option{value:"search-icon-18"} 18
+              %option{value:"search-icon-19"} 19
+              %option{value:"search-icon-20"} 20
+              %option{value:"search-icon-21"} 21
+              %option{value:"search-icon-22"} 22
           %p
             %label icon-size
             %input{type:"text", name:"$search-icon-size", value:"26px"}
@@ -181,77 +203,83 @@
             %label icon-color
             %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
           %p
-            %label icon-background-color
+            %label icon-bg-color
             %input.jscolor{type:"text", name:"$search-icon-background", value:"transparent"}
 
           %h2 clear
           %p
             %label icon-clear-img
-            %input{type:"text", name:"$icon-clear", value:"1"}
+            %select.jselectric{name:"$icon-clear"}
+              %option{value:"clear-icon-1"} 1
+              %option{value:"clear-icon-2"} 2
+              %option{value:"clear-icon-3"} 3
+              %option{value:"clear-icon-4"} 4
           %p
             %label icon-clear-size
             %input{type:"text", name:"$search-clear-size", value:"12px"}
+
           %p
             %button.btn-update{type:"button"} Update
 
-    .row
-      %h2 Search icons
-      .icons
-        %svg.icon
-          %use{xlink:href:"#search-icon-1"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-2"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-3"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-4"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-5"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-6"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-7"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-8"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-9"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-10"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-11"}
-        %br
-        %svg.icon
-          %use{xlink:href:"#search-icon-12"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-13"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-14"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-15"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-16"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-17"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-18"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-19"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-20"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-21"}
-        %svg.icon
-          %use{xlink:href:"#search-icon-22"}
-      %h2 Clear icons
-      .icons
-        %svg.icon
-          %use{xlink:href:"#clear-icon-1"}
-        %svg.icon
-          %use{xlink:href:"#clear-icon-2"}
-        %svg.icon
-          %use{xlink:href:"#clear-icon-3"}
-        %svg.icon
-          %use{xlink:href:"#clear-icon-4"}
+    -# .row
+    -#   %h2 Search icons
+    -#   .icons
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-1"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-2"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-3"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-4"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-5"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-6"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-7"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-8"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-9"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-10"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-11"}
+    -#     %br
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-12"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-13"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-14"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-15"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-16"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-17"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-18"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-19"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-20"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-21"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#search-icon-22"}
+    -#   %h2 Clear icons
+    -#   .icons
+    -#     %svg.icon
+    -#       %use{xlink:href:"#clear-icon-1"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#clear-icon-2"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#clear-icon-3"}
+    -#     %svg.icon
+    -#       %use{xlink:href:"#clear-icon-4"}
+
 
     .row
       .col-6
@@ -278,6 +306,7 @@
     %script{src:"js/prism.js",data-manual}
     %script{src:"js/sass.js"}
     %script{src:"js/jscolor.min.js"}
+    %script{src:"js/jquery.selectric.min.js"}
     :javascript
       var scss = "";
     %script{src:"js/app.js"}
