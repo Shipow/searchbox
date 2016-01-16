@@ -83,7 +83,7 @@ $search-placeholder-color: #aaa !default;
         color: $search-placeholder-color;
       }
     }
-    .ui-icon-input {
+    .ui-icon-submit {
       position: absolute;
       #{$search-icon-position}: 0;
       top: 0;
@@ -114,7 +114,7 @@ $search-placeholder-color: #aaa !default;
         }
       }
     }
-    .clear-q {
+    .ui-icon-clear {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
       left: $search-input-width - $search-clear-size * 2 - if($search-icon-position == "right", $search-input-height, 0);

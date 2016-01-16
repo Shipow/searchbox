@@ -1,14 +1,14 @@
 $('.q').on('input', function() {
-    $(this).closest('.awesome-searchbox').find('.clear-q').removeClass('hide');
+    $(this).closest('.awesome-searchbox').find('.ui-icon-clear').removeClass('hide');
 });
-$('.clear-q').on('click', function() {
+$('.ui-icon-clear').on('click', function() {
   $(this).closest('.awesome-searchbox').find('.q').val('').focus();
   $(this).addClass('hide');
 });
 
 var Sass = new Sass();
 
-$('.snippet code.language-markup').text($('.awesome-searchbox').parent().html());
+$('.snippet code.language-markup').text($('.awesome-searchbox_custom').parent().html());
 
 function updateSnippet(){
   $.get('awesome-searchbox.scss', function(data){
