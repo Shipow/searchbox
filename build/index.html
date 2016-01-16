@@ -26,10 +26,7 @@
     <form id="settings">
       <div class="col-6">
         <h2>Apparence</h2>
-        <p>
-          <label>namespace</label>
-          <input type="text" name="$config-name" value="awesome-searchbox_custom" />
-        </p>
+        <input type="hidden" name="$config-name" value="awesome-searchbox_custom" />
         <p>
           <label>width</label>
           <input type="text" name="$search-input-width" value="250px" />
@@ -183,13 +180,16 @@
     <h2>Clear icons</h2>
     <div class="icons">
       <svg class="icon">
-        <use xlink:href="#clear-icon"></use>
+        <use xlink:href="#clear-icon-1"></use>
       </svg>
       <svg class="icon">
         <use xlink:href="#clear-icon-2"></use>
       </svg>
       <svg class="icon">
         <use xlink:href="#clear-icon-3"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#clear-icon-4"></use>
       </svg>
     </div>
   </div>
@@ -205,7 +205,7 @@
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-3"></use>
           </svg>
         </div>
       </div>
@@ -221,103 +221,103 @@
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-3"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Twitter</h2>
     <div class="demo demo-twitter">
-      <div class="awesome-searchbox_twitter">
+      <div class="awesome-searchbox awesome-searchbox_twitter">
         <input type="search" placeholder="Search Twitter" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark"></use>
+            <use xlink:href="#search-icon-8"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-3"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Amazon</h2>
     <div class="demo demo-amazon">
-      <div class="awesome-searchbox_amazon">
+      <div class="awesome-searchbox awesome-searchbox_amazon">
         <input type="search" placeholder="Search Amazon" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark"></use>
+            <use xlink:href="#search-icon-11"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-2"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Spotify</h2>
     <div class="demo demo-spotify">
-      <div class="awesome-searchbox_spotify">
+      <div class="awesome-searchbox awesome-searchbox_spotify">
         <input type="search" placeholder="Search" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark"></use>
+            <use xlink:href="#search-icon-9"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-4"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Meetup</h2>
     <div class="demo demo-meetup">
-      <div class="awesome-searchbox_meetup">
+      <div class="awesome-searchbox awesome-searchbox_meetup">
         <input type="search" placeholder="Search Meetup" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark"></use>
+            <use xlink:href="#search-icon-13"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-3"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Medium</h2>
     <div class="demo demo-medium">
-      <div class="awesome-searchbox_medium">
+      <div class="awesome-searchbox awesome-searchbox_medium">
         <input type="search" placeholder="Search Medium" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark-thin"></use>
+            <use xlink:href="#search-icon-11"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-1"></use>
           </svg>
         </div>
       </div>
     </div>
     <h2>Facebook</h2>
     <div class="demo demo-facebook">
-      <div class="awesome-searchbox_facebook">
+      <div class="awesome-searchbox awesome-searchbox_facebook">
         <input type="search" placeholder="Search Facebook" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
-            <use xlink:href="#search-icon-dark"></use>
+            <use xlink:href="#search-icon-8"></use>
           </svg>
         </div>
         <div class="clear-q hide">
           <svg class="icon">
-            <use xlink:href="#clear-icon"></use>
+            <use xlink:href="#clear-icon-4"></use>
           </svg>
         </div>
       </div>
@@ -334,20 +334,25 @@
   <div style="height: 0; width: 0; position: absolute; visibility: hidden"></div>
   <!-- inject:svg -->
   <svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="clear-icon-2" viewBox="0 0 26 26">
+    <symbol id="clear-icon-1" viewBox="0 0 15 15">
+      <title>clear-icon-1</title>
+      <path d="M6.688 7.395L.956 1.663.602 1.31 1.31.602l.353.354 5.732 5.732 5.73-5.732.355-.354.707.708-.354.353-5.73 5.732 5.73 5.73.354.355-.707.707-.354-.354-5.73-5.73-5.733 5.73-.353.354-.708-.707.354-.354 5.732-5.73z" fill-rule="evenodd"
+      />
+    </symbol>
+    <symbol id="clear-icon-2" viewBox="0 0 25 25">
       <title>clear-icon-2</title>
       <path d="M12.098 12.805L1.218 1.925.864 1.57 1.57.865l.355.354 10.88 10.88 10.88-10.88.355-.354.707.707-.354.355-10.88 10.88 10.88 10.88.354.355-.707.707-.354-.354-10.88-10.88-10.88 10.88-.355.354-.706-.707.354-.354 10.88-10.88z"
-      stroke-linecap="square" stroke="#000" fill-rule="evenodd" />
-    </symbol>
-    <symbol id="clear-icon-3" viewBox="0 0 81 81">
-      <title>clear-icon-3</title>
-      <path d="M35.097 41L16.452 22.355 14 19.903 18.903 15l2.452 2.452L40 36.097l18.645-18.645L61.097 15 66 19.903l-2.452 2.452L44.903 41l18.645 18.645L66 62.097 61.097 67l-2.452-2.452L40 45.903 21.355 64.548 18.903 67 14 62.097l2.452-2.452L35.097 41zM40.5 81C62.868 81 81 62.868 81 40.5S62.868 0 40.5 0 0 18.132 0 40.5 18.132 81 40.5 81z"
       fill-rule="evenodd" />
     </symbol>
-    <symbol id="clear-icon" viewBox="0 0 15 15">
-      <title>clear-icon</title>
-      <path d="M6.688 7.395L.956 1.663.602 1.31 1.31.602l.353.354 5.732 5.732 5.73-5.732.355-.354.707.708-.354.353-5.73 5.732 5.73 5.73.354.355-.707.707-.354-.354-5.73-5.73-5.733 5.73-.353.354-.708-.707.354-.354 5.732-5.73z" stroke-linecap="square"
-      stroke="#000" fill-rule="evenodd" />
+    <symbol id="clear-icon-3" viewBox="0 0 16 16">
+      <title>clear-icon-3</title>
+      <path d="M6.98 8.395L1.602 3.017.895 2.31 2.31.895l.707.707L8.395 6.98l5.378-5.378.707-.707 1.414 1.415-.707.707L9.81 8.395l5.377 5.378.707.707-1.414 1.414-.707-.707L8.395 9.81l-5.378 5.377-.707.707L.895 14.48l.707-.707L6.98 8.395z"
+      fill-rule="evenodd" />
+    </symbol>
+    <symbol id="clear-icon-4" viewBox="0 0 81 81">
+      <title>clear-icon-4</title>
+      <path d="M47.903 40L68 60.097 61.097 67 41 46.903 20.903 67 14 60.097 34.097 40 14 19.903 20.903 13 41 33.097 61.097 13 68 19.903 47.903 40zM40.5 81C62.868 81 81 62.868 81 40.5S62.868 0 40.5 0 0 18.132 0 40.5 18.132 81 40.5 81z"
+      fill-rule="evenodd" />
     </symbol>
     <symbol id="search-icon-1" viewBox="0 0 73 73">
       <title>search-icon-1</title>
