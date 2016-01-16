@@ -30,9 +30,10 @@ function updateSnippet(){
 
     Sass.writeFile('settings.scss', config + ';');
 
-
-    Sass.compile('@import "settings";' + data, function(result) {
+    var scss = config + ';' + data;
+    Sass.compile(scss, function(result) {
       $('.snippet code.language-css').text(result.text);
+      $('.snippet code.language-scss').text(scss);
       $("<style>" + result.text + "</style>").appendTo( "head" );
       Prism.highlightAll(false);
     });
@@ -41,3 +42,12 @@ function updateSnippet(){
 $('.btn-update').on('click',updateSnippet);
 
 $('.jscolor').addClass('{hash:true}')
+
+$('.jselectric').selectric({
+  optionsItemBuilder: function(itemData, element, index) {
+    return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
+  },
+  labelBuilder: function(itemData) {
+    return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
+  }
+});
