@@ -20,22 +20,22 @@
           %use{xlink:href:"#search-icon-17"}
         SearchBox
 
-      %ul.list-inline
-        %li Google
-        %li.separator |
-        %li Twitter
-        %li.separator |
-        %li Amazon
-        %li.separator |
-        %li Spotify
-        %li.separator |
-        %li Meetup
-        %li.separator |
-        %li Medium
-        %li.separator |
-        %li Facebook
-        %li.separator |
-        %li Custom
+      -# %ul.list-inline
+      -#   %li Google
+      -#   %li.separator |
+      -#   %li Twitter
+      -#   %li.separator |
+      -#   %li Amazon
+      -#   %li.separator |
+      -#   %li Spotify
+      -#   %li.separator |
+      -#   %li Meetup
+      -#   %li.separator |
+      -#   %li Medium
+      -#   %li.separator |
+      -#   %li Facebook
+      -#   %li.separator |
+      -#   %li Custom
 
     .examples
 
@@ -150,22 +150,22 @@
             %input{type:"text", name:"$search-border-radius", value:"25px"}
           %p
             %label border-color
-            %input{type:"text", name:"$search-input-border-color", value:"#ccc"}
+            %input.jscolor{type:"text", name:"$search-input-border-color", value:"#ccc"}
           %p
             %label background-color
-            %input{type:"text", name:"$search-input-background", value:"white"}
+            %input.jscolor{type:"text", name:"$search-input-background", value:"white"}
           %p
             %label placeholder-color
-            %input{type:"text", name:"$search-placeholder-color", value:"#aaa"}
+            %input.jscolor{type:"text", name:"$search-placeholder-color", value:"#aaa"}
 
 
           %h2 Focus
           %p
             %label focus-border-color
-            %input{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
+            %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
           %p
             %label focus-background-color
-            %input{type:"text", name:"$search-input-focus-background", value:"white"}
+            %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
         .col-6
           %h2 Search icon
           %p
@@ -179,10 +179,10 @@
             %input{type:"text", name:"$search-icon-position", value:"right"}
           %p
             %label icon-color
-            %input{type:"text", name:"$search-icon-color", value:"#E5186F"}
+            %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
           %p
             %label icon-background-color
-            %input{type:"text", name:"$search-icon-background", value:"transparent"}
+            %input.jscolor{type:"text", name:"$search-icon-background", value:"transparent"}
 
           %h2 clear
           %p
@@ -262,6 +262,14 @@
         %h2 Snippet HTML
         %pre.snippet
           %code.language-markup
+      .col-6
+        %h2 Snippet Scss
+        %pre.snippet
+          %code.language-scss
+      .col-6
+        %h2 Snippet Javascript
+        %pre.snippet
+          %code.language-js
 
     %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->
@@ -269,6 +277,7 @@
     %script{src:"js/jquery-2.2.0.min.js"}
     %script{src:"js/prism.js",data-manual}
     %script{src:"js/sass.js"}
+    %script{src:"js/jscolor.min.js"}
     :javascript
       var scss = "";
     %script{src:"js/app.js"}
