@@ -21,23 +21,6 @@
 <body class="demos">
   <div class="demo-header"><a href="https://github.com/Shipow/searchbox" class="github-source">Source on Github</a>
     <h1><svg class="icon"><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
-    <ul class="list-inline">
-      <li>Google</li>
-      <li class="separator">|</li>
-      <li>Twitter</li>
-      <li class="separator">|</li>
-      <li>Amazon</li>
-      <li class="separator">|</li>
-      <li>Spotify</li>
-      <li class="separator">|</li>
-      <li>Meetup</li>
-      <li class="separator">|</li>
-      <li>Medium</li>
-      <li class="separator">|</li>
-      <li>Facebook</li>
-      <li class="separator">|</li>
-      <li>Custom</li>
-    </ul>
   </div>
   <div class="examples">
     <h2>Google (default)</h2>
@@ -196,24 +179,24 @@
         </p>
         <p>
           <label>border-color</label>
-          <input type="text" name="$search-input-border-color" value="#ccc" />
+          <input type="text" name="$search-input-border-color" value="#ccc" class="jscolor" />
         </p>
         <p>
           <label>background-color</label>
-          <input type="text" name="$search-input-background" value="white" />
+          <input type="text" name="$search-input-background" value="white" class="jscolor" />
         </p>
         <p>
           <label>placeholder-color</label>
-          <input type="text" name="$search-placeholder-color" value="#aaa" />
+          <input type="text" name="$search-placeholder-color" value="#aaa" class="jscolor" />
         </p>
         <h2>Focus</h2>
         <p>
           <label>focus-border-color</label>
-          <input type="text" name="$search-input-focus-border-color" value="#E5186F" />
+          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
         </p>
         <p>
           <label>focus-background-color</label>
-          <input type="text" name="$search-input-focus-background" value="white" />
+          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
         </p>
       </div>
       <div class="col-6">
@@ -232,11 +215,11 @@
         </p>
         <p>
           <label>icon-color</label>
-          <input type="text" name="$search-icon-color" value="#E5186F" />
+          <input type="text" name="$search-icon-color" value="#E5186F" class="jscolor" />
         </p>
         <p>
           <label>icon-background-color</label>
-          <input type="text" name="$search-icon-background" value="transparent" />
+          <input type="text" name="$search-icon-background" value="transparent" class="jscolor" />
         </p>
         <h2>clear</h2>
         <p>
@@ -346,6 +329,12 @@
     </div>
     <div class="col-6">
       <h2>Snippet HTML</h2><pre class="snippet"><code class="language-markup"></code></pre>
+    </div>
+    <div class="col-6">
+      <h2>Snippet Scss</h2><pre class="snippet"><code class="language-scss"></code></pre>
+    </div>
+    <div class="col-6">
+      <h2>Snippet Javascript</h2><pre class="snippet"><code class="language-js"></code></pre>
     </div>
   </div>
   <div style="height: 0; width: 0; position: absolute; visibility: hidden"></div>
@@ -486,6 +475,7 @@
   <script src="js/jquery-2.2.0.min.js"></script>
   <script src="js/prism.js"></script>
   <script src="js/sass.js"></script>
+  <script src="js/jscolor.min.js"></script>
   <script type="text/javascript">
     //<![CDATA[
     var scss = "";

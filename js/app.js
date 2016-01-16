@@ -39,3 +39,5 @@ function updateSnippet(){
   });
 };
 $('.btn-update').on('click',updateSnippet);
+
+$('.jscolor').addClass('{hash:true}')
