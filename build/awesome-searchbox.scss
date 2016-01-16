@@ -1,21 +1,28 @@
 //settings
 $google-blue: #3E82F7 !default;
-$config-name: 'awesome-searchbox' !default; 
+$config-name: 'awesome-searchbox' !default;
+
 $search-input-height: 40px !default;
 $search-input-width: 500px !default;
-$search-clear-size: 12px !default;
+$search-input-border-color: #ccc !default;
+$search-input-background: white !default;
+
+$search-input-focus-background: white !default;
+$search-input-focus-border-color: $google-blue !default;
+
+$search-font-size: 14px !default;
+$search-placeholder-color: #aaa !default;
+
 $search-border-width: 1px !default;
 $search-border-radius: 3px !default;
-$search-icon-color: white !default;
-$search-input-border-color: #ccc !default;
-$search-input-focus-border-color: $google-blue !default;
-$search-icon-background: $google-blue !default;
-$search-font-size: 14px !default;
-$search-icon-size: $search-input-height - ($search-input-height / 2) !default;
-$search-input-background: white !default;
-$search-input-focus-background: white !default;
+
 $search-icon-position: right !default;
-$search-placeholder-color: #aaa !default;
+$search-icon-size: $search-input-height - ($search-input-height / 2) !default;
+$search-icon-color: white !default;
+$search-icon-background: $google-blue !default;
+$search-icon-background-opacity: 1 !default;
+
+$search-clear-size: 12px !default;
 
 //reset
 @mixin reset {
@@ -85,14 +92,14 @@ $search-placeholder-color: #aaa !default;
     }
     .ui-icon-submit {
       position: absolute;
-      #{$search-icon-position}: 0;
       top: 0;
       height: 100%;
       width: $search-input-height;
       vertical-align: middle;
       border-radius: if($search-icon-position == "right", 0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius);
       text-align: center;
-      background-color: $search-icon-background;
+      background-color: rgba($search-icon-background,$search-icon-background-opacity);
+      #{$search-icon-position}: 0;
       // Helper for vertical alignement of the icon
       &:before {
         content: "";

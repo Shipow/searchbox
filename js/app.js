@@ -25,8 +25,6 @@ function updateSnippet(){
         }
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';');
-    console.log(config);
-
 
     Sass.writeFile('settings.scss', config + ';');
 
@@ -38,8 +36,12 @@ function updateSnippet(){
       Prism.highlightAll(false);
     });
   });
+  var searchIcon = $('select[name="$search-icon"]').val();
+  $('.awesome-searchbox_custom .ui-icon-submit use').attr('xlink:href','#' + searchIcon);
+  var clearIcon = $('select[name="$clear-icon"]').val();
+  $('.awesome-searchbox_custom .ui-icon-clear use').attr('xlink:href','#' + clearIcon);
 };
-$('.btn-update').on('click',updateSnippet);
+$('.btn-update').on('click', updateSnippet);
 
 $('.jscolor').addClass('{hash:true}')
 

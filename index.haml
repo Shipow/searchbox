@@ -20,23 +20,6 @@
           %use{xlink:href:"#search-icon-17"}
         SearchBox
 
-      -# %ul.list-inline
-      -#   %li Google
-      -#   %li.separator |
-      -#   %li Twitter
-      -#   %li.separator |
-      -#   %li Amazon
-      -#   %li.separator |
-      -#   %li Spotify
-      -#   %li.separator |
-      -#   %li Meetup
-      -#   %li.separator |
-      -#   %li Medium
-      -#   %li.separator |
-      -#   %li Facebook
-      -#   %li.separator |
-      -#   %li Custom
-
     .examples
 
       %h2 Google (default)
@@ -118,7 +101,7 @@
 
       %h2 Custom - Build your own
       .demo.demo-custom
-        .awesome-searchbox_custom
+        .awesome-searchbox.awesome-searchbox_custom
           %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
           .ui-icon-submit
             %svg
@@ -204,12 +187,15 @@
             %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
           %p
             %label icon-bg-color
-            %input.jscolor{type:"text", name:"$search-icon-background", value:"transparent"}
+            %input.jscolor{type:"text", name:"$search-icon-background", value:"#FFFFFF"}
+          %p
+            %label icon-bg-opacity
+            %input{type:"text", name:"$search-icon-background-opacity", value:"0"}
 
           %h2 clear
           %p
             %label icon-clear-img
-            %select.jselectric{name:"$icon-clear"}
+            %select.jselectric{name:"$clear-icon"}
               %option{value:"clear-icon-1"} 1
               %option{value:"clear-icon-2"} 2
               %option{value:"clear-icon-3"} 3
@@ -220,66 +206,6 @@
 
           %p
             %button.btn-update{type:"button"} Update
-
-    -# .row
-    -#   %h2 Search icons
-    -#   s
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-1"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-2"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-3"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-4"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-5"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-6"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-7"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-8"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-9"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-10"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-11"}
-    -#     %br
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-12"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-13"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-14"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-15"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-16"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-17"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-18"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-19"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-20"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-21"}
-    -#     %svg
-    -#       %use{xlink:href:"#search-icon-22"}
-    -#   %h2 Clear icons
-    -#   s
-    -#     %svg
-    -#       %use{xlink:href:"#clear-icon-1"}
-    -#     %svg
-    -#       %use{xlink:href:"#clear-icon-2"}
-    -#     %svg
-    -#       %use{xlink:href:"#clear-icon-3"}
-    -#     %svg
-    -#       %use{xlink:href:"#clear-icon-4"}
-
 
     .row
       .col-6
@@ -298,6 +224,66 @@
         %h2 Snippet Javascript
         %pre.snippet
           %code.language-js
+
+    .row
+      %h2 Search icons
+      .icons
+        %svg
+          %use{xlink:href:"#search-icon-1"}
+        %svg
+          %use{xlink:href:"#search-icon-2"}
+        %svg
+          %use{xlink:href:"#search-icon-3"}
+        %svg
+          %use{xlink:href:"#search-icon-4"}
+        %svg
+          %use{xlink:href:"#search-icon-5"}
+        %svg
+          %use{xlink:href:"#search-icon-6"}
+        %svg
+          %use{xlink:href:"#search-icon-7"}
+        %svg
+          %use{xlink:href:"#search-icon-8"}
+        %svg
+          %use{xlink:href:"#search-icon-9"}
+        %svg
+          %use{xlink:href:"#search-icon-10"}
+        %svg
+          %use{xlink:href:"#search-icon-11"}
+        %br
+        %svg
+          %use{xlink:href:"#search-icon-12"}
+        %svg
+          %use{xlink:href:"#search-icon-13"}
+        %svg
+          %use{xlink:href:"#search-icon-14"}
+        %svg
+          %use{xlink:href:"#search-icon-15"}
+        %svg
+          %use{xlink:href:"#search-icon-16"}
+        %svg
+          %use{xlink:href:"#search-icon-17"}
+        %svg
+          %use{xlink:href:"#search-icon-18"}
+        %svg
+          %use{xlink:href:"#search-icon-19"}
+        %svg
+          %use{xlink:href:"#search-icon-20"}
+        %svg
+          %use{xlink:href:"#search-icon-21"}
+        %svg
+          %use{xlink:href:"#search-icon-22"}
+      %h2 Clear icons
+      .icons
+        %svg
+          %use{xlink:href:"#clear-icon-1"}
+        %svg
+          %use{xlink:href:"#clear-icon-2"}
+        %svg
+          %use{xlink:href:"#clear-icon-3"}
+        %svg
+          %use{xlink:href:"#clear-icon-4"}
+
 
     %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->
