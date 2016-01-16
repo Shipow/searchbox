@@ -24,8 +24,9 @@ function updateSnippet(){
             config[item.name] = item.value;
         }
     });
-
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';');
+    console.log(config);
+
 
     Sass.writeFile('settings.scss', config + ';');
 

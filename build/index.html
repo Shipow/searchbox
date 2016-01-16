@@ -23,75 +23,90 @@
     <h1><svg class="icon"><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
   </div>
   <div class="settings">
-    <h2>Settings</h2>
     <form id="settings">
-      <p>
-        <label>config-name</label>
-        <input type="text" name="$config-name" value="awesome-searchbox_custom" />
-      </p>
-      <p>
-        <label>input-width</label>
-        <input type="text" name="$search-input-width" value="250px" />
-      </p>
-      <p>
-        <label>input-height</label>
-        <input type="text" name="$search-input-height" value="50px" />
-      </p>
-      <p>
-        <label>clear-size</label>
-        <input type="text" name="$search-clear-size" value="12px" />
-      </p>
-      <p>
-        <label>border-width</label>
-        <input type="text" name="$search-border-width" value="2px" />
-      </p>
-      <p>
-        <label>border-radius</label>
-        <input type="text" name="$search-border-radius" value="25px" />
-      </p>
-      <p>
-        <label>icon-color</label>
-        <input type="text" name="$search-icon-color" value="#E5186F" />
-      </p>
-      <p>
-        <label>border-color</label>
-        <input type="text" name="$search-input-border-color" value="#ccc" />
-      </p>
-      <p>
-        <label>focus-border-color</label>
-        <input type="text" name="$search-input-focus-border-color" value="#E5186F" />
-      </p>
-      <p>
-        <label>icon-background-color</label>
-        <input type="text" name="$search-icon-background" value="transparent" />
-      </p>
-      <p>
-        <label>font-size</label>
-        <input type="text" name="$search-font-size" value="14px" />
-      </p>
-      <p>
-        <label>icon-size</label>
-        <input type="text" name="$search-icon-size" value="26px" />
-      </p>
-      <p>
-        <label>background-color</label>
-        <input type="text" name="$search-input-background" value="white" />
-      </p>
-      <p>
-        <label>focus-background-color</label>
-        <input type="text" name="$search-input-focus-background" value="white" />
-      </p>
-      <p>
-        <label>icon-position</label>
-        <input type="text" name="$search-icon-position" value="right" />
-      </p>
-      <p>
-        <label>placeholder-color</label>
-        <input type="text" name="$search-placeholder-color" value="#aaa" />
-      </p>
-      <p>
-        <button type="button" class="btn-update">Update</button>
-      </p>
+      <div class="col-6">
+        <h2>Apparence</h2>
+        <p>
+          <label>namespace</label>
+          <input type="text" name="$config-name" value="awesome-searchbox_custom" />
+        </p>
+        <p>
+          <label>width</label>
+          <input type="text" name="$search-input-width" value="250px" />
+        </p>
+        <p>
+          <label>height</label>
+          <input type="text" name="$search-input-height" value="50px" />
+        </p>
+        <p>
+          <label>font-size</label>
+          <input type="text" name="$search-font-size" value="14px" />
+        </p>
+        <p>
+          <label>border-width</label>
+          <input type="text" name="$search-border-width" value="2px" />
+        </p>
+        <p>
+          <label>border-radius</label>
+          <input type="text" name="$search-border-radius" value="25px" />
+        </p>
+        <p>
+          <label>border-color</label>
+          <input type="text" name="$search-input-border-color" value="#ccc" />
+        </p>
+        <p>
+          <label>background-color</label>
+          <input type="text" name="$search-input-background" value="white" />
+        </p>
+        <p>
+          <label>placeholder-color</label>
+          <input type="text" name="$search-placeholder-color" value="#aaa" />
+        </p>
+        <h2>Focus</h2>
+        <p>
+          <label>focus-border-color</label>
+          <input type="text" name="$search-input-focus-border-color" value="#E5186F" />
+        </p>
+        <p>
+          <label>focus-background-color</label>
+          <input type="text" name="$search-input-focus-background" value="white" />
+        </p>
+      </div>
+      <div class="col-6">
+        <h2>Search icon</h2>
+        <p>
+          <label>icon-img</label>
+          <input type="text" name="$search-icon" value="12" />
+        </p>
+        <p>
+          <label>icon-size</label>
+          <input type="text" name="$search-icon-size" value="26px" />
+        </p>
+        <p>
+          <label>icon-position</label>
+          <input type="text" name="$search-icon-position" value="right" />
+        </p>
+        <p>
+          <label>icon-color</label>
+          <input type="text" name="$search-icon-color" value="#E5186F" />
+        </p>
+        <p>
+          <label>icon-background-color</label>
+          <input type="text" name="$search-icon-background" value="transparent" />
+        </p>
+        <h2>clear</h2>
+        <p>
+          <label>icon-clear-img</label>
+          <input type="text" name="$icon-clear" value="1" />
+        </p>
+        <p>
+          <label>icon-clear-size</label>
+          <input type="text" name="$search-clear-size" value="12px" />
+        </p>
+        <p>
+          <button type="button" class="btn-update">Update</button>
+        </p>
+      </div>
     </form>
   </div>
   <div class="row">
@@ -165,9 +180,15 @@
         <use xlink:href="#search-icon-22"></use>
       </svg>
     </div>
+    <h2>Clear icons</h2>
+    <div class="icons">
+      <svg class="icon">
+        <use xlink:href="#clear-icon"></use>
+      </svg>
+    </div>
   </div>
   <div class="examples">
-    <h2>Create yours</h2>
+    <h2>Custom</h2>
     <div class="demo demo-custom">
       <div class="awesome-searchbox awesome-searchbox_custom">
         <input type="search" placeholder="Search your website" autocomplete="off" class="q" />

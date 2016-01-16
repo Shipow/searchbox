@@ -21,58 +21,72 @@
         SearchBox
 
     .settings
-      %h2 Settings
       %form#settings
-        %p
-          %label config-name
-          %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
-        %p
-          %label input-width
-          %input{type:"text", name:"$search-input-width", value:"250px"}
-        %p
-          %label input-height
-          %input{type:"text", name:"$search-input-height", value:"50px"}
-        %p
-          %label clear-size
-          %input{type:"text", name:"$search-clear-size", value:"12px"}
-        %p
-          %label border-width
-          %input{type:"text", name:"$search-border-width", value:"2px"}
-        %p
-          %label border-radius
-          %input{type:"text", name:"$search-border-radius", value:"25px"}
-        %p
-          %label icon-color
-          %input{type:"text", name:"$search-icon-color", value:"#E5186F"}
-        %p
-          %label border-color
-          %input{type:"text", name:"$search-input-border-color", value:"#ccc"}
-        %p
-          %label focus-border-color
-          %input{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
-        %p
-          %label icon-background-color
-          %input{type:"text", name:"$search-icon-background", value:"transparent"}
-        %p
-          %label font-size
-          %input{type:"text", name:"$search-font-size", value:"14px"}
-        %p
-          %label icon-size
-          %input{type:"text", name:"$search-icon-size", value:"26px"}
-        %p
-          %label background-color
-          %input{type:"text", name:"$search-input-background", value:"white"}
-        %p
-          %label focus-background-color
-          %input{type:"text", name:"$search-input-focus-background", value:"white"}
-        %p
-          %label icon-position
-          %input{type:"text", name:"$search-icon-position", value:"right"}
-        %p
-          %label placeholder-color
-          %input{type:"text", name:"$search-placeholder-color", value:"#aaa"}
-        %p
-          %button.btn-update{type:"button"} Update
+        .col-6
+          %h2 Apparence
+          %p
+            %label namespace
+            %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
+          %p
+            %label width
+            %input{type:"text", name:"$search-input-width", value:"250px"}
+          %p
+            %label height
+            %input{type:"text", name:"$search-input-height", value:"50px"}
+          %p
+            %label font-size
+            %input{type:"text", name:"$search-font-size", value:"14px"}
+          %p
+            %label border-width
+            %input{type:"text", name:"$search-border-width", value:"2px"}
+          %p
+            %label border-radius
+            %input{type:"text", name:"$search-border-radius", value:"25px"}
+          %p
+            %label border-color
+            %input{type:"text", name:"$search-input-border-color", value:"#ccc"}
+          %p
+            %label background-color
+            %input{type:"text", name:"$search-input-background", value:"white"}
+          %p
+            %label placeholder-color
+            %input{type:"text", name:"$search-placeholder-color", value:"#aaa"}
+
+
+          %h2 Focus
+          %p
+            %label focus-border-color
+            %input{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
+          %p
+            %label focus-background-color
+            %input{type:"text", name:"$search-input-focus-background", value:"white"}
+        .col-6
+          %h2 Search icon
+          %p
+            %label icon-img
+            %input{type:"text", name:"$search-icon", value:"12"}
+          %p
+            %label icon-size
+            %input{type:"text", name:"$search-icon-size", value:"26px"}
+          %p
+            %label icon-position
+            %input{type:"text", name:"$search-icon-position", value:"right"}
+          %p
+            %label icon-color
+            %input{type:"text", name:"$search-icon-color", value:"#E5186F"}
+          %p
+            %label icon-background-color
+            %input{type:"text", name:"$search-icon-background", value:"transparent"}
+
+          %h2 clear
+          %p
+            %label icon-clear-img
+            %input{type:"text", name:"$icon-clear", value:"1"}
+          %p
+            %label icon-clear-size
+            %input{type:"text", name:"$search-clear-size", value:"12px"}
+          %p
+            %button.btn-update{type:"button"} Update
 
     .row
       %h2 Search icons
@@ -122,9 +136,13 @@
           %use{xlink:href:"#search-icon-21"}
         %svg.icon
           %use{xlink:href:"#search-icon-22"}
+      %h2 Clear icons
+      .icons
+        %svg.icon
+          %use{xlink:href:"#clear-icon"}
 
     .examples
-      %h2 Create yours
+      %h2 Custom
       .demo.demo-custom
         .awesome-searchbox.awesome-searchbox_custom
           %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>

@@ -1,16 +1,20 @@
 @charset 'utf-8'
 
+$primary-color: #2FC9E8
+
 @import "prism"
 
 .demos
   margin: 0
+  min-width: 640px
   .row
+    width: 100%
     clear: both
   .col-6
     width: 50%
     float: left
   .demo-header
-    background-color: #2FC9E8
+    background-color: $primary-color
     border-bottom: solid 2px #444
     height: 200px
     padding: 20px
@@ -50,12 +54,16 @@
       use
         fill: #444
   .settings
+    form
+      width: 100%
+      display: inline-block
+      margin-bottom: 0
     p
       margin: 0 0 4px
       padding: 0
     label
       display: inline-block
-      width: 300px
+      width: 250px
       padding-right: 4px
       text-align: right
       font-family: "fatfrank"
@@ -66,42 +74,50 @@
       border-radius: 3px
       border: solid 1px #ccc
       padding: 4px 8px
+      &:focus
+        border-color: $primary-color
+        outline: 0
     .btn-update
-      margin-left: 308px
+      margin: 40px 0 0 258px
       width: 142px
-      padding: 20px
+      padding: 10px
       background: white
       border: solid 1px #ccc
       border-radius: 3px
       cursor: pointer
+      text-transform: uppercase
+      font-family: "fatfrank"
+      font-size: 1em
+      &:focus
+        outline: 0
       &:hover
-        background-color: #ddd
+        border-color: darken($primary-color,10%)
+        background-color: $primary-color
   .snippet
     width: 92%
     height: 300px
   .awesome-searchbox_custom *
     transition: all 0.5s ease
-  .examples
-    .demo
-      padding: 14px
-      > div
-        margin: 0 auto
-    .demo-default
-      background-color: #F1F1F1
-    .demo-twitter
-      border-top: solid 1px #D6DEE3
-      background-color: white
-    .demo-amazon
-      background-color: #202F40
-    .demo-spotify
-      background-color: #272727
-    .demo-meetup
-      background-color: #505050
-    .demo-medium
-      border-top: solid 1px #D9D9D9
-      background-color: white
-    .demo-facebook
-      background-color: #3E5DA0
+  .demo
+    padding: 14px
+    > div
+      margin: 0 auto
+  .demo-default
+    background-color: #F1F1F1
+  .demo-twitter
+    border-top: solid 1px #D6DEE3
+    background-color: white
+  .demo-amazon
+    background-color: #202F40
+  .demo-spotify
+    background-color: #272727
+  .demo-meetup
+    background-color: #505050
+  .demo-medium
+    border-top: solid 1px #D9D9D9
+    background-color: white
+  .demo-facebook
+    background-color: #3E5DA0
 
 @import "awesome-searchbox"
 

@@ -103,8 +103,10 @@ pre[class*="language-"] {
   cursor: help; }
 
 .demos {
-  margin: 0; }
+  margin: 0;
+  min-width: 640px; }
   .demos .row {
+    width: 100%;
     clear: both; }
   .demos .col-6 {
     width: 50%;
@@ -149,12 +151,16 @@ pre[class*="language-"] {
       margin: 0 10px  10px 0; }
       .demos .icons svg use {
         fill: #444; }
+  .demos .settings form {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0; }
   .demos .settings p {
     margin: 0 0 4px;
     padding: 0; }
   .demos .settings label {
     display: inline-block;
-    width: 300px;
+    width: 250px;
     padding-right: 4px;
     text-align: right;
     font-family: "fatfrank";
@@ -165,40 +171,49 @@ pre[class*="language-"] {
     border-radius: 3px;
     border: solid 1px #ccc;
     padding: 4px 8px; }
+    .demos .settings input:focus {
+      border-color: #2FC9E8;
+      outline: 0; }
   .demos .settings .btn-update {
-    margin-left: 308px;
+    margin: 40px 0 0 258px;
     width: 142px;
-    padding: 20px;
+    padding: 10px;
     background: white;
     border: solid 1px #ccc;
     border-radius: 3px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "fatfrank";
+    font-size: 1em; }
+    .demos .settings .btn-update:focus {
+      outline: 0; }
     .demos .settings .btn-update:hover {
-      background-color: #ddd; }
+      border-color: #17afcd;
+      background-color: #2FC9E8; }
   .demos .snippet {
     width: 92%;
     height: 300px; }
   .demos .awesome-searchbox_custom * {
     transition: all 0.5s ease; }
-  .demos .examples .demo {
+  .demos .demo {
     padding: 14px; }
-    .demos .examples .demo > div {
+    .demos .demo > div {
       margin: 0 auto; }
-  .demos .examples .demo-default {
+  .demos .demo-default {
     background-color: #F1F1F1; }
-  .demos .examples .demo-twitter {
+  .demos .demo-twitter {
     border-top: solid 1px #D6DEE3;
     background-color: white; }
-  .demos .examples .demo-amazon {
+  .demos .demo-amazon {
     background-color: #202F40; }
-  .demos .examples .demo-spotify {
+  .demos .demo-spotify {
     background-color: #272727; }
-  .demos .examples .demo-meetup {
+  .demos .demo-meetup {
     background-color: #505050; }
-  .demos .examples .demo-medium {
+  .demos .demo-medium {
     border-top: solid 1px #D9D9D9;
     background-color: white; }
-  .demos .examples .demo-facebook {
+  .demos .demo-facebook {
     background-color: #3E5DA0; }
 
 .awesome-searchbox {
