@@ -11,7 +11,7 @@ var Sass = new Sass();
 $('.snippet code.language-markup').text($('.awesome-searchbox').parent().html());
 
 function updateSnippet(){
-  $.get('_awesome-searchbox.scss', function(data){
+  $.get('awesome-searchbox.scss', function(data){
 
     var config = {};
     $('form#settings').serializeArray().map(function(item) {

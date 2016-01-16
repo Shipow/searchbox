@@ -111,6 +111,12 @@ pre[class*="language-"] {
     color: #444;
     clear: both;
     text-transform: uppercase; }
+    .demos h1 svg {
+      height: 60px;
+      width: 60px;
+      margin-right: 8px; }
+      .demos h1 svg use {
+        fill: #444; }
   .demos h2 {
     margin: 40px 0 8px 0;
     font-size: 14px;

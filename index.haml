@@ -14,7 +14,10 @@
 
   %body.demos
     %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
-    %h1 SearchBox
+    %h1
+      %svg.icon
+        %use{xlink:href:"#search-icon-17"}
+      SearchBox
 
     .settings
       %h2 Settings
@@ -23,49 +26,49 @@
           %label config-name
           %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
         %p
-          %label search-input-width
+          %label input-width
           %input{type:"text", name:"$search-input-width", value:"500px"}
         %p
-          %label search-input-height
+          %label input-height
           %input{type:"text", name:"$search-input-height", value:"50px"}
         %p
-          %label search-clear-size
+          %label clear-button-size
           %input{type:"text", name:"$search-clear-size", value:"12px"}
         %p
-          %label search-border-width
+          %label border-width
           %input{type:"text", name:"$search-border-width", value:"2px"}
         %p
-          %label search-border-radius
+          %label border-radius
           %input{type:"text", name:"$search-border-radius", value:"25px"}
         %p
-          %label search-icon-color
+          %label icon-color
           %input{type:"text", name:"$search-icon-color", value:"#E5186F"}
         %p
-          %label search-input-border-color
+          %label border-color
           %input{type:"text", name:"$search-input-border-color", value:"#ccc"}
         %p
-          %label search-input-focus-border-color
+          %label focus-border-color
           %input{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
         %p
-          %label search-icon-background
+          %label icon-background-color
           %input{type:"text", name:"$search-icon-background", value:"transparent"}
         %p
-          %label search-font-size
+          %label font-size
           %input{type:"text", name:"$search-font-size", value:"14px"}
         %p
-          %label search-icon-size
+          %label icon-size
           %input{type:"text", name:"$search-icon-size", value:"26px"}
         %p
-          %label search-input-background
+          %label input-background-color
           %input{type:"text", name:"$search-input-background", value:"white"}
         %p
-          %label search-input-focus-background
+          %label focus-background-color
           %input{type:"text", name:"$search-input-focus-background", value:"white"}
         %p
-          %label search-icon-position
+          %label icon-position
           %input{type:"text", name:"$search-icon-position", value:"right"}
         %p
-          %label search-placeholder-color
+          %label placeholder-color
           %input{type:"text", name:"$search-placeholder-color", value:"#aaa"}
         %p
           %button.btn-update{type:"button"} Update

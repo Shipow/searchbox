@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var del = require('del');
+var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
 var webserver = require('gulp-webserver');
 var livereload = require('gulp-livereload');
@@ -88,6 +89,7 @@ gulp.task('js', function () {
 
 gulp.task('awesome-searchbox', function () {
   gulp.src('scss/_awesome-searchbox.scss')
+  .pipe(rename("awesome-searchbox.scss"))
   .pipe(gulp.dest('build'))
 });
 
