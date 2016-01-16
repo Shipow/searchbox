@@ -13,11 +13,12 @@
       // tets
 
   %body.demos
-    %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
-    %h1
-      %svg.icon
-        %use{xlink:href:"#search-icon-17"}
-      SearchBox
+    .demo-header
+      %a.github-source{href:"https://github.com/Shipow/searchbox"} Source on Github
+      %h1
+        %svg.icon
+          %use{xlink:href:"#search-icon-17"}
+        SearchBox
 
     .settings
       %h2 Settings
@@ -27,12 +28,12 @@
           %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
         %p
           %label input-width
-          %input{type:"text", name:"$search-input-width", value:"500px"}
+          %input{type:"text", name:"$search-input-width", value:"250px"}
         %p
           %label input-height
           %input{type:"text", name:"$search-input-height", value:"50px"}
         %p
-          %label clear-button-size
+          %label clear-size
           %input{type:"text", name:"$search-clear-size", value:"12px"}
         %p
           %label border-width
@@ -59,7 +60,7 @@
           %label icon-size
           %input{type:"text", name:"$search-icon-size", value:"26px"}
         %p
-          %label input-background-color
+          %label background-color
           %input{type:"text", name:"$search-input-background", value:"white"}
         %p
           %label focus-background-color
@@ -126,7 +127,7 @@
       %h2 Create yours
       .demo.demo-custom
         .awesome-searchbox.awesome-searchbox_custom
-          %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+          %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
               %use{xlink:href:"#search-icon-10"}
@@ -212,13 +213,14 @@
 
 
     .row
-      %h2 Snippet Css
-    %pre.snippet
-      %code.language-css
-    .row
-      %h2 Snippet HTML
-    %pre.snippet
-      %code.language-markup
+      .col-6
+        %h2 Snippet Css
+        %pre.snippet
+          %code.language-css
+      .col-6
+        %h2 Snippet HTML
+        %pre.snippet
+          %code.language-markup
 
     %div{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->

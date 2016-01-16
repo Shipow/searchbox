@@ -3,14 +3,28 @@
 @import "prism"
 
 .demos
-  margin: 20px 40px
+  margin: 0
+  .row
+    clear: both
+  .col-6
+    width: 50%
+    float: left
+  .demo-header
+    background-color: #2FC9E8
+    border-bottom: solid 2px #444
+    height: 200px
+    padding: 20px
   h1
     text-align: center
     font-size: 80px
     font-family: "fatfrank"
     color: #444
-    clear: both
     text-transform: uppercase
+    width: 580px
+    background-color: rgba(white,.3)
+    margin: 60px auto 0
+    border-radius: 90px
+    border: solid 2px #444
     svg
       height: 60px
       width: 60px
@@ -18,7 +32,7 @@
       use
         fill: #444
   h2
-    margin: 40px 0 8px 0
+    margin: 40px 40px 8px
     font-size: 14px
     font-family: "fatfrank"
     color: #888
@@ -59,8 +73,11 @@
       background: white
       border: solid 1px #ccc
       border-radius: 3px
+      cursor: pointer
+      &:hover
+        background-color: #ddd
   .snippet
-    width: 50%
+    width: 92%
     height: 300px
   .awesome-searchbox_custom *
     transition: all 0.5s ease

@@ -18,8 +18,10 @@
   </style>
 </head>
 
-<body class="demos"><a href="https://github.com/Shipow/searchbox" class="github-source">Source on Github</a>
-  <h1><svg class="icon"><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
+<body class="demos">
+  <div class="demo-header"><a href="https://github.com/Shipow/searchbox" class="github-source">Source on Github</a>
+    <h1><svg class="icon"><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
+  </div>
   <div class="settings">
     <h2>Settings</h2>
     <form id="settings">
@@ -29,14 +31,14 @@
       </p>
       <p>
         <label>input-width</label>
-        <input type="text" name="$search-input-width" value="500px" />
+        <input type="text" name="$search-input-width" value="250px" />
       </p>
       <p>
         <label>input-height</label>
         <input type="text" name="$search-input-height" value="50px" />
       </p>
       <p>
-        <label>clear-button-size</label>
+        <label>clear-size</label>
         <input type="text" name="$search-clear-size" value="12px" />
       </p>
       <p>
@@ -72,7 +74,7 @@
         <input type="text" name="$search-icon-size" value="26px" />
       </p>
       <p>
-        <label>input-background-color</label>
+        <label>background-color</label>
         <input type="text" name="$search-input-background" value="white" />
       </p>
       <p>
@@ -168,7 +170,7 @@
     <h2>Create yours</h2>
     <div class="demo demo-custom">
       <div class="awesome-searchbox awesome-searchbox_custom">
-        <input type="search" placeholder="Search for product, category, SKU, …" autocomplete="off" class="q" />
+        <input type="search" placeholder="Search your website" autocomplete="off" class="q" />
         <div class="ui-icon-input">
           <svg class="icon">
             <use xlink:href="#search-icon-10"></use>
@@ -295,11 +297,13 @@
     </div>
   </div>
   <div class="row">
-    <h2>Snippet Css</h2>
-  </div><pre class="snippet"><code class="language-css"></code></pre>
-  <div class="row">
-    <h2>Snippet HTML</h2>
-  </div><pre class="snippet"><code class="language-markup"></code></pre>
+    <div class="col-6">
+      <h2>Snippet Css</h2><pre class="snippet"><code class="language-css"></code></pre>
+    </div>
+    <div class="col-6">
+      <h2>Snippet HTML</h2><pre class="snippet"><code class="language-markup"></code></pre>
+    </div>
+  </div>
   <div style="height: 0; width: 0; position: absolute; visibility: hidden"></div>
   <!-- inject:svg -->
   <svg xmlns="http://www.w3.org/2000/svg">
