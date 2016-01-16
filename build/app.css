@@ -151,6 +151,15 @@ pre[class*="language-"] {
       margin: 0 10px  10px 0; }
       .demos .icons svg use {
         fill: #444; }
+  .demos .list-inline {
+    margin-top: 20px;
+    font-family: "fatfrank";
+    text-align: center; }
+    .demos .list-inline li {
+      padding: 4px;
+      display: inline-block; }
+      .demos .list-inline li.separator {
+        opacity: .3; }
   .demos .settings form {
     width: 100%;
     display: inline-block;
@@ -196,7 +205,8 @@ pre[class*="language-"] {
   .demos .awesome-searchbox_custom * {
     transition: all 0.5s ease; }
   .demos .demo {
-    padding: 14px; }
+    padding: 14px;
+    margin-bottom: 80px; }
     .demos .demo > div {
       margin: 0 auto; }
   .demos .demo-default {
