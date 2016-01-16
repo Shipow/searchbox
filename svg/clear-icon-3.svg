@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
     <title>clear-icon-3</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-103.000000, -1082.000000)" fill="#000000">
-            <path d="M138.096954,1123 L119.451523,1104.35457 L117,1101.90305 L121.903046,1097 L124.354569,1099.45152 L143,1118.09695 L161.645431,1099.45152 L164.096954,1097 L169,1101.90305 L166.548477,1104.35457 L147.903046,1123 L166.548477,1141.64543 L169,1144.09695 L164.096954,1149 L161.645431,1146.54848 L143,1127.90305 L124.354569,1146.54848 L121.903046,1149 L117,1144.09695 L119.451523,1141.64543 L138.096954,1123 Z M143.5,1163 C165.867532,1163 184,1144.86753 184,1122.5 C184,1100.13247 165.867532,1082 143.5,1082 C121.132468,1082 103,1100.13247 103,1122.5 C103,1144.86753 121.132468,1163 143.5,1163 Z" id="clear-icon-3" sketch:type="MSShapeGroup"></path>
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-51.000000, -960.000000)" fill="#000000">
+            <g id="sizing" sketch:type="MSLayerGroup" transform="translate(51.000000, 388.000000)">
+                <path d="M6.9804255,580.394639 L1.60241703,575.016631 L0.895310247,574.309524 L2.30952381,572.89531 L3.01663059,573.602417 L8.39463906,578.980425 L13.7726475,573.602417 L14.4797543,572.89531 L15.8939679,574.309524 L15.1868611,575.016631 L9.80885262,580.394639 L15.1868611,585.772648 L15.8939679,586.479754 L14.4797543,587.893968 L13.7726475,587.186861 L8.39463906,581.808853 L3.01663059,587.186861 L2.30952381,587.893968 L0.895310247,586.479754 L1.60241703,585.772648 L6.9804255,580.394639 Z" id="clear-icon-3" sketch:type="MSShapeGroup"></path>
+            </g>
         </g>
     </g>
 </svg>

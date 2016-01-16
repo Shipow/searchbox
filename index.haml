@@ -24,9 +24,9 @@
       %form#settings
         .col-6
           %h2 Apparence
-          %p
-            %label namespace
-            %input{type:"text", name:"$config-name", value:"awesome-searchbox_custom"}
+          -# %p
+          -#   %label namespace
+          %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
           %p
             %label width
             %input{type:"text", name:"$search-input-width", value:"250px"}
@@ -139,11 +139,13 @@
       %h2 Clear icons
       .icons
         %svg.icon
-          %use{xlink:href:"#clear-icon"}
+          %use{xlink:href:"#clear-icon-1"}
         %svg.icon
           %use{xlink:href:"#clear-icon-2"}
         %svg.icon
           %use{xlink:href:"#clear-icon-3"}
+        %svg.icon
+          %use{xlink:href:"#clear-icon-4"}
     .examples
       %h2 Custom
       .demo.demo-custom
@@ -154,7 +156,7 @@
               %use{xlink:href:"#search-icon-10"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-3"}
       %h2 Google (default)
       .demo.demo-default
         .awesome-searchbox
@@ -164,73 +166,73 @@
               %use{xlink:href:"#search-icon-13"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-3"}
 
       %h2 Twitter
       .demo.demo-twitter
-        .awesome-searchbox_twitter
+        .awesome-searchbox.awesome-searchbox_twitter
           %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark"}
+              %use{xlink:href:"#search-icon-8"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-3"}
 
       %h2 Amazon
       .demo.demo-amazon
-        .awesome-searchbox_amazon
+        .awesome-searchbox.awesome-searchbox_amazon
           %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark"}
+              %use{xlink:href:"#search-icon-11"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-2"}
 
       %h2 Spotify
       .demo.demo-spotify
-        .awesome-searchbox_spotify
+        .awesome-searchbox.awesome-searchbox_spotify
           %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark"}
+              %use{xlink:href:"#search-icon-9"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-4"}
 
       %h2 Meetup
       .demo.demo-meetup
-        .awesome-searchbox_meetup
+        .awesome-searchbox.awesome-searchbox_meetup
           %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark"}
+              %use{xlink:href:"#search-icon-13"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-3"}
 
       %h2 Medium
       .demo.demo-medium
-        .awesome-searchbox_medium
+        .awesome-searchbox.awesome-searchbox_medium
           %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark-thin"}
+              %use{xlink:href:"#search-icon-11"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-1"}
 
       %h2 Facebook
       .demo.demo-facebook
-        .awesome-searchbox_facebook
+        .awesome-searchbox.awesome-searchbox_facebook
           %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
           .ui-icon-input
             %svg.icon
-              %use{xlink:href:"#search-icon-dark"}
+              %use{xlink:href:"#search-icon-8"}
           .clear-q.hide
             %svg.icon
-              %use{xlink:href:"#clear-icon"}
+              %use{xlink:href:"#clear-icon-4"}
 
 
     .row
