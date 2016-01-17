@@ -17,7 +17,12 @@
 </head>
 
 <body class="demos">
-  <div class="demo-header"><a href="https://github.com/Shipow/searchbox" class="github-source">Source on Github</a>
+  <div class="demo-header">
+    <a href="https://github.com/Shipow/searchbox" class="github-source">
+      <svg>
+        <use xlink:href="#github-banner"></use>
+      </svg>
+    </a>
     <h1><svg><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
   </div>
   <div class="examples">
@@ -133,7 +138,7 @@
         </div>
       </div>
     </div>
-    <h2>Custom - Build your own</h2>
+    <h2>Custom - Get your own</h2>
     <div class="demo demo-custom">
       <div class="awesome-searchbox awesome-searchbox_custom">
         <input type="search" placeholder="Search your website" autocomplete="off" class="q" />
@@ -152,8 +157,8 @@
   </div>
   <div class="settings">
     <form id="settings">
-      <div class="col-6">
-        <h2>Appearence</h2>
+      <div class="col-4">
+        <h3>Appearence</h3>
         <input type="hidden" name="$config-name" value="awesome-searchbox_custom" />
         <p>
           <label>width</label>
@@ -187,18 +192,9 @@
           <label>placeholder-color</label>
           <input type="text" name="$search-placeholder-color" value="#aaa" class="jscolor" />
         </p>
-        <h2>Focus</h2>
-        <p>
-          <label>focus-border-color</label>
-          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
-        </p>
-        <p>
-          <label>focus-bg-color</label>
-          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
-        </p>
       </div>
-      <div class="col-6">
-        <h2>Search icon</h2>
+      <div class="col-4">
+        <h3>Search icon</h3>
         <p>
           <label>icon-img</label>
           <select name="$search-icon" class="jselectric">
@@ -206,7 +202,7 @@
             <option value="search-icon-2">2</option>
             <option value="search-icon-3">3</option>
             <option value="search-icon-4">4</option>
-            <option value="search-icon-5">5</option>
+            <option value="search-icon-5" selected="undefined">5</option>
             <option value="search-icon-6">6</option>
             <option value="search-icon-7">7</option>
             <option value="search-icon-8">8</option>
@@ -246,7 +242,18 @@
           <label>icon-bg-opacity</label>
           <input type="text" name="$search-icon-background-opacity" value="0" />
         </p>
-        <h2>clear</h2>
+      </div>
+      <div class="col-4">
+        <h3>Focus</h3>
+        <p>
+          <label>focus-border-color</label>
+          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
+        </p>
+        <p>
+          <label>focus-bg-color</label>
+          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
+        </p>
+        <h3>Clear</h3>
         <p>
           <label>icon-clear-img</label>
           <select name="$clear-icon" class="jselectric">
@@ -259,9 +266,6 @@
         <p>
           <label>icon-clear-size</label>
           <input type="text" name="$search-clear-size" value="12px" />
-        </p>
-        <p>
-          <button type="button" class="btn-update">Update</button>
         </p>
       </div>
     </form>
@@ -388,6 +392,11 @@
     <symbol id="clear-icon-4" viewBox="0 0 81 81">
       <title>clear-icon-4</title>
       <path d="M47.903 40L68 60.097 61.097 67 41 46.903 20.903 67 14 60.097 34.097 40 14 19.903 20.903 13 41 33.097 61.097 13 68 19.903 47.903 40zM40.5 81C62.868 81 81 62.868 81 40.5S62.868 0 40.5 0 0 18.132 0 40.5 18.132 81 40.5 81z"
+      fill-rule="evenodd" />
+    </symbol>
+    <symbol id="github-banner" viewBox="0 0 71 72">
+      <title>github-banner</title>
+      <path d="M.006.97S30.56 31.55 31.24 32.206c.68.655 1.036.537 1.342.23.273-.272.988-1.006 1.943-1.973-3.9-2.508-2.336-5.424-2.336-5.424.806-1.856.405-2.965.405-2.965-.33-1.76.78-.62.78-.62 1.074 1.236.576 2.95.576 2.95-.73 2.788 1.446 3.948 2.397 4.31.85-.64 1.654-.85 2.27-.81-2.266-2.847-3.967-6.525.447-10.94 1.257-1.256 2.735-1.836 4.276-1.904.173-.41.95-1.976 3.162-2.934 0 0 1.276.657 1.986 4.348 1.175.663 2.288 1.52 3.272 2.496.974.983 1.83 2.096 2.495 3.27 3.69.71 4.345 1.985 4.345 1.985-.956 2.214-2.523 2.99-2.933 3.163-.066 1.543-.65 3.018-1.907 4.275-4.425 4.425-8.092 2.705-10.942.425.057.77-.277 1.84-1.35 2.914-1.54 1.54-2.798 2.768-3.176 3.146-.308.308.238 1.346.238 1.346l32.134 32.134-.2-70.14"
       fill-rule="evenodd" />
     </symbol>
     <symbol id="search-icon-1" viewBox="0 0 73 73">

@@ -114,7 +114,7 @@ pre[class*="language-"] {
   width: 100%; }
 
 .selectric {
-  border: 2px solid #aaa;
+  border: 1px solid #aaa;
   position: relative;
   width: 80px; }
 
@@ -127,7 +127,7 @@ pre[class*="language-"] {
   font-size: 12px;
   line-height: 48px;
   color: #444;
-  height: 30px; }
+  height: 36px; }
 
 .selectric .button {
   display: block;
@@ -286,7 +286,10 @@ pre[class*="language-"] {
 
 .demos {
   margin: 0;
-  min-width: 640px; }
+  min-width: 800px;
+  width: 100%;
+  position: relative;
+  font-family: "gibson"; }
 
 .row {
   width: 100%;
@@ -296,40 +299,53 @@ pre[class*="language-"] {
   width: 50%;
   float: left; }
 
+.col-4 {
+  width: 33%;
+  float: left; }
+
 .demo-header {
   background-color: #2FC9E8;
   border-bottom: solid 2px #444;
   height: 200px;
-  padding: 20px; }
+  padding: 20px 0; }
 
 h1 {
   text-align: center;
   font-size: 80px;
-  font-family: "fatfrank";
-  color: #444;
+  font-weight: 200;
+  color: white;
   text-transform: uppercase;
-  width: 580px;
-  background-color: rgba(255, 255, 255, 0.3);
+  width: 560px;
+  background-color: rgba(255, 255, 255, 0.2);
   margin: 60px auto 0;
   border-radius: 90px;
-  border: solid 2px #444; }
+  border: solid 2px white; }
   h1 svg {
     height: 60px;
     width: 60px;
     margin-right: 8px; }
     h1 svg use {
-      fill: #444; }
+      fill: white; }
 
 h2 {
-  margin: 40px 40px 8px;
-  font-size: 14px;
-  font-family: "fatfrank";
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 18px;
+  font-family: "gibson";
+  font-weight: 300;
   color: #888;
   text-transform: uppercase;
   letter-spacing: 1px; }
 
 .github-source {
-  float: right; }
+  position: absolute;
+  top: -5px;
+  right: -5px; }
+  .github-source svg {
+    height: 120px;
+    width: 120px; }
+    .github-source svg use {
+      fill: white; }
 
 .icons {
   text-align: center;
@@ -352,15 +368,27 @@ h2 {
       opacity: .3; }
 
 .settings form {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 0; }
+  display: block;
+  width: 90%;
+  margin: 0 auto; }
+  .settings form h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 20px 10px 10px;
+    text-align: left;
+    border-bottom: solid 1px #ccc;
+    color: #aaa;
+    letter-spacing: 1px; }
+  .settings form:after {
+    content: '';
+    clear: both;
+    display: block; }
 
 .settings .icon-select-option, .settings .icon-select-label {
   width: 20px;
   height: 20px;
-  display: inline-block;
-  margin-right: 8px; }
+  display: inline-block; }
 
 .settings p {
   margin: 0 0 4px;
@@ -368,38 +396,21 @@ h2 {
 
 .settings label {
   display: inline-block;
-  width: 250px;
+  width: 160px;
   padding-right: 4px;
   text-align: right;
-  font-family: "fatfrank";
   letter-spacing: 1px;
   font-size: 12px;
   text-transform: uppercase; }
 
 .settings input {
-  width: 80px;
-  border: solid 2px #aaa;
+  width: 56px;
+  border: solid 1px #aaa;
   padding: 8px 12px;
   box-shadow: inset 0 0 0 1px white; }
   .settings input:focus {
     border-color: #000;
     outline: 0; }
-
-.settings .btn-update {
-  margin: 40px 0 0;
-  width: 410px;
-  padding: 10px;
-  background: white;
-  border: solid 2px #ccc;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: "fatfrank";
-  font-size: 1em; }
-  .settings .btn-update:focus {
-    outline: 0; }
-  .settings .btn-update:hover {
-    border-color: #17afcd;
-    background-color: #2FC9E8; }
 
 .snippet {
   width: 92%;
