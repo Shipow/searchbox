@@ -96,7 +96,7 @@ gulp.task('awesome-searchbox', function () {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('scss/*.sass', ['sass']);
+  gulp.watch(['scss/*.sass','scss/*.scss'], ['sass']);
   gulp.watch('*.haml', ['build']);
   gulp.watch('js/*.js', ['js']);
 });

@@ -440,50 +440,44 @@ h2 {
 
 .awesome-searchbox {
   position: relative;
+  width: 500px;
   height: 40px;
-  white-space: nowrap;
-  width: 500px; }
-  .awesome-searchbox input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    margin: 0;
+    padding: 0;
     padding-left: 13.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
     line-height: 40px;
-    border-width: 1px;
-    border-color: #ccc;
-    border-style: solid;
+    border: none;
     border-radius: 3px;
-    background: white; }
-    .awesome-searchbox input::-webkit-search-decoration, .awesome-searchbox input::-webkit-search-cancel-button, .awesome-searchbox input::-webkit-search-results-button, .awesome-searchbox input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px #ccc;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox input[type="search"]::-webkit-search-decoration, .awesome-searchbox input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox input[type="search"]::-webkit-search-results-button, .awesome-searchbox input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox input:focus {
-      outline: 0; }
-    .awesome-searchbox input:hover {
-      border-color: #b3b3b3; }
-    .awesome-searchbox input:focus {
+    .awesome-searchbox input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #b3b3b3; }
+    .awesome-searchbox input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #3E82F7; }
-    .awesome-searchbox input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px #3E82F7; }
+    .awesome-searchbox input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox input::-moz-placeholder {
+    .awesome-searchbox input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox input:-ms-input-placeholder {
+    .awesome-searchbox input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox input:-moz-placeholder {
+    .awesome-searchbox input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox .ui-icon-submit {
     position: absolute;
@@ -527,50 +521,44 @@ h2 {
 
 .awesome-searchbox_custom {
   position: relative;
+  width: 500px;
   height: 40px;
-  white-space: nowrap;
-  width: 500px; }
-  .awesome-searchbox_custom input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_custom input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    margin: 0;
+    padding: 0;
     padding-left: 13.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
     line-height: 40px;
-    border-width: 1px;
-    border-color: #ccc;
-    border-style: solid;
+    border: none;
     border-radius: 3px;
-    background: white; }
-    .awesome-searchbox_custom input::-webkit-search-decoration, .awesome-searchbox_custom input::-webkit-search-cancel-button, .awesome-searchbox_custom input::-webkit-search-results-button, .awesome-searchbox_custom input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px #ccc;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_custom input[type="search"]::-webkit-search-decoration, .awesome-searchbox_custom input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_custom input[type="search"]::-webkit-search-results-button, .awesome-searchbox_custom input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_custom input:focus {
-      outline: 0; }
-    .awesome-searchbox_custom input:hover {
-      border-color: #b3b3b3; }
-    .awesome-searchbox_custom input:focus {
+    .awesome-searchbox_custom input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #b3b3b3; }
+    .awesome-searchbox_custom input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #3E82F7; }
-    .awesome-searchbox_custom input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px #3E82F7; }
+    .awesome-searchbox_custom input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_custom input::-moz-placeholder {
+    .awesome-searchbox_custom input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_custom input:-ms-input-placeholder {
+    .awesome-searchbox_custom input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_custom input:-moz-placeholder {
+    .awesome-searchbox_custom input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_custom .ui-icon-submit {
     position: absolute;
@@ -614,50 +602,44 @@ h2 {
 
 .awesome-searchbox_twitter {
   position: relative;
+  width: 200px;
   height: 30px;
-  white-space: nowrap;
-  width: 200px; }
-  .awesome-searchbox_twitter input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_twitter input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 12px;
+    margin: 0;
+    padding: 0;
     padding-left: 12.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 12px;
     line-height: 30px;
-    border-width: 1px;
-    border-color: #D6DEE3;
-    border-style: solid;
+    border: none;
     border-radius: 15px;
-    background: #F5F8FA; }
-    .awesome-searchbox_twitter input::-webkit-search-decoration, .awesome-searchbox_twitter input::-webkit-search-cancel-button, .awesome-searchbox_twitter input::-webkit-search-results-button, .awesome-searchbox_twitter input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px #D6DEE3;
+    background: #F5F8FA;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_twitter input[type="search"]::-webkit-search-decoration, .awesome-searchbox_twitter input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_twitter input[type="search"]::-webkit-search-results-button, .awesome-searchbox_twitter input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_twitter input:focus {
-      outline: 0; }
-    .awesome-searchbox_twitter input:hover {
-      border-color: #b8c6ce; }
-    .awesome-searchbox_twitter input:focus {
+    .awesome-searchbox_twitter input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #b8c6ce; }
+    .awesome-searchbox_twitter input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #D6DEE3; }
-    .awesome-searchbox_twitter input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px #D6DEE3; }
+    .awesome-searchbox_twitter input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_twitter input::-moz-placeholder {
+    .awesome-searchbox_twitter input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_twitter input:-ms-input-placeholder {
+    .awesome-searchbox_twitter input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_twitter input:-moz-placeholder {
+    .awesome-searchbox_twitter input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_twitter .ui-icon-submit {
     position: absolute;
@@ -701,50 +683,44 @@ h2 {
 
 .awesome-searchbox_amazon {
   position: relative;
+  width: 500px;
   height: 38px;
-  white-space: nowrap;
-  width: 500px; }
-  .awesome-searchbox_amazon input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_amazon input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    margin: 0;
+    padding: 0;
     padding-left: 12.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
     line-height: 38px;
-    border-width: 1px;
-    border-color: white;
-    border-style: solid;
+    border: none;
     border-radius: 3px;
-    background: white; }
-    .awesome-searchbox_amazon input::-webkit-search-decoration, .awesome-searchbox_amazon input::-webkit-search-cancel-button, .awesome-searchbox_amazon input::-webkit-search-results-button, .awesome-searchbox_amazon input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px white;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_amazon input[type="search"]::-webkit-search-decoration, .awesome-searchbox_amazon input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_amazon input[type="search"]::-webkit-search-results-button, .awesome-searchbox_amazon input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_amazon input:focus {
-      outline: 0; }
-    .awesome-searchbox_amazon input:hover {
-      border-color: #e6e6e6; }
-    .awesome-searchbox_amazon input:focus {
+    .awesome-searchbox_amazon input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #e6e6e6; }
+    .awesome-searchbox_amazon input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #FFBF58; }
-    .awesome-searchbox_amazon input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px #FFBF58; }
+    .awesome-searchbox_amazon input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_amazon input::-moz-placeholder {
+    .awesome-searchbox_amazon input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_amazon input:-ms-input-placeholder {
+    .awesome-searchbox_amazon input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_amazon input:-moz-placeholder {
+    .awesome-searchbox_amazon input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_amazon .ui-icon-submit {
     position: absolute;
@@ -788,50 +764,44 @@ h2 {
 
 .awesome-searchbox_spotify {
   position: relative;
+  width: 200px;
   height: 24px;
-  white-space: nowrap;
-  width: 200px; }
-  .awesome-searchbox_spotify input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_spotify input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 12px;
+    margin: 0;
+    padding: 0;
     padding-left: 24px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 12px;
     line-height: 24px;
-    border-width: 1px;
-    border-color: white;
-    border-style: solid;
+    border: none;
     border-radius: 12px;
-    background: white; }
-    .awesome-searchbox_spotify input::-webkit-search-decoration, .awesome-searchbox_spotify input::-webkit-search-cancel-button, .awesome-searchbox_spotify input::-webkit-search-results-button, .awesome-searchbox_spotify input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px white;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_spotify input[type="search"]::-webkit-search-decoration, .awesome-searchbox_spotify input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_spotify input[type="search"]::-webkit-search-results-button, .awesome-searchbox_spotify input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_spotify input:focus {
-      outline: 0; }
-    .awesome-searchbox_spotify input:hover {
-      border-color: #e6e6e6; }
-    .awesome-searchbox_spotify input:focus {
+    .awesome-searchbox_spotify input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #e6e6e6; }
+    .awesome-searchbox_spotify input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: white; }
-    .awesome-searchbox_spotify input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px white; }
+    .awesome-searchbox_spotify input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_spotify input::-moz-placeholder {
+    .awesome-searchbox_spotify input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_spotify input:-ms-input-placeholder {
+    .awesome-searchbox_spotify input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_spotify input:-moz-placeholder {
+    .awesome-searchbox_spotify input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_spotify .ui-icon-submit {
     position: absolute;
@@ -875,50 +845,44 @@ h2 {
 
 .awesome-searchbox_meetup {
   position: relative;
+  width: 300px;
   height: 44px;
-  white-space: nowrap;
-  width: 300px; }
-  .awesome-searchbox_meetup input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_meetup input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
     padding-left: 14.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 16px;
     line-height: 44px;
-    border-width: 1px;
-    border-color: #D6DEE3;
-    border-style: solid;
+    border: none;
     border-radius: 3px;
-    background: #F5F8FA; }
-    .awesome-searchbox_meetup input::-webkit-search-decoration, .awesome-searchbox_meetup input::-webkit-search-cancel-button, .awesome-searchbox_meetup input::-webkit-search-results-button, .awesome-searchbox_meetup input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px #D6DEE3;
+    background: #F5F8FA;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_meetup input[type="search"]::-webkit-search-decoration, .awesome-searchbox_meetup input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_meetup input[type="search"]::-webkit-search-results-button, .awesome-searchbox_meetup input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_meetup input:focus {
-      outline: 0; }
-    .awesome-searchbox_meetup input:hover {
-      border-color: #b8c6ce; }
-    .awesome-searchbox_meetup input:focus {
+    .awesome-searchbox_meetup input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px #b8c6ce; }
+    .awesome-searchbox_meetup input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #D6DEE3; }
-    .awesome-searchbox_meetup input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px #D6DEE3; }
+    .awesome-searchbox_meetup input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_meetup input::-moz-placeholder {
+    .awesome-searchbox_meetup input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_meetup input:-ms-input-placeholder {
+    .awesome-searchbox_meetup input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_meetup input:-moz-placeholder {
+    .awesome-searchbox_meetup input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_meetup .ui-icon-submit {
     position: absolute;
@@ -962,50 +926,44 @@ h2 {
 
 .awesome-searchbox_medium {
   position: relative;
+  width: 200px;
   height: 36px;
-  white-space: nowrap;
-  width: 200px; }
-  .awesome-searchbox_medium input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_medium input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 13px;
+    margin: 0;
+    padding: 0;
     padding-left: 36px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 13px;
     line-height: 36px;
-    border-width: 1px;
-    border-color: #D9D9D9;
-    border-style: solid;
+    border: none;
     border-radius: 30px;
-    background: white; }
-    .awesome-searchbox_medium input::-webkit-search-decoration, .awesome-searchbox_medium input::-webkit-search-cancel-button, .awesome-searchbox_medium input::-webkit-search-results-button, .awesome-searchbox_medium input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 1px #D9D9D9;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_medium input[type="search"]::-webkit-search-decoration, .awesome-searchbox_medium input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_medium input[type="search"]::-webkit-search-results-button, .awesome-searchbox_medium input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_medium input:focus {
-      outline: 0; }
-    .awesome-searchbox_medium input:hover {
-      border-color: silver; }
-    .awesome-searchbox_medium input:focus {
+    .awesome-searchbox_medium input[type="search"]:hover {
+      box-shadow: inset 0 0 0 1px silver; }
+    .awesome-searchbox_medium input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: silver; }
-    .awesome-searchbox_medium input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 1px silver; }
+    .awesome-searchbox_medium input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_medium input::-moz-placeholder {
+    .awesome-searchbox_medium input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_medium input:-ms-input-placeholder {
+    .awesome-searchbox_medium input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_medium input:-moz-placeholder {
+    .awesome-searchbox_medium input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_medium .ui-icon-submit {
     position: absolute;
@@ -1049,50 +1007,44 @@ h2 {
 
 .awesome-searchbox_facebook {
   position: relative;
+  width: 500px;
   height: 25px;
-  white-space: nowrap;
-  width: 500px; }
-  .awesome-searchbox_facebook input {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  white-space: nowrap; }
+  .awesome-searchbox_facebook input[type="search"] {
     display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    line-height: 1;
-    font-size: 13px;
-    font-family: Arial;
-    -moz-appearance: none;
-    -moz-box-sizing: padding-box;
-    -webkit-appearance: none;
+    box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     width: 100%;
     height: 100%;
-    font-size: 13px;
+    margin: 0;
+    padding: 0;
     padding-left: 6.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 13px;
     line-height: 25px;
-    border-width: 0;
-    border-color: #ccc;
-    border-style: solid;
+    border: none;
     border-radius: 3px;
-    background: white; }
-    .awesome-searchbox_facebook input::-webkit-search-decoration, .awesome-searchbox_facebook input::-webkit-search-cancel-button, .awesome-searchbox_facebook input::-webkit-search-results-button, .awesome-searchbox_facebook input::-webkit-search-results-decoration {
+    box-shadow: inset 0 0 0 0 #ccc;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .awesome-searchbox_facebook input[type="search"]::-webkit-search-decoration, .awesome-searchbox_facebook input[type="search"]::-webkit-search-cancel-button, .awesome-searchbox_facebook input[type="search"]::-webkit-search-results-button, .awesome-searchbox_facebook input[type="search"]::-webkit-search-results-decoration {
       display: none; }
-    .awesome-searchbox_facebook input:focus {
-      outline: 0; }
-    .awesome-searchbox_facebook input:hover {
-      border-color: #b3b3b3; }
-    .awesome-searchbox_facebook input:focus {
+    .awesome-searchbox_facebook input[type="search"]:hover {
+      box-shadow: inset 0 0 0 0 #b3b3b3; }
+    .awesome-searchbox_facebook input[type="search"]:focus {
+      outline: 0;
       background: white;
-      border-color: #3E82F7; }
-    .awesome-searchbox_facebook input::-webkit-input-placeholder {
+      box-shadow: inset 0 0 0 0 #3E82F7; }
+    .awesome-searchbox_facebook input[type="search"]::-webkit-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_facebook input::-moz-placeholder {
+    .awesome-searchbox_facebook input[type="search"]::-moz-placeholder {
       color: #aaa; }
-    .awesome-searchbox_facebook input:-ms-input-placeholder {
+    .awesome-searchbox_facebook input[type="search"]:-ms-input-placeholder {
       color: #aaa; }
-    .awesome-searchbox_facebook input:-moz-placeholder {
+    .awesome-searchbox_facebook input[type="search"]:-moz-placeholder {
       color: #aaa; }
   .awesome-searchbox_facebook .ui-icon-submit {
     position: absolute;

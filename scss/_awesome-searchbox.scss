@@ -23,58 +23,46 @@ $search-icon-background-opacity: 1 !default;
 
 $search-clear-size: 12px !default;
 
-//reset
-@mixin reset {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-  background: none;
-  line-height: 1;
-  font-size: 13px;
-  font-family: Arial;
-  -moz-appearance: none;
-  -moz-box-sizing: padding-box;
-  -webkit-appearance: none;
-  -webkit-box-sizing: padding-box;
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    display: none;
-  }
-  // Remove the stupid outer glow in Webkit
-  &:focus {
-    outline: 0;
-  }
-}
 
 @mixin awesome-searchbox($config) {
   .#{$config} {
     position: relative;
+    width: $search-input-width;
     height: $search-input-height;
     white-space: nowrap;
-    width: $search-input-width;
-    input {
-      @include reset;
+    input[type="search"] {
+      display: inline-block;
+      box-sizing: padding-box;
+      -webkit-box-sizing: padding-box;
+      -moz-box-sizing: padding-box;
       width: 100%;
       height: 100%;
-      font-size: $search-font-size;
+      margin: 0;
+      padding: 0;
       padding-left: if($search-icon-position == "right", ($search-input-height - $search-font-size) / 2 + $search-border-radius / 4, $search-input-height);
+      vertical-align: middle;
+      white-space: normal;
+      font-size: $search-font-size;
       line-height: $search-input-height;
-      border-width: $search-border-width;
-      border-color: $search-input-border-color;
-      border-style: solid;
+      border: none;
       border-radius: $search-border-radius;
+      box-shadow: inset 0 0 0 $search-border-width $search-input-border-color;
       background: $search-input-background;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        display: none;
+      }
       &:hover {
-        border-color: darken($search-input-border-color, 10%);
+        box-shadow: inset 0 0 0 $search-border-width darken($search-input-border-color,10%);
       }
       &:focus {
+        outline: 0; // Remove the stupid outer glow in Webkit
         background: $search-input-focus-background;
-        border-color: $search-input-focus-border-color;
+        box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
       }
       &::-webkit-input-placeholder {
         color: $search-placeholder-color;
