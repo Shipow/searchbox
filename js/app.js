@@ -22,13 +22,18 @@ function updateSnippet(){
             config[item.name].push(item.value);
         } else {
             config[item.name] = item.value;
+            if(item.name.match(/-px/)){
+              var itemName = item.name.replace(/-px/,"");
+              config[itemName] = item.value + 'px';
+            }
+
         }
     });
-    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';');
+    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';\n');
 
     Sass.writeFile('settings.scss', config + ';');
 
-    var scss = config + ';' + data;
+    var scss = config + ';\n\n' + data;
     Sass.compile(scss, function(result) {
       $('.snippet code.language-css').text(result.text);
       $('.snippet code.language-scss').text(scss);

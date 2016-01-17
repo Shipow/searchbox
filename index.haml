@@ -117,20 +117,20 @@
           -#   %label namespace
           %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
           %p
-            %label width
-            %input{type:"text", name:"$search-input-width", value:"250px"}
+            %label width (px)
+            %input{type:"number", name:"$search-input-width-px", value:"250"}
           %p
-            %label height
-            %input{type:"text", name:"$search-input-height", value:"50px"}
+            %label height (px)
+            %input{type:"number", name:"$search-input-height-px", value:"50"}
           %p
-            %label font-size
-            %input{type:"text", name:"$search-font-size", value:"14px"}
+            %label font-size (px)
+            %input{type:"number", name:"$search-font-size-px", value:"14"}
           %p
-            %label border-width
-            %input{type:"text", name:"$search-border-width", value:"2px"}
+            %label border-width (px)
+            %input{type:"number", name:"$search-border-widt-pxh", value:"2"}
           %p
-            %label border-radius
-            %input{type:"text", name:"$search-border-radius", value:"25px"}
+            %label border-radius (px)
+            %input{type:"number", name:"$search-border-radius-px", value:"25"}
           %p
             %label border-color
             %input.jscolor{type:"text", name:"$search-input-border-color", value:"#ccc"}
@@ -168,11 +168,17 @@
               %option{value:"search-icon-21"} 21
               %option{value:"search-icon-22"} 22
           %p
-            %label icon-size
-            %input{type:"text", name:"$search-icon-size", value:"26px"}
+            %label icon-size (px)
+            %input{type:"number", name:"$search-icon-size-px", value:"22"}
           %p
             %label icon-position
-            %input{type:"text", name:"$search-icon-position", value:"right"}
+            %span.radio-control
+              %label.label-radio
+                %input{type:"radio", name:"$search-icon-position", value:"right", checked:}
+                Right
+              %label.label-radio
+                %input{type:"radio", name:"$search-icon-position", value:"left"}
+                Left
           %p
             %label icon-color
             %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
@@ -201,8 +207,8 @@
               %option{value:"clear-icon-4"} 4
               %option{value:"clear-icon-5"} 5
           %p
-            %label icon-clear-size
-            %input{type:"text", name:"$search-clear-size", value:"12px"}
+            %label icon-clear-size (px)
+            %input{type:"number", name:"$search-clear-size-px", value:"12"}
 
     .row
       .col-6

@@ -289,7 +289,7 @@ pre[class*="language-"] {
   min-width: 800px;
   width: 100%;
   position: relative;
-  font-family: "gibson"; }
+  font-family: "canada-type-gibson"; }
 
 .row {
   width: 100%;
@@ -312,7 +312,7 @@ pre[class*="language-"] {
 h1 {
   text-align: center;
   font-size: 80px;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
   text-transform: uppercase;
   width: 560px;
@@ -331,7 +331,6 @@ h2 {
   text-align: center;
   margin: 40px 0 20px;
   font-size: 18px;
-  font-family: "gibson";
   font-weight: 300;
   color: #888;
   text-transform: uppercase;
@@ -357,16 +356,6 @@ h2 {
     .icons svg use {
       fill: #444; }
 
-.list-inline {
-  margin-top: 20px;
-  font-family: "fatfrank";
-  text-align: center; }
-  .list-inline li {
-    padding: 4px;
-    display: inline-block; }
-    .list-inline li.separator {
-      opacity: .3; }
-
 .settings form {
   display: block;
   width: 90%;
@@ -385,7 +374,8 @@ h2 {
     clear: both;
     display: block; }
 
-.settings .icon-select-option, .settings .icon-select-label {
+.settings .icon-select-option,
+.settings .icon-select-label {
   width: 20px;
   height: 20px;
   display: inline-block; }
@@ -396,6 +386,7 @@ h2 {
 
 .settings label {
   display: inline-block;
+  line-height: 34px;
   width: 160px;
   padding-right: 4px;
   text-align: right;
@@ -403,14 +394,19 @@ h2 {
   font-size: 12px;
   text-transform: uppercase; }
 
-.settings input {
+.settings input[type='text'], .settings input[type="number"] {
   width: 56px;
   border: solid 1px #aaa;
   padding: 8px 12px;
   box-shadow: inset 0 0 0 1px white; }
-  .settings input:focus {
+  .settings input[type='text']:focus, .settings input[type="number"]:focus {
     border-color: #000;
     outline: 0; }
+
+.settings .radio-control {
+  display: inline-block; }
+  .settings .radio-control label {
+    width: inherit; }
 
 .snippet {
   width: 92%;

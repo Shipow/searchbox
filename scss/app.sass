@@ -10,7 +10,7 @@ $primary-color: #2FC9E8
   min-width: 800px
   width: 100%
   position: relative
-  font-family: "gibson"
+  font-family: "canada-type-gibson"
 .row
   width: 100%
   clear: both
@@ -28,7 +28,7 @@ $primary-color: #2FC9E8
 h1
   text-align: center
   font-size: 80px
-  font-weight: 200
+  font-weight: 300
   color: white
   text-transform: uppercase
   width: 560px
@@ -46,7 +46,6 @@ h2
   text-align: center
   margin: 40px 0 20px
   font-size: 18px
-  font-family: "gibson"
   font-weight: 300
   color: #888
   text-transform: uppercase
@@ -69,15 +68,7 @@ h2
     margin: 0 10px  10px 0
     use
       fill: #444
-.list-inline
-  margin-top: 20px
-  font-family: "fatfrank"
-  text-align: center
-  li
-    padding: 4px
-    display: inline-block
-    &.separator
-      opacity: .3
+
 .settings
   form
     display: block
@@ -96,7 +87,8 @@ h2
       content: ''
       clear: both
       display: block
-  .icon-select-option, .icon-select-label
+  .icon-select-option,
+  .icon-select-label
     width: 20px
     height: 20px
     display: inline-block
@@ -106,13 +98,14 @@ h2
     padding: 0
   label
     display: inline-block
+    line-height: 34px
     width: 160px
     padding-right: 4px
     text-align: right
     letter-spacing: 1px
     font-size: 12px
     text-transform: uppercase
-  input
+  input[type='text'], input[type="number"]
     width: 56px
     border: solid 1px #aaa
     padding: 8px 12px
@@ -120,6 +113,10 @@ h2
     &:focus
       border-color: #000
       outline: 0
+  .radio-control
+    display: inline-block
+    label
+      width: inherit
 
 .snippet
   width: 92%
