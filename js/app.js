@@ -1,5 +1,8 @@
 $('.q').on('input', function() {
     $(this).closest('.awesome-searchbox').find('.ui-icon-clear').removeClass('hide');
+    if($('.q').val().length === 0){
+      $(this).closest('.awesome-searchbox').find('.ui-icon-clear').addClass('hide')
+    }
 });
 $('.ui-icon-clear').on('click', function() {
   $(this).closest('.awesome-searchbox').find('.q').val('').focus();
@@ -21,12 +24,12 @@ function updateSnippet(){
             }
             config[item.name].push(item.value);
         } else {
-            config[item.name] = item.value;
             if(item.name.match(/-px/)){
               var itemName = item.name.replace(/-px/,"");
               config[itemName] = item.value + 'px';
+            } else {
+              config[item.name] = item.value;
             }
-
         }
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';\n');
