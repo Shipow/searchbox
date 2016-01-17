@@ -5,6 +5,7 @@ var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
 var webserver = require('gulp-webserver');
 var livereload = require('gulp-livereload');
+var ghPages = require('gulp-gh-pages');
 
 var sass = require('gulp-sass');
 var haml = require('gulp-haml');
@@ -116,4 +117,9 @@ gulp.task('build',['clean'], function(callback) {
 
 gulp.task('dev', function(callback) {
   runSequence('build', 'watch','webserver', callback);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
 });
