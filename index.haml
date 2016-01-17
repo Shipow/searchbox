@@ -99,7 +99,7 @@
             %svg
               %use{xlink:href:"#clear-icon-4"}
 
-      %h2 Custom - Build your own
+      %h2 Custom - Get your own
       .demo.demo-custom
         .awesome-searchbox.awesome-searchbox_custom
           %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
@@ -111,8 +111,8 @@
               %use{xlink:href:"#clear-icon-3"}
     .settings
       %form#settings
-        .col-6
-          %h2 Appearence
+        .col-4
+          %h3 Appearence
           -# %p
           -#   %label namespace
           %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
@@ -140,17 +140,8 @@
           %p
             %label placeholder-color
             %input.jscolor{type:"text", name:"$search-placeholder-color", value:"#aaa"}
-
-
-          %h2 Focus
-          %p
-            %label focus-border-color
-            %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
-          %p
-            %label focus-bg-color
-            %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
-        .col-6
-          %h2 Search icon
+        .col-4
+          %h3 Search icon
           %p
             %label icon-img
             %select.jselectric{name:"$search-icon"}
@@ -158,7 +149,7 @@
               %option{value:"search-icon-2"} 2
               %option{value:"search-icon-3"} 3
               %option{value:"search-icon-4"} 4
-              %option{value:"search-icon-5"} 5
+              %option{value:"search-icon-5",selected:} 5
               %option{value:"search-icon-6"} 6
               %option{value:"search-icon-7"} 7
               %option{value:"search-icon-8"} 8
@@ -192,7 +183,15 @@
             %label icon-bg-opacity
             %input{type:"text", name:"$search-icon-background-opacity", value:"0"}
 
-          %h2 clear
+        .col-4
+          %h3 Focus
+          %p
+            %label focus-border-color
+            %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
+          %p
+            %label focus-bg-color
+            %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
+          %h3 Clear
           %p
             %label icon-clear-img
             %select.jselectric{name:"$clear-icon"}
@@ -203,9 +202,6 @@
           %p
             %label icon-clear-size
             %input{type:"text", name:"$search-clear-size", value:"12px"}
-
-          %p
-            %button.btn-update{type:"button"} Update
 
     .row
       .col-6

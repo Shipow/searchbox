@@ -138,7 +138,7 @@
         </div>
       </div>
     </div>
-    <h2>Custom - Build your own</h2>
+    <h2>Custom - Get your own</h2>
     <div class="demo demo-custom">
       <div class="awesome-searchbox awesome-searchbox_custom">
         <input type="search" placeholder="Search your website" autocomplete="off" class="q" />
@@ -157,8 +157,8 @@
   </div>
   <div class="settings">
     <form id="settings">
-      <div class="col-6">
-        <h2>Appearence</h2>
+      <div class="col-4">
+        <h3>Appearence</h3>
         <input type="hidden" name="$config-name" value="awesome-searchbox_custom" />
         <p>
           <label>width</label>
@@ -192,18 +192,9 @@
           <label>placeholder-color</label>
           <input type="text" name="$search-placeholder-color" value="#aaa" class="jscolor" />
         </p>
-        <h2>Focus</h2>
-        <p>
-          <label>focus-border-color</label>
-          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
-        </p>
-        <p>
-          <label>focus-bg-color</label>
-          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
-        </p>
       </div>
-      <div class="col-6">
-        <h2>Search icon</h2>
+      <div class="col-4">
+        <h3>Search icon</h3>
         <p>
           <label>icon-img</label>
           <select name="$search-icon" class="jselectric">
@@ -211,7 +202,7 @@
             <option value="search-icon-2">2</option>
             <option value="search-icon-3">3</option>
             <option value="search-icon-4">4</option>
-            <option value="search-icon-5">5</option>
+            <option value="search-icon-5" selected="undefined">5</option>
             <option value="search-icon-6">6</option>
             <option value="search-icon-7">7</option>
             <option value="search-icon-8">8</option>
@@ -251,7 +242,18 @@
           <label>icon-bg-opacity</label>
           <input type="text" name="$search-icon-background-opacity" value="0" />
         </p>
-        <h2>clear</h2>
+      </div>
+      <div class="col-4">
+        <h3>Focus</h3>
+        <p>
+          <label>focus-border-color</label>
+          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
+        </p>
+        <p>
+          <label>focus-bg-color</label>
+          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
+        </p>
+        <h3>Clear</h3>
         <p>
           <label>icon-clear-img</label>
           <select name="$clear-icon" class="jselectric">
@@ -264,9 +266,6 @@
         <p>
           <label>icon-clear-size</label>
           <input type="text" name="$search-clear-size" value="12px" />
-        </p>
-        <p>
-          <button type="button" class="btn-update">Update</button>
         </p>
       </div>
     </form>

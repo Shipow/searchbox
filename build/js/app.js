@@ -42,7 +42,10 @@ function updateSnippet(){
   var clearIcon = $('select[name="$clear-icon"]').val();
   $('.awesome-searchbox_custom .ui-icon-clear use').attr('xlink:href','#' + clearIcon);
 };
-$('.btn-update').on('click', updateSnippet);
+
+$('form#settings').on('input change', updateSnippet);
+updateSnippet();
+
 
 $('.jscolor').addClass('{hash:true}')
 

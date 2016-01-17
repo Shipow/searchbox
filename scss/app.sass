@@ -10,11 +10,15 @@ $primary-color: #2FC9E8
   min-width: 800px
   width: 100%
   position: relative
+  font-family: "gibson"
 .row
   width: 100%
   clear: both
 .col-6
   width: 50%
+  float: left
+.col-4
+  width: 33%
   float: left
 .demo-header
   background-color: $primary-color
@@ -24,10 +28,10 @@ $primary-color: #2FC9E8
 h1
   text-align: center
   font-size: 80px
-  font-family: "fatfrank"
+  font-weight: 200
   color: white
   text-transform: uppercase
-  width: 580px
+  width: 560px
   background-color: rgba(white,.2)
   margin: 60px auto 0
   border-radius: 90px
@@ -39,9 +43,11 @@ h1
     use
       fill: white
 h2
-  margin: 40px 40px 8px
-  font-size: 14px
-  font-family: "fatfrank"
+  text-align: center
+  margin: 40px 0 20px
+  font-size: 18px
+  font-family: "gibson"
+  font-weight: 300
   color: #888
   text-transform: uppercase
   letter-spacing: 1px
@@ -74,50 +80,47 @@ h2
       opacity: .3
 .settings
   form
-    width: 100%
-    display: inline-block
-    margin-bottom: 0
+    display: block
+    width: 90%
+    margin: 0 auto
+    h3
+      font-size: 16px
+      font-weight: 600
+      font-style: italic
+      margin: 20px 10px 10px
+      text-align: left
+      border-bottom: solid 1px #ccc
+      color: #aaa
+      letter-spacing: 1px
+    &:after
+      content: ''
+      clear: both
+      display: block
   .icon-select-option, .icon-select-label
     width: 20px
     height: 20px
     display: inline-block
-    margin-right: 8px
 
   p
     margin: 0 0 4px
     padding: 0
   label
     display: inline-block
-    width: 250px
+    width: 160px
     padding-right: 4px
     text-align: right
-    font-family: "fatfrank"
     letter-spacing: 1px
     font-size: 12px
     text-transform: uppercase
   input
-    width: 80px
-    border: solid 2px #aaa
+    width: 56px
+    border: solid 1px #aaa
     padding: 8px 12px
     box-shadow: inset 0 0 0 1px white
     &:focus
       border-color: #000
       outline: 0
-  .btn-update
-    margin: 40px 0 0
-    width: 410px
-    padding: 10px
-    background: white
-    border: solid 2px #ccc
-    cursor: pointer
-    text-transform: uppercase
-    font-family: "fatfrank"
-    font-size: 1em
-    &:focus
-      outline: 0
-    &:hover
-      border-color: darken($primary-color,10%)
-      background-color: $primary-color
+
 .snippet
   width: 92%
   height: 300px
