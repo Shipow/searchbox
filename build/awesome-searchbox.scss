@@ -1,5 +1,4 @@
 //settings
-$google-blue: #3E82F7 !default;
 $config-name: 'awesome-searchbox' !default;
 
 $search-input-height: 40px !default;
@@ -8,7 +7,7 @@ $search-input-border-color: #ccc !default;
 $search-input-background: white !default;
 
 $search-input-focus-background: white !default;
-$search-input-focus-border-color: $google-blue !default;
+$search-input-focus-border-color: #3E82F7 !default;
 
 $search-font-size: 14px !default;
 $search-placeholder-color: #aaa !default;
@@ -19,7 +18,7 @@ $search-border-radius: 3px !default;
 $search-icon-position: right !default;
 $search-icon-size: $search-input-height - ($search-input-height / 2) !default;
 $search-icon-color: white !default;
-$search-icon-background: $google-blue !default;
+$search-icon-background: #3E82F7 !default;
 $search-icon-background-opacity: 1 !default;
 
 $search-clear-size: 12px !default;
@@ -110,7 +109,6 @@ $search-clear-size: 12px !default;
       }
       &:hover {
         cursor: pointer;
-        background-color: lighten($search-icon-background, 10%);
       }
       svg, img {
         height: $search-icon-size;
@@ -124,10 +122,11 @@ $search-clear-size: 12px !default;
     .ui-icon-clear {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
-      left: $search-input-width - $search-clear-size * 2 - if($search-icon-position == "right", $search-input-height, 0);
+      right: 8px  + if($search-icon-position == "right", $search-input-height, $search-border-radius/4);
       opacity: 0.6;
       line-height: 0;
       height: $search-clear-size;
+      cursor: pointer;
       &:hover {
         opacity: 1;
       }

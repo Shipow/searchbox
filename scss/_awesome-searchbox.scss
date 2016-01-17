@@ -109,7 +109,6 @@ $search-clear-size: 12px !default;
       }
       &:hover {
         cursor: pointer;
-        background-color: lighten($search-icon-background, 10%);
       }
       svg, img {
         height: $search-icon-size;
@@ -123,10 +122,11 @@ $search-clear-size: 12px !default;
     .ui-icon-clear {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
-      left: $search-input-width - $search-clear-size * 2 - if($search-icon-position == "right", $search-input-height, 0);
+      right: 8px  + if($search-icon-position == "right", $search-input-height, $search-border-radius/4);
       opacity: 0.6;
       line-height: 0;
       height: $search-clear-size;
+      cursor: pointer;
       &:hover {
         opacity: 1;
       }
