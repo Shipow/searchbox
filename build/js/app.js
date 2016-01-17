@@ -1,6 +1,6 @@
 $('.q').on('input', function() {
     $(this).closest('.awesome-searchbox').find('.ui-icon-clear').removeClass('hide');
-    if($('.q').val().length === 0){
+    if($(this).val().length === 0){
       $(this).closest('.awesome-searchbox').find('.ui-icon-clear').addClass('hide')
     }
 });
