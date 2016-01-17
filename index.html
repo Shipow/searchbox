@@ -161,24 +161,24 @@
         <h3>Appearence</h3>
         <input type="hidden" name="$config-name" value="awesome-searchbox_custom" />
         <p>
-          <label>width</label>
-          <input type="text" name="$search-input-width" value="250px" />
+          <label>width (px)</label>
+          <input type="number" name="$search-input-width-px" value="250" />
         </p>
         <p>
-          <label>height</label>
-          <input type="text" name="$search-input-height" value="50px" />
+          <label>height (px)</label>
+          <input type="number" name="$search-input-height-px" value="50" />
         </p>
         <p>
-          <label>font-size</label>
-          <input type="text" name="$search-font-size" value="14px" />
+          <label>font-size (px)</label>
+          <input type="number" name="$search-font-size-px" value="14" />
         </p>
         <p>
-          <label>border-width</label>
-          <input type="text" name="$search-border-width" value="2px" />
+          <label>border-width (px)</label>
+          <input type="number" name="$search-border-widt-pxh" value="2" />
         </p>
         <p>
-          <label>border-radius</label>
-          <input type="text" name="$search-border-radius" value="25px" />
+          <label>border-radius (px)</label>
+          <input type="number" name="$search-border-radius-px" value="25" />
         </p>
         <p>
           <label>border-color</label>
@@ -223,12 +223,11 @@
           </select>
         </p>
         <p>
-          <label>icon-size</label>
-          <input type="text" name="$search-icon-size" value="26px" />
+          <label>icon-size (px)</label>
+          <input type="number" name="$search-icon-size-px" value="22" />
         </p>
         <p>
-          <label>icon-position</label>
-          <input type="text" name="$search-icon-position" value="right" />
+          <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="$search-icon-position" value="right" checked="undefined" />Right</label><label class="label-radio"><input type="radio" name="$search-icon-position" value="left" />Left</label></span>
         </p>
         <p>
           <label>icon-color</label>
@@ -261,11 +260,12 @@
             <option value="clear-icon-2">2</option>
             <option value="clear-icon-3">3</option>
             <option value="clear-icon-4">4</option>
+            <option value="clear-icon-5">5</option>
           </select>
         </p>
         <p>
-          <label>icon-clear-size</label>
-          <input type="text" name="$search-clear-size" value="12px" />
+          <label>icon-clear-size (px)</label>
+          <input type="number" name="$search-clear-size-px" value="12" />
         </p>
       </div>
     </form>
@@ -369,6 +369,9 @@
       <svg>
         <use xlink:href="#clear-icon-4"></use>
       </svg>
+      <svg>
+        <use xlink:href="#clear-icon-5"></use>
+      </svg>
     </div>
   </div>
   <div style="height: 0; width: 0; position: absolute; visibility: hidden"></div>
@@ -392,6 +395,11 @@
     <symbol id="clear-icon-4" viewBox="0 0 81 81">
       <title>clear-icon-4</title>
       <path d="M47.903 40L68 60.097 61.097 67 41 46.903 20.903 67 14 60.097 34.097 40 14 19.903 20.903 13 41 33.097 61.097 13 68 19.903 47.903 40zM40.5 81C62.868 81 81 62.868 81 40.5S62.868 0 40.5 0 0 18.132 0 40.5 18.132 81 40.5 81z"
+      fill-rule="evenodd" />
+    </symbol>
+    <symbol id="clear-icon-5" viewBox="0 0 81 81">
+      <title>clear-icon-5</title>
+      <path d="M45.326 40L57.92 52.594l-4.326 4.326L41 44.326 28.406 56.92l-4.326-4.326L36.674 40 24.08 27.406l4.326-4.326L41 35.674 53.594 23.08l4.326 4.326L45.326 40zM40.5 81C62.868 81 81 62.868 81 40.5S62.868 0 40.5 0 0 18.132 0 40.5 18.132 81 40.5 81zm0-7C59.002 74 74 59.002 74 40.5 74 21.998 59.002 7 40.5 7 21.998 7 7 21.998 7 40.5 7 59.002 21.998 74 40.5 74z"
       fill-rule="evenodd" />
     </symbol>
     <symbol id="github-banner" viewBox="0 0 71 72">
