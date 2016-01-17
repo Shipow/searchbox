@@ -7,7 +7,9 @@ $primary-color: #2FC9E8
 
 .demos
   margin: 0
-  min-width: 640px
+  min-width: 800px
+  width: 100%
+  position: relative
 .row
   width: 100%
   clear: both
@@ -18,24 +20,24 @@ $primary-color: #2FC9E8
   background-color: $primary-color
   border-bottom: solid 2px #444
   height: 200px
-  padding: 20px
+  padding: 20px 0
 h1
   text-align: center
   font-size: 80px
   font-family: "fatfrank"
-  color: #444
+  color: white
   text-transform: uppercase
   width: 580px
-  background-color: rgba(white,.3)
+  background-color: rgba(white,.2)
   margin: 60px auto 0
   border-radius: 90px
-  border: solid 2px #444
+  border: solid 2px white
   svg
     height: 60px
     width: 60px
     margin-right: 8px
     use
-      fill: #444
+      fill: white
 h2
   margin: 40px 40px 8px
   font-size: 14px
@@ -44,7 +46,14 @@ h2
   text-transform: uppercase
   letter-spacing: 1px
 .github-source
-  float: right
+  position: absolute
+  top: -5px
+  right: -5px
+  svg
+    height: 120px
+    width: 120px
+    use
+      fill: white
 .icons
   text-align: center
   padding: 18px
