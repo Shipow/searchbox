@@ -32,6 +32,7 @@ function updateSnippet(){
     Sass.compile(scss, function(result) {
       $('.snippet code.language-css').text(result.text);
       $('.snippet code.language-scss').text(scss);
+      $('head style').last().remove();
       $("<style>" + result.text + "</style>").appendTo( "head" );
       Prism.highlightAll(false);
     });
