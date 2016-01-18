@@ -5,6 +5,12 @@ $primary-color: #2FC9E8
 @import "prism"
 @import "selectric"
 
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
 .demos
   margin: 0
   min-width: 800px
@@ -69,7 +75,20 @@ h2
     use
       fill: #444
 
+.text-center
+  text-align: center
+
+.btn
+  padding: 8px 12px
+  background-color: #eee
+  border: solid 1px #ccc
+  border-radius: 3px
+  margin-right: 10px
+  text-decoration: none
+  color: #000
+
 .settings
+  +clearfix
   form
     display: block
     width: 90%
@@ -119,6 +138,8 @@ h2
     label
       width: inherit
 
+.snippets
+  +clearfix
 .snippet
   width: 92%
   height: 400px

@@ -109,6 +109,7 @@
           .ui-icon-clear.hide
             %svg
               %use{xlink:href:"#clear-icon-3"}
+
     .settings
       %form#settings
         .col-4
@@ -210,7 +211,12 @@
             %label icon-clear-size (px)
             %input{type:"number", name:"$search-clear-size-px", value:"18"}
 
-    .row
+
+      .text-center
+        %a.btn.view-snippets{href:"javascript:void(0);"} View Snippets
+        %a.btn.download-zip{href:"javascript:void(0);"} Download
+
+    .snippets
       .col-6
         %h2 Snippet Css
         %pre.snippet
@@ -297,6 +303,8 @@
     %script{src:"js/sass.js"}
     %script{src:"js/jscolor.min.js"}
     %script{src:"js/jquery.selectric.min.js"}
+    %script{src:"js/jszip.min.js"}
+    %script{src:"js/FileSaver.min.js"}
     :javascript
       var scss = "";
     %script{src:"js/app.js"}

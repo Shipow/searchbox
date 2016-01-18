@@ -23,7 +23,6 @@ $search-icon-background-opacity: 1 !default;
 
 $search-clear-size: 12px !default;
 
-
 @mixin awesome-searchbox($config) {
   .#{$config} {
     position: relative;
