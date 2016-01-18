@@ -11,6 +11,8 @@ $('.ui-icon-clear').on('click', function() {
 
 var Sass = new Sass();
 
+var html, scss, css, js;
+
 function updateSnippet(){
   $.get('awesome-searchbox.scss', function(data){
 
@@ -31,32 +33,55 @@ function updateSnippet(){
         }
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';\n');
-
     Sass.writeFile('settings.scss', config + ';');
 
-    var scss = config + ';\n\n' + data;
+    scss = config + ';\n\n' + data;
+
     Sass.compile(scss, function(result) {
-      $('.snippet code.language-css').text(result.text);
-      $('.snippet code.language-scss').text(scss);
+      css = result.text;
       $('head style').last().remove();
-      $("<style>" + result.text + "</style>").appendTo( "head" );
+      $("<style>" + css + "</style>").appendTo( "head" );
+      $('.snippet code.language-css').text(css);
+      $('.snippet code.language-scss').text(scss);
       Prism.highlightAll(false);
     });
   });
   var searchIcon = $('select[name="$search-icon"]').val();
-  $('.awesome-searchbox_custom .ui-icon-submit use').attr('xlink:href','#' + searchIcon);
   var clearIcon = $('select[name="$clear-icon"]').val();
+  $('.awesome-searchbox_custom .ui-icon-submit use').attr('xlink:href','#' + searchIcon);
   $('.awesome-searchbox_custom .ui-icon-clear use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
-  var svgWrapper = '  <svg style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
+  var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
   $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox_custom').parent().html());
 };
 
-$('form#settings').on('input change', updateSnippet);
 updateSnippet();
 
+$('form#settings').on('input change', updateSnippet);
+
+html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
+  '<html lang="en">\n'+
+    '<head>\n' +
+      '<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
+      '<title>title</title>\n'+
+      '<link rel="stylesheet" type="text/css" href="style.css">\n' +
+      '<script type="text/javascript" src="script.js"></script>\n' +
+    '</head>\n' +
+    '<body>\n' +
+  		$('.snippet code.language-markup').text() +
+    '</body>\n'+
+  '</html>';
+
+$('.download-zip').on('click',function(){
+  var zip = new JSZip();
+  zip.file("index.html", html);
+  zip.file("style.css", css );
+  zip.file("script.js", "Hello World\n");
+  var content = zip.generate({type:"blob"});
+  saveAs(content, "awesome-searchbox.zip");
+});
 
 $('.jscolor').addClass('{hash:true}')
 

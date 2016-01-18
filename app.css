@@ -338,8 +338,8 @@ h2 {
 
 .github-source {
   position: absolute;
-  top: -5px;
-  right: -5px; }
+  top: 0;
+  right: 0; }
   .github-source svg {
     height: 120px;
     width: 120px; }
@@ -355,6 +355,23 @@ h2 {
     margin: 0 10px  10px 0; }
     .icons svg use {
       fill: #444; }
+
+.text-center {
+  text-align: center; }
+
+.btn {
+  padding: 8px 12px;
+  background-color: #eee;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000; }
+
+.settings:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .settings form {
   display: block;
@@ -408,6 +425,11 @@ h2 {
   display: inline-block; }
   .settings .radio-control label {
     width: inherit; }
+
+.snippets:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .snippet {
   width: 92%;
