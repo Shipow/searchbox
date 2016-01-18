@@ -75,13 +75,14 @@ h2
     width: 90%
     margin: 0 auto
     h3
-      font-size: 16px
+      font-size: 13px
       font-weight: 600
       font-style: italic
       margin: 20px 10px 10px
       text-align: left
       border-bottom: solid 1px #ccc
-      color: #aaa
+      color: #ccc
+      text-transform: uppercase
       letter-spacing: 1px
     &:after
       content: ''
@@ -120,8 +121,8 @@ h2
 
 .snippet
   width: 92%
-  height: 300px
-  font-size: 12px
+  height: 400px
+  font-size: 11px
 .awesome-searchbox_custom *
   transition: all 0.5s ease
 .demo
@@ -147,7 +148,6 @@ h2
   background-color: #3E5DA0
 
 @import "awesome-searchbox"
-+awesome-searchbox("awesome-searchbox_custom")
 
 @import "theme-twitter"
 +awesome-searchbox($config-name)

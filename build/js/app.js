@@ -11,8 +11,6 @@ $('.ui-icon-clear').on('click', function() {
 
 var Sass = new Sass();
 
-$('.snippet code.language-markup').text($('.awesome-searchbox_custom').parent().html());
-
 function updateSnippet(){
   $.get('awesome-searchbox.scss', function(data){
 
@@ -49,6 +47,11 @@ function updateSnippet(){
   $('.awesome-searchbox_custom .ui-icon-submit use').attr('xlink:href','#' + searchIcon);
   var clearIcon = $('select[name="$clear-icon"]').val();
   $('.awesome-searchbox_custom .ui-icon-clear use').attr('xlink:href','#' + clearIcon);
+  var serializer = new XMLSerializer();
+  var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
+  var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
+  var svgWrapper = '  <svg style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
+  $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox_custom').parent().html());
 };
 
 $('form#settings').on('input change', updateSnippet);
