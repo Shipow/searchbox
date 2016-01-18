@@ -98,7 +98,7 @@ $search-clear-size: 12px !default;
       &:hover {
         cursor: pointer;
       }
-      svg, img {
+      svg {
         height: $search-icon-size;
         width: $search-icon-size;
         vertical-align: middle;
@@ -121,7 +121,7 @@ $search-clear-size: 12px !default;
       &.hide {
         display: none;
       }
-      svg, img {
+      svg {
         height: $search-clear-size;
         width: $search-clear-size;
       }
