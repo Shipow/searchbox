@@ -338,8 +338,8 @@ h2 {
 
 .github-source {
   position: absolute;
-  top: -5px;
-  right: -5px; }
+  top: 0;
+  right: 0; }
   .github-source svg {
     height: 120px;
     width: 120px; }
