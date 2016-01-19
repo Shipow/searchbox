@@ -101,8 +101,8 @@
 
       %h2 Custom - Get your own
       .demo.demo-custom
-        .awesome-searchbox.awesome-searchbox_custom
-          %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
+        .awesome-searchbox.awesome-searchbox_custom{role:"search"}
+          %input.q{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
           .ui-icon-submit
             %svg
               %use{xlink:href:"#search-icon-10"}
@@ -162,7 +162,7 @@
               %option{value:"search-icon-14"} 14
               %option{value:"search-icon-15"} 15
               %option{value:"search-icon-16"} 16
-              %option{value:"search-icon-17", selected:} 17
+              %option{value:"search-icon-17", selected} 17
               %option{value:"search-icon-18"} 18
               %option{value:"search-icon-19"} 19
               %option{value:"search-icon-20"} 20
