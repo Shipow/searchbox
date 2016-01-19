@@ -285,74 +285,74 @@ pre[class*="language-"] {
   padding-left: 25px; }
 
 .demos {
-  margin: 0;
-  min-width: 800px;
-  width: 100%;
   position: relative;
-  font-family: "canada-type-gibson"; }
+  font-family: "canada-type-gibson";
+  margin: 0;
+  width: 100%;
+  min-width: 800px; }
 
 .row {
-  width: 100%;
-  clear: both; }
+  clear: both;
+  width: 100%; }
 
 .col-6 {
-  width: 50%;
-  float: left; }
+  float: left;
+  width: 50%; }
 
 .col-4 {
-  width: 33%;
-  float: left; }
+  float: left;
+  width: 33%; }
 
 .demo-header {
   background-color: #2FC9E8;
+  padding: 20px 0;
   border-bottom: solid 2px #444;
-  height: 200px;
-  padding: 20px 0; }
+  height: 200px; }
 
 h1 {
-  text-align: center;
   font-size: 80px;
   font-weight: 300;
-  color: white;
-  text-transform: uppercase;
-  width: 560px;
   background-color: rgba(255, 255, 255, 0.2);
+  color: white;
   margin: 60px auto 0;
+  border: solid 2px white;
   border-radius: 90px;
-  border: solid 2px white; }
+  text-align: center;
+  width: 560px;
+  text-transform: uppercase; }
   h1 svg {
-    height: 60px;
+    margin-right: 8px;
     width: 60px;
-    margin-right: 8px; }
+    height: 60px; }
     h1 svg use {
       fill: white; }
 
 h2 {
-  text-align: center;
-  margin: 40px 0 20px;
   font-size: 18px;
   font-weight: 300;
   color: #888;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  margin: 40px 0 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase; }
 
 .github-source {
   position: absolute;
   top: 0;
   right: 0; }
   .github-source svg {
-    height: 120px;
-    width: 120px; }
+    width: 120px;
+    height: 120px; }
     .github-source svg use {
       fill: white; }
 
 .icons {
-  text-align: center;
-  padding: 18px; }
+  padding: 18px;
+  text-align: center; }
   .icons svg {
+    margin: 0 10px  10px 0;
     width: 40px;
-    height: 40px;
-    margin: 0 10px  10px 0; }
+    height: 40px; }
     .icons svg use {
       fill: #444; }
 
@@ -360,13 +360,13 @@ h2 {
   text-align: center; }
 
 .btn {
-  padding: 8px 12px;
   background-color: #eee;
+  color: #000;
+  padding: 8px 12px;
+  margin-right: 10px;
   border: solid 1px #ccc;
   border-radius: 3px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #000; }
+  text-decoration: none; }
 
 .settings:after {
   content: "";
@@ -375,49 +375,49 @@ h2 {
 
 .settings form {
   display: block;
-  width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 90%; }
+  .settings form:after {
+    content: "";
+    display: table;
+    clear: both; }
   .settings form h3 {
     font-size: 13px;
-    font-weight: 600;
     font-style: italic;
-    margin: 20px 10px 10px;
-    text-align: left;
-    border-bottom: solid 1px #ccc;
+    font-weight: 600;
     color: #ccc;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
-  .settings form:after {
-    content: '';
-    clear: both;
-    display: block; }
+    margin: 20px 10px 10px;
+    border-bottom: solid 1px #ccc;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase; }
 
 .settings .icon-select-option,
 .settings .icon-select-label {
+  display: inline-block;
   width: 20px;
-  height: 20px;
-  display: inline-block; }
+  height: 20px; }
 
 .settings p {
-  margin: 0 0 4px;
-  padding: 0; }
+  padding: 0;
+  margin: 0 0 4px; }
 
 .settings label {
   display: inline-block;
-  line-height: 34px;
-  width: 160px;
-  padding-right: 4px;
-  text-align: right;
-  letter-spacing: 1px;
   font-size: 12px;
+  padding-right: 4px;
+  letter-spacing: 1px;
+  line-height: 34px;
+  text-align: right;
+  width: 160px;
   text-transform: uppercase; }
 
-.settings input[type='text'], .settings input[type="number"] {
-  width: 56px;
-  border: solid 1px #aaa;
+.settings input[type='text'], .settings input[type="number"], .settings input[type="select"] {
+  box-shadow: inset 0 0 0 1px white;
   padding: 8px 12px;
-  box-shadow: inset 0 0 0 1px white; }
-  .settings input[type='text']:focus, .settings input[type="number"]:focus {
+  border: solid 1px #aaa;
+  width: 56px; }
+  .settings input[type='text']:focus, .settings input[type="number"]:focus, .settings input[type="select"]:focus {
     border-color: #000;
     outline: 0; }
 
@@ -432,9 +432,9 @@ h2 {
   clear: both; }
 
 .snippet {
+  font-size: 11px;
   width: 92%;
-  height: 400px;
-  font-size: 11px; }
+  height: 400px; }
 
 .awesome-searchbox_custom * {
   transition: all 0.5s ease; }
@@ -449,8 +449,8 @@ h2 {
   background-color: #F1F1F1; }
 
 .demo-twitter {
-  border-top: solid 1px #D6DEE3;
-  background-color: white; }
+  background-color: white;
+  border-top: solid 1px #D6DEE3; }
 
 .demo-amazon {
   background-color: #202F40; }
@@ -462,8 +462,8 @@ h2 {
   background-color: #505050; }
 
 .demo-medium {
-  border-top: solid 1px #D9D9D9;
-  background-color: white; }
+  background-color: white;
+  border-top: solid 1px #D9D9D9; }
 
 .demo-facebook {
   background-color: #3E5DA0; }
