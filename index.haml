@@ -22,91 +22,91 @@
 
     .examples
 
-      %h2 Google (default)
-      .demo.demo-default
-        .awesome-searchbox
-          %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-13"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
-
-      %h2 Twitter
-      .demo.demo-twitter
-        .awesome-searchbox.awesome-searchbox_twitter
-          %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-8"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
-
-      %h2 Amazon
-      .demo.demo-amazon
-        .awesome-searchbox.awesome-searchbox_amazon
-          %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-11"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-2"}
-
-      %h2 Spotify
-      .demo.demo-spotify
-        .awesome-searchbox.awesome-searchbox_spotify
-          %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-9"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-4"}
-
-      %h2 Meetup
-      .demo.demo-meetup
-        .awesome-searchbox.awesome-searchbox_meetup
-          %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-13"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
-
-      %h2 Medium
-      .demo.demo-medium
-        .awesome-searchbox.awesome-searchbox_medium
-          %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-11"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-1"}
-
-      %h2 Facebook
-      .demo.demo-facebook
-        .awesome-searchbox.awesome-searchbox_facebook
-          %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-8"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-4"}
+      -# %h2 Google (default)
+      -# .demo.demo-default
+      -#   .awesome-searchbox
+      -#     %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-13"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Twitter
+      -# .demo.demo-twitter
+      -#   .awesome-searchbox.awesome-searchbox_twitter
+      -#     %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-8"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Amazon
+      -# .demo.demo-amazon
+      -#   .awesome-searchbox.awesome-searchbox_amazon
+      -#     %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-11"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-2"}
+      -#
+      -# %h2 Spotify
+      -# .demo.demo-spotify
+      -#   .awesome-searchbox.awesome-searchbox_spotify
+      -#     %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-9"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-4"}
+      -#
+      -# %h2 Meetup
+      -# .demo.demo-meetup
+      -#   .awesome-searchbox.awesome-searchbox_meetup
+      -#     %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-13"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Medium
+      -# .demo.demo-medium
+      -#   .awesome-searchbox.awesome-searchbox_medium
+      -#     %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-11"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-1"}
+      -#
+      -# %h2 Facebook
+      -# .demo.demo-facebook
+      -#   .awesome-searchbox.awesome-searchbox_facebook
+      -#     %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-8"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-4"}
 
       %h2 Custom - Get your own
       .demo.demo-custom
-        .awesome-searchbox.awesome-searchbox_custom{role:"search"}
-          %input.q{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
-          .ui-icon-submit
+        .awesome-searchbox.asb{role:"search"}
+          %input.q.asb__input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
+          .asb__submit
             %svg
               %use{xlink:href:"#search-icon-10"}
-          .ui-icon-clear.hide
+          .asb__reset.hide
             %svg
               %use{xlink:href:"#clear-icon-3"}
 
@@ -114,9 +114,7 @@
       %form#settings
         .col-4
           %h3 Appearence
-          -# %p
-          -#   %label namespace
-          %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
+          %input{type:"hidden", name:"$config-name", value:"asb"}
           %p
             %label width (px)
             %input{type:"number", name:"$search-input-width-px", value:"250"}

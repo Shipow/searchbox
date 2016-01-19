@@ -18,7 +18,6 @@ var cheerio = require('gulp-cheerio');
 var svgfallback = require('gulp-svgfallback');
 
 gulp.task('clean', function() {
-  // Return the Promise from del()
   return del("build");
 });
 
@@ -90,7 +89,7 @@ gulp.task('js', function () {
 
 gulp.task('awesome-searchbox', function () {
   gulp.src('scss/_awesome-searchbox.scss')
-  .pipe(rename("awesome-searchbox.scss"))
+  .pipe(rename('awesome-searchbox.scss'))
   .pipe(gulp.dest('build'))
 });
 

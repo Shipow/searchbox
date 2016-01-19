@@ -1,5 +1,5 @@
 //default settings
-$config-name: 'awesome-searchbox' !default;
+$config-name: 'asb' !default;
 
 $search-input-height: 40px !default;
 $search-input-width: 500px !default;
@@ -29,11 +29,9 @@ $search-clear-size: 12px !default;
     width: $search-input-width;
     height: $search-input-height;
     white-space: nowrap;
-    input[type="search"] {
+    @at-root #{&}__input {
       display: inline-block;
-      box-sizing: padding-box;
-      -webkit-box-sizing: padding-box;
-      -moz-box-sizing: padding-box;
+      box-sizing: border-box;
       width: 100%;
       height: 100%;
       margin: 0;
@@ -63,20 +61,16 @@ $search-clear-size: 12px !default;
         background: $search-input-focus-background;
         box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
       }
-      &::-webkit-input-placeholder {
-        color: $search-placeholder-color;
-      }
-      &::-moz-placeholder {
-        color: $search-placeholder-color;
-      }
-      &:-ms-input-placeholder {
-        color: $search-placeholder-color;
-      }
-      &:-moz-placeholder {
+      &::-webkit-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder,
+      &::-ms-input-placeholder,
+      &:placeholder-shown {
         color: $search-placeholder-color;
       }
     }
-    .ui-icon-submit {
+    @at-root #{&}__submit {
       position: absolute;
       top: 0;
       height: 100%;
@@ -106,7 +100,7 @@ $search-clear-size: 12px !default;
         }
       }
     }
-    .ui-icon-clear {
+    @at-root #{&}__reset {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
       right: 8px  + if($search-icon-position == "right", $search-input-height, $search-border-radius/4);
