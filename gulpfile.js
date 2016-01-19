@@ -90,7 +90,7 @@ gulp.task('js', function () {
 gulp.task('awesome-searchbox', function () {
   gulp.src('scss/_awesome-searchbox.scss')
   .pipe(rename('awesome-searchbox.scss'))
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {

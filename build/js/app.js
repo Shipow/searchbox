@@ -33,6 +33,7 @@ function updateSnippet(){
         }
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';\n');
+
     Sass.writeFile('settings.scss', config + ';');
 
     scss = config + ';\n\n' + data;

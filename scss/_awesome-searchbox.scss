@@ -1,27 +1,4 @@
-//default settings
-$config-name: 'asb' !default;
-
-$search-input-height: 40px !default;
-$search-input-width: 500px !default;
-$search-input-border-color: #ccc !default;
-$search-input-background: white !default;
-
-$search-input-focus-background: white !default;
-$search-input-focus-border-color: #3E82F7 !default;
-
-$search-font-size: 14px !default;
-$search-placeholder-color: #aaa !default;
-
-$search-border-width: 1px !default;
-$search-border-radius: 3px !default;
-
-$search-icon-position: right !default;
-$search-icon-size: $search-input-height - ($search-input-height / 2) !default;
-$search-icon-color: white !default;
-$search-icon-background: #3E82F7 !default;
-$search-icon-background-opacity: 1 !default;
-
-$search-clear-size: 12px !default;
+@import "settings"; //default settings
 
 @mixin awesome-searchbox($config) {
   .#{$config} {
@@ -56,16 +33,26 @@ $search-clear-size: 12px !default;
       &:hover {
         box-shadow: inset 0 0 0 $search-border-width darken($search-input-border-color,10%);
       }
-      &:focus {
+      &:focus, &:active {
         outline: 0; // Remove the stupid outer glow in Webkit
         background: $search-input-focus-background;
         box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
       }
-      &::-webkit-input-placeholder,
-      &:-moz-placeholder,
-      &::-moz-placeholder,
-      &:-ms-input-placeholder,
-      &::-ms-input-placeholder,
+      &::-webkit-input-placeholder{
+        color: $search-placeholder-color;
+      }
+      &:-moz-placeholder{
+        color: $search-placeholder-color;
+      }
+      &::-moz-placeholder{
+        color: $search-placeholder-color;
+      }
+      &:-ms-input-placeholder{
+        color: $search-placeholder-color;
+      }
+      &::-ms-input-placeholder {
+        color: $search-placeholder-color;
+      }
       &:placeholder-shown {
         color: $search-placeholder-color;
       }
@@ -88,7 +75,7 @@ $search-clear-size: 12px !default;
         margin-right: -4px;
         vertical-align: middle;
       }
-      &:hover {
+      &:hover, &:active {
         cursor: pointer;
       }
       svg {

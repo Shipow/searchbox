@@ -292,16 +292,11 @@ pre[class*="language-"] {
   min-width: 800px; }
 
 .row {
-  clear: both;
   width: 100%; }
 
 .col-6 {
   float: left;
   width: 50%; }
-
-.col-4 {
-  float: left;
-  width: 33%; }
 
 .demo-header {
   background-color: #2FC9E8;
@@ -412,12 +407,12 @@ h2 {
   width: 160px;
   text-transform: uppercase; }
 
-.settings input[type='text'], .settings input[type="number"], .settings input[type="select"] {
+.settings input[type='text'], .settings input[type="number"] {
   box-shadow: inset 0 0 0 1px white;
   padding: 8px 12px;
   border: solid 1px #aaa;
   width: 56px; }
-  .settings input[type='text']:focus, .settings input[type="number"]:focus, .settings input[type="select"]:focus {
+  .settings input[type='text']:focus, .settings input[type="number"]:focus {
     border-color: #000;
     outline: 0; }
 
@@ -495,11 +490,21 @@ h2 {
       display: none; }
     .asb__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
-    .asb__input:focus {
+    .asb__input:focus, .asb__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 1px #3E82F7; }
-    .asb__input::-webkit-input-placeholder, .asb__input:-moz-placeholder, .asb__input::-moz-placeholder, .asb__input:-ms-input-placeholder, .asb__input::-ms-input-placeholder, .asb__input:placeholder-shown {
+    .asb__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .asb__input:-moz-placeholder {
+      color: #aaa; }
+    .asb__input::-moz-placeholder {
+      color: #aaa; }
+    .asb__input:-ms-input-placeholder {
+      color: #aaa; }
+    .asb__input::-ms-input-placeholder {
+      color: #aaa; }
+    .asb__input:placeholder-shown {
       color: #aaa; }
   .asb__submit {
     position: absolute;
@@ -517,7 +522,7 @@ h2 {
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb__submit:hover {
+    .asb__submit:hover, .asb__submit:active {
       cursor: pointer; }
     .asb__submit svg {
       height: 20px;
