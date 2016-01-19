@@ -1,10 +1,10 @@
 $('.q').on('input', function() {
-    $(this).closest('.awesome-searchbox').find('.ui-icon-clear').removeClass('hide');
+    $(this).closest('.awesome-searchbox').find('.asb__reset').removeClass('hide');
     if($(this).val().length === 0){
-      $(this).closest('.awesome-searchbox').find('.ui-icon-clear').addClass('hide')
+      $(this).closest('.awesome-searchbox').find('.asb__reset').addClass('hide')
     }
 });
-$('.ui-icon-clear').on('click', function() {
+$('.asb__reset').on('click', function() {
   $(this).closest('.awesome-searchbox').find('.q').val('').focus();
   $(this).addClass('hide');
 });
@@ -48,13 +48,13 @@ function updateSnippet(){
   });
   var searchIcon = $('select[name="$search-icon"]').val();
   var clearIcon = $('select[name="$clear-icon"]').val();
-  $('.awesome-searchbox_custom .ui-icon-submit use').attr('xlink:href','#' + searchIcon);
-  $('.awesome-searchbox_custom .ui-icon-clear use').attr('xlink:href','#' + clearIcon);
+  $('.awesome-searchbox .asb__submit use').attr('xlink:href','#' + searchIcon);
+  $('.awesome-searchbox .asb__reset use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
-  $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox_custom').parent().html());
+  $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox').parent().html());
 };
 
 updateSnippet();
