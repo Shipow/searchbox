@@ -161,4 +161,9 @@ h2
 .demo-facebook
   background-color: #3E5DA0
 
-@import "awesome-searchbox"
+@import 'themes/theme-amazon'
+@import 'awesome-searchbox'
+
+@include awesome-searchbox(()...);
+@include awesome-searchbox(($amazon)...);
+// @include awesome-searchbox((theme:'google')...);

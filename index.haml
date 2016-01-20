@@ -110,13 +110,12 @@
               %use{xlink:href:"#clear-icon-3"}
 
     .settings
+      %p
+        %label Theme
+        %select{name:"$search-theme"}
+          %option{value:"theme-default"} Default
+          %option{value:"theme-amazon"} Amazon
       %form#settings
-        %h3 Examples
-        %p
-          %label Theme
-          %select{name:"$search-theme"}
-            %option{value:"theme-default"} Default
-            %option{value:"theme-amazon"} Amazon
         %h3 Appearence
         %input{type:"hidden", name:"$config-name", value:"asb"}
         %p
