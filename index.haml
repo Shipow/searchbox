@@ -98,7 +98,6 @@
       -#       %svg
       -#         %use{xlink:href:"#clear-icon-4"}
 
-      %h2 Customize your Searchbox
       #demo.asb-google_demo
         .awesome-searchbox.asb-google{role:"search"}
           %input.asb-google__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
@@ -112,11 +111,22 @@
     .settings
       %p
         %label Theme
-        %select{name:"theme"}
-          %option{value:"asb-custom"} Custom
+        %select{name:"search-namespace"}
           %option{value:"asb-google", selected:true} Google
           %option{value:"asb-amazon"} Amazon
           %option{value:"asb-facebook"} Facebook
+          %option{value:"asb-medium"} Medium
+          %option{value:"asb-meetup"} Meetup
+          %option{value:"asb-spotify"} Spotify
+          %option{value:"asb-twitter"} Twitter
+          %option{value:"asb-custom"} Custom - Build Your own
+      %p
+        %strong Work in progress
+        %br
+        Right now, selecting a theme doesn't update the generator ;)
+
+
+      %h2 Generator
       %form#settings
         %h3 Appearence
         %p

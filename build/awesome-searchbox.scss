@@ -1,5 +1,5 @@
 @mixin awesome-searchbox(
-    $theme: 'asb-default',
+    $search-namespace: 'asb-default',
     $search-input-height: 40px,
     $search-input-width: 500px,
     $search-input-border-color: #ccc,
@@ -19,7 +19,7 @@
     $search-clear-icon: 'search-clear-icon-1',
     $search-clear-size: 12px
   ) {
-  .#{$theme} {
+  .#{$search-namespace} {
     position: relative;
     width: $search-input-width;
     height: $search-input-height;

@@ -37,11 +37,11 @@ function updateSnippet(){
             }
         }
     });
-    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t');
+    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
     // Sass.writeFile('settings.scss', config + ';');
 
-    scss = '$custom:(\n\ttheme:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom :(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
@@ -117,7 +117,7 @@ function applyTheme(val, el, suf){
   }).addClass(val + suf);
 }
 
-$('select[name="theme"]').on('change', function(){
+$('select[name="search-namespace"]').on('change', function(){
   var val = $(this).val();
   applyTheme(val,'#demo','_demo');
   applyTheme(val,'.awesome-searchbox');
