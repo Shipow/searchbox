@@ -25,20 +25,18 @@
           %p
             %label Select a Theme
             %select.select{name:"search-namespace"}
-              %option{value:"asb-google", selected:true} Google
+              %option{value:"asb-google"} Google
               %option{value:"asb-amazon"} Amazon
               %option{value:"asb-facebook"} Facebook
               %option{value:"asb-medium"} Medium
               %option{value:"asb-meetup"} Meetup
               %option{value:"asb-spotify"} Spotify
               %option{value:"asb-twitter"} Twitter
-              %option{value:"asb-custom"} Custom
+              %option{value:"asb-custom", selected:true} Custom
           %p.warning
             %strong Work in progress
             %br
-            Right now, selecting a theme doesn't update the generator.
-            The generator works only with Custom theme.
-
+            Right now, selecting a theme doesn't update the generator. And the generator works only with Custom theme.
 
           %h2 Generator
           %form#settings
@@ -140,13 +138,13 @@
 
       .col-9
         %h2 Generated Searchbox
-        #demo.asb-google_demo
-          .awesome-searchbox.asb-google{role:"search"}
-            %input.asb-google__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
-            .asb-google__submit.js-search-submit
+        #demo.asb-custom_demo
+          .awesome-searchbox.asb-custom{role:"search"}
+            %input.asb-custom__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
+            .asb-custom__submit.js-search-submit
               %svg
                 %use{xlink:href:"#search-icon-10"}
-            .asb-google__reset.hide.js-search-reset
+            .asb-custom__reset.hide.js-search-reset
               %svg
                 %use{xlink:href:"#clear-icon-3"}
 
