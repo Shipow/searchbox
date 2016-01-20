@@ -51,6 +51,8 @@ function updateSnippet(){
       $('.snippet code.language-css').text(css);
       $('.snippet code.language-scss').text(scss);
       Prism.highlightAll(false);
+      $('#demo').removeClass('hide');
+      $('#snippets').removeClass('hide');
     });
   });
   var searchIcon = $('select[name="search-icon"]').val();

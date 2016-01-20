@@ -138,37 +138,38 @@
 
       .col-9
         %h2 Generated Searchbox
-        #demo.asb-custom_demo
+        #demo.asb-custom_demo.hide
           .awesome-searchbox.asb-custom{role:"search"}
             %input.asb-custom__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
-            .asb-custom__submit.js-search-submit
+            %span.asb-custom__submit.js-search-submit
               %svg
                 %use{xlink:href:"#search-icon-10"}
-            .asb-custom__reset.hide.js-search-reset
+            %span.asb-custom__reset.hide.js-search-reset
               %svg
                 %use{xlink:href:"#clear-icon-3"}
 
         %a.btn.download-zip{href:"javascript:void(0);"} Download
 
-        %h2
-          Snippet
-          %a{href:"#"} Css
-          \ |
-          %a{href:"#"} Scss
-        %pre.snippet
-          %code.language-css
+        %section#snippets.hide
+          %h2
+            Snippet
+            %a{href:"#"} Css
+            \ |
+            %a{href:"#"} Scss
+          %pre.snippet
+            %code.language-css
 
-        %h2 Snippet HTML
-        %pre.snippet
-          %code.language-markup
+          %h2 Snippet HTML
+          %pre.snippet
+            %code.language-markup
 
-        %h2 Snippet Scss
-        %pre.snippet
-          %code.language-scss
+          %h2 Snippet Scss
+          %pre.snippet
+            %code.language-scss
 
-        %h2 Snippet Javascript
-        %pre.snippet
-          %code.language-js
+          %h2 Snippet Javascript
+          %pre.snippet
+            %code.language-js
 
     .row
       %h2 Search icons
