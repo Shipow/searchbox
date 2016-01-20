@@ -1,13 +1,13 @@
 // asb
 
-$('.q').on('input', function() {
-    $(this).closest('.awesome-searchbox').find('.asb__reset').removeClass('hide');
+$('.js-search-input').on('input', function() {
+    $(this).closest('.awesome-searchbox').find('.js-search-reset').removeClass('hide');
     if($(this).val().length === 0){
-      $(this).closest('.awesome-searchbox').find('.asb__reset').addClass('hide')
+      $(this).closest('.awesome-searchbox').find('.js-search-reset').addClass('hide')
     }
 });
-$('.asb__reset').on('click', function() {
-  $(this).closest('.awesome-searchbox').find('.q').val('').focus();
+$('.js-search-reset').on('click', function() {
+  $(this).closest('.awesome-searchbox').find('.js-search-input').val('').focus();
   $(this).addClass('hide');
 });
 
@@ -41,7 +41,7 @@ function updateSnippet(){
 
     // Sass.writeFile('settings.scss', config + ';');
 
-    scss = '$custom:(\n\ttheme:\'custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\ttheme:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
@@ -101,8 +101,28 @@ $('.jselectric').selectric({
   }
 });
 
+
+//BERK
+
+$.fn.regex = function(pattern, fn, fn_a){
+    var fn = fn || $.fn.text;
+    return this.filter(function() {
+        return pattern.test(fn.apply($(this), fn_a));
+    });
+};
+
 $('select[name="theme"]').on('change', function(){
-  $('.awesome-searchbox').removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb--\S+/g) || []).join(' ');
-  }).addClass('asb--' + $(this).val());
+  var val = $(this).val();
+  $('#demo .awesome-searchbox').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  }).addClass(val);
+  $('#demo .js-search-input').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  }).addClass( val + '__input' );
+  $('#demo .js-search-reset').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  }).addClass( val + '__reset' );
+  $('#demo .js-search-submit').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  }).addClass( val + '__submit' );
 });

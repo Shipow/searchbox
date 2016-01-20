@@ -463,12 +463,12 @@ h2 {
 .demo-facebook {
   background-color: #3E5DA0; }
 
-.asb--default {
+.asb-default {
   position: relative;
   width: 500px;
   height: 40px;
   white-space: nowrap; }
-  .asb--default .asb__input {
+  .asb-default__input {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
@@ -486,27 +486,27 @@ h2 {
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
-    .asb--default .asb__input::-webkit-search-decoration, .asb--default .asb__input::-webkit-search-cancel-button, .asb--default .asb__input::-webkit-search-results-button, .asb--default .asb__input::-webkit-search-results-decoration {
+    .asb-default__input::-webkit-search-decoration, .asb-default__input::-webkit-search-cancel-button, .asb-default__input::-webkit-search-results-button, .asb-default__input::-webkit-search-results-decoration {
       display: none; }
-    .asb--default .asb__input:hover {
+    .asb-default__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
-    .asb--default .asb__input:focus, .asb--default .asb__input:active {
+    .asb-default__input:focus, .asb-default__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 1px #3E82F7; }
-    .asb--default .asb__input::-webkit-input-placeholder {
+    .asb-default__input::-webkit-input-placeholder {
       color: #aaa; }
-    .asb--default .asb__input:-moz-placeholder {
+    .asb-default__input:-moz-placeholder {
       color: #aaa; }
-    .asb--default .asb__input::-moz-placeholder {
+    .asb-default__input::-moz-placeholder {
       color: #aaa; }
-    .asb--default .asb__input:-ms-input-placeholder {
+    .asb-default__input:-ms-input-placeholder {
       color: #aaa; }
-    .asb--default .asb__input::-ms-input-placeholder {
+    .asb-default__input::-ms-input-placeholder {
       color: #aaa; }
-    .asb--default .asb__input:placeholder-shown {
+    .asb-default__input:placeholder-shown {
       color: #aaa; }
-  .asb--default .asb__submit {
+  .asb-default__submit {
     position: absolute;
     top: 0;
     height: 100%;
@@ -516,21 +516,21 @@ h2 {
     text-align: center;
     background-color: #3e82f7;
     right: 0; }
-    .asb--default .asb__submit:before {
+    .asb-default__submit:before {
       content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb--default .asb__submit:hover, .asb--default .asb__submit:active {
+    .asb-default__submit:hover, .asb-default__submit:active {
       cursor: pointer; }
-    .asb--default .asb__submit svg {
+    .asb-default__submit svg {
       height: 20px;
       width: 20px;
       vertical-align: middle; }
-      .asb--default .asb__submit svg use {
+      .asb-default__submit svg use {
         fill: white; }
-  .asb--default .asb__reset {
+  .asb-default__reset {
     position: absolute;
     top: 14px;
     right: 48px;
@@ -538,20 +538,20 @@ h2 {
     line-height: 0;
     height: 12px;
     cursor: pointer; }
-    .asb--default .asb__reset:hover {
+    .asb-default__reset:hover {
       opacity: 1; }
-    .asb--default .asb__reset.hide {
+    .asb-default__reset.hide {
       display: none; }
-    .asb--default .asb__reset svg {
+    .asb-default__reset svg {
       height: 12px;
       width: 12px; }
 
-.asb--amazon {
+.asb-amazon {
   position: relative;
   width: 500px;
   height: 38px;
   white-space: nowrap; }
-  .asb--amazon .asb__input {
+  .asb-amazon__input {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
@@ -569,27 +569,27 @@ h2 {
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
-    .asb--amazon .asb__input::-webkit-search-decoration, .asb--amazon .asb__input::-webkit-search-cancel-button, .asb--amazon .asb__input::-webkit-search-results-button, .asb--amazon .asb__input::-webkit-search-results-decoration {
+    .asb-amazon__input::-webkit-search-decoration, .asb-amazon__input::-webkit-search-cancel-button, .asb-amazon__input::-webkit-search-results-button, .asb-amazon__input::-webkit-search-results-decoration {
       display: none; }
-    .asb--amazon .asb__input:hover {
+    .asb-amazon__input:hover {
       box-shadow: inset 0 0 0 1px #e6e6e6; }
-    .asb--amazon .asb__input:focus, .asb--amazon .asb__input:active {
+    .asb-amazon__input:focus, .asb-amazon__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 1px #FFBF58; }
-    .asb--amazon .asb__input::-webkit-input-placeholder {
+    .asb-amazon__input::-webkit-input-placeholder {
       color: #aaa; }
-    .asb--amazon .asb__input:-moz-placeholder {
+    .asb-amazon__input:-moz-placeholder {
       color: #aaa; }
-    .asb--amazon .asb__input::-moz-placeholder {
+    .asb-amazon__input::-moz-placeholder {
       color: #aaa; }
-    .asb--amazon .asb__input:-ms-input-placeholder {
+    .asb-amazon__input:-ms-input-placeholder {
       color: #aaa; }
-    .asb--amazon .asb__input::-ms-input-placeholder {
+    .asb-amazon__input::-ms-input-placeholder {
       color: #aaa; }
-    .asb--amazon .asb__input:placeholder-shown {
+    .asb-amazon__input:placeholder-shown {
       color: #aaa; }
-  .asb--amazon .asb__submit {
+  .asb-amazon__submit {
     position: absolute;
     top: 0;
     height: 100%;
@@ -599,21 +599,21 @@ h2 {
     text-align: center;
     background-color: #ffbf58;
     right: 0; }
-    .asb--amazon .asb__submit:before {
+    .asb-amazon__submit:before {
       content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb--amazon .asb__submit:hover, .asb--amazon .asb__submit:active {
+    .asb-amazon__submit:hover, .asb-amazon__submit:active {
       cursor: pointer; }
-    .asb--amazon .asb__submit svg {
+    .asb-amazon__submit svg {
       height: 20px;
       width: 20px;
       vertical-align: middle; }
-      .asb--amazon .asb__submit svg use {
+      .asb-amazon__submit svg use {
         fill: #202F40; }
-  .asb--amazon .asb__reset {
+  .asb-amazon__reset {
     position: absolute;
     top: 13px;
     right: 46px;
@@ -621,20 +621,20 @@ h2 {
     line-height: 0;
     height: 12px;
     cursor: pointer; }
-    .asb--amazon .asb__reset:hover {
+    .asb-amazon__reset:hover {
       opacity: 1; }
-    .asb--amazon .asb__reset.hide {
+    .asb-amazon__reset.hide {
       display: none; }
-    .asb--amazon .asb__reset svg {
+    .asb-amazon__reset svg {
       height: 12px;
       width: 12px; }
 
-.asb--google {
+.asb-google {
   position: relative;
   width: 500px;
   height: 40px;
   white-space: nowrap; }
-  .asb--google .asb__input {
+  .asb-google__input {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
@@ -652,27 +652,27 @@ h2 {
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
-    .asb--google .asb__input::-webkit-search-decoration, .asb--google .asb__input::-webkit-search-cancel-button, .asb--google .asb__input::-webkit-search-results-button, .asb--google .asb__input::-webkit-search-results-decoration {
+    .asb-google__input::-webkit-search-decoration, .asb-google__input::-webkit-search-cancel-button, .asb-google__input::-webkit-search-results-button, .asb-google__input::-webkit-search-results-decoration {
       display: none; }
-    .asb--google .asb__input:hover {
+    .asb-google__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
-    .asb--google .asb__input:focus, .asb--google .asb__input:active {
+    .asb-google__input:focus, .asb-google__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 1px #3E82F7; }
-    .asb--google .asb__input::-webkit-input-placeholder {
+    .asb-google__input::-webkit-input-placeholder {
       color: #aaa; }
-    .asb--google .asb__input:-moz-placeholder {
+    .asb-google__input:-moz-placeholder {
       color: #aaa; }
-    .asb--google .asb__input::-moz-placeholder {
+    .asb-google__input::-moz-placeholder {
       color: #aaa; }
-    .asb--google .asb__input:-ms-input-placeholder {
+    .asb-google__input:-ms-input-placeholder {
       color: #aaa; }
-    .asb--google .asb__input::-ms-input-placeholder {
+    .asb-google__input::-ms-input-placeholder {
       color: #aaa; }
-    .asb--google .asb__input:placeholder-shown {
+    .asb-google__input:placeholder-shown {
       color: #aaa; }
-  .asb--google .asb__submit {
+  .asb-google__submit {
     position: absolute;
     top: 0;
     height: 100%;
@@ -682,21 +682,21 @@ h2 {
     text-align: center;
     background-color: #3e82f7;
     right: 0; }
-    .asb--google .asb__submit:before {
+    .asb-google__submit:before {
       content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb--google .asb__submit:hover, .asb--google .asb__submit:active {
+    .asb-google__submit:hover, .asb-google__submit:active {
       cursor: pointer; }
-    .asb--google .asb__submit svg {
+    .asb-google__submit svg {
       height: 20px;
       width: 20px;
       vertical-align: middle; }
-      .asb--google .asb__submit svg use {
+      .asb-google__submit svg use {
         fill: white; }
-  .asb--google .asb__reset {
+  .asb-google__reset {
     position: absolute;
     top: 14px;
     right: 48px;
@@ -704,20 +704,20 @@ h2 {
     line-height: 0;
     height: 12px;
     cursor: pointer; }
-    .asb--google .asb__reset:hover {
+    .asb-google__reset:hover {
       opacity: 1; }
-    .asb--google .asb__reset.hide {
+    .asb-google__reset.hide {
       display: none; }
-    .asb--google .asb__reset svg {
+    .asb-google__reset svg {
       height: 12px;
       width: 12px; }
 
-.asb--facebook {
+.asb-facebook {
   position: relative;
   width: 500px;
   height: 25px;
   white-space: nowrap; }
-  .asb--facebook .asb__input {
+  .asb-facebook__input {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
@@ -735,27 +735,27 @@ h2 {
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
-    .asb--facebook .asb__input::-webkit-search-decoration, .asb--facebook .asb__input::-webkit-search-cancel-button, .asb--facebook .asb__input::-webkit-search-results-button, .asb--facebook .asb__input::-webkit-search-results-decoration {
+    .asb-facebook__input::-webkit-search-decoration, .asb-facebook__input::-webkit-search-cancel-button, .asb-facebook__input::-webkit-search-results-button, .asb-facebook__input::-webkit-search-results-decoration {
       display: none; }
-    .asb--facebook .asb__input:hover {
+    .asb-facebook__input:hover {
       box-shadow: inset 0 0 0 0 #b3b3b3; }
-    .asb--facebook .asb__input:focus, .asb--facebook .asb__input:active {
+    .asb-facebook__input:focus, .asb-facebook__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 0 #3E82F7; }
-    .asb--facebook .asb__input::-webkit-input-placeholder {
+    .asb-facebook__input::-webkit-input-placeholder {
       color: #aaa; }
-    .asb--facebook .asb__input:-moz-placeholder {
+    .asb-facebook__input:-moz-placeholder {
       color: #aaa; }
-    .asb--facebook .asb__input::-moz-placeholder {
+    .asb-facebook__input::-moz-placeholder {
       color: #aaa; }
-    .asb--facebook .asb__input:-ms-input-placeholder {
+    .asb-facebook__input:-ms-input-placeholder {
       color: #aaa; }
-    .asb--facebook .asb__input::-ms-input-placeholder {
+    .asb-facebook__input::-ms-input-placeholder {
       color: #aaa; }
-    .asb--facebook .asb__input:placeholder-shown {
+    .asb-facebook__input:placeholder-shown {
       color: #aaa; }
-  .asb--facebook .asb__submit {
+  .asb-facebook__submit {
     position: absolute;
     top: 0;
     height: 100%;
@@ -765,21 +765,21 @@ h2 {
     text-align: center;
     background-color: #f6f7f8;
     right: 0; }
-    .asb--facebook .asb__submit:before {
+    .asb-facebook__submit:before {
       content: "";
       display: inline-block;
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb--facebook .asb__submit:hover, .asb--facebook .asb__submit:active {
+    .asb-facebook__submit:hover, .asb-facebook__submit:active {
       cursor: pointer; }
-    .asb--facebook .asb__submit svg {
+    .asb-facebook__submit svg {
       height: 12.5px;
       width: 12.5px;
       vertical-align: middle; }
-      .asb--facebook .asb__submit svg use {
+      .asb-facebook__submit svg use {
         fill: #3C5BA2; }
-  .asb--facebook .asb__reset {
+  .asb-facebook__reset {
     position: absolute;
     top: 6.5px;
     right: 33px;
@@ -787,10 +787,10 @@ h2 {
     line-height: 0;
     height: 12px;
     cursor: pointer; }
-    .asb--facebook .asb__reset:hover {
+    .asb-facebook__reset:hover {
       opacity: 1; }
-    .asb--facebook .asb__reset.hide {
+    .asb-facebook__reset.hide {
       display: none; }
-    .asb--facebook .asb__reset svg {
+    .asb-facebook__reset svg {
       height: 12px;
       width: 12px; }
