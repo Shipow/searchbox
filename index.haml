@@ -23,7 +23,7 @@
       .col-3
         .settings
           %p
-            %label Theme
+            %label Select a Theme
             %select.select{name:"search-namespace"}
               %option{value:"asb-google", selected:true} Google
               %option{value:"asb-amazon"} Amazon
@@ -33,10 +33,11 @@
               %option{value:"asb-spotify"} Spotify
               %option{value:"asb-twitter"} Twitter
               %option{value:"asb-custom"} Custom
-          %p
+          %p.warning
             %strong Work in progress
             %br
-            Right now, selecting a theme doesn't update the generator ;)
+            Right now, selecting a theme doesn't update the generator.
+            The generator works only with Custom theme.
 
 
           %h2 Generator
@@ -138,7 +139,7 @@
 
 
       .col-9
-        %h2 Searchbox
+        %h2 Generated Searchbox
         #demo.asb-google_demo
           .awesome-searchbox.asb-google{role:"search"}
             %input.asb-google__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
@@ -151,7 +152,11 @@
 
         %a.btn.download-zip{href:"javascript:void(0);"} Download
 
-        %h2 Snippet Css | Scss
+        %h2
+          Snippet
+          %a{href:"#"} Css
+          \ |
+          %a{href:"#"} Scss
         %pre.snippet
           %code.language-css
 

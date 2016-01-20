@@ -288,8 +288,7 @@ body {
   position: relative;
   font-family: "canada-type-gibson";
   margin: 0;
-  width: 100%;
-  min-width: 800px; }
+  width: 100%; }
 
 .row {
   font-size: 0; }
@@ -403,7 +402,11 @@ h3 {
     margin-right: 8px; }
   .settings p {
     padding: 0;
-    margin: 0 0 4px 40px; }
+    margin: 0 0 4px 0; }
+    .settings p.warning {
+      background-color: #FFDD78;
+      padding: 8px;
+      display: block; }
   .settings label {
     display: inline-block;
     font-size: 12px;
@@ -430,14 +433,16 @@ h3 {
 
 .snippet {
   font-size: 11px;
-  width: 92%;
-  height: 300px; }
+  height: 300px;
+  width: 94%; }
 
 #demo {
+  box-sizing: border-box;
   padding: 14px;
   margin: 0 0 80px 0;
-  width: 100%;
-  transition: all 0.5s ease; }
+  width: 100%; }
+  #demo * {
+    transition: all 0.5s ease; }
   #demo > div {
     margin: 0 auto; }
   #demo.asb-google_demo {

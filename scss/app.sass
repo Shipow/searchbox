@@ -30,7 +30,6 @@ body
   font-family: "canada-type-gibson"
   margin: 0
   width: 100%
-  min-width: 800px
 
 .row
   +row
@@ -124,7 +123,11 @@ h3
 
   p
     padding: 0
-    margin: 0 0 4px 40px
+    margin: 0 0 4px 0
+    &.warning
+      background-color: #FFDD78
+      padding: 8px
+      display: block
   label
     display: inline-block
     font-size: 12px
@@ -151,15 +154,16 @@ h3
 
 .snippet
   font-size: 11px
-  width: 92%
   height: 300px
+  width: 94%
 
 #demo
-
+  box-sizing: border-box;
   padding: 14px
   margin: 0 0 80px 0
   width: 100%
-  transition: all 0.5s ease
+  *
+    transition: all 0.5s ease
   > div
     margin: 0 auto
   &.asb-google_demo
