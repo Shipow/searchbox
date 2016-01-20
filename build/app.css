@@ -103,12 +103,13 @@ pre[class*="language-"] {
   cursor: help; }
 
 /*======================================
-  Selectric v1.9.3
+  Selectric v1.9.3 //modified
 ======================================*/
 .selectric-wrapper {
   position: relative;
   cursor: pointer;
-  display: inline-block; }
+  display: inline-block;
+  top: 10px; }
 
 .selectric-responsive {
   width: 100%; }
@@ -116,18 +117,17 @@ pre[class*="language-"] {
 .selectric {
   border: 1px solid #aaa;
   position: relative;
-  width: 80px; }
+  display: inline-block; }
 
 .selectric .label {
-  display: inline-block;
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 38px 0 10px;
   font-size: 12px;
-  line-height: 48px;
-  color: #444;
-  height: 36px; }
+  line-height: 28px;
+  color: #444; }
 
 .selectric .button {
   display: block;
@@ -135,7 +135,7 @@ pre[class*="language-"] {
   right: 0;
   top: 0;
   width: 33px;
-  height: 33px;
+  height: 28px;
   color: #BBB;
   text-align: center;
   font: 0/0 a; }
@@ -390,8 +390,11 @@ h2 {
 .settings .icon-select-option,
 .settings .icon-select-label {
   display: inline-block;
-  width: 20px;
-  height: 20px; }
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 4px;
+  margin-right: 8px; }
 
 .settings p {
   padding: 0;
@@ -409,9 +412,11 @@ h2 {
 
 .settings input[type='text'], .settings input[type="number"] {
   box-shadow: inset 0 0 0 1px white;
-  padding: 8px 12px;
+  padding: 0 12px;
+  line-height: 28px;
   border: solid 1px #aaa;
-  width: 56px; }
+  width: 56px;
+  font-size: 12px; }
   .settings input[type='text']:focus, .settings input[type="number"]:focus {
     border-color: #000;
     outline: 0; }

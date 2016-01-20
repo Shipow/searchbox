@@ -92,7 +92,7 @@ $('.download-zip').on('click',function(){
 
 $('.jscolor').addClass('{hash:true}')
 
-$('.jselectric').selectric({
+$('.select-icon').selectric({
   optionsItemBuilder: function(itemData, element, index) {
     return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
   },
@@ -100,6 +100,7 @@ $('.jselectric').selectric({
     return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
   }
 });
+$('.select').selectric();
 
 //BERK
 

@@ -111,7 +111,7 @@
     .settings
       %p
         %label Theme
-        %select{name:"search-namespace"}
+        %select.select{name:"search-namespace"}
           %option{value:"asb-google", selected:true} Google
           %option{value:"asb-amazon"} Amazon
           %option{value:"asb-facebook"} Facebook
@@ -157,7 +157,7 @@
         %h3 Search icon
         %p
           %label icon-img
-          %select.jselectric{name:"search-icon"}
+          %select.select-icon{name:"search-icon"}
             %option{value:"search-icon-1"} 1
             %option{value:"search-icon-2"} 2
             %option{value:"search-icon-3"} 3
@@ -212,7 +212,7 @@
         %h3 Clear
         %p
           %label icon-clear-img
-          %select.jselectric{name:"search-clear-icon"}
+          %select.select-icon{name:"search-clear-icon"}
             %option{value:"clear-icon-1"} 1
             %option{value:"clear-icon-2"} 2
             %option{value:"clear-icon-3"} 3
