@@ -25,160 +25,153 @@
     </a>
     <h1><svg><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
   </div>
-  <div class="examples">
-    <div class="asb-google_demo" id="demo">
-      <div role="search" class="awesome-searchbox asb-google">
-        <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-google__input js-search-input" />
-        <div class="asb-google__submit js-search-submit">
-          <svg>
-            <use xlink:href="#search-icon-10"></use>
-          </svg>
-        </div>
-        <div class="asb-google__reset hide js-search-reset">
-          <svg>
-            <use xlink:href="#clear-icon-3"></use>
-          </svg>
-        </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="settings">
+        <p>
+          <label>Theme</label>
+          <select name="search-namespace" class="select">
+            <option value="asb-google" selected="selected">Google</option>
+            <option value="asb-amazon">Amazon</option>
+            <option value="asb-facebook">Facebook</option>
+            <option value="asb-medium">Medium</option>
+            <option value="asb-meetup">Meetup</option>
+            <option value="asb-spotify">Spotify</option>
+            <option value="asb-twitter">Twitter</option>
+            <option value="asb-custom">Custom</option>
+          </select>
+        </p>
+        <p><strong>Work in progress</strong>
+          <br />Right now, selecting a theme doesn't update the generator ;)</p>
+        <h2>Generator</h2>
+        <form id="settings">
+          <h3>Appearence</h3>
+          <p>
+            <label>width (px)</label>
+            <input type="number" name="search-input-width-px" value="250" />
+          </p>
+          <p>
+            <label>height (px)</label>
+            <input type="number" name="search-input-height-px" value="50" />
+          </p>
+          <p>
+            <label>font-size (px)</label>
+            <input type="number" name="search-font-size-px" value="14" />
+          </p>
+          <p>
+            <label>border-width (px)</label>
+            <input type="number" name="search-border-widt-pxh" value="2" />
+          </p>
+          <p>
+            <label>border-radius (px)</label>
+            <input type="number" name="search-border-radius-px" value="25" />
+          </p>
+          <p>
+            <label>border-color</label>
+            <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
+          </p>
+          <p>
+            <label>bg-color</label>
+            <input type="text" name="search-input-background" value="white" class="jscolor" />
+          </p>
+          <p>
+            <label>placeholder-color</label>
+            <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
+          </p>
+          <h3>Search icon</h3>
+          <p>
+            <label>icon-img</label>
+            <select name="search-icon" class="select-icon">
+              <option value="search-icon-1">1</option>
+              <option value="search-icon-2">2</option>
+              <option value="search-icon-3">3</option>
+              <option value="search-icon-4">4</option>
+              <option value="search-icon-5">5</option>
+              <option value="search-icon-6">6</option>
+              <option value="search-icon-7">7</option>
+              <option value="search-icon-8">8</option>
+              <option value="search-icon-9">9</option>
+              <option value="search-icon-10">10</option>
+              <option value="search-icon-11">11</option>
+              <option value="search-icon-12">12</option>
+              <option value="search-icon-13">13</option>
+              <option value="search-icon-14">14</option>
+              <option value="search-icon-15">15</option>
+              <option value="search-icon-16">16</option>
+              <option value="search-icon-17" selected="selected">17</option>
+              <option value="search-icon-18">18</option>
+              <option value="search-icon-19">19</option>
+              <option value="search-icon-20">20</option>
+              <option value="search-icon-21">21</option>
+              <option value="search-icon-22">22</option>
+            </select>
+          </p>
+          <p>
+            <label>icon-size (px)</label>
+            <input type="number" name="search-icon-size-px" value="28" />
+          </p>
+          <p>
+            <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="search-icon-position" value="left" checked="undefined" />Left</label></span>
+          </p>
+          <p>
+            <label>icon-color</label>
+            <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
+          </p>
+          <p>
+            <label>icon-bg-color</label>
+            <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
+          </p>
+          <p>
+            <label>icon-bg-opacity</label>
+            <input type="text" name="search-icon-background-opacity" value="0" />
+          </p>
+          <h3>Focus</h3>
+          <p>
+            <label>focus-border-color</label>
+            <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
+          </p>
+          <p>
+            <label>focus-bg-color</label>
+            <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
+          </p>
+          <h3>Clear</h3>
+          <p>
+            <label>icon-clear-img</label>
+            <select name="search-clear-icon" class="select-icon">
+              <option value="clear-icon-1">1</option>
+              <option value="clear-icon-2">2</option>
+              <option value="clear-icon-3">3</option>
+              <option value="clear-icon-4">4</option>
+              <option value="clear-icon-5" selected="selected">5</option>
+            </select>
+          </p>
+          <p>
+            <label>icon-clear-size (px)</label>
+            <input type="number" name="search-clear-size-px" value="18" />
+          </p>
+        </form>
       </div>
     </div>
-  </div>
-  <div class="settings">
-    <p>
-      <label>Theme</label>
-      <select name="search-namespace">
-        <option value="asb-google" selected="selected">Google</option>
-        <option value="asb-amazon">Amazon</option>
-        <option value="asb-facebook">Facebook</option>
-        <option value="asb-medium">Medium</option>
-        <option value="asb-meetup">Meetup</option>
-        <option value="asb-spotify">Spotify</option>
-        <option value="asb-twitter">Twitter</option>
-        <option value="asb-custom">Custom - Build Your own</option>
-      </select>
-    </p>
-    <p><strong>Work in progress</strong>
-      <br />Right now, selecting a theme doesn't update the generator ;)</p>
-    <h2>Generator</h2>
-    <form id="settings">
-      <h3>Appearence</h3>
-      <p>
-        <label>width (px)</label>
-        <input type="number" name="search-input-width-px" value="250" />
-      </p>
-      <p>
-        <label>height (px)</label>
-        <input type="number" name="search-input-height-px" value="50" />
-      </p>
-      <p>
-        <label>font-size (px)</label>
-        <input type="number" name="search-font-size-px" value="14" />
-      </p>
-      <p>
-        <label>border-width (px)</label>
-        <input type="number" name="search-border-widt-pxh" value="2" />
-      </p>
-      <p>
-        <label>border-radius (px)</label>
-        <input type="number" name="search-border-radius-px" value="25" />
-      </p>
-      <p>
-        <label>border-color</label>
-        <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
-      </p>
-      <p>
-        <label>bg-color</label>
-        <input type="text" name="search-input-background" value="white" class="jscolor" />
-      </p>
-      <p>
-        <label>placeholder-color</label>
-        <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
-      </p>
-      <h3>Search icon</h3>
-      <p>
-        <label>icon-img</label>
-        <select name="search-icon" class="jselectric">
-          <option value="search-icon-1">1</option>
-          <option value="search-icon-2">2</option>
-          <option value="search-icon-3">3</option>
-          <option value="search-icon-4">4</option>
-          <option value="search-icon-5">5</option>
-          <option value="search-icon-6">6</option>
-          <option value="search-icon-7">7</option>
-          <option value="search-icon-8">8</option>
-          <option value="search-icon-9">9</option>
-          <option value="search-icon-10">10</option>
-          <option value="search-icon-11">11</option>
-          <option value="search-icon-12">12</option>
-          <option value="search-icon-13">13</option>
-          <option value="search-icon-14">14</option>
-          <option value="search-icon-15">15</option>
-          <option value="search-icon-16">16</option>
-          <option value="search-icon-17" selected="selected">17</option>
-          <option value="search-icon-18">18</option>
-          <option value="search-icon-19">19</option>
-          <option value="search-icon-20">20</option>
-          <option value="search-icon-21">21</option>
-          <option value="search-icon-22">22</option>
-        </select>
-      </p>
-      <p>
-        <label>icon-size (px)</label>
-        <input type="number" name="search-icon-size-px" value="28" />
-      </p>
-      <p>
-        <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="search-icon-position" value="left" checked="undefined" />Left</label></span>
-      </p>
-      <p>
-        <label>icon-color</label>
-        <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
-      </p>
-      <p>
-        <label>icon-bg-color</label>
-        <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
-      </p>
-      <p>
-        <label>icon-bg-opacity</label>
-        <input type="text" name="search-icon-background-opacity" value="0" />
-      </p>
-      <h3>Focus</h3>
-      <p>
-        <label>focus-border-color</label>
-        <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
-      </p>
-      <p>
-        <label>focus-bg-color</label>
-        <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
-      </p>
-      <h3>Clear</h3>
-      <p>
-        <label>icon-clear-img</label>
-        <select name="search-clear-icon" class="jselectric">
-          <option value="clear-icon-1">1</option>
-          <option value="clear-icon-2">2</option>
-          <option value="clear-icon-3">3</option>
-          <option value="clear-icon-4">4</option>
-          <option value="clear-icon-5" selected="selected">5</option>
-        </select>
-      </p>
-      <p>
-        <label>icon-clear-size (px)</label>
-        <input type="number" name="search-clear-size-px" value="18" />
-      </p>
-    </form>
-  </div>
-  <div class="text-center"><a href="javascript:void(0);" class="btn download-zip">Download</a>
-  </div>
-  <div class="snippets">
-    <div class="col-6">
-      <h2>Snippet Css</h2><pre class="snippet"><code class="language-css"></code></pre>
-    </div>
-    <div class="col-6">
+    <div class="col-9">
+      <h2>Searchbox</h2>
+      <div class="asb-google_demo" id="demo">
+        <div role="search" class="awesome-searchbox asb-google">
+          <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-google__input js-search-input" />
+          <div class="asb-google__submit js-search-submit">
+            <svg>
+              <use xlink:href="#search-icon-10"></use>
+            </svg>
+          </div>
+          <div class="asb-google__reset hide js-search-reset">
+            <svg>
+              <use xlink:href="#clear-icon-3"></use>
+            </svg>
+          </div>
+        </div>
+      </div><a href="javascript:void(0);" class="btn download-zip">Download</a>
+      <h2>Snippet Css | Scss</h2><pre class="snippet"><code class="language-css"></code></pre>
       <h2>Snippet HTML</h2><pre class="snippet"><code class="language-markup"></code></pre>
-    </div>
-    <div class="col-6">
       <h2>Snippet Scss</h2><pre class="snippet"><code class="language-scss"></code></pre>
-    </div>
-    <div class="col-6">
       <h2>Snippet Javascript</h2><pre class="snippet"><code class="language-js"></code></pre>
     </div>
   </div>
