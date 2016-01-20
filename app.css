@@ -462,6 +462,9 @@ h3 {
   #demo.asb-facebook_demo {
     background-color: #3E5DA0; }
 
+.hide {
+  display: none; }
+
 .asb-default {
   position: relative;
   width: 500px;
