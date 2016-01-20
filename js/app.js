@@ -1,3 +1,5 @@
+// asb
+
 $('.q').on('input', function() {
     $(this).closest('.awesome-searchbox').find('.asb__reset').removeClass('hide');
     if($(this).val().length === 0){
@@ -8,6 +10,9 @@ $('.asb__reset').on('click', function() {
   $(this).closest('.awesome-searchbox').find('.q').val('').focus();
   $(this).addClass('hide');
 });
+
+
+// demos
 
 var Sass = new Sass();
 
@@ -32,11 +37,12 @@ function updateSnippet(){
             }
         }
     });
-    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g, ';\n');
+    config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t');
 
-    Sass.writeFile('settings.scss', config + ';');
+    // Sass.writeFile('settings.scss', config + ';');
 
-    scss = config + ';\n\n' + data;
+    scss = '$custom:(\n\t' + config + '\n);\n\n' + data;
+    scss += '\n@include awesome-searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
       css = result.text;
@@ -47,8 +53,8 @@ function updateSnippet(){
       Prism.highlightAll(false);
     });
   });
-  var searchIcon = $('select[name="$search-icon"]').val();
-  var clearIcon = $('select[name="$clear-icon"]').val();
+  var searchIcon = $('select[name="search-icon"]').val();
+  var clearIcon = $('select[name="search-clear-icon"]').val();
   $('.awesome-searchbox .asb__submit use').attr('xlink:href','#' + searchIcon);
   $('.awesome-searchbox .asb__reset use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();

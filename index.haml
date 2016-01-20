@@ -117,36 +117,36 @@
           %option{value:"theme-amazon"} Amazon
       %form#settings
         %h3 Appearence
-        %input{type:"hidden", name:"$config-name", value:"asb"}
+        %input{type:"hidden", name:"theme", value:"asb"}
         %p
           %label width (px)
-          %input{type:"number", name:"$search-input-width-px", value:"250"}
+          %input{type:"number", name:"search-input-width-px", value:"250"}
         %p
           %label height (px)
-          %input{type:"number", name:"$search-input-height-px", value:"50"}
+          %input{type:"number", name:"search-input-height-px", value:"50"}
         %p
           %label font-size (px)
-          %input{type:"number", name:"$search-font-size-px", value:"14"}
+          %input{type:"number", name:"search-font-size-px", value:"14"}
         %p
           %label border-width (px)
-          %input{type:"number", name:"$search-border-widt-pxh", value:"2"}
+          %input{type:"number", name:"search-border-widt-pxh", value:"2"}
         %p
           %label border-radius (px)
-          %input{type:"number", name:"$search-border-radius-px", value:"25"}
+          %input{type:"number", name:"search-border-radius-px", value:"25"}
         %p
           %label border-color
-          %input.jscolor{type:"text", name:"$search-input-border-color", value:"#ccc"}
+          %input.jscolor{type:"text", name:"search-input-border-color", value:"#ccc"}
         %p
           %label bg-color
-          %input.jscolor{type:"text", name:"$search-input-background", value:"white"}
+          %input.jscolor{type:"text", name:"search-input-background", value:"white"}
         %p
           %label placeholder-color
-          %input.jscolor{type:"text", name:"$search-placeholder-color", value:"#aaa"}
+          %input.jscolor{type:"text", name:"search-placeholder-color", value:"#aaa"}
 
         %h3 Search icon
         %p
           %label icon-img
-          %select.jselectric{name:"$search-icon"}
+          %select.jselectric{name:"search-icon"}
             %option{value:"search-icon-1"} 1
             %option{value:"search-icon-2"} 2
             %option{value:"search-icon-3"} 3
@@ -171,37 +171,37 @@
             %option{value:"search-icon-22"} 22
         %p
           %label icon-size (px)
-          %input{type:"number", name:"$search-icon-size-px", value:"28"}
+          %input{type:"number", name:"search-icon-size-px", value:"28"}
         %p
           %label icon-position
           %span.radio-control
             %label.label-radio
-              %input{type:"radio", name:"$search-icon-position", value:"right"}
+              %input{type:"radio", name:"search-icon-position", value:"right"}
               Right
             %label.label-radio
-              %input{type:"radio", name:"$search-icon-position", value:"left", checked:}
+              %input{type:"radio", name:"search-icon-position", value:"left", checked:}
               Left
         %p
           %label icon-color
-          %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
+          %input.jscolor{type:"text", name:"search-icon-color", value:"#E5186F"}
         %p
           %label icon-bg-color
-          %input.jscolor{type:"text", name:"$search-icon-background", value:"#FFFFFF"}
+          %input.jscolor{type:"text", name:"search-icon-background", value:"#FFFFFF"}
         %p
           %label icon-bg-opacity
-          %input{type:"text", name:"$search-icon-background-opacity", value:"0"}
+          %input{type:"text", name:"search-icon-background-opacity", value:"0"}
 
         %h3 Focus
         %p
           %label focus-border-color
-          %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
+          %input.jscolor{type:"text", name:"search-input-focus-border-color", value:"#E5186F"}
         %p
           %label focus-bg-color
-          %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
+          %input.jscolor{type:"text", name:"search-input-focus-background", value:"white"}
         %h3 Clear
         %p
           %label icon-clear-img
-          %select.jselectric{name:"$clear-icon"}
+          %select.jselectric{name:"search-clear-icon"}
             %option{value:"clear-icon-1"} 1
             %option{value:"clear-icon-2"} 2
             %option{value:"clear-icon-3"} 3
@@ -209,7 +209,7 @@
             %option{value:"clear-icon-5", selected:} 5
         %p
           %label icon-clear-size (px)
-          %input{type:"number", name:"$search-clear-size-px", value:"18"}
+          %input{type:"number", name:"search-clear-size-px", value:"18"}
 
 
     .text-center

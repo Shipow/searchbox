@@ -10,11 +10,13 @@
     $search-placeholder-color: #aaa,
     $search-border-width: 1px,
     $search-border-radius: 3px,
+    $search-icon: 'search-icon-1',
     $search-icon-position: right,
     $search-icon-size: $search-input-height - ($search-input-height / 2),
     $search-icon-color: white,
     $search-icon-background: #3E82F7,
     $search-icon-background-opacity: 1,
+    $search-clear-icon: 'search-clear-icon-1',
     $search-clear-size: 12px
   ) {
   .#{$theme} {
