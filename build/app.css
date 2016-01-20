@@ -284,7 +284,7 @@ pre[class*="language-"] {
 .selectric-items .selectric-group li {
   padding-left: 25px; }
 
-.demos {
+body {
   position: relative;
   font-family: "canada-type-gibson";
   margin: 0;
@@ -292,24 +292,44 @@ pre[class*="language-"] {
   min-width: 800px; }
 
 .row {
-  width: 100%; }
+  font-size: 0; }
 
-.col-6 {
-  float: left;
-  width: 50%; }
+.col-3 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 1em; }
+  @media only screen and (min-width: 768px) {
+    .col-3 {
+      width: 33.33333%;
+      vertical-align: top; } }
+
+.col-9 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 0; }
+  @media only screen and (min-width: 768px) {
+    .col-9 {
+      width: 66.66667%;
+      vertical-align: top; } }
 
 .demo-header {
   background-color: #2FC9E8;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: solid 2px #444;
-  height: 200px; }
+  height: 150px; }
 
 h1 {
   font-size: 80px;
   font-weight: 300;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  margin: 60px auto 0;
+  margin: 24px auto 0;
   border: solid 2px white;
   border-radius: 90px;
   text-align: center;
@@ -329,6 +349,17 @@ h2 {
   margin: 40px 0 20px;
   letter-spacing: 1px;
   text-align: center;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  color: #ccc;
+  margin: 20px 10px 10px;
+  border-bottom: solid 1px #ccc;
+  letter-spacing: 1px;
+  text-align: left;
   text-transform: uppercase; }
 
 .github-source {
@@ -351,9 +382,6 @@ h2 {
     .icons svg use {
       fill: #444; }
 
-.text-center {
-  text-align: center; }
-
 .btn {
   background-color: #eee;
   color: #000;
@@ -363,82 +391,51 @@ h2 {
   border-radius: 3px;
   text-decoration: none; }
 
-.settings:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.settings form {
-  display: block;
-  margin: 0 auto;
-  width: 90%; }
-  .settings form:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .settings form h3 {
-    font-size: 13px;
-    font-style: italic;
-    font-weight: 600;
-    color: #ccc;
-    margin: 20px 10px 10px;
-    border-bottom: solid 1px #ccc;
+.settings {
+  margin-top: 20px; }
+  .settings .icon-select-option,
+  .settings .icon-select-label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+    margin-right: 8px; }
+  .settings p {
+    padding: 0;
+    margin: 0 0 4px 40px; }
+  .settings label {
+    display: inline-block;
+    font-size: 12px;
+    padding-right: 4px;
     letter-spacing: 1px;
-    text-align: left;
+    line-height: 34px;
+    text-align: right;
+    width: 160px;
     text-transform: uppercase; }
-
-.settings .icon-select-option,
-.settings .icon-select-label {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  top: 4px;
-  margin-right: 8px; }
-
-.settings p {
-  padding: 0;
-  margin: 0 0 4px; }
-
-.settings label {
-  display: inline-block;
-  font-size: 12px;
-  padding-right: 4px;
-  letter-spacing: 1px;
-  line-height: 34px;
-  text-align: right;
-  width: 160px;
-  text-transform: uppercase; }
-
-.settings input[type='text'], .settings input[type="number"] {
-  box-shadow: inset 0 0 0 1px white;
-  padding: 0 12px;
-  line-height: 28px;
-  border: solid 1px #aaa;
-  width: 56px;
-  font-size: 12px; }
-  .settings input[type='text']:focus, .settings input[type="number"]:focus {
-    border-color: #000;
-    outline: 0; }
-
-.settings .radio-control {
-  display: inline-block; }
-  .settings .radio-control label {
-    width: inherit; }
-
-.snippets:after {
-  content: "";
-  display: table;
-  clear: both; }
+  .settings input[type='text'], .settings input[type="number"] {
+    box-shadow: inset 0 0 0 1px white;
+    padding: 0 12px;
+    line-height: 28px;
+    border: solid 1px #aaa;
+    width: 56px;
+    font-size: 12px; }
+    .settings input[type='text']:focus, .settings input[type="number"]:focus {
+      border-color: #000;
+      outline: 0; }
+  .settings .radio-control {
+    display: inline-block; }
+    .settings .radio-control label {
+      width: inherit; }
 
 .snippet {
   font-size: 11px;
   width: 92%;
-  height: 400px; }
+  height: 300px; }
 
 #demo {
   padding: 14px;
-  margin-bottom: 80px;
+  margin: 0 0 80px 0;
   width: 100%;
   transition: all 0.5s ease; }
   #demo > div {
