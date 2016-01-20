@@ -98,9 +98,9 @@
       -#       %svg
       -#         %use{xlink:href:"#clear-icon-4"}
 
-      %h2 Custom - Get your own
+      %h2 Customize your Searchbox
       .demo.demo-custom
-        .awesome-searchbox.asb{role:"search"}
+        .awesome-searchbox.asb.asb--custom{role:"search"}
           %input.q.asb__input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
           .asb__submit
             %svg
@@ -117,7 +117,6 @@
           %option{value:"theme-amazon"} Amazon
       %form#settings
         %h3 Appearence
-        %input{type:"hidden", name:"theme", value:"asb"}
         %p
           %label width (px)
           %input{type:"number", name:"search-input-width-px", value:"250"}

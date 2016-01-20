@@ -41,7 +41,7 @@ function updateSnippet(){
 
     // Sass.writeFile('settings.scss', config + ';');
 
-    scss = '$custom:(\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\ttheme:\'custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
