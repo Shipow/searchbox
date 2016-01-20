@@ -431,37 +431,29 @@ h2 {
   width: 92%;
   height: 400px; }
 
-.awesome-searchbox * {
-  transition: all 0.5s ease; }
-
 #demo {
   padding: 14px;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  width: 100%;
+  transition: all 0.5s ease; }
   #demo > div {
     margin: 0 auto; }
-
-.demo-default {
-  background-color: #F1F1F1; }
-
-.demo-twitter {
-  background-color: white;
-  border-top: solid 1px #D6DEE3; }
-
-.demo-amazon {
-  background-color: #202F40; }
-
-.demo-spotify {
-  background-color: #272727; }
-
-.demo-meetup {
-  background-color: #505050; }
-
-.demo-medium {
-  background-color: white;
-  border-top: solid 1px #D9D9D9; }
-
-.demo-facebook {
-  background-color: #3E5DA0; }
+  #demo.asb-google_demo {
+    background-color: #F1F1F1; }
+  #demo.asb-twitter_demo {
+    background-color: white;
+    border-top: solid 1px #D6DEE3; }
+  #demo.asb-amazon_demo {
+    background-color: #202F40; }
+  #demo.asb-spotify_demo {
+    background-color: #272727; }
+  #demo.asb-meetup_demo {
+    background-color: #505050; }
+  #demo.asb-medium_demo {
+    background-color: white;
+    border-top: solid 1px #D9D9D9; }
+  #demo.asb-facebook_demo {
+    background-color: #3E5DA0; }
 
 .asb-default {
   position: relative;

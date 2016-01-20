@@ -101,7 +101,6 @@ $('.jselectric').selectric({
   }
 });
 
-
 //BERK
 
 $.fn.regex = function(pattern, fn, fn_a){
@@ -111,18 +110,19 @@ $.fn.regex = function(pattern, fn, fn_a){
     });
 };
 
+function applyTheme(val, el, suf){
+  suf = typeof suf !== 'undefined' ? suf : '';
+  $(' ' + el).regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  }).addClass(val + suf);
+}
+
 $('select[name="theme"]').on('change', function(){
   var val = $(this).val();
-  $('#demo .awesome-searchbox').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
-  }).addClass(val);
-  $('#demo .js-search-input').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
-  }).addClass( val + '__input' );
-  $('#demo .js-search-reset').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
-  }).addClass( val + '__reset' );
-  $('#demo .js-search-submit').regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
-  }).addClass( val + '__submit' );
+  applyTheme(val,'#demo','_demo');
+  applyTheme(val,'.awesome-searchbox');
+  applyTheme(val,'.js-search-input','__input');
+  applyTheme(val,'.js-search-reset','__reset');
+  applyTheme(val,'.js-search-submit','__submit');
+
 });

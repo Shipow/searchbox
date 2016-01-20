@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     %meta{content: "ie=edge", http-equiv: "x-ua-compatible"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %title Searchbox: One mixin to syle them all
+    %title Searchbox Generator
     %link{href: "app.css", rel: "stylesheet"}
     %script{src: "https://use.typekit.net/rwx3htg.js"}
     :javascript
@@ -99,7 +99,7 @@
       -#         %use{xlink:href:"#clear-icon-4"}
 
       %h2 Customize your Searchbox
-      #demo
+      #demo.asb-google_demo
         .awesome-searchbox.asb-google{role:"search"}
           %input.asb-google__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
           .asb-google__submit.js-search-submit
