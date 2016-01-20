@@ -292,16 +292,11 @@ pre[class*="language-"] {
   min-width: 800px; }
 
 .row {
-  clear: both;
   width: 100%; }
 
 .col-6 {
   float: left;
   width: 50%; }
-
-.col-4 {
-  float: left;
-  width: 33%; }
 
 .demo-header {
   background-color: #2FC9E8;
@@ -412,12 +407,12 @@ h2 {
   width: 160px;
   text-transform: uppercase; }
 
-.settings input[type='text'], .settings input[type="number"], .settings input[type="select"] {
+.settings input[type='text'], .settings input[type="number"] {
   box-shadow: inset 0 0 0 1px white;
   padding: 8px 12px;
   border: solid 1px #aaa;
   width: 56px; }
-  .settings input[type='text']:focus, .settings input[type="number"]:focus, .settings input[type="select"]:focus {
+  .settings input[type='text']:focus, .settings input[type="number"]:focus {
     border-color: #000;
     outline: 0; }
 
@@ -495,11 +490,21 @@ h2 {
       display: none; }
     .asb__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
-    .asb__input:focus {
+    .asb__input:focus, .asb__input:active {
       outline: 0;
       background: white;
       box-shadow: inset 0 0 0 1px #3E82F7; }
-    .asb__input::-webkit-input-placeholder, .asb__input:-moz-placeholder, .asb__input::-moz-placeholder, .asb__input:-ms-input-placeholder, .asb__input::-ms-input-placeholder, .asb__input:placeholder-shown {
+    .asb__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .asb__input:-moz-placeholder {
+      color: #aaa; }
+    .asb__input::-moz-placeholder {
+      color: #aaa; }
+    .asb__input:-ms-input-placeholder {
+      color: #aaa; }
+    .asb__input::-ms-input-placeholder {
+      color: #aaa; }
+    .asb__input:placeholder-shown {
       color: #aaa; }
   .asb__submit {
     position: absolute;
@@ -517,7 +522,7 @@ h2 {
       height: 100%;
       margin-right: -4px;
       vertical-align: middle; }
-    .asb__submit:hover {
+    .asb__submit:hover, .asb__submit:active {
       cursor: pointer; }
     .asb__submit svg {
       height: 20px;
@@ -538,5 +543,254 @@ h2 {
     .asb__reset.hide {
       display: none; }
     .asb__reset svg {
+      height: 12px;
+      width: 12px; }
+
+.amazon {
+  position: relative;
+  width: 500px;
+  height: 38px;
+  white-space: nowrap; }
+  .amazon__input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 12.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
+    line-height: 38px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px white;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .amazon__input::-webkit-search-decoration, .amazon__input::-webkit-search-cancel-button, .amazon__input::-webkit-search-results-button, .amazon__input::-webkit-search-results-decoration {
+      display: none; }
+    .amazon__input:hover {
+      box-shadow: inset 0 0 0 1px #e6e6e6; }
+    .amazon__input:focus, .amazon__input:active {
+      outline: 0;
+      background: white;
+      box-shadow: inset 0 0 0 1px #FFBF58; }
+    .amazon__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .amazon__input:-moz-placeholder {
+      color: #aaa; }
+    .amazon__input::-moz-placeholder {
+      color: #aaa; }
+    .amazon__input:-ms-input-placeholder {
+      color: #aaa; }
+    .amazon__input::-ms-input-placeholder {
+      color: #aaa; }
+    .amazon__input:placeholder-shown {
+      color: #aaa; }
+  .amazon__submit {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 38px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: #ffbf58;
+    right: 0; }
+    .amazon__submit:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .amazon__submit:hover, .amazon__submit:active {
+      cursor: pointer; }
+    .amazon__submit svg {
+      height: 20px;
+      width: 20px;
+      vertical-align: middle; }
+      .amazon__submit svg use {
+        fill: #202F40; }
+  .amazon__reset {
+    position: absolute;
+    top: 13px;
+    right: 46px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px;
+    cursor: pointer; }
+    .amazon__reset:hover {
+      opacity: 1; }
+    .amazon__reset.hide {
+      display: none; }
+    .amazon__reset svg {
+      height: 12px;
+      width: 12px; }
+
+.google {
+  position: relative;
+  width: 500px;
+  height: 40px;
+  white-space: nowrap; }
+  .google__input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 13.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
+    line-height: 40px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #ccc;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .google__input::-webkit-search-decoration, .google__input::-webkit-search-cancel-button, .google__input::-webkit-search-results-button, .google__input::-webkit-search-results-decoration {
+      display: none; }
+    .google__input:hover {
+      box-shadow: inset 0 0 0 1px #b3b3b3; }
+    .google__input:focus, .google__input:active {
+      outline: 0;
+      background: white;
+      box-shadow: inset 0 0 0 1px #3E82F7; }
+    .google__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .google__input:-moz-placeholder {
+      color: #aaa; }
+    .google__input::-moz-placeholder {
+      color: #aaa; }
+    .google__input:-ms-input-placeholder {
+      color: #aaa; }
+    .google__input::-ms-input-placeholder {
+      color: #aaa; }
+    .google__input:placeholder-shown {
+      color: #aaa; }
+  .google__submit {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: #3e82f7;
+    right: 0; }
+    .google__submit:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .google__submit:hover, .google__submit:active {
+      cursor: pointer; }
+    .google__submit svg {
+      height: 20px;
+      width: 20px;
+      vertical-align: middle; }
+      .google__submit svg use {
+        fill: white; }
+  .google__reset {
+    position: absolute;
+    top: 14px;
+    right: 48px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px;
+    cursor: pointer; }
+    .google__reset:hover {
+      opacity: 1; }
+    .google__reset.hide {
+      display: none; }
+    .google__reset svg {
+      height: 12px;
+      width: 12px; }
+
+.facebook {
+  position: relative;
+  width: 500px;
+  height: 25px;
+  white-space: nowrap; }
+  .facebook__input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 6.75px;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 13px;
+    line-height: 25px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 0 #ccc;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+    .facebook__input::-webkit-search-decoration, .facebook__input::-webkit-search-cancel-button, .facebook__input::-webkit-search-results-button, .facebook__input::-webkit-search-results-decoration {
+      display: none; }
+    .facebook__input:hover {
+      box-shadow: inset 0 0 0 0 #b3b3b3; }
+    .facebook__input:focus, .facebook__input:active {
+      outline: 0;
+      background: white;
+      box-shadow: inset 0 0 0 0 #3E82F7; }
+    .facebook__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .facebook__input:-moz-placeholder {
+      color: #aaa; }
+    .facebook__input::-moz-placeholder {
+      color: #aaa; }
+    .facebook__input:-ms-input-placeholder {
+      color: #aaa; }
+    .facebook__input::-ms-input-placeholder {
+      color: #aaa; }
+    .facebook__input:placeholder-shown {
+      color: #aaa; }
+  .facebook__submit {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 25px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    background-color: #f6f7f8;
+    right: 0; }
+    .facebook__submit:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle; }
+    .facebook__submit:hover, .facebook__submit:active {
+      cursor: pointer; }
+    .facebook__submit svg {
+      height: 12.5px;
+      width: 12.5px;
+      vertical-align: middle; }
+      .facebook__submit svg use {
+        fill: #3C5BA2; }
+  .facebook__reset {
+    position: absolute;
+    top: 6.5px;
+    right: 33px;
+    opacity: 0.6;
+    line-height: 0;
+    height: 12px;
+    cursor: pointer; }
+    .facebook__reset:hover {
+      opacity: 1; }
+    .facebook__reset.hide {
+      display: none; }
+    .facebook__reset svg {
       height: 12px;
       width: 12px; }

@@ -44,121 +44,122 @@
     </div>
   </div>
   <div class="settings">
+    <p>
+      <label>Theme</label>
+      <select name="$search-theme">
+        <option value="theme-default">Default</option>
+        <option value="theme-amazon">Amazon</option>
+      </select>
+    </p>
     <form id="settings">
-      <div class="col-4">
-        <h3>Appearence</h3>
-        <input type="hidden" name="$config-name" value="asb" />
-        <p>
-          <label>width (px)</label>
-          <input type="number" name="$search-input-width-px" value="250" />
-        </p>
-        <p>
-          <label>height (px)</label>
-          <input type="number" name="$search-input-height-px" value="50" />
-        </p>
-        <p>
-          <label>font-size (px)</label>
-          <input type="number" name="$search-font-size-px" value="14" />
-        </p>
-        <p>
-          <label>border-width (px)</label>
-          <input type="number" name="$search-border-widt-pxh" value="2" />
-        </p>
-        <p>
-          <label>border-radius (px)</label>
-          <input type="number" name="$search-border-radius-px" value="25" />
-        </p>
-        <p>
-          <label>border-color</label>
-          <input type="text" name="$search-input-border-color" value="#ccc" class="jscolor" />
-        </p>
-        <p>
-          <label>bg-color</label>
-          <input type="text" name="$search-input-background" value="white" class="jscolor" />
-        </p>
-        <p>
-          <label>placeholder-color</label>
-          <input type="text" name="$search-placeholder-color" value="#aaa" class="jscolor" />
-        </p>
-      </div>
-      <div class="col-4">
-        <h3>Search icon</h3>
-        <p>
-          <label>icon-img</label>
-          <select name="$search-icon" class="jselectric">
-            <option value="search-icon-1">1</option>
-            <option value="search-icon-2">2</option>
-            <option value="search-icon-3">3</option>
-            <option value="search-icon-4">4</option>
-            <option value="search-icon-5">5</option>
-            <option value="search-icon-6">6</option>
-            <option value="search-icon-7">7</option>
-            <option value="search-icon-8">8</option>
-            <option value="search-icon-9">9</option>
-            <option value="search-icon-10">10</option>
-            <option value="search-icon-11">11</option>
-            <option value="search-icon-12">12</option>
-            <option value="search-icon-13">13</option>
-            <option value="search-icon-14">14</option>
-            <option value="search-icon-15">15</option>
-            <option value="search-icon-16">16</option>
-            <option value="search-icon-17">17</option>
-            <option value="search-icon-18">18</option>
-            <option value="search-icon-19">19</option>
-            <option value="search-icon-20">20</option>
-            <option value="search-icon-21">21</option>
-            <option value="search-icon-22">22</option>
-          </select>
-        </p>
-        <p>
-          <label>icon-size (px)</label>
-          <input type="number" name="$search-icon-size-px" value="28" />
-        </p>
-        <p>
-          <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="$search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="$search-icon-position" value="left" checked="undefined" />Left</label></span>
-        </p>
-        <p>
-          <label>icon-color</label>
-          <input type="text" name="$search-icon-color" value="#E5186F" class="jscolor" />
-        </p>
-        <p>
-          <label>icon-bg-color</label>
-          <input type="text" name="$search-icon-background" value="#FFFFFF" class="jscolor" />
-        </p>
-        <p>
-          <label>icon-bg-opacity</label>
-          <input type="text" name="$search-icon-background-opacity" value="0" />
-        </p>
-      </div>
-      <div class="col-4">
-        <h3>Focus</h3>
-        <p>
-          <label>focus-border-color</label>
-          <input type="text" name="$search-input-focus-border-color" value="#E5186F" class="jscolor" />
-        </p>
-        <p>
-          <label>focus-bg-color</label>
-          <input type="text" name="$search-input-focus-background" value="white" class="jscolor" />
-        </p>
-        <h3>Clear</h3>
-        <p>
-          <label>icon-clear-img</label>
-          <select name="$clear-icon" class="jselectric">
-            <option value="clear-icon-1">1</option>
-            <option value="clear-icon-2">2</option>
-            <option value="clear-icon-3">3</option>
-            <option value="clear-icon-4">4</option>
-            <option value="clear-icon-5" selected="undefined">5</option>
-          </select>
-        </p>
-        <p>
-          <label>icon-clear-size (px)</label>
-          <input type="number" name="$search-clear-size-px" value="18" />
-        </p>
-      </div>
+      <h3>Appearence</h3>
+      <input type="hidden" name="theme" value="asb" />
+      <p>
+        <label>width (px)</label>
+        <input type="number" name="search-input-width-px" value="250" />
+      </p>
+      <p>
+        <label>height (px)</label>
+        <input type="number" name="search-input-height-px" value="50" />
+      </p>
+      <p>
+        <label>font-size (px)</label>
+        <input type="number" name="search-font-size-px" value="14" />
+      </p>
+      <p>
+        <label>border-width (px)</label>
+        <input type="number" name="search-border-widt-pxh" value="2" />
+      </p>
+      <p>
+        <label>border-radius (px)</label>
+        <input type="number" name="search-border-radius-px" value="25" />
+      </p>
+      <p>
+        <label>border-color</label>
+        <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
+      </p>
+      <p>
+        <label>bg-color</label>
+        <input type="text" name="search-input-background" value="white" class="jscolor" />
+      </p>
+      <p>
+        <label>placeholder-color</label>
+        <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
+      </p>
+      <h3>Search icon</h3>
+      <p>
+        <label>icon-img</label>
+        <select name="search-icon" class="jselectric">
+          <option value="search-icon-1">1</option>
+          <option value="search-icon-2">2</option>
+          <option value="search-icon-3">3</option>
+          <option value="search-icon-4">4</option>
+          <option value="search-icon-5">5</option>
+          <option value="search-icon-6">6</option>
+          <option value="search-icon-7">7</option>
+          <option value="search-icon-8">8</option>
+          <option value="search-icon-9">9</option>
+          <option value="search-icon-10">10</option>
+          <option value="search-icon-11">11</option>
+          <option value="search-icon-12">12</option>
+          <option value="search-icon-13">13</option>
+          <option value="search-icon-14">14</option>
+          <option value="search-icon-15">15</option>
+          <option value="search-icon-16">16</option>
+          <option value="search-icon-17">17</option>
+          <option value="search-icon-18">18</option>
+          <option value="search-icon-19">19</option>
+          <option value="search-icon-20">20</option>
+          <option value="search-icon-21">21</option>
+          <option value="search-icon-22">22</option>
+        </select>
+      </p>
+      <p>
+        <label>icon-size (px)</label>
+        <input type="number" name="search-icon-size-px" value="28" />
+      </p>
+      <p>
+        <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="search-icon-position" value="left" checked="undefined" />Left</label></span>
+      </p>
+      <p>
+        <label>icon-color</label>
+        <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
+      </p>
+      <p>
+        <label>icon-bg-color</label>
+        <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
+      </p>
+      <p>
+        <label>icon-bg-opacity</label>
+        <input type="text" name="search-icon-background-opacity" value="0" />
+      </p>
+      <h3>Focus</h3>
+      <p>
+        <label>focus-border-color</label>
+        <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
+      </p>
+      <p>
+        <label>focus-bg-color</label>
+        <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
+      </p>
+      <h3>Clear</h3>
+      <p>
+        <label>icon-clear-img</label>
+        <select name="search-clear-icon" class="jselectric">
+          <option value="clear-icon-1">1</option>
+          <option value="clear-icon-2">2</option>
+          <option value="clear-icon-3">3</option>
+          <option value="clear-icon-4">4</option>
+          <option value="clear-icon-5" selected="undefined">5</option>
+        </select>
+      </p>
+      <p>
+        <label>icon-clear-size (px)</label>
+        <input type="number" name="search-clear-size-px" value="18" />
+      </p>
     </form>
-    <div class="text-center"><a href="javascript:void(0);" class="btn view-snippets">View Snippets</a><a href="javascript:void(0);" class="btn download-zip">Download</a>
-    </div>
+  </div>
+  <div class="text-center"><a href="javascript:void(0);" class="btn download-zip">Download</a>
   </div>
   <div class="snippets">
     <div class="col-6">
