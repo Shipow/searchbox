@@ -31,18 +31,18 @@
         <p>
           <label>Select a Theme</label>
           <select name="search-namespace" class="select">
-            <option value="asb-google" selected="selected">Google</option>
+            <option value="asb-google">Google</option>
             <option value="asb-amazon">Amazon</option>
             <option value="asb-facebook">Facebook</option>
             <option value="asb-medium">Medium</option>
             <option value="asb-meetup">Meetup</option>
             <option value="asb-spotify">Spotify</option>
             <option value="asb-twitter">Twitter</option>
-            <option value="asb-custom">Custom</option>
+            <option value="asb-custom" selected="selected">Custom</option>
           </select>
         </p>
         <p class="warning"><strong>Work in progress</strong>
-          <br />Right now, selecting a theme doesn't update the generator.The generator works only with Custom theme.</p>
+          <br />Right now, selecting a theme doesn't update the generator. And the generator works only with Custom theme.</p>
         <h2>Generator</h2>
         <form id="settings">
           <h3>Appearence</h3>
@@ -154,15 +154,15 @@
     </div>
     <div class="col-9">
       <h2>Generated Searchbox</h2>
-      <div class="asb-google_demo" id="demo">
-        <div role="search" class="awesome-searchbox asb-google">
-          <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-google__input js-search-input" />
-          <div class="asb-google__submit js-search-submit">
+      <div class="asb-custom_demo" id="demo">
+        <div role="search" class="awesome-searchbox asb-custom">
+          <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-custom__input js-search-input" />
+          <div class="asb-custom__submit js-search-submit">
             <svg>
               <use xlink:href="#search-icon-10"></use>
             </svg>
           </div>
-          <div class="asb-google__reset hide js-search-reset">
+          <div class="asb-custom__reset hide js-search-reset">
             <svg>
               <use xlink:href="#clear-icon-3"></use>
             </svg>
