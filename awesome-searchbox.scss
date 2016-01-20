@@ -1,5 +1,5 @@
 @mixin awesome-searchbox(
-    $theme: 'asb',
+    $theme: 'default',
     $search-input-height: 40px,
     $search-input-width: 500px,
     $search-input-border-color: #ccc,
@@ -19,12 +19,12 @@
     $search-clear-icon: 'search-clear-icon-1',
     $search-clear-size: 12px
   ) {
-  .#{$theme} {
+  .asb--#{$theme} {
     position: relative;
     width: $search-input-width;
     height: $search-input-height;
     white-space: nowrap;
-    @at-root #{&}__input {
+    @at-root #{&} .asb__input {
       display: inline-block;
       box-sizing: border-box;
       width: 100%;
@@ -75,7 +75,7 @@
         color: $search-placeholder-color;
       }
     }
-    @at-root #{&}__submit {
+    @at-root #{&} .asb__submit {
       position: absolute;
       top: 0;
       height: 100%;
@@ -105,7 +105,7 @@
         }
       }
     }
-    @at-root #{&}__reset {
+    @at-root #{&} .asb__reset {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
       right: 8px  + if($search-icon-position == "right", $search-input-height, $search-border-radius/4);
