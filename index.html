@@ -27,8 +27,8 @@
   </div>
   <div class="examples">
     <h2>Customize your Searchbox</h2>
-    <div class="demo demo-custom">
-      <div role="search" class="awesome-searchbox asb asb--custom">
+    <div id="demo">
+      <div role="search" class="awesome-searchbox asb asb--google">
         <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="q asb__input" />
         <div class="asb__submit">
           <svg>
@@ -46,9 +46,11 @@
   <div class="settings">
     <p>
       <label>Theme</label>
-      <select name="$search-theme">
-        <option value="theme-default">Default</option>
-        <option value="theme-amazon">Amazon</option>
+      <select name="theme">
+        <option value="custom">Custom</option>
+        <option value="google">Google</option>
+        <option value="amazon">Amazon</option>
+        <option value="facebook">Facebook</option>
       </select>
     </p>
     <form id="settings">
