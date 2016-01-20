@@ -55,8 +55,8 @@ function updateSnippet(){
   });
   var searchIcon = $('select[name="search-icon"]').val();
   var clearIcon = $('select[name="search-clear-icon"]').val();
-  $('.awesome-searchbox .asb__submit use').attr('xlink:href','#' + searchIcon);
-  $('.awesome-searchbox .asb__reset use').attr('xlink:href','#' + clearIcon);
+  $('.js-search-submit use').attr('xlink:href','#' + searchIcon);
+  $('.js-search-reset use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
