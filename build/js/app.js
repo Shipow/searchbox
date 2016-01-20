@@ -100,3 +100,9 @@ $('.jselectric').selectric({
     return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
   }
 });
+
+$('select[name="theme"]').on('change', function(){
+  $('.awesome-searchbox').removeClass(function (index, css) {
+    return (css.match (/(^|\s)asb--\S+/g) || []).join(' ');
+  }).addClass('asb--' + $(this).val());
+});

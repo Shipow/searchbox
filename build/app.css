@@ -434,10 +434,10 @@ h2 {
 .awesome-searchbox * {
   transition: all 0.5s ease; }
 
-.demo {
+#demo {
   padding: 14px;
   margin-bottom: 80px; }
-  .demo > div {
+  #demo > div {
     margin: 0 auto; }
 
 .demo-default {
