@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta content="ie=edge" http-equiv="x-ua-compatible" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Searchbox: One mixin to syle them all</title>
+  <title>Searchbox Generator</title>
   <link href="app.css" rel="stylesheet" />
   <script src="https://use.typekit.net/rwx3htg.js"></script>
   <script type="text/javascript">
@@ -26,16 +26,15 @@
     <h1><svg><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
   </div>
   <div class="examples">
-    <h2>Customize your Searchbox</h2>
-    <div id="demo">
-      <div role="search" class="awesome-searchbox asb asb--google">
-        <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="q asb__input" />
-        <div class="asb__submit">
+    <div class="asb-google_demo" id="demo">
+      <div role="search" class="awesome-searchbox asb-google">
+        <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-google__input js-search-input" />
+        <div class="asb-google__submit js-search-submit">
           <svg>
             <use xlink:href="#search-icon-10"></use>
           </svg>
         </div>
-        <div class="asb__reset hide">
+        <div class="asb-google__reset hide js-search-reset">
           <svg>
             <use xlink:href="#clear-icon-3"></use>
           </svg>
@@ -46,13 +45,20 @@
   <div class="settings">
     <p>
       <label>Theme</label>
-      <select name="theme">
-        <option value="custom">Custom</option>
-        <option value="google">Google</option>
-        <option value="amazon">Amazon</option>
-        <option value="facebook">Facebook</option>
+      <select name="search-namespace">
+        <option value="asb-google" selected="selected">Google</option>
+        <option value="asb-amazon">Amazon</option>
+        <option value="asb-facebook">Facebook</option>
+        <option value="asb-medium">Medium</option>
+        <option value="asb-meetup">Meetup</option>
+        <option value="asb-spotify">Spotify</option>
+        <option value="asb-twitter">Twitter</option>
+        <option value="asb-custom">Custom - Build Your own</option>
       </select>
     </p>
+    <p><strong>Work in progress</strong>
+      <br />Right now, selecting a theme doesn't update the generator ;)</p>
+    <h2>Generator</h2>
     <form id="settings">
       <h3>Appearence</h3>
       <p>
@@ -107,7 +113,7 @@
           <option value="search-icon-14">14</option>
           <option value="search-icon-15">15</option>
           <option value="search-icon-16">16</option>
-          <option value="search-icon-17">17</option>
+          <option value="search-icon-17" selected="selected">17</option>
           <option value="search-icon-18">18</option>
           <option value="search-icon-19">19</option>
           <option value="search-icon-20">20</option>
@@ -151,7 +157,7 @@
           <option value="clear-icon-2">2</option>
           <option value="clear-icon-3">3</option>
           <option value="clear-icon-4">4</option>
-          <option value="clear-icon-5" selected="undefined">5</option>
+          <option value="clear-icon-5" selected="selected">5</option>
         </select>
       </p>
       <p>
@@ -418,11 +424,6 @@
   <script src="js/jquery.selectric.min.js"></script>
   <script src="js/jszip.min.js"></script>
   <script src="js/FileSaver.min.js"></script>
-  <script type="text/javascript">
-    //<![CDATA[
-    var scss = "";
-    //]]>
-  </script>
   <script src="js/app.js"></script>
 </body>
 
