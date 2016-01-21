@@ -145,6 +145,10 @@ function populate(frm, data) {
     var val = $(this).val();
     populate($('form#settings'), themes['asb-google']); //default
     populate($('form#settings'), themes[val]);
+    $.map($('.jscolor'), function(data){
+      data.jscolor.fromString($(data).val().replace(/#/,''));
+    });
+
 
     applyTheme(val,'#demo','_demo');
     applyTheme(val,'.awesome-searchbox');
