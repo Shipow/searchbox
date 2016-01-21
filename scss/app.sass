@@ -4,6 +4,7 @@ $primary-color: #2FC9E8
 
 @import "vendors/prism"
 @import "vendors/selectric"
+@import "vendors/SassyJSON"
 
 @mixin clearfix
   &:after
@@ -203,3 +204,18 @@ h3
 @include awesome-searchbox(($meetup)...)
 @include awesome-searchbox(($spotify)...)
 @include awesome-searchbox(($twitter)...)
+
+.amazon-theme:before
+  +json-encode($amazon);
+.facebook-theme:before
+  +json-encode($facebook);
+.google-theme:before
+  +json-encode($google);
+.medium-theme:before
+  +json-encode($medium);
+.meetup-theme:before
+  +json-encode($meetup);
+.spotify-theme:before
+  +json-encode($spotify);
+.twitter-theme:before
+  +json-encode($twitter);

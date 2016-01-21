@@ -1,5 +1,11 @@
 var Sass = new Sass();
 var html, scss, css, js;
+var themes = {};
+
+$('.theme-json').each(function(){
+  var theme = JSON.parse(JSON.parse(window.getComputedStyle(this,':before').content));
+  themes[theme['search-namespace']] = theme;
+});
 
 function updateSnippet(){
 
@@ -105,8 +111,34 @@ function applyTheme(val, el, suf){
   }).addClass(val + suf);
 }
 
+function populate(frm, data) {
+  $.each(data, function(key, value){
+    var $ctrl = $('[name='+key+']', frm);
+    if( typeof value === "string" && value.match(/px/) ){
+      $('[name='+key+'-px]', frm).val(value.replace(/px/,''));
+    };
+    switch($ctrl.attr("type"))
+    {
+        case "text" :
+        case "hidden" :
+        $ctrl.val(value);
+        break;
+        case "radio" : case "checkbox":
+        $ctrl.each(function(){
+           if($(this).attr('value') == value) {  $(this).attr("checked",value); } });
+        break;
+        default:
+        $ctrl.val(value);
+    }
+    });
+}
+
+
 $('select[name="search-namespace"]').on('change', function(){
+
   var val = $(this).val();
+  populate($('form#settings'), themes[val]);
+
   applyTheme(val,'#demo','_demo');
   applyTheme(val,'.awesome-searchbox');
   applyTheme(val,'.js-search-input','__input');

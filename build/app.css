@@ -367,6 +367,7 @@ pre[class*="language-"] {
 .selectric-items .selectric-group li {
   padding-left: 25px; }
 
+/*! sassyjson - v1.1.8 - 2015-09-24 */
 body {
   position: relative;
   font-family: "canada-type-gibson";
@@ -1122,3 +1123,52 @@ h3 {
     .asb-twitter__reset svg {
       height: 10px;
       width: 10px; }
+
+.amazon-theme:before {
+  content: '{"search-namespace": "asb-amazon", "search-input-height": "38px", "search-border-radius": "3px", "search-icon-background": "#FFBF58", "search-icon-background-opacity": 1, "search-font-size": "14px", "search-icon-size": "20px", "search-icon-position": "right", "search-input-border-color": "white", "search-input-focus-border-color": "#FFBF58", "search-icon-color": "#202F40"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.facebook-theme:before {
+  content: '{"search-namespace": "asb-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "white", "search-input-focus-background": "white", "search-icon-position": "right", "search-placeholder-color": "#aaa", "search-icon-color": "#3C5BA2"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.google-theme:before {
+  content: '{"search-namespace": "asb-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#ccc", "search-input-background": "white", "search-input-focus-background": "white", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#aaa", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "white", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.medium-theme:before {
+  content: '{"search-namespace": "asb-medium", "search-input-height": "36px", "search-border-radius": "30px", "search-input-width": "200px", "search-icon-background": "white", "search-icon-background-opacity": 0, "search-font-size": "13px", "search-icon-size": "16px", "search-icon-position": "left", "search-input-border-color": "#D9D9D9", "search-input-focus-border-color": "silver", "search-icon-color": "#202F40"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.meetup-theme:before {
+  content: '{"search-namespace": "asb-meetup", "search-input-height": "44px", "search-input-width": "300px", "search-border-radius": "3px", "search-icon-background": "white", "search-icon-background-opacity": 0, "search-font-size": "16px", "search-input-background": "#F5F8FA", "search-icon-size": "24px", "search-icon-position": "right", "search-input-border-color": "#444", "search-input-focus-border-color": "black", "search-icon-color": "#505050", "search-placeholder-color": "#bbb"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.spotify-theme:before {
+  content: '{"search-namespace": "asb-spotify", "search-input-height": "24px", "search-input-width": "200px", "search-border-radius": "12px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-icon-size": "12px", "search-icon-position": "left", "search-input-border-color": "white", "search-input-focus-border-color": "white", "search-icon-color": "#222"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
+
+.twitter-theme:before {
+  content: '{"search-namespace": "asb-twitter", "search-input-height": "30px", "search-input-width": "200px", "search-border-radius": "15px", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-input-background": "#F5F8FA", "search-icon-size": "12px", "search-icon-position": "right", "search-input-border-color": "#D6DEE3", "search-input-focus-border-color": "#D6DEE3", "search-icon-color": "#73777A", "search-clear-size": "10px"}';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0; }
