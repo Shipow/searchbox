@@ -2,123 +2,121 @@
     $search-namespace: 'asb-default',
     $search-input-height: 40px,
     $search-input-width: 500px,
-    $search-input-border-color: #ccc,
-    $search-input-background: white,
-    $search-input-focus-background: white,
-    $search-input-focus-border-color: #3E82F7,
+    $search-input-border-color: rgb(204, 204, 204),
+    $search-input-background: rgb(255, 255, 255),
+    $search-input-focus-background: rgb(255, 255, 255),
+    $search-input-focus-border-color: rgb(62, 130, 247),
     $search-font-size: 14px,
-    $search-placeholder-color: #aaa,
+    $search-placeholder-color: rgb(170, 170, 170),
     $search-border-width: 1px,
     $search-border-radius: 3px,
     $search-icon: 'search-icon-1',
     $search-icon-position: right,
-    $search-icon-size: $search-input-height/2,
-    $search-icon-color: white,
-    $search-icon-background: #3E82F7,
+    $search-icon-size: ($search-input-height / 2),
+    $search-icon-color: rgb(255, 255, 255),
+    $search-icon-background: rgb(62, 130, 247),
     $search-icon-background-opacity: 1,
     $search-clear-icon: 'search-clear-icon-1',
     $search-clear-size: 12px
   ) {
   .#{$search-namespace} {
+    display: inline-block;
     position: relative;
     width: $search-input-width;
     height: $search-input-height;
     white-space: nowrap;
-    @at-root #{&}__input {
+    &__input {
       display: inline-block;
       box-sizing: border-box;
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
-      padding-left: if($search-icon-position == "right", ($search-input-height - $search-font-size) / 2 + $search-border-radius / 4, $search-input-height);
+      padding-left: if($search-icon-position == 'right', ($search-input-height - $search-font-size) / 2 + $search-border-radius / 4, $search-input-height);
       vertical-align: middle;
       white-space: normal;
       font-size: $search-font-size;
-      line-height: $search-input-height;
       border: none;
       border-radius: $search-border-radius;
       box-shadow: inset 0 0 0 $search-border-width $search-input-border-color;
       background: $search-input-background;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+      appearance: none;
+
       &::-webkit-search-decoration,
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button,
       &::-webkit-search-results-decoration {
         display: none;
       }
+
       &:hover {
-        box-shadow: inset 0 0 0 $search-border-width darken($search-input-border-color,10%);
+        box-shadow: inset 0 0 0 $search-border-width darken($search-input-border-color, 10%);
       }
+
       &:focus, &:active {
         outline: 0; // Remove the stupid outer glow in Webkit
         background: $search-input-focus-background;
         box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
       }
-      &::-webkit-input-placeholder{
+
+      &::placeholder {
         color: $search-placeholder-color;
       }
-      &:-moz-placeholder{
-        color: $search-placeholder-color;
-      }
-      &::-moz-placeholder{
-        color: $search-placeholder-color;
-      }
-      &:-ms-input-placeholder{
-        color: $search-placeholder-color;
-      }
-      &::-ms-input-placeholder {
-        color: $search-placeholder-color;
-      }
-      &:placeholder-shown {
-        color: $search-placeholder-color;
-      }
+
     }
-    @at-root #{&}__submit {
+
+    &__submit {
       position: absolute;
       top: 0;
       height: 100%;
       width: $search-input-height;
       vertical-align: middle;
-      border-radius: if($search-icon-position == "right", 0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius);
+      border-radius: if($search-icon-position == 'right', 0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius);
       text-align: center;
       background-color: rgba($search-icon-background,$search-icon-background-opacity);
       #{$search-icon-position}: 0;
+
       // Helper for vertical alignement of the icon
       &:before {
-        content: "";
+        content: '';
         display: inline-block;
         height: 100%;
         margin-right: -4px;
         vertical-align: middle;
       }
+
       &:hover, &:active {
         cursor: pointer;
       }
+
       svg {
         height: $search-icon-size;
         width: $search-icon-size;
         vertical-align: middle;
+
         use {
           fill: $search-icon-color;
         }
       }
     }
-    @at-root #{&}__reset {
+
+    &__reset {
       position: absolute;
       top: ($search-input-height - $search-clear-size) / 2;
-      right: 8px  + if($search-icon-position == "right", $search-input-height, $search-border-radius/4);
+      right: 8px + if($search-icon-position == 'right', $search-input-height, $search-border-radius / 4);
       opacity: 0.6;
       line-height: 0;
       height: $search-clear-size;
       cursor: pointer;
+
       &:hover {
         opacity: 1;
       }
-      @at-root #{&}.hide {
+
+      &.hide {
         display: none;
       }
+
       svg {
         height: $search-clear-size;
         width: $search-clear-size;
