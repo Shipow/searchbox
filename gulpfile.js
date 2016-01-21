@@ -87,17 +87,19 @@ gulp.task('js', function () {
   .pipe(livereload());
 });
 
-gulp.task('awesome-searchbox', function () {
+gulp.task('copy', function () {
   gulp.src('scss/_awesome-searchbox.scss')
   .pipe(rename('awesome-searchbox.scss'))
+  .pipe(gulp.dest('build/scss'));
+  gulp.src('scss/themes/*.scss')
   .pipe(gulp.dest('build'));
   gulp.src('favicon.ico')
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('build/scss/themes'));
 });
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(['scss/**/*.sass','scss/**/*.scss'], ['sass','awesome-searchbox']);
+  gulp.watch(['scss/**/*.sass','scss/**/*.scss'], ['sass','copy']);
   gulp.watch('*.haml', ['build']);
   gulp.watch('js/**/*.js', ['js']);
 });
@@ -114,7 +116,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('build',['clean'], function(callback) {
-  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass','awesome-searchbox', callback);
+  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass','copy', callback);
 });
 
 gulp.task('dev', function(callback) {

@@ -3,7 +3,7 @@ var html, scss, css, js;
 
 function updateSnippet(){
 
-  $.get('awesome-searchbox.scss', function(data){
+  $.get('scss/awesome-searchbox.scss', function(data){
 
     var config = {};
     $('form#settings').serializeArray().map(function(item) {
