@@ -481,13 +481,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    line-height: 40px;
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #cccccc;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-default__input::-webkit-search-decoration, .asb-default__input::-webkit-search-cancel-button, .asb-default__input::-webkit-search-results-button, .asb-default__input::-webkit-search-results-decoration {
       display: none; }
     .asb-default__input:hover {
@@ -565,13 +563,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    line-height: 38px;
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px white;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-amazon__input::-webkit-search-decoration, .asb-amazon__input::-webkit-search-cancel-button, .asb-amazon__input::-webkit-search-results-button, .asb-amazon__input::-webkit-search-results-decoration {
       display: none; }
     .asb-amazon__input:hover {
@@ -649,13 +645,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    line-height: 40px;
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #ccc;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-google__input::-webkit-search-decoration, .asb-google__input::-webkit-search-cancel-button, .asb-google__input::-webkit-search-results-button, .asb-google__input::-webkit-search-results-decoration {
       display: none; }
     .asb-google__input:hover {
@@ -733,13 +727,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 13px;
-    line-height: 25px;
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 0 #cccccc;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-facebook__input::-webkit-search-decoration, .asb-facebook__input::-webkit-search-cancel-button, .asb-facebook__input::-webkit-search-results-button, .asb-facebook__input::-webkit-search-results-decoration {
       display: none; }
     .asb-facebook__input:hover {
@@ -817,13 +809,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 13px;
-    line-height: 36px;
     border: none;
     border-radius: 30px;
     box-shadow: inset 0 0 0 1px #D9D9D9;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-medium__input::-webkit-search-decoration, .asb-medium__input::-webkit-search-cancel-button, .asb-medium__input::-webkit-search-results-button, .asb-medium__input::-webkit-search-results-decoration {
       display: none; }
     .asb-medium__input:hover {
@@ -901,13 +891,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 16px;
-    line-height: 44px;
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #444;
     background: #F5F8FA;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-meetup__input::-webkit-search-decoration, .asb-meetup__input::-webkit-search-cancel-button, .asb-meetup__input::-webkit-search-results-button, .asb-meetup__input::-webkit-search-results-decoration {
       display: none; }
     .asb-meetup__input:hover {
@@ -985,13 +973,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 12px;
-    line-height: 24px;
     border: none;
     border-radius: 12px;
     box-shadow: inset 0 0 0 1px white;
     background: white;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-spotify__input::-webkit-search-decoration, .asb-spotify__input::-webkit-search-cancel-button, .asb-spotify__input::-webkit-search-results-button, .asb-spotify__input::-webkit-search-results-decoration {
       display: none; }
     .asb-spotify__input:hover {
@@ -1069,13 +1055,11 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 12px;
-    line-height: 30px;
     border: none;
     border-radius: 15px;
     box-shadow: inset 0 0 0 1px #D6DEE3;
     background: #F5F8FA;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
+    appearance: none; }
     .asb-twitter__input::-webkit-search-decoration, .asb-twitter__input::-webkit-search-cancel-button, .asb-twitter__input::-webkit-search-results-button, .asb-twitter__input::-webkit-search-results-decoration {
       display: none; }
     .asb-twitter__input:hover {

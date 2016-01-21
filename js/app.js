@@ -19,6 +19,7 @@ var Sass = new Sass();
 var html, scss, css, js;
 
 function updateSnippet(){
+
   $.get('awesome-searchbox.scss', function(data){
 
     var config = {};
@@ -44,15 +45,16 @@ function updateSnippet(){
     scss = '$custom :(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
 
+
     Sass.compile(scss, function(result) {
       css = result.text;
       $('head style').last().remove();
       $("<style>" + css + "</style>").appendTo( "head" );
-      $('.snippet code.language-css').text(css);
+      var prefixed = autoprefixer.process(css);
+      $('.snippet code.language-css').text(prefixed.css);
       $('.snippet code.language-scss').text(scss);
       Prism.highlightAll(false);
-      $('#demo').removeClass('hide');
-      $('#snippets').removeClass('hide');
+      $('#demo, #snippets').removeClass('hide');
     });
   });
   var searchIcon = $('select[name="search-icon"]').val();
