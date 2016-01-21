@@ -70,7 +70,6 @@ $('form#settings').on('input change', function(){
     var val = "asb-custom";
     if (!$('#demo').hasClass('asb-custom_demo')){
       $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
-      applyTheme(val,'#demo','_demo');
       applyTheme(val,'.awesome-searchbox');
       applyTheme(val,'.js-search-input','__input');
       applyTheme(val,'.js-search-reset','__reset');
