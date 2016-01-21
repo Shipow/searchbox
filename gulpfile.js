@@ -92,9 +92,9 @@ gulp.task('copy', function () {
   .pipe(rename('awesome-searchbox.scss'))
   .pipe(gulp.dest('build/scss'));
   gulp.src('scss/themes/*.scss')
-  .pipe(gulp.dest('build'));
-  gulp.src('favicon.ico')
   .pipe(gulp.dest('build/scss/themes'));
+  gulp.src('favicon.ico')
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {
