@@ -91,6 +91,8 @@ gulp.task('awesome-searchbox', function () {
   gulp.src('scss/_awesome-searchbox.scss')
   .pipe(rename('awesome-searchbox.scss'))
   .pipe(gulp.dest('build'));
+  gulp.src('favicon.ico')
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {
