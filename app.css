@@ -638,7 +638,7 @@ h3 {
     font-size: 14px;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 0 0 1px white;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
     background: white;
     appearance: none; }
     .asb-amazon__input::-webkit-search-decoration, .asb-amazon__input::-webkit-search-cancel-button, .asb-amazon__input::-webkit-search-results-button, .asb-amazon__input::-webkit-search-results-decoration {
@@ -710,8 +710,8 @@ h3 {
     font-size: 14px;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #ccc;
-    background: white;
+    box-shadow: inset 0 0 0 1px #CCCCCC;
+    background: #FFFFFF;
     appearance: none; }
     .asb-google__input::-webkit-search-decoration, .asb-google__input::-webkit-search-cancel-button, .asb-google__input::-webkit-search-results-button, .asb-google__input::-webkit-search-results-decoration {
       display: none; }
@@ -719,10 +719,10 @@ h3 {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
     .asb-google__input:focus, .asb-google__input:active {
       outline: 0;
-      background: white;
+      background: #FFFFFF;
       box-shadow: inset 0 0 0 1px #3E82F7; }
     .asb-google__input::placeholder {
-      color: #aaa; }
+      color: #AAAAAA; }
   .asb-google__submit {
     position: absolute;
     top: 0;
@@ -746,7 +746,7 @@ h3 {
       width: 20px;
       vertical-align: middle; }
       .asb-google__submit svg use {
-        fill: white; }
+        fill: #FFFFFF; }
   .asb-google__reset {
     position: absolute;
     top: 14px;
@@ -794,7 +794,7 @@ h3 {
       background: white;
       box-shadow: inset 0 0 0 0 #3e82f7; }
     .asb-facebook__input::placeholder {
-      color: #aaa; }
+      color: #AAAAAA; }
   .asb-facebook__submit {
     position: absolute;
     top: 0;
@@ -864,7 +864,7 @@ h3 {
     .asb-medium__input:focus, .asb-medium__input:active {
       outline: 0;
       background: white;
-      box-shadow: inset 0 0 0 1px silver; }
+      box-shadow: inset 0 0 0 1px #AAAAAA; }
     .asb-medium__input::placeholder {
       color: #aaaaaa; }
   .asb-medium__submit {
@@ -926,7 +926,7 @@ h3 {
     font-size: 16px;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #444;
+    box-shadow: inset 0 0 0 1px #444444;
     background: #F5F8FA;
     appearance: none; }
     .asb-meetup__input::-webkit-search-decoration, .asb-meetup__input::-webkit-search-cancel-button, .asb-meetup__input::-webkit-search-results-button, .asb-meetup__input::-webkit-search-results-decoration {
@@ -936,9 +936,9 @@ h3 {
     .asb-meetup__input:focus, .asb-meetup__input:active {
       outline: 0;
       background: white;
-      box-shadow: inset 0 0 0 1px black; }
+      box-shadow: inset 0 0 0 1px #000000; }
     .asb-meetup__input::placeholder {
-      color: #bbb; }
+      color: #BBBBBB; }
   .asb-meetup__submit {
     position: absolute;
     top: 0;
@@ -998,7 +998,7 @@ h3 {
     font-size: 12px;
     border: none;
     border-radius: 12px;
-    box-shadow: inset 0 0 0 1px white;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
     background: white;
     appearance: none; }
     .asb-spotify__input::-webkit-search-decoration, .asb-spotify__input::-webkit-search-cancel-button, .asb-spotify__input::-webkit-search-results-button, .asb-spotify__input::-webkit-search-results-decoration {
@@ -1008,7 +1008,7 @@ h3 {
     .asb-spotify__input:focus, .asb-spotify__input:active {
       outline: 0;
       background: white;
-      box-shadow: inset 0 0 0 1px white; }
+      box-shadow: inset 0 0 0 1px #FFFFFF; }
     .asb-spotify__input::placeholder {
       color: #aaaaaa; }
   .asb-spotify__submit {
@@ -1124,42 +1124,42 @@ h3 {
       width: 10px; }
 
 .amazon-theme:before {
-  content: '{"search-namespace": "asb-amazon", "search-input-height": "38px", "search-border-radius": "3px", "search-icon-background": "#FFBF58", "search-icon-background-opacity": 1, "search-font-size": "14px", "search-icon-size": "20px", "search-icon-position": "right", "search-input-border-color": "white", "search-input-focus-border-color": "#FFBF58", "search-icon-color": "#202F40"}';
+  content: '{"search-namespace": "asb-amazon", "search-input-height": "38px", "search-border-radius": "3px", "search-icon-background": "#FFBF58", "search-icon-background-opacity": 1, "search-font-size": "14px", "search-icon-size": "20px", "search-icon-position": "right", "search-input-border-color": "#FFFFFF", "search-input-focus-border-color": "#FFBF58", "search-icon-color": "#202F40"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .facebook-theme:before {
-  content: '{"search-namespace": "asb-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "white", "search-input-focus-background": "white", "search-icon-position": "right", "search-placeholder-color": "#aaa", "search-icon-color": "#3C5BA2"}';
+  content: '{"search-namespace": "asb-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "white", "search-input-focus-background": "white", "search-icon-position": "right", "search-placeholder-color": "#AAAAAA", "search-icon-color": "#3C5BA2"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .google-theme:before {
-  content: '{"search-namespace": "asb-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#ccc", "search-input-background": "white", "search-input-focus-background": "white", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#aaa", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "white", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px"}';
+  content: '{"search-namespace": "asb-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#CCCCCC", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#AAAAAA", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "#FFFFFF", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .medium-theme:before {
-  content: '{"search-namespace": "asb-medium", "search-input-height": "36px", "search-border-radius": "30px", "search-input-width": "200px", "search-icon-background": "white", "search-icon-background-opacity": 0, "search-font-size": "13px", "search-icon-size": "16px", "search-icon-position": "left", "search-input-border-color": "#D9D9D9", "search-input-focus-border-color": "silver", "search-icon-color": "#202F40"}';
+  content: '{"search-namespace": "asb-medium", "search-input-height": "36px", "search-border-radius": "30px", "search-input-width": "200px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "13px", "search-icon-size": "16px", "search-icon-position": "left", "search-input-border-color": "#D9D9D9", "search-input-focus-border-color": "#AAAAAA", "search-icon-color": "#202F40"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .meetup-theme:before {
-  content: '{"search-namespace": "asb-meetup", "search-input-height": "44px", "search-input-width": "300px", "search-border-radius": "3px", "search-icon-background": "white", "search-icon-background-opacity": 0, "search-font-size": "16px", "search-input-background": "#F5F8FA", "search-icon-size": "24px", "search-icon-position": "right", "search-input-border-color": "#444", "search-input-focus-border-color": "black", "search-icon-color": "#505050", "search-placeholder-color": "#bbb"}';
+  content: '{"search-namespace": "asb-meetup", "search-input-height": "44px", "search-input-width": "300px", "search-border-radius": "3px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "16px", "search-input-background": "#F5F8FA", "search-icon-size": "24px", "search-icon-position": "right", "search-input-border-color": "#444444", "search-input-focus-border-color": "#000000", "search-icon-color": "#505050", "search-placeholder-color": "#BBBBBB"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .spotify-theme:before {
-  content: '{"search-namespace": "asb-spotify", "search-input-height": "24px", "search-input-width": "200px", "search-border-radius": "12px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-icon-size": "12px", "search-icon-position": "left", "search-input-border-color": "white", "search-input-focus-border-color": "white", "search-icon-color": "#222"}';
+  content: '{"search-namespace": "asb-spotify", "search-input-height": "24px", "search-input-width": "200px", "search-border-radius": "12px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-icon-size": "12px", "search-icon-position": "left", "search-input-border-color": "#FFFFFF", "search-input-focus-border-color": "#FFFFFF", "search-icon-color": "#222"}';
   display: block;
   height: 0;
   overflow: hidden;
