@@ -7,25 +7,30 @@ $('.theme-json').each(function(){
   themes[theme['search-namespace']] = theme;
 });
 
+$.fn.regex = function(pattern, fn, fn_a){
+  var fn = fn || $.fn.text;
+  return this.filter(function() {
+    return pattern.test(fn.apply($(this), fn_a));
+  });
+};
+
 function updateSnippet(){
-
   $.get('scss/awesome-searchbox.scss', function(data){
-
     var config = {};
     $('form#settings').serializeArray().map(function(item) {
-        if ( config[item.name] ) {
-            if ( typeof(config[item.name]) === "string" ) {
-                config[item.name] = [config[item.name]];
-            }
-            config[item.name].push(item.value);
-        } else {
-            if(item.name.match(/-px/)){
-              var itemName = item.name.replace(/-px/,"");
-              config[itemName] = item.value + 'px';
-            } else {
-              config[item.name] = item.value;
-            }
+      if ( config[item.name] ) {
+        if ( typeof(config[item.name]) === "string" ) {
+          config[item.name] = [config[item.name]];
         }
+        config[item.name].push(item.value);
+      } else {
+        if(item.name.match(/-px/)){
+          var itemName = item.name.replace(/-px/,"");
+          config[itemName] = item.value + 'px';
+        } else {
+          config[item.name] = item.value;
+        }
+      }
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
@@ -55,24 +60,37 @@ function updateSnippet(){
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
   $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox').parent().html());
+
 };
 
 updateSnippet();
 
-$('form#settings').on('input change', updateSnippet);
+$('form#settings').on('input change', function(){
+    updateSnippet();
+
+    var val = "asb-custom";
+    $('select[name="search-namespace"]').prop('selectedIndex', 7).selectric('refresh');
+    applyTheme(val,'#demo','_demo');
+    applyTheme(val,'.awesome-searchbox');
+    applyTheme(val,'.js-search-input','__input');
+    applyTheme(val,'.js-search-reset','__reset');
+    applyTheme(val,'.js-search-submit','__submit');
+
+});
+
 
 html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
-  '<html lang="en">\n'+
-    '<head>\n' +
-      '<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
-      '<title>title</title>\n'+
-      '<link rel="stylesheet" type="text/css" href="style.css">\n' +
-      '<script type="text/javascript" src="script.js"></script>\n' +
-    '</head>\n' +
-    '<body>\n' +
-  		$('.snippet code.language-markup').text() +
-    '</body>\n'+
-  '</html>';
+'<html lang="en">\n'+
+'<head>\n' +
+'<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
+'<title>title</title>\n'+
+'<link rel="stylesheet" type="text/css" href="style.css">\n' +
+'<script type="text/javascript" src="script.js"></script>\n' +
+'</head>\n' +
+'<body>\n' +
+$('.snippet code.language-markup').text() +
+'</body>\n'+
+'</html>';
 
 $('.download-zip').on('click',function(){
   var zip = new JSZip();
@@ -95,15 +113,6 @@ $('.select-icon').selectric({
 });
 $('.select').selectric();
 
-//BERK
-
-$.fn.regex = function(pattern, fn, fn_a){
-    var fn = fn || $.fn.text;
-    return this.filter(function() {
-        return pattern.test(fn.apply($(this), fn_a));
-    });
-};
-
 function applyTheme(val, el, suf){
   suf = typeof suf !== 'undefined' ? suf : '';
   $(' ' + el).regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
@@ -119,30 +128,30 @@ function populate(frm, data) {
     };
     switch($ctrl.attr("type"))
     {
-        case "text" :
-        case "hidden" :
-        $ctrl.val(value);
-        break;
-        case "radio" : case "checkbox":
-        $ctrl.each(function(){
-           if($(this).attr('value') == value) {  $(this).attr("checked",value); } });
+      case "text" :
+      case "hidden" :
+      $ctrl.val(value);
+      break;
+      case "radio" : case "checkbox":
+      $ctrl.each(function(){
+        if($(this).attr('value') == value) {  $(this).attr("checked",value); } });
         break;
         default:
         $ctrl.val(value);
-    }
+      }
     });
-}
+  }
 
+  $('select[name="search-namespace"]').on('change', function(){
 
-$('select[name="search-namespace"]').on('change', function(){
+    var val = $(this).val();
+    populate($('form#settings'), themes['asb-google']); //default
+    populate($('form#settings'), themes[val]);
 
-  var val = $(this).val();
-  populate($('form#settings'), themes[val]);
+    applyTheme(val,'#demo','_demo');
+    applyTheme(val,'.awesome-searchbox');
+    applyTheme(val,'.js-search-input','__input');
+    applyTheme(val,'.js-search-reset','__reset');
+    applyTheme(val,'.js-search-submit','__submit');
 
-  applyTheme(val,'#demo','_demo');
-  applyTheme(val,'.awesome-searchbox');
-  applyTheme(val,'.js-search-input','__input');
-  applyTheme(val,'.js-search-reset','__reset');
-  applyTheme(val,'.js-search-submit','__submit');
-
-});
+  });
