@@ -67,17 +67,16 @@ updateSnippet();
 
 $('form#settings').on('input change', function(){
     updateSnippet();
-
     var val = "asb-custom";
-    $('select[name="search-namespace"]').prop('selectedIndex', 7).selectric('refresh');
-    applyTheme(val,'#demo','_demo');
-    applyTheme(val,'.awesome-searchbox');
-    applyTheme(val,'.js-search-input','__input');
-    applyTheme(val,'.js-search-reset','__reset');
-    applyTheme(val,'.js-search-submit','__submit');
-
+    if (!$('#demo').hasClass('asb-custom_demo')){
+      $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
+      applyTheme(val,'#demo','_demo');
+      applyTheme(val,'.awesome-searchbox');
+      applyTheme(val,'.js-search-input','__input');
+      applyTheme(val,'.js-search-reset','__reset');
+      applyTheme(val,'.js-search-submit','__submit');
+    }
 });
-
 
 html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
 '<html lang="en">\n'+
@@ -153,5 +152,7 @@ function populate(frm, data) {
     applyTheme(val,'.js-search-input','__input');
     applyTheme(val,'.js-search-reset','__reset');
     applyTheme(val,'.js-search-submit','__submit');
+
+    updateSnippet();
 
   });

@@ -22,9 +22,11 @@
     .row
       .col-3
         .settings
+          %h2 Generator
           %p
             %label Select a Theme
             %select.select{name:"search-namespace"}
+              %option{value:"asb-custom", selected:true} Custom
               %option{value:"asb-google"} Google
               %option{value:"asb-amazon"} Amazon
               %option{value:"asb-facebook"} Facebook
@@ -32,9 +34,7 @@
               %option{value:"asb-meetup"} Meetup
               %option{value:"asb-spotify"} Spotify
               %option{value:"asb-twitter"} Twitter
-              %option{value:"asb-custom", selected:true} Custom
-            
-          %h2 Generator
+
           %form#settings
             %h3 Appearance
             %p
