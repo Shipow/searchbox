@@ -440,11 +440,10 @@ h3 {
   box-sizing: border-box;
   padding: 14px;
   margin: 0 0 80px 0;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   #demo * {
     transition: all 0.5s ease; }
-  #demo > div {
-    margin: 0 auto; }
   #demo.asb-google_demo {
     background-color: #F1F1F1; }
   #demo.asb-twitter_demo {
@@ -466,6 +465,7 @@ h3 {
   display: none; }
 
 .asb-default {
+  display: inline-block;
   position: relative;
   width: 500px;
   height: 40px;
@@ -484,7 +484,7 @@ h3 {
     line-height: 40px;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #ccc;
+    box-shadow: inset 0 0 0 1px #cccccc;
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
@@ -495,19 +495,19 @@ h3 {
     .asb-default__input:focus, .asb-default__input:active {
       outline: 0;
       background: white;
-      box-shadow: inset 0 0 0 1px #3E82F7; }
+      box-shadow: inset 0 0 0 1px #3e82f7; }
     .asb-default__input::-webkit-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-default__input:-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-default__input::-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-default__input:-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-default__input::-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-default__input:placeholder-shown {
-      color: #aaa; }
+      color: #aaaaaa; }
   .asb-default__submit {
     position: absolute;
     top: 0;
@@ -519,7 +519,7 @@ h3 {
     background-color: #3e82f7;
     right: 0; }
     .asb-default__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -549,6 +549,7 @@ h3 {
       width: 12px; }
 
 .asb-amazon {
+  display: inline-block;
   position: relative;
   width: 500px;
   height: 38px;
@@ -580,17 +581,17 @@ h3 {
       background: white;
       box-shadow: inset 0 0 0 1px #FFBF58; }
     .asb-amazon__input::-webkit-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-amazon__input:-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-amazon__input::-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-amazon__input:-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-amazon__input::-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-amazon__input:placeholder-shown {
-      color: #aaa; }
+      color: #aaaaaa; }
   .asb-amazon__submit {
     position: absolute;
     top: 0;
@@ -602,7 +603,7 @@ h3 {
     background-color: #ffbf58;
     right: 0; }
     .asb-amazon__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -632,6 +633,7 @@ h3 {
       width: 12px; }
 
 .asb-google {
+  display: inline-block;
   position: relative;
   width: 500px;
   height: 40px;
@@ -685,7 +687,7 @@ h3 {
     background-color: #3e82f7;
     right: 0; }
     .asb-google__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -715,6 +717,7 @@ h3 {
       width: 12px; }
 
 .asb-facebook {
+  display: inline-block;
   position: relative;
   width: 500px;
   height: 25px;
@@ -733,7 +736,7 @@ h3 {
     line-height: 25px;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 0 0 0 #ccc;
+    box-shadow: inset 0 0 0 0 #cccccc;
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none; }
@@ -744,7 +747,7 @@ h3 {
     .asb-facebook__input:focus, .asb-facebook__input:active {
       outline: 0;
       background: white;
-      box-shadow: inset 0 0 0 0 #3E82F7; }
+      box-shadow: inset 0 0 0 0 #3e82f7; }
     .asb-facebook__input::-webkit-input-placeholder {
       color: #aaa; }
     .asb-facebook__input:-moz-placeholder {
@@ -768,7 +771,7 @@ h3 {
     background-color: #f6f7f8;
     right: 0; }
     .asb-facebook__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -798,6 +801,7 @@ h3 {
       width: 12px; }
 
 .asb-medium {
+  display: inline-block;
   position: relative;
   width: 200px;
   height: 36px;
@@ -829,17 +833,17 @@ h3 {
       background: white;
       box-shadow: inset 0 0 0 1px silver; }
     .asb-medium__input::-webkit-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-medium__input:-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-medium__input::-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-medium__input:-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-medium__input::-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-medium__input:placeholder-shown {
-      color: #aaa; }
+      color: #aaaaaa; }
   .asb-medium__submit {
     position: absolute;
     top: 0;
@@ -851,7 +855,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0);
     left: 0; }
     .asb-medium__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -881,6 +885,7 @@ h3 {
       width: 12px; }
 
 .asb-meetup {
+  display: inline-block;
   position: relative;
   width: 300px;
   height: 44px;
@@ -934,7 +939,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0);
     right: 0; }
     .asb-meetup__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -964,6 +969,7 @@ h3 {
       width: 12px; }
 
 .asb-spotify {
+  display: inline-block;
   position: relative;
   width: 200px;
   height: 24px;
@@ -995,17 +1001,17 @@ h3 {
       background: white;
       box-shadow: inset 0 0 0 1px white; }
     .asb-spotify__input::-webkit-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-spotify__input:-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-spotify__input::-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-spotify__input:-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-spotify__input::-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-spotify__input:placeholder-shown {
-      color: #aaa; }
+      color: #aaaaaa; }
   .asb-spotify__submit {
     position: absolute;
     top: 0;
@@ -1017,7 +1023,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0);
     left: 0; }
     .asb-spotify__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;
@@ -1047,6 +1053,7 @@ h3 {
       width: 12px; }
 
 .asb-twitter {
+  display: inline-block;
   position: relative;
   width: 200px;
   height: 30px;
@@ -1078,17 +1085,17 @@ h3 {
       background: white;
       box-shadow: inset 0 0 0 1px #D6DEE3; }
     .asb-twitter__input::-webkit-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-twitter__input:-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-twitter__input::-moz-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-twitter__input:-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-twitter__input::-ms-input-placeholder {
-      color: #aaa; }
+      color: #aaaaaa; }
     .asb-twitter__input:placeholder-shown {
-      color: #aaa; }
+      color: #aaaaaa; }
   .asb-twitter__submit {
     position: absolute;
     top: 0;
@@ -1100,7 +1107,7 @@ h3 {
     background-color: rgba(62, 130, 247, 0);
     right: 0; }
     .asb-twitter__submit:before {
-      content: "";
+      content: '';
       display: inline-block;
       height: 100%;
       margin-right: -4px;

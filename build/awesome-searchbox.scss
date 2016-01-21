@@ -20,6 +20,7 @@
     $search-clear-size: 12px
   ) {
   .#{$search-namespace} {
+    display: inline-block;
     position: relative;
     width: $search-input-width;
     height: $search-input-height;
