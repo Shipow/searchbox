@@ -29,6 +29,7 @@ body
   font-family: "canada-type-gibson"
   margin: 0
   width: 100%
+  min-width: 1000px
 
 .row
   +row
@@ -40,6 +41,7 @@ body
   text-align: center
 
 .generator-sidebar
+  padding-top: 50px
   width: 300px
   float: left
   height: 100%
@@ -79,7 +81,12 @@ h2
   letter-spacing: 1px
   text-transform: uppercase
   text-align: center
-
+  &::after
+    content: ''
+    width: 40px
+    display: block
+    margin: 8px auto 0
+    border-bottom: solid 2px $primary-color
 h3
   font-size: 13px
   font-style: italic
@@ -180,7 +187,7 @@ h3
 .snippet
   font-size: 14px
   border-right: 1px #ccc solid
-  height: 2000px
+  height: 2100px
 
 .tabs, .inline-list
   margin: 0 0 12px 0
