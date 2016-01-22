@@ -164,3 +164,10 @@ $('select[name="search-namespace"]').on('change', function(){
   updateSnippet();
 
   });
+
+  $("form.awesome-searchbox").submit(function(e){
+      e.preventDefault();
+      var form = this;
+      $('.message-demo').removeClass('hide')
+      $('.query').text($('[type="search"]').val());
+  });
