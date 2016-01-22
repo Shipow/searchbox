@@ -1,5 +1,5 @@
 var Sass = new Sass();
-var html, scss, css, prefixed, js;
+var html, scss, css, prefixed;
 var themes = {};
 
 $('.theme-json').each(function(){
@@ -35,11 +35,8 @@ function updateSnippet(){
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
-    // Sass.writeFile('settings.scss', config + ';');
-
     scss = '$custom:(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
-
 
     Sass.compile(scss, function(result) {
       css = result.text;
@@ -66,8 +63,8 @@ function updateSnippet(){
 };
 
 tabby.init();
-updateSnippet();
 
+updateSnippet();
 
 $('form#settings').on('input change', function(){
     updateSnippet();
@@ -98,7 +95,6 @@ $('.download-zip').on('click',function(){
   var zip = new JSZip();
   zip.file("index.html", html);
   zip.file("style.css", prefixed );
-  zip.file("script.js", "Hello World\n");
   var content = zip.generate({type:"blob"});
   saveAs(content, "awesome-searchbox.zip");
 });
@@ -113,6 +109,7 @@ $('.select-icon').selectric({
     return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
   }
 });
+
 $('.select').selectric();
 
 function applyTheme(val, el, suf){
