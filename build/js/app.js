@@ -1,5 +1,5 @@
 var Sass = new Sass();
-var html, scss, css, js;
+var html, scss, css, prefixed, js;
 var themes = {};
 
 $('.theme-json').each(function(){
@@ -43,7 +43,7 @@ function updateSnippet(){
     Sass.compile(scss, function(result) {
       css = result.text;
       $('head style').last().remove();
-      var prefixed = autoprefixer.process(css);
+      prefixed = autoprefixer.process(css);
       $("<style>" + prefixed + "</style>").appendTo( "head" );
       $('#css').text(css);
       $('#css-prefix').text(prefixed.css);
@@ -99,7 +99,7 @@ $('.snippet code.language-markup').text() +
 $('.download-zip').on('click',function(){
   var zip = new JSZip();
   zip.file("index.html", html);
-  zip.file("style.css", css );
+  zip.file("style.css", prefixed );
   zip.file("script.js", "Hello World\n");
   var content = zip.generate({type:"blob"});
   saveAs(content, "awesome-searchbox.zip");
