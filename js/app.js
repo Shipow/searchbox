@@ -47,7 +47,7 @@ function updateSnippet(){
       $('#css-prefix').text(prefixed.css);
       $('#scss').text(scss);
       Prism.highlightAll(false);
-      $('#demo, #snippets').removeClass('hide');
+      $('.main-content').removeClass('hide');
     });
   });
   var searchIcon = $('select[name="search-icon"]').val();
@@ -60,9 +60,23 @@ function updateSnippet(){
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
   $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox').parent().html());
 
+  $('.select-icon').selectric({
+    optionsItemBuilder: function(itemData, element, index) {
+      return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
+    },
+    labelBuilder: function(itemData) {
+      return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
+    }
+  });
+
 };
 
 tabby.init();
+$('#snippets .tabs a').on('click', function(e){
+  $('#snippets .tabs a').removeClass('active');
+  $(this).addClass('active');
+
+})
 
 updateSnippet();
 
@@ -100,15 +114,6 @@ $('.download-zip').on('click',function(){
 });
 
 $('.jscolor').addClass('{hash:true}')
-
-$('.select-icon').selectric({
-  optionsItemBuilder: function(itemData, element, index) {
-    return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
-  },
-  labelBuilder: function(itemData) {
-    return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
-  }
-});
 
 $('.select').selectric();
 

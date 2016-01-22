@@ -25,6 +25,9 @@
     width: $search-input-width;
     height: $search-input-height;
     white-space: nowrap;
+    * {
+      transition: all 0.5s ease;
+    }
     &__input {
       display: inline-block;
       box-sizing: border-box;
@@ -54,7 +57,7 @@
       }
 
       &:focus, &:active {
-        outline: 0; // Remove the stupid outer glow in Webkit
+        outline: 0;
         background: $search-input-focus-background;
         box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
       }
@@ -95,14 +98,15 @@
         cursor: pointer;
       }
 
+      &:focus {
+        outline: 0;
+      }
+
       svg {
         height: $search-icon-size;
         width: $search-icon-size;
         vertical-align: middle;
-
-        use {
-          fill: $search-icon-color;
-        }
+        fill: $search-icon-color;
       }
     }
 
@@ -121,6 +125,10 @@
 
       &:hover {
         opacity: 1;
+      }
+
+      &:focus {
+        outline: 0;
       }
 
       &.hide {
