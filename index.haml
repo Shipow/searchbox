@@ -132,10 +132,9 @@
             %label icon-clear-size (px)
             %input{type: "number", name: "search-clear-size-px", value: "18"}
 
-    %main.main-content
-
-      #demo.asb-custom_demo.hide
-        %h2 Preview
+    %main.main-content.hide
+      %h2 Preview
+      #demo.asb-custom_demo
         %form.awesome-searchbox.asb-custom{role: "search", novalidate: true}
           %input.asb-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
           %button.asb-custom__submit{type: "submit"}
@@ -145,12 +144,13 @@
             %svg
               %use{xlink:href: "#clear-icon-3"}
 
-      %section#snippets.hide
-        %p.text-center
-          %a.btn.download-zip{href: "javascript:void(0);"}
-            %svg
-              %use{xlink:href: "#download-icon"}
-            Download
+      %p.text-center
+        %a.btn.download-zip{href: "javascript:void(0);"}
+          %svg
+            %use{xlink:href: "#download-icon"}
+          Download
+
+      %section#snippets
 
         %h2 Snippets
         .row

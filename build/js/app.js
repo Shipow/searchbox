@@ -47,7 +47,7 @@ function updateSnippet(){
       $('#css-prefix').text(prefixed.css);
       $('#scss').text(scss);
       Prism.highlightAll(false);
-      $('#demo, #snippets').removeClass('hide');
+      $('.main-content').removeClass('hide');
     });
   });
   var searchIcon = $('select[name="search-icon"]').val();
