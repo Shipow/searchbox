@@ -477,9 +477,8 @@ h3 {
   right: 0; }
   .github-source svg {
     width: 100px;
-    height: 100px; }
-    .github-source svg use {
-      fill: white; }
+    height: 100px;
+    fill: white; }
 
 .icons {
   padding: 18px;
@@ -487,9 +486,8 @@ h3 {
   .icons svg {
     margin: 0 10px  10px 0;
     width: 40px;
-    height: 40px; }
-    .icons svg use {
-      fill: #444; }
+    height: 40px;
+    fill: #444; }
 
 .btn {
   display: inline-block;
@@ -586,8 +584,6 @@ h3 {
   margin: 0 0 20px 0;
   width: 100%;
   text-align: center; }
-  #demo * {
-    transition: all 0.5s ease; }
   #demo.asb-google_demo {
     background-color: #F1F1F1; }
   #demo.asb-twitter_demo {
@@ -614,6 +610,8 @@ h3 {
   width: 500px;
   height: 40px;
   white-space: nowrap; }
+  .asb-default * {
+    transition: all 0.5s ease; }
   .asb-default__input {
     display: inline-block;
     box-sizing: border-box;
@@ -673,6 +671,8 @@ h3 {
       vertical-align: middle; }
     .asb-default__submit:hover, .asb-default__submit:active {
       cursor: pointer; }
+    .asb-default__submit:focus {
+      outline: 0; }
     .asb-default__submit svg {
       height: 20px;
       width: 20px;
@@ -695,6 +695,8 @@ h3 {
     cursor: pointer; }
     .asb-default__reset:hover {
       opacity: 1; }
+    .asb-default__reset:focus {
+      outline: 0; }
     .asb-default__reset.hide {
       display: none; }
     .asb-default__reset svg {
@@ -707,6 +709,8 @@ h3 {
   width: 500px;
   height: 38px;
   white-space: nowrap; }
+  .asb-amazon * {
+    transition: all 0.5s ease; }
   .asb-amazon__input {
     display: inline-block;
     box-sizing: border-box;
@@ -766,6 +770,8 @@ h3 {
       vertical-align: middle; }
     .asb-amazon__submit:hover, .asb-amazon__submit:active {
       cursor: pointer; }
+    .asb-amazon__submit:focus {
+      outline: 0; }
     .asb-amazon__submit svg {
       height: 20px;
       width: 20px;
@@ -788,6 +794,8 @@ h3 {
     cursor: pointer; }
     .asb-amazon__reset:hover {
       opacity: 1; }
+    .asb-amazon__reset:focus {
+      outline: 0; }
     .asb-amazon__reset.hide {
       display: none; }
     .asb-amazon__reset svg {
@@ -800,6 +808,8 @@ h3 {
   width: 500px;
   height: 40px;
   white-space: nowrap; }
+  .asb-google * {
+    transition: all 0.5s ease; }
   .asb-google__input {
     display: inline-block;
     box-sizing: border-box;
@@ -859,6 +869,8 @@ h3 {
       vertical-align: middle; }
     .asb-google__submit:hover, .asb-google__submit:active {
       cursor: pointer; }
+    .asb-google__submit:focus {
+      outline: 0; }
     .asb-google__submit svg {
       height: 20px;
       width: 20px;
@@ -881,6 +893,8 @@ h3 {
     cursor: pointer; }
     .asb-google__reset:hover {
       opacity: 1; }
+    .asb-google__reset:focus {
+      outline: 0; }
     .asb-google__reset.hide {
       display: none; }
     .asb-google__reset svg {
@@ -893,6 +907,8 @@ h3 {
   width: 500px;
   height: 25px;
   white-space: nowrap; }
+  .asb-facebook * {
+    transition: all 0.5s ease; }
   .asb-facebook__input {
     display: inline-block;
     box-sizing: border-box;
@@ -952,6 +968,8 @@ h3 {
       vertical-align: middle; }
     .asb-facebook__submit:hover, .asb-facebook__submit:active {
       cursor: pointer; }
+    .asb-facebook__submit:focus {
+      outline: 0; }
     .asb-facebook__submit svg {
       height: 12.5px;
       width: 12.5px;
@@ -974,6 +992,8 @@ h3 {
     cursor: pointer; }
     .asb-facebook__reset:hover {
       opacity: 1; }
+    .asb-facebook__reset:focus {
+      outline: 0; }
     .asb-facebook__reset.hide {
       display: none; }
     .asb-facebook__reset svg {
@@ -986,6 +1006,8 @@ h3 {
   width: 200px;
   height: 36px;
   white-space: nowrap; }
+  .asb-medium * {
+    transition: all 0.5s ease; }
   .asb-medium__input {
     display: inline-block;
     box-sizing: border-box;
@@ -1045,6 +1067,8 @@ h3 {
       vertical-align: middle; }
     .asb-medium__submit:hover, .asb-medium__submit:active {
       cursor: pointer; }
+    .asb-medium__submit:focus {
+      outline: 0; }
     .asb-medium__submit svg {
       height: 16px;
       width: 16px;
@@ -1067,6 +1091,8 @@ h3 {
     cursor: pointer; }
     .asb-medium__reset:hover {
       opacity: 1; }
+    .asb-medium__reset:focus {
+      outline: 0; }
     .asb-medium__reset.hide {
       display: none; }
     .asb-medium__reset svg {
@@ -1079,6 +1105,8 @@ h3 {
   width: 300px;
   height: 44px;
   white-space: nowrap; }
+  .asb-meetup * {
+    transition: all 0.5s ease; }
   .asb-meetup__input {
     display: inline-block;
     box-sizing: border-box;
@@ -1138,6 +1166,8 @@ h3 {
       vertical-align: middle; }
     .asb-meetup__submit:hover, .asb-meetup__submit:active {
       cursor: pointer; }
+    .asb-meetup__submit:focus {
+      outline: 0; }
     .asb-meetup__submit svg {
       height: 24px;
       width: 24px;
@@ -1160,6 +1190,8 @@ h3 {
     cursor: pointer; }
     .asb-meetup__reset:hover {
       opacity: 1; }
+    .asb-meetup__reset:focus {
+      outline: 0; }
     .asb-meetup__reset.hide {
       display: none; }
     .asb-meetup__reset svg {
@@ -1172,6 +1204,8 @@ h3 {
   width: 200px;
   height: 24px;
   white-space: nowrap; }
+  .asb-spotify * {
+    transition: all 0.5s ease; }
   .asb-spotify__input {
     display: inline-block;
     box-sizing: border-box;
@@ -1231,6 +1265,8 @@ h3 {
       vertical-align: middle; }
     .asb-spotify__submit:hover, .asb-spotify__submit:active {
       cursor: pointer; }
+    .asb-spotify__submit:focus {
+      outline: 0; }
     .asb-spotify__submit svg {
       height: 12px;
       width: 12px;
@@ -1253,6 +1289,8 @@ h3 {
     cursor: pointer; }
     .asb-spotify__reset:hover {
       opacity: 1; }
+    .asb-spotify__reset:focus {
+      outline: 0; }
     .asb-spotify__reset.hide {
       display: none; }
     .asb-spotify__reset svg {
@@ -1265,6 +1303,8 @@ h3 {
   width: 200px;
   height: 30px;
   white-space: nowrap; }
+  .asb-twitter * {
+    transition: all 0.5s ease; }
   .asb-twitter__input {
     display: inline-block;
     box-sizing: border-box;
@@ -1324,6 +1364,8 @@ h3 {
       vertical-align: middle; }
     .asb-twitter__submit:hover, .asb-twitter__submit:active {
       cursor: pointer; }
+    .asb-twitter__submit:focus {
+      outline: 0; }
     .asb-twitter__submit svg {
       height: 12px;
       width: 12px;
@@ -1346,6 +1388,8 @@ h3 {
     cursor: pointer; }
     .asb-twitter__reset:hover {
       opacity: 1; }
+    .asb-twitter__reset:focus {
+      outline: 0; }
     .asb-twitter__reset.hide {
       display: none; }
     .asb-twitter__reset svg {
