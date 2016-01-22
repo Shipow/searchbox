@@ -134,8 +134,8 @@
 
     %main.main-content
 
-      %h2 Preview
       #demo.asb-custom_demo.hide
+        %h2 Preview
         %form.awesome-searchbox.asb-custom{role: "search", novalidate: true}
           %input.asb-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
           %button.asb-custom__submit{type: "submit"}
@@ -145,9 +145,13 @@
             %svg
               %use{xlink:href: "#clear-icon-3"}
 
-      %a.btn.download-zip{href: "javascript:void(0);"} Download
-
       %section#snippets.hide
+        %p.text-center
+          %a.btn.download-zip{href: "javascript:void(0);"}
+            %svg
+              %use{xlink:href: "#download-icon"}
+            Download
+
         %h2 Snippets
         .row
           .col-6

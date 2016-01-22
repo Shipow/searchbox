@@ -94,7 +94,7 @@ $('.snippet code.language-markup').text() +
 $('.download-zip').on('click',function(){
   var zip = new JSZip();
   zip.file("index.html", html);
-  zip.file("style.css", prefixed );
+  zip.file("style.css", prefixed.content );
   var content = zip.generate({type:"blob"});
   saveAs(content, "awesome-searchbox.zip");
 });
