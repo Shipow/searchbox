@@ -91,21 +91,19 @@ $('form#settings').on('input change', function(){
     }
 });
 
-html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
-'<html lang="en">\n'+
-'<head>\n' +
-'<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
-'<title>title</title>\n'+
-'<link rel="stylesheet" type="text/css" href="style.css">\n' +
-'<script type="text/javascript" src="script.js"></script>\n' +
-'</head>\n' +
-'<body>\n' +
-$('.snippet code.language-markup').text() +
-'</body>\n'+
-'</html>';
-
 $('.download-zip').on('click',function(){
   var zip = new JSZip();
+  html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
+  '<html lang="en">\n'+
+  '<head>\n' +
+  '<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
+  '<title>title</title>\n'+
+  '<link rel="stylesheet" type="text/css" href="style.css">\n' +
+  '</head>\n' +
+  '<body>\n' +
+  $('.snippet code.language-markup').text() +
+  '</body>\n'+
+  '</html>';
   zip.file("index.html", html);
   zip.file("style.css", prefixed.content );
   var content = zip.generate({type:"blob"});
@@ -128,41 +126,41 @@ function populate(frm, data) {
     var $ctrl = $('[name='+key+']', frm);
     if( typeof value === "string" && value.match(/px/) ){
       $('[name='+key+'-px]', frm).val(value.replace(/px/,''));
-    };
-    switch($ctrl.attr("type"))
-    {
+    }
+    switch($ctrl.attr("type")) {
       case "text" :
       case "hidden" :
       $ctrl.val(value);
       break;
       case "radio" : case "checkbox":
       $ctrl.each(function(){
-        if($(this).attr('value') == value) {  $(this).attr("checked",value); } });
-        break;
-        default:
-        $ctrl.val(value);
-      }
-    });
-  }
-
-  $('select[name="search-namespace"]').on('change', function(){
-
-    var val = $(this).val();
-    if (val !== 'asb-custom'){
-      populate($('form#settings'), themes['asb-google']); //default
+        if($(this).attr('value') == value) {
+          $(this).attr("checked",value);
+        }
+      });
+      break;
+      default:
+      $ctrl.val(value);
     }
-    populate($('form#settings'), themes[val]);
-    $.map($('.jscolor'), function(data){
-      data.jscolor.fromString($(data).val().replace(/#/,''));
-    });
+  });
+}
 
+$('select[name="search-namespace"]').on('change', function(){
+  var val = $(this).val();
+  if (val !== 'asb-custom'){
+    populate($('form#settings'), themes['asb-google']); //default
+  }
+  populate($('form#settings'), themes[val]);
+  $.map($('.jscolor'), function(data){
+    data.jscolor.fromString($(data).val().replace(/#/,''));
+  });
 
-    applyTheme(val,'#demo','_demo');
-    applyTheme(val,'.awesome-searchbox');
-    applyTheme(val,'[type="search"]','__input');
-    applyTheme(val,'[type="reset"]','__reset');
-    applyTheme(val,'[type="submit"]','__submit');
+  applyTheme(val,'#demo','_demo');
+  applyTheme(val,'.awesome-searchbox');
+  applyTheme(val,'[type="search"]','__input');
+  applyTheme(val,'[type="reset"]','__reset');
+  applyTheme(val,'[type="submit"]','__submit');
 
-    updateSnippet();
+  updateSnippet();
 
   });
