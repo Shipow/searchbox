@@ -559,10 +559,6 @@ h3 {
   .asb-default__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -594,6 +590,8 @@ h3 {
       color: #aaaaaa; }
     .asb-default__input::placeholder {
       color: #aaaaaa; }
+    .asb-default__input:valid ~ .asb-default__reset {
+      display: block; }
   .asb-default__submit {
     position: absolute;
     top: 0;
@@ -604,6 +602,7 @@ h3 {
     user-select: none;
     width: 40px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: #3e82f7;
@@ -623,11 +622,14 @@ h3 {
       .asb-default__submit svg use {
         fill: white; }
   .asb-default__reset {
+    display: none;
     position: absolute;
     top: 14px;
     right: 48px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -651,10 +653,6 @@ h3 {
   .asb-amazon__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -686,6 +684,8 @@ h3 {
       color: #aaaaaa; }
     .asb-amazon__input::placeholder {
       color: #aaaaaa; }
+    .asb-amazon__input:valid ~ .asb-amazon__reset {
+      display: block; }
   .asb-amazon__submit {
     position: absolute;
     top: 0;
@@ -696,6 +696,7 @@ h3 {
     user-select: none;
     width: 38px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: #ffbf58;
@@ -715,11 +716,14 @@ h3 {
       .asb-amazon__submit svg use {
         fill: #202F40; }
   .asb-amazon__reset {
+    display: none;
     position: absolute;
     top: 13px;
     right: 46px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -743,10 +747,6 @@ h3 {
   .asb-google__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -778,6 +778,8 @@ h3 {
       color: #AAAAAA; }
     .asb-google__input::placeholder {
       color: #AAAAAA; }
+    .asb-google__input:valid ~ .asb-google__reset {
+      display: block; }
   .asb-google__submit {
     position: absolute;
     top: 0;
@@ -788,6 +790,7 @@ h3 {
     user-select: none;
     width: 40px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: #3e82f7;
@@ -807,11 +810,14 @@ h3 {
       .asb-google__submit svg use {
         fill: #FFFFFF; }
   .asb-google__reset {
+    display: none;
     position: absolute;
     top: 14px;
     right: 48px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -835,10 +841,6 @@ h3 {
   .asb-facebook__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -870,6 +872,8 @@ h3 {
       color: #AAAAAA; }
     .asb-facebook__input::placeholder {
       color: #AAAAAA; }
+    .asb-facebook__input:valid ~ .asb-facebook__reset {
+      display: block; }
   .asb-facebook__submit {
     position: absolute;
     top: 0;
@@ -880,6 +884,7 @@ h3 {
     user-select: none;
     width: 25px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: #f6f7f8;
@@ -899,11 +904,14 @@ h3 {
       .asb-facebook__submit svg use {
         fill: #3C5BA2; }
   .asb-facebook__reset {
+    display: none;
     position: absolute;
     top: 6.5px;
     right: 33px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -927,10 +935,6 @@ h3 {
   .asb-medium__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -962,6 +966,8 @@ h3 {
       color: #aaaaaa; }
     .asb-medium__input::placeholder {
       color: #aaaaaa; }
+    .asb-medium__input:valid ~ .asb-medium__reset {
+      display: block; }
   .asb-medium__submit {
     position: absolute;
     top: 0;
@@ -972,6 +978,7 @@ h3 {
     user-select: none;
     width: 36px;
     vertical-align: middle;
+    border: 0;
     border-radius: 30px 0 0 30px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
@@ -991,11 +998,14 @@ h3 {
       .asb-medium__submit svg use {
         fill: #202F40; }
   .asb-medium__reset {
+    display: none;
     position: absolute;
     top: 12px;
     right: 15.5px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1019,10 +1029,6 @@ h3 {
   .asb-meetup__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1054,6 +1060,8 @@ h3 {
       color: #BBBBBB; }
     .asb-meetup__input::placeholder {
       color: #BBBBBB; }
+    .asb-meetup__input:valid ~ .asb-meetup__reset {
+      display: block; }
   .asb-meetup__submit {
     position: absolute;
     top: 0;
@@ -1064,6 +1072,7 @@ h3 {
     user-select: none;
     width: 44px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 3px 3px 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
@@ -1083,11 +1092,14 @@ h3 {
       .asb-meetup__submit svg use {
         fill: #505050; }
   .asb-meetup__reset {
+    display: none;
     position: absolute;
     top: 16px;
     right: 52px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1111,10 +1123,6 @@ h3 {
   .asb-spotify__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1146,6 +1154,8 @@ h3 {
       color: #aaaaaa; }
     .asb-spotify__input::placeholder {
       color: #aaaaaa; }
+    .asb-spotify__input:valid ~ .asb-spotify__reset {
+      display: block; }
   .asb-spotify__submit {
     position: absolute;
     top: 0;
@@ -1156,6 +1166,7 @@ h3 {
     user-select: none;
     width: 24px;
     vertical-align: middle;
+    border: 0;
     border-radius: 12px 0 0 12px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
@@ -1175,11 +1186,14 @@ h3 {
       .asb-spotify__submit svg use {
         fill: #222; }
   .asb-spotify__reset {
+    display: none;
     position: absolute;
     top: 6px;
     right: 11px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1203,10 +1217,6 @@ h3 {
   .asb-twitter__input {
     display: inline-block;
     box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1238,6 +1248,8 @@ h3 {
       color: #aaaaaa; }
     .asb-twitter__input::placeholder {
       color: #aaaaaa; }
+    .asb-twitter__input:valid ~ .asb-twitter__reset {
+      display: block; }
   .asb-twitter__submit {
     position: absolute;
     top: 0;
@@ -1248,6 +1260,7 @@ h3 {
     user-select: none;
     width: 30px;
     vertical-align: middle;
+    border: 0;
     border-radius: 0 15px 15px 0;
     text-align: center;
     background-color: rgba(62, 130, 247, 0);
@@ -1267,11 +1280,14 @@ h3 {
       .asb-twitter__submit svg use {
         fill: #73777A; }
   .asb-twitter__reset {
+    display: none;
     position: absolute;
     top: 10px;
     right: 38px;
     opacity: 0.6;
-    line-height: 0;
+    border: 0;
+    padding: 0;
+    background: none;
     height: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;

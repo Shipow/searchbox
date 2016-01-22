@@ -55,8 +55,8 @@ function updateSnippet(){
   });
   var searchIcon = $('select[name="search-icon"]').val();
   var clearIcon = $('select[name="search-clear-icon"]').val();
-  $('.js-search-submit use').attr('xlink:href','#' + searchIcon);
-  $('.js-search-reset use').attr('xlink:href','#' + clearIcon);
+  $('[type="submit"] use').attr('xlink:href','#' + searchIcon);
+  $('[type="reset"] use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
@@ -69,20 +69,15 @@ tabby.init();
 updateSnippet();
 
 
-$.get('js/awesome-searchbox.js', function(data){
-  $('#js').text(data);
-});
-
-
 $('form#settings').on('input change', function(){
     updateSnippet();
     var val = "asb-custom";
     if (!$('#demo').hasClass('asb-custom_demo')){
       $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
       applyTheme(val,'.awesome-searchbox');
-      applyTheme(val,'.js-search-input','__input');
-      applyTheme(val,'.js-search-reset','__reset');
-      applyTheme(val,'.js-search-submit','__submit');
+      applyTheme(val,'[type="search"]','__input');
+      applyTheme(val,'[type="reset"]','__reset');
+      applyTheme(val,'[type="submit"]','__submit');
     }
 });
 
@@ -161,9 +156,9 @@ function populate(frm, data) {
 
     applyTheme(val,'#demo','_demo');
     applyTheme(val,'.awesome-searchbox');
-    applyTheme(val,'.js-search-input','__input');
-    applyTheme(val,'.js-search-reset','__reset');
-    applyTheme(val,'.js-search-submit','__submit');
+    applyTheme(val,'[type="search"]','__input');
+    applyTheme(val,'[type="reset"]','__reset');
+    applyTheme(val,'[type="submit"]','__submit');
 
     updateSnippet();
 
