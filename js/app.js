@@ -37,7 +37,7 @@ function updateSnippet(){
 
     // Sass.writeFile('settings.scss', config + ';');
 
-    scss = '$custom :(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include awesome-searchbox(($custom)...);'
 
 
@@ -65,7 +65,9 @@ function updateSnippet(){
 
 };
 
+tabby.init();
 updateSnippet();
+
 
 $.get('js/awesome-searchbox.js', function(data){
   $('#js').text(data);

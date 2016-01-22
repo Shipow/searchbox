@@ -26,251 +26,266 @@
     </a>
     <h1><svg><use xlink:href="#search-icon-17"></use></svg>SearchBox</h1>
   </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="settings">
-        <h2>Generator</h2>
+  <aside class="generator-sidebar">
+    <div class="settings">
+      <h2>Generator</h2>
+      <p>
+        <label>Select a Theme</label>
+        <select name="search-namespace" class="select">
+          <option value="asb-custom" selected="selected">Custom</option>
+          <option value="asb-google">Google</option>
+          <option value="asb-amazon">Amazon</option>
+          <option value="asb-facebook">Facebook</option>
+          <option value="asb-medium">Medium</option>
+          <option value="asb-meetup">Meetup</option>
+          <option value="asb-spotify">Spotify</option>
+          <option value="asb-twitter">Twitter</option>
+        </select>
+      </p>
+      <form id="settings">
+        <h3>Appearance</h3>
         <p>
-          <label>Select a Theme</label>
-          <select name="search-namespace" class="select">
-            <option value="asb-custom" selected="selected">Custom</option>
-            <option value="asb-google">Google</option>
-            <option value="asb-amazon">Amazon</option>
-            <option value="asb-facebook">Facebook</option>
-            <option value="asb-medium">Medium</option>
-            <option value="asb-meetup">Meetup</option>
-            <option value="asb-spotify">Spotify</option>
-            <option value="asb-twitter">Twitter</option>
+          <label>width (px)</label>
+          <input type="number" name="search-input-width-px" value="250" />
+        </p>
+        <p>
+          <label>height (px)</label>
+          <input type="number" name="search-input-height-px" value="50" />
+        </p>
+        <p>
+          <label>font-size (px)</label>
+          <input type="number" name="search-font-size-px" value="14" />
+        </p>
+        <p>
+          <label>border-width (px)</label>
+          <input type="number" name="search-border-width-px" value="2" />
+        </p>
+        <p>
+          <label>border-radius (px)</label>
+          <input type="number" name="search-border-radius-px" value="25" />
+        </p>
+        <p>
+          <label>border-color</label>
+          <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
+        </p>
+        <p>
+          <label>bg-color</label>
+          <input type="text" name="search-input-background" value="white" class="jscolor" />
+        </p>
+        <p>
+          <label>placeholder-color</label>
+          <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
+        </p>
+        <h3>Search icon</h3>
+        <p>
+          <label>icon-img</label>
+          <select name="search-icon" class="select-icon">
+            <option value="search-icon-1">1</option>
+            <option value="search-icon-2">2</option>
+            <option value="search-icon-3">3</option>
+            <option value="search-icon-4">4</option>
+            <option value="search-icon-5">5</option>
+            <option value="search-icon-6">6</option>
+            <option value="search-icon-7">7</option>
+            <option value="search-icon-8">8</option>
+            <option value="search-icon-9">9</option>
+            <option value="search-icon-10">10</option>
+            <option value="search-icon-11">11</option>
+            <option value="search-icon-12">12</option>
+            <option value="search-icon-13">13</option>
+            <option value="search-icon-14">14</option>
+            <option value="search-icon-15">15</option>
+            <option value="search-icon-16">16</option>
+            <option value="search-icon-17" selected="selected">17</option>
+            <option value="search-icon-18">18</option>
+            <option value="search-icon-19">19</option>
+            <option value="search-icon-20">20</option>
+            <option value="search-icon-21">21</option>
+            <option value="search-icon-22">22</option>
           </select>
         </p>
-        <form id="settings">
-          <h3>Appearance</h3>
-          <p>
-            <label>width (px)</label>
-            <input type="number" name="search-input-width-px" value="250" />
-          </p>
-          <p>
-            <label>height (px)</label>
-            <input type="number" name="search-input-height-px" value="50" />
-          </p>
-          <p>
-            <label>font-size (px)</label>
-            <input type="number" name="search-font-size-px" value="14" />
-          </p>
-          <p>
-            <label>border-width (px)</label>
-            <input type="number" name="search-border-width-px" value="2" />
-          </p>
-          <p>
-            <label>border-radius (px)</label>
-            <input type="number" name="search-border-radius-px" value="25" />
-          </p>
-          <p>
-            <label>border-color</label>
-            <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
-          </p>
-          <p>
-            <label>bg-color</label>
-            <input type="text" name="search-input-background" value="white" class="jscolor" />
-          </p>
-          <p>
-            <label>placeholder-color</label>
-            <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
-          </p>
-          <h3>Search icon</h3>
-          <p>
-            <label>icon-img</label>
-            <select name="search-icon" class="select-icon">
-              <option value="search-icon-1">1</option>
-              <option value="search-icon-2">2</option>
-              <option value="search-icon-3">3</option>
-              <option value="search-icon-4">4</option>
-              <option value="search-icon-5">5</option>
-              <option value="search-icon-6">6</option>
-              <option value="search-icon-7">7</option>
-              <option value="search-icon-8">8</option>
-              <option value="search-icon-9">9</option>
-              <option value="search-icon-10">10</option>
-              <option value="search-icon-11">11</option>
-              <option value="search-icon-12">12</option>
-              <option value="search-icon-13">13</option>
-              <option value="search-icon-14">14</option>
-              <option value="search-icon-15">15</option>
-              <option value="search-icon-16">16</option>
-              <option value="search-icon-17" selected="selected">17</option>
-              <option value="search-icon-18">18</option>
-              <option value="search-icon-19">19</option>
-              <option value="search-icon-20">20</option>
-              <option value="search-icon-21">21</option>
-              <option value="search-icon-22">22</option>
-            </select>
-          </p>
-          <p>
-            <label>icon-size (px)</label>
-            <input type="number" name="search-icon-size-px" value="28" />
-          </p>
-          <p>
-            <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="search-icon-position" value="left" checked="undefined" />Left</label></span>
-          </p>
-          <p>
-            <label>icon-color</label>
-            <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
-          </p>
-          <p>
-            <label>icon-bg-color</label>
-            <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
-          </p>
-          <p>
-            <label>icon-bg-opacity</label>
-            <input type="text" name="search-icon-background-opacity" value="0" />
-          </p>
-          <h3>Focus</h3>
-          <p>
-            <label>focus-border-color</label>
-            <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
-          </p>
-          <p>
-            <label>focus-bg-color</label>
-            <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
-          </p>
-          <h3>Clear</h3>
-          <p>
-            <label>icon-clear-img</label>
-            <select name="search-clear-icon" class="select-icon">
-              <option value="clear-icon-1">1</option>
-              <option value="clear-icon-2">2</option>
-              <option value="clear-icon-3">3</option>
-              <option value="clear-icon-4">4</option>
-              <option value="clear-icon-5" selected="selected">5</option>
-            </select>
-          </p>
-          <p>
-            <label>icon-clear-size (px)</label>
-            <input type="number" name="search-clear-size-px" value="18" />
-          </p>
-        </form>
+        <p>
+          <label>icon-size (px)</label>
+          <input type="number" name="search-icon-size-px" value="28" />
+        </p>
+        <p>
+          <label>icon-position</label><span class="radio-control"><label class="label-radio"><input type="radio" name="search-icon-position" value="right" />Right</label><label class="label-radio"><input type="radio" name="search-icon-position" value="left" checked="undefined" />Left</label></span>
+        </p>
+        <p>
+          <label>icon-color</label>
+          <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
+        </p>
+        <p>
+          <label>icon-bg-color</label>
+          <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
+        </p>
+        <p>
+          <label>icon-bg-opacity</label>
+          <input type="text" name="search-icon-background-opacity" value="0" />
+        </p>
+        <h3>Focus</h3>
+        <p>
+          <label>focus-border-color</label>
+          <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
+        </p>
+        <p>
+          <label>focus-bg-color</label>
+          <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
+        </p>
+        <h3>Clear</h3>
+        <p>
+          <label>icon-clear-img</label>
+          <select name="search-clear-icon" class="select-icon">
+            <option value="clear-icon-1">1</option>
+            <option value="clear-icon-2">2</option>
+            <option value="clear-icon-3">3</option>
+            <option value="clear-icon-4">4</option>
+            <option value="clear-icon-5" selected="selected">5</option>
+          </select>
+        </p>
+        <p>
+          <label>icon-clear-size (px)</label>
+          <input type="number" name="search-clear-size-px" value="18" />
+        </p>
+      </form>
+    </div>
+  </aside>
+  <main class="main-content">
+    <h2>Preview</h2>
+    <div class="asb-custom_demo hide" id="demo">
+      <div role="search" class="awesome-searchbox asb-custom">
+        <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-custom__input js-search-input" />
+        <div class="asb-custom__submit js-search-submit">
+          <svg>
+            <use xlink:href="#search-icon-10"></use>
+          </svg>
+        </div>
+        <div class="asb-custom__reset hide js-search-reset">
+          <svg>
+            <use xlink:href="#clear-icon-3"></use>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div class="col-9">
-      <h2>Generated Searchbox</h2>
-      <div class="asb-custom_demo hide" id="demo">
-        <div role="search" class="awesome-searchbox asb-custom">
-          <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-custom__input js-search-input" />
-          <div class="asb-custom__submit js-search-submit">
-            <svg>
-              <use xlink:href="#search-icon-10"></use>
-            </svg>
-          </div>
-          <div class="asb-custom__reset hide js-search-reset">
-            <svg>
-              <use xlink:href="#clear-icon-3"></use>
-            </svg>
-          </div>
-        </div>
-      </div><a href="javascript:void(0);" class="btn download-zip">Download</a>
-      <section class="hide" id="snippets">
+    </div><a href="javascript:void(0);" class="btn download-zip">Download</a>
+    <section class="hide" id="snippets">
+      <h2>Snippets</h2>
+      <div class="row">
         <div class="col-6">
-          <h2>Snippet<a href="#">Scss</a> |<a href="#">Css</a> |<a href="#">Css prefixed</a></h2><pre class="snippet"><code class="language-css" id="css"></code></pre>
+          <ul data-tabs="data-tabs" class="tabs">
+            <li><a data-tab="data-tab" href="#tabscss">SCSS</a>
+            </li>
+            <li><a data-tab="data-tab" href="#tabcss">CSS</a>
+            </li>
+            <li><a data-tab="data-tab" href="#tabprefix">Prefixed CSS</a>
+            </li>
+          </ul>
+          <div data-tabs-content="data-tabs-content">
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane active" id="tabcss"><pre class="snippet"><code class="language-css" id="css"></code></pre>
+            </div>
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabscss"><pre class="snippet"><code class="language-scss" id="scss"></code></pre>
+            </div>
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabprefix"><pre class="snippet"><code class="language-css" id="css-prefix"></code></pre>
+            </div>
+          </div>
         </div>
         <div class="col-6">
-          <h2>Snippet HTML</h2><pre class="snippet"><code class="language-markup" id="html"></code></pre>
+          <ul class="tabs">
+            <li>HTML</li>
+          </ul><pre class="snippet"><code class="language-markup" id="html"></code></pre>
         </div>
-        <h2>Snippet Css prefixed</h2><pre class="snippet"><code class="language-css" id="css-prefix"></code></pre>
-        <h2>Snippet Scss</h2><pre class="snippet"><code class="language-scss" id="scss"></code></pre>
-        <h2>Snippet Javascript</h2><pre class="snippet"><code class="language-js" id="js"></code></pre>
-      </section>
-    </div>
-  </div>
-  <div class="row">
-    <h2>Search icons</h2>
-    <div class="icons">
-      <svg>
-        <use xlink:href="#search-icon-1"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-2"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-3"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-4"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-5"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-6"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-7"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-8"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-9"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-10"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-11"></use>
-      </svg>
-      <br />
-      <svg>
-        <use xlink:href="#search-icon-12"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-13"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-14"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-15"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-16"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-17"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-18"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-19"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-20"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-21"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#search-icon-22"></use>
-      </svg>
-    </div>
-    <h2>Clear icons</h2>
-    <div class="icons">
-      <svg>
-        <use xlink:href="#clear-icon-1"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#clear-icon-2"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#clear-icon-3"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#clear-icon-4"></use>
-      </svg>
-      <svg>
-        <use xlink:href="#clear-icon-5"></use>
-      </svg>
-    </div>
-  </div>
+      </div>
+      <div class="row">
+        <h2>Search icons</h2>
+        <div class="icons">
+          <svg>
+            <use xlink:href="#search-icon-1"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-2"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-3"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-4"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-5"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-6"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-7"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-8"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-9"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-10"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-11"></use>
+          </svg>
+          <br />
+          <svg>
+            <use xlink:href="#search-icon-12"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-13"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-14"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-15"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-16"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-17"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-18"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-19"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-20"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-21"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#search-icon-22"></use>
+          </svg>
+        </div>
+        <h2>Clear icons</h2>
+        <div class="icons">
+          <svg>
+            <use xlink:href="#clear-icon-1"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#clear-icon-2"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#clear-icon-3"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#clear-icon-4"></use>
+          </svg>
+          <svg>
+            <use xlink:href="#clear-icon-5"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
   <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="svg-icons"></div>
   <!-- inject:svg -->
   <svg xmlns="http://www.w3.org/2000/svg">
@@ -424,6 +439,7 @@
   <div class="theme-json spotify-theme"></div>
   <div class="theme-json twitter-theme"></div>
   <script src="js/vendors/jquery-2.2.0.min.js"></script>
+  <script src="js/vendors/tabby.min.js"></script>
   <script src="js/vendors/prism.js"></script>
   <script src="js/vendors/jscolor.min.js"></script>
   <script src="js/vendors/jquery.selectric.min.js"></script>
