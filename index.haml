@@ -150,15 +150,10 @@
           .col-6
             %ul.tabs{data-tabs: true}
               %li
-                %a.btn.active{data-tab: true, href: "#tabprefix"} Prefixed CSS
-              %li
-                %a.btn{data-tab: true, href: "#tabcss"} CSS
+                %a.btn.active{data-tab: true, href: "#tabprefix"} CSS
               %li
                 %a.btn{data-tab: true, href: "#tabscss"} SCSS
             %div{data-tabs-content: true}
-              #tabcss.tabs-pane{data-tabs-pane: true}
-                %pre.snippet
-                  %code#css.language-css
               #tabprefix.tabs-pane.active{data-tabs-pane: true}
                 %pre.snippet
                   %code#css-prefix.language-css
@@ -167,7 +162,7 @@
                   %code#scss.language-scss
           .col-6
             %ul.inline-list
-              %li HTML + SVG symbols
+              %li HTML + Images (SVG)
               %li
                 %a.btn.download-zip{href: "javascript:void(0);"}
                   %svg

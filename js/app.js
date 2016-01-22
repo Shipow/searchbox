@@ -43,7 +43,6 @@ function updateSnippet(){
       $('head style').last().remove();
       prefixed = autoprefixer.process(css);
       $("<style>" + prefixed + "</style>").appendTo( "head" );
-      $('#css').text(css);
       $('#css-prefix').text(prefixed.css);
       $('#scss').text(scss);
       Prism.highlightAll(false);
