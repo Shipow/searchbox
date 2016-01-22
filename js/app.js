@@ -3,7 +3,8 @@ var html, scss, css, prefixed, js;
 var themes = {};
 
 $('.theme-json').each(function(){
-  var theme = JSON.parse(window.getComputedStyle(this,':before').content.replace(/'/g,''));
+  var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
+  theme = JSON.parse(theme);
   themes[theme['search-namespace']] = theme;
 });
 
