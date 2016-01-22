@@ -3,7 +3,7 @@ var html, scss, css, prefixed, js;
 var themes = {};
 
 $('.theme-json').each(function(){
-  var theme = JSON.parse(JSON.parse(window.getComputedStyle(this,':before').content));
+  var theme = JSON.parse(window.getComputedStyle(this,':before').content.replace(/'/g,''));
   themes[theme['search-namespace']] = theme;
 });
 
