@@ -2,8 +2,9 @@
 
 $primary-color: #2FC9E8
 
-@import "prism"
-@import "selectric"
+@import "vendors/prism"
+@import "vendors/selectric"
+@import "vendors/SassyJSON"
 
 @mixin clearfix
   &:after
@@ -11,125 +12,138 @@ $primary-color: #2FC9E8
     display: table
     clear: both
 
-.demos
-  margin: 0
-  min-width: 800px
+@mixin row()
+  font-size: 0
+
+@mixin col($col, $sum, $gap: 1em, $align: top, $first: false, $last: false)
   width: 100%
+  font-size: 16px
+  display: inline-block
+  box-sizing: border-box
+  padding-left: if($first, 0, $gap)
+  padding-right: if($last, 0, $gap)
+  @media only screen and (min-width: 768px)
+    width: percentage($col/$sum)
+    vertical-align: $align
+
+body
   position: relative
   font-family: "canada-type-gibson"
-.row
+  margin: 0
   width: 100%
-  clear: both
-.col-6
-  width: 50%
-  float: left
-.col-4
-  width: 33%
-  float: left
+
+.row
+  +row
+.col-3
+  +col(1, 3, $first: true)
+.col-9
+  +col(2, 3, $last: true)
+
 .demo-header
   background-color: $primary-color
+  padding: 10px 0
   border-bottom: solid 2px #444
-  height: 200px
-  padding: 20px 0
+  height: 150px
+
+// typo
 h1
-  text-align: center
   font-size: 80px
   font-weight: 300
-  color: white
-  text-transform: uppercase
-  width: 560px
   background-color: rgba(white,.2)
-  margin: 60px auto 0
-  border-radius: 90px
+  color: white
+  margin: 24px auto 0
   border: solid 2px white
+  border-radius: 90px
+  text-align: center
+  width: 560px
+  text-transform: uppercase
   svg
-    height: 60px
-    width: 60px
     margin-right: 8px
+    width: 60px
+    height: 60px
     use
       fill: white
 h2
-  text-align: center
-  margin: 40px 0 20px
   font-size: 18px
   font-weight: 300
   color: #888
-  text-transform: uppercase
+  margin: 40px 0 20px
   letter-spacing: 1px
+  text-transform: uppercase
+h3
+  font-size: 13px
+  font-style: italic
+  font-weight: 600
+  color: #ccc
+  margin: 20px 10px 10px
+  border-bottom: solid 1px #ccc
+  letter-spacing: 1px
+  text-align: left
+  text-transform: uppercase
+
 .github-source
   position: absolute
   top: 0
   right: 0
   svg
-    height: 120px
     width: 120px
+    height: 120px
     use
       fill: white
+
 .icons
-  text-align: center
   padding: 18px
+  text-align: center
   svg
+    margin: 0 10px  10px 0
     width: 40px
     height: 40px
-    margin: 0 10px  10px 0
     use
       fill: #444
 
-.text-center
-  text-align: center
-
 .btn
-  padding: 8px 12px
   background-color: #eee
+  color: #000
+  padding: 8px 12px
+  margin-right: 10px
   border: solid 1px #ccc
   border-radius: 3px
-  margin-right: 10px
   text-decoration: none
-  color: #000
 
 .settings
-  +clearfix
-  form
-    display: block
-    width: 90%
-    margin: 0 auto
-    h3
-      font-size: 13px
-      font-weight: 600
-      font-style: italic
-      margin: 20px 10px 10px
-      text-align: left
-      border-bottom: solid 1px #ccc
-      color: #ccc
-      text-transform: uppercase
-      letter-spacing: 1px
-    &:after
-      content: ''
-      clear: both
-      display: block
+  margin-top: 20px
   .icon-select-option,
   .icon-select-label
-    width: 20px
-    height: 20px
     display: inline-block
+    width: 24px
+    height: 24px
+    position: relative
+    top: 4px
+    margin-right: 8px
 
   p
-    margin: 0 0 4px
     padding: 0
+    margin: 0 0 4px 0
+    &.warning
+      background-color: #FFDD78
+      padding: 8px
+      display: block
   label
     display: inline-block
-    line-height: 34px
-    width: 160px
-    padding-right: 4px
-    text-align: right
-    letter-spacing: 1px
     font-size: 12px
+    padding-right: 4px
+    letter-spacing: 1px
+    line-height: 34px
+    text-align: right
+    width: 160px
     text-transform: uppercase
   input[type='text'], input[type="number"]
-    width: 56px
-    border: solid 1px #aaa
-    padding: 8px 12px
     box-shadow: inset 0 0 0 1px white
+    padding: 0 12px
+    line-height: 28px
+    border: solid 1px #aaa
+    width: 56px
+    font-size: 12px
     &:focus
       border-color: #000
       outline: 0
@@ -138,52 +152,69 @@ h2
     label
       width: inherit
 
-.snippets
-  +clearfix
 .snippet
-  width: 92%
-  height: 400px
   font-size: 11px
-.awesome-searchbox_custom *
-  transition: all 0.5s ease
-.demo
+  height: 300px
+  width: 94%
+
+#demo
+  box-sizing: border-box;
   padding: 14px
-  margin-bottom: 80px
-  > div
-    margin: 0 auto
-.demo-default
-  background-color: #F1F1F1
-.demo-twitter
-  border-top: solid 1px #D6DEE3
-  background-color: white
-.demo-amazon
-  background-color: #202F40
-.demo-spotify
-  background-color: #272727
-.demo-meetup
-  background-color: #505050
-.demo-medium
-  border-top: solid 1px #D9D9D9
-  background-color: white
-.demo-facebook
-  background-color: #3E5DA0
+  margin: 0 0 80px 0
+  width: 100%
+  text-align: center
+  *
+    transition: all 0.5s ease
+  &.asb-google_demo
+    background-color: #F1F1F1
+  &.asb-twitter_demo
+    background-color: white
+    border-top: solid 1px #D6DEE3
+  &.asb-amazon_demo
+    background-color: #202F40
+  &.asb-spotify_demo
+    background-color: #272727
+  &.asb-meetup_demo
+    background-color: #505050
+  &.asb-medium_demo
+    background-color: white
+    border-top: solid 1px #D9D9D9
+  &.asb-facebook_demo
+    background-color: #3E5DA0
 
-@import "awesome-searchbox"
+.hide
+  display: none
 
-@import "theme-twitter"
-+awesome-searchbox($config-name)
+@import 'awesome-searchbox'
+//themes
+@import 'themes/theme-amazon'
+@import 'themes/theme-google'
+@import 'themes/theme-facebook'
+@import 'themes/theme-medium'
+@import 'themes/theme-meetup'
+@import 'themes/theme-spotify'
+@import 'themes/theme-twitter'
 
-@import "theme-amazon"
-+awesome-searchbox($config-name)
+@include awesome-searchbox()
+@include awesome-searchbox(($amazon)...)
+@include awesome-searchbox(($google)...)
+@include awesome-searchbox(($facebook)...)
+@include awesome-searchbox(($medium)...)
+@include awesome-searchbox(($meetup)...)
+@include awesome-searchbox(($spotify)...)
+@include awesome-searchbox(($twitter)...)
 
-@import "theme-spotify"
-+awesome-searchbox($config-name)
-
-@import "theme-meetup"
-+awesome-searchbox($config-name)
-
-@import "theme-medium"
-+awesome-searchbox($config-name)
-
-@import "theme-facebook"
-+awesome-searchbox($config-name)
+.amazon-theme:before
+  +json-encode($amazon);
+.facebook-theme:before
+  +json-encode($facebook);
+.google-theme:before
+  +json-encode($google);
+.medium-theme:before
+  +json-encode($medium);
+.meetup-theme:before
+  +json-encode($meetup);
+.spotify-theme:before
+  +json-encode($spotify);
+.twitter-theme:before
+  +json-encode($twitter);

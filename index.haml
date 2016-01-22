@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     %meta{content: "ie=edge", http-equiv: "x-ua-compatible"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %title Searchbox: One mixin to syle them all
+    %title Searchbox Generator
     %link{href: "app.css", rel: "stylesheet"}
     %script{src: "https://use.typekit.net/rwx3htg.js"}
     :javascript
@@ -19,220 +19,160 @@
         %svg
           %use{xlink:href:"#search-icon-17"}
         SearchBox
+    .row
+      .col-3
+        .settings
+          %h2 Generator
+          %p
+            %label Select a Theme
+            %select.select{name:"search-namespace"}
+              %option{value:"asb-custom", selected:true} Custom
+              %option{value:"asb-google"} Google
+              %option{value:"asb-amazon"} Amazon
+              %option{value:"asb-facebook"} Facebook
+              %option{value:"asb-medium"} Medium
+              %option{value:"asb-meetup"} Meetup
+              %option{value:"asb-spotify"} Spotify
+              %option{value:"asb-twitter"} Twitter
 
-    .examples
+          %form#settings
+            %h3 Appearance
+            %p
+              %label width (px)
+              %input{type:"number", name:"search-input-width-px", value:"250"}
+            %p
+              %label height (px)
+              %input{type:"number", name:"search-input-height-px", value:"50"}
+            %p
+              %label font-size (px)
+              %input{type:"number", name:"search-font-size-px", value:"14"}
+            %p
+              %label border-width (px)
+              %input{type:"number", name:"search-border-width-px", value:"2"}
+            %p
+              %label border-radius (px)
+              %input{type:"number", name:"search-border-radius-px", value:"25"}
+            %p
+              %label border-color
+              %input.jscolor{type:"text", name:"search-input-border-color", value:"#ccc"}
+            %p
+              %label bg-color
+              %input.jscolor{type:"text", name:"search-input-background", value:"white"}
+            %p
+              %label placeholder-color
+              %input.jscolor{type:"text", name:"search-placeholder-color", value:"#aaa"}
 
-      %h2 Google (default)
-      .demo.demo-default
-        .awesome-searchbox
-          %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-13"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
+            %h3 Search icon
+            %p
+              %label icon-img
+              %select.select-icon{name:"search-icon"}
+                %option{value:"search-icon-1"} 1
+                %option{value:"search-icon-2"} 2
+                %option{value:"search-icon-3"} 3
+                %option{value:"search-icon-4"} 4
+                %option{value:"search-icon-5"} 5
+                %option{value:"search-icon-6"} 6
+                %option{value:"search-icon-7"} 7
+                %option{value:"search-icon-8"} 8
+                %option{value:"search-icon-9"} 9
+                %option{value:"search-icon-10"} 10
+                %option{value:"search-icon-11"} 11
+                %option{value:"search-icon-12"} 12
+                %option{value:"search-icon-13"} 13
+                %option{value:"search-icon-14"} 14
+                %option{value:"search-icon-15"} 15
+                %option{value:"search-icon-16"} 16
+                %option{value:"search-icon-17", selected:true} 17
+                %option{value:"search-icon-18"} 18
+                %option{value:"search-icon-19"} 19
+                %option{value:"search-icon-20"} 20
+                %option{value:"search-icon-21"} 21
+                %option{value:"search-icon-22"} 22
+            %p
+              %label icon-size (px)
+              %input{type:"number", name:"search-icon-size-px", value:"28"}
+            %p
+              %label icon-position
+              %span.radio-control
+                %label.label-radio
+                  %input{type:"radio", name:"search-icon-position", value:"right"}
+                  Right
+                %label.label-radio
+                  %input{type:"radio", name:"search-icon-position", value:"left", checked:}
+                  Left
+            %p
+              %label icon-color
+              %input.jscolor{type:"text", name:"search-icon-color", value:"#E5186F"}
+            %p
+              %label icon-bg-color
+              %input.jscolor{type:"text", name:"search-icon-background", value:"#FFFFFF"}
+            %p
+              %label icon-bg-opacity
+              %input{type:"text", name:"search-icon-background-opacity", value:"0"}
 
-      %h2 Twitter
-      .demo.demo-twitter
-        .awesome-searchbox.awesome-searchbox_twitter
-          %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-8"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
+            %h3 Focus
+            %p
+              %label focus-border-color
+              %input.jscolor{type:"text", name:"search-input-focus-border-color", value:"#E5186F"}
+            %p
+              %label focus-bg-color
+              %input.jscolor{type:"text", name:"search-input-focus-background", value:"white"}
 
-      %h2 Amazon
-      .demo.demo-amazon
-        .awesome-searchbox.awesome-searchbox_amazon
-          %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-11"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-2"}
-
-      %h2 Spotify
-      .demo.demo-spotify
-        .awesome-searchbox.awesome-searchbox_spotify
-          %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-9"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-4"}
-
-      %h2 Meetup
-      .demo.demo-meetup
-        .awesome-searchbox.awesome-searchbox_meetup
-          %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-13"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
-
-      %h2 Medium
-      .demo.demo-medium
-        .awesome-searchbox.awesome-searchbox_medium
-          %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-11"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-1"}
-
-      %h2 Facebook
-      .demo.demo-facebook
-        .awesome-searchbox.awesome-searchbox_facebook
-          %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-8"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-4"}
-
-      %h2 Custom - Get your own
-      .demo.demo-custom
-        .awesome-searchbox.awesome-searchbox_custom
-          %input.q{ type: "search", placeholder:"Search your website", autocomplete: "off"}>
-          .ui-icon-submit
-            %svg
-              %use{xlink:href:"#search-icon-10"}
-          .ui-icon-clear.hide
-            %svg
-              %use{xlink:href:"#clear-icon-3"}
-
-    .settings
-      %form#settings
-        .col-4
-          %h3 Appearence
-          -# %p
-          -#   %label namespace
-          %input{type:"hidden", name:"$config-name", value:"awesome-searchbox_custom"}
-          %p
-            %label width (px)
-            %input{type:"number", name:"$search-input-width-px", value:"250"}
-          %p
-            %label height (px)
-            %input{type:"number", name:"$search-input-height-px", value:"50"}
-          %p
-            %label font-size (px)
-            %input{type:"number", name:"$search-font-size-px", value:"14"}
-          %p
-            %label border-width (px)
-            %input{type:"number", name:"$search-border-widt-pxh", value:"2"}
-          %p
-            %label border-radius (px)
-            %input{type:"number", name:"$search-border-radius-px", value:"25"}
-          %p
-            %label border-color
-            %input.jscolor{type:"text", name:"$search-input-border-color", value:"#ccc"}
-          %p
-            %label bg-color
-            %input.jscolor{type:"text", name:"$search-input-background", value:"white"}
-          %p
-            %label placeholder-color
-            %input.jscolor{type:"text", name:"$search-placeholder-color", value:"#aaa"}
-        .col-4
-          %h3 Search icon
-          %p
-            %label icon-img
-            %select.jselectric{name:"$search-icon"}
-              %option{value:"search-icon-1"} 1
-              %option{value:"search-icon-2"} 2
-              %option{value:"search-icon-3"} 3
-              %option{value:"search-icon-4"} 4
-              %option{value:"search-icon-5"} 5
-              %option{value:"search-icon-6"} 6
-              %option{value:"search-icon-7"} 7
-              %option{value:"search-icon-8"} 8
-              %option{value:"search-icon-9"} 9
-              %option{value:"search-icon-10"} 10
-              %option{value:"search-icon-11"} 11
-              %option{value:"search-icon-12"} 12
-              %option{value:"search-icon-13"} 13
-              %option{value:"search-icon-14"} 14
-              %option{value:"search-icon-15"} 15
-              %option{value:"search-icon-16"} 16
-              %option{value:"search-icon-17", selected:} 17
-              %option{value:"search-icon-18"} 18
-              %option{value:"search-icon-19"} 19
-              %option{value:"search-icon-20"} 20
-              %option{value:"search-icon-21"} 21
-              %option{value:"search-icon-22"} 22
-          %p
-            %label icon-size (px)
-            %input{type:"number", name:"$search-icon-size-px", value:"28"}
-          %p
-            %label icon-position
-            %span.radio-control
-              %label.label-radio
-                %input{type:"radio", name:"$search-icon-position", value:"right"}
-                Right
-              %label.label-radio
-                %input{type:"radio", name:"$search-icon-position", value:"left", checked:}
-                Left
-          %p
-            %label icon-color
-            %input.jscolor{type:"text", name:"$search-icon-color", value:"#E5186F"}
-          %p
-            %label icon-bg-color
-            %input.jscolor{type:"text", name:"$search-icon-background", value:"#FFFFFF"}
-          %p
-            %label icon-bg-opacity
-            %input{type:"text", name:"$search-icon-background-opacity", value:"0"}
-
-        .col-4
-          %h3 Focus
-          %p
-            %label focus-border-color
-            %input.jscolor{type:"text", name:"$search-input-focus-border-color", value:"#E5186F"}
-          %p
-            %label focus-bg-color
-            %input.jscolor{type:"text", name:"$search-input-focus-background", value:"white"}
-          %h3 Clear
-          %p
-            %label icon-clear-img
-            %select.jselectric{name:"$clear-icon"}
-              %option{value:"clear-icon-1"} 1
-              %option{value:"clear-icon-2"} 2
-              %option{value:"clear-icon-3"} 3
-              %option{value:"clear-icon-4"} 4
-              %option{value:"clear-icon-5", selected:} 5
-          %p
-            %label icon-clear-size (px)
-            %input{type:"number", name:"$search-clear-size-px", value:"18"}
+            %h3 Clear
+            %p
+              %label icon-clear-img
+              %select.select-icon{name:"search-clear-icon"}
+                %option{value:"clear-icon-1"} 1
+                %option{value:"clear-icon-2"} 2
+                %option{value:"clear-icon-3"} 3
+                %option{value:"clear-icon-4"} 4
+                %option{value:"clear-icon-5", selected:true} 5
+            %p
+              %label icon-clear-size (px)
+              %input{type:"number", name:"search-clear-size-px", value:"18"}
 
 
-      .text-center
-        %a.btn.view-snippets{href:"javascript:void(0);"} View Snippets
+      .col-9
+        %h2 Generated Searchbox
+        #demo.asb-custom_demo.hide
+          .awesome-searchbox.asb-custom{role:"search"}
+            %input.asb-custom__input.js-search-input{type: "search", name:"search", placeholder:"Search your website", autocomplete: "off"}>
+            .asb-custom__submit.js-search-submit
+              %svg
+                %use{xlink:href:"#search-icon-10"}
+            .asb-custom__reset.hide.js-search-reset
+              %svg
+                %use{xlink:href:"#clear-icon-3"}
+
         %a.btn.download-zip{href:"javascript:void(0);"} Download
 
-    .snippets
-      .col-6
-        %h2 Snippet Css
-        %pre.snippet
-          %code.language-css
-      .col-6
-        %h2 Snippet HTML
-        %pre.snippet
-          %code.language-markup
-      .col-6
-        %h2 Snippet Scss
-        %pre.snippet
-          %code.language-scss
-      .col-6
-        %h2 Snippet Javascript
-        %pre.snippet
-          %code.language-js
+        %section#snippets.hide
+          .col-6
+            %h2
+              Snippet
+              %a{href:"#"} Scss
+              \ |
+              %a{href:"#"} Css
+              \ |
+              %a{href:"#"} Css prefixed
+            %pre.snippet
+              %code#css.language-css
+          .col-6
+            %h2 Snippet HTML
+            %pre.snippet
+              %code#html.language-markup
+
+          %h2 Snippet Css prefixed
+          %pre.snippet
+            %code#css-prefix.language-css
+
+          %h2 Snippet Scss
+          %pre.snippet
+            %code#scss.language-scss
+
+          %h2 Snippet Javascript
+          %pre.snippet
+            %code#js.language-js
 
     .row
       %h2 Search icons
@@ -298,13 +238,102 @@
     .svg-icons{style:"height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->
 
-    %script{src:"js/jquery-2.2.0.min.js"}
-    %script{src:"js/prism.js",data-manual}
-    %script{src:"js/sass.js"}
-    %script{src:"js/jscolor.min.js"}
-    %script{src:"js/jquery.selectric.min.js"}
-    %script{src:"js/jszip.min.js"}
-    %script{src:"js/FileSaver.min.js"}
-    :javascript
-      var scss = "";
+
+    .theme-json.amazon-theme
+    .theme-json.facebook-theme
+    .theme-json.google-theme
+    .theme-json.medium-theme
+    .theme-json.meetup-theme
+    .theme-json.spotify-theme
+    .theme-json.twitter-theme
+
+    %script{src:"js/vendors/jquery-2.2.0.min.js"}
+    %script{src:"js/vendors/prism.js",data-manual}
+    %script{src:"js/vendors/jscolor.min.js"}
+    %script{src:"js/vendors/jquery.selectric.min.js"}
+    %script{src:"js/vendors/jszip.min.js"}
+    %script{src:"js/vendors/FileSaver.min.js"}
+    %script{src:"js/vendors/sass.js"}
+    %script{src:"js/vendors/autoprefixer.js"}
+
+    %script{src:"js/awesome-searchbox.js"}
+
     %script{src:"js/app.js"}
+
+
+      -# %h2 Google (default)
+      -# .demo.demo-default
+      -#   .awesome-searchbox
+      -#     %input.q{ type: "search", placeholder:"Search for product, category, SKU, …", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-13"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Twitter
+      -# .demo.demo-twitter
+      -#   .awesome-searchbox.awesome-searchbox_twitter
+      -#     %input.q{ type: "search", placeholder:"Search Twitter", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-8"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Amazon
+      -# .demo.demo-amazon
+      -#   .awesome-searchbox.awesome-searchbox_amazon
+      -#     %input.q{ type: "search", placeholder:"Search Amazon", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-11"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-2"}
+      -#
+      -# %h2 Spotify
+      -# .demo.demo-spotify
+      -#   .awesome-searchbox.awesome-searchbox_spotify
+      -#     %input.q{ type: "search", placeholder:"Search", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-9"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-4"}
+      -#
+      -# %h2 Meetup
+      -# .demo.demo-meetup
+      -#   .awesome-searchbox.awesome-searchbox_meetup
+      -#     %input.q{ type: "search", placeholder:"Search Meetup", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-13"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-3"}
+      -#
+      -# %h2 Medium
+      -# .demo.demo-medium
+      -#   .awesome-searchbox.awesome-searchbox_medium
+      -#     %input.q{ type: "search", placeholder:"Search Medium", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-11"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-1"}
+      -#
+      -# %h2 Facebook
+      -# .demo.demo-facebook
+      -#   .awesome-searchbox.awesome-searchbox_facebook
+      -#     %input.q{ type: "search", placeholder:"Search Facebook", autocomplete: "off"}>
+      -#     .asb__submit
+      -#       %svg
+      -#         %use{xlink:href:"#search-icon-8"}
+      -#     .asb__reset.hide
+      -#       %svg
+      -#         %use{xlink:href:"#clear-icon-4"}

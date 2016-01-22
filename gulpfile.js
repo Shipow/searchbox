@@ -18,7 +18,6 @@ var cheerio = require('gulp-cheerio');
 var svgfallback = require('gulp-svgfallback');
 
 gulp.task('clean', function() {
-  // Return the Promise from del()
   return del("build");
 });
 
@@ -83,27 +82,32 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src(['js/*.js','js/*.mem'])
+  gulp.src(['js/**/*.js','js/**/*.mem'])
   .pipe(gulp.dest('build/js'))
   .pipe(livereload());
 });
 
-gulp.task('awesome-searchbox', function () {
+gulp.task('copy', function () {
   gulp.src('scss/_awesome-searchbox.scss')
-  .pipe(rename("awesome-searchbox.scss"))
-  .pipe(gulp.dest('build'))
+  .pipe(rename('awesome-searchbox.scss'))
+  .pipe(gulp.dest('build/scss'));
+  gulp.src('scss/themes/*.scss')
+  .pipe(gulp.dest('build/scss/themes'));
+  gulp.src('favicon.ico')
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(['scss/*.sass','scss/*.scss'], ['sass']);
+  gulp.watch(['scss/**/*.sass','scss/**/*.scss'], ['sass','copy']);
   gulp.watch('*.haml', ['build']);
-  gulp.watch('js/*.js', ['js']);
+  gulp.watch('js/**/*.js', ['js']);
 });
 
 gulp.task('webserver', function() {
   gulp.src('build')
     .pipe(webserver({
+      host: '0.0.0.0',
       port: 1337,
       livereload: true,
       directoryListing: false,
@@ -112,7 +116,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('build',['clean'], function(callback) {
-  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass','awesome-searchbox', callback);
+  runSequence('haml', 'inlineSvg', 'prettify', 'js', 'sass','copy', callback);
 });
 
 gulp.task('dev', function(callback) {
