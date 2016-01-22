@@ -45,8 +45,9 @@ function updateSnippet(){
       $('head style').last().remove();
       var prefixed = autoprefixer.process(css);
       $("<style>" + prefixed + "</style>").appendTo( "head" );
-      $('.snippet code.language-css').text(prefixed.css);
-      $('.snippet code.language-scss').text(scss);
+      $('#css').text(css);
+      $('#css-prefix').text(prefixed.css);
+      $('#scss').text(scss);
       Prism.highlightAll(false);
       $('#demo, #snippets').removeClass('hide');
     });
@@ -64,6 +65,11 @@ function updateSnippet(){
 };
 
 updateSnippet();
+
+$.get('js/awesome-searchbox.js', function(data){
+  $('#js').text(data);
+});
+
 
 $('form#settings').on('input change', function(){
     updateSnippet();

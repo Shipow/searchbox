@@ -147,25 +147,32 @@
         %a.btn.download-zip{href:"javascript:void(0);"} Download
 
         %section#snippets.hide
-          %h2
-            Snippet
-            %a{href:"#"} Css
-            \ |
-            %a{href:"#"} Scss
-          %pre.snippet
-            %code.language-css
+          .col-6
+            %h2
+              Snippet
+              %a{href:"#"} Scss
+              \ |
+              %a{href:"#"} Css
+              \ |
+              %a{href:"#"} Css prefixed
+            %pre.snippet
+              %code#css.language-css
+          .col-6
+            %h2 Snippet HTML
+            %pre.snippet
+              %code#html.language-markup
 
-          %h2 Snippet HTML
+          %h2 Snippet Css prefixed
           %pre.snippet
-            %code.language-markup
+            %code#css-prefix.language-css
 
           %h2 Snippet Scss
           %pre.snippet
-            %code.language-scss
+            %code#scss.language-scss
 
           %h2 Snippet Javascript
           %pre.snippet
-            %code.language-js
+            %code#js.language-js
 
     .row
       %h2 Search icons
