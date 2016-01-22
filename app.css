@@ -401,7 +401,8 @@ body {
   position: relative;
   font-family: "canada-type-gibson";
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  min-width: 1000px; }
 
 .row {
   font-size: 0; }
@@ -420,6 +421,7 @@ body {
   text-align: center; }
 
 .generator-sidebar {
+  padding-top: 50px;
   width: 300px;
   float: left;
   height: 100%; }
@@ -459,6 +461,12 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center; }
+  h2::after {
+    content: '';
+    width: 40px;
+    display: block;
+    margin: 8px auto 0;
+    border-bottom: solid 2px #2FC9E8; }
 
 h3 {
   font-size: 13px;
@@ -558,7 +566,7 @@ h3 {
 .snippet {
   font-size: 14px;
   border-right: 1px #ccc solid;
-  height: 2000px; }
+  height: 2100px; }
 
 .tabs, .inline-list {
   margin: 0 0 12px 0;
@@ -923,7 +931,7 @@ h3 {
     border: none;
     border-radius: 3px;
     box-shadow: inset 0 0 0 0 #cccccc;
-    background: white;
+    background: #FFFFFF;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -933,7 +941,7 @@ h3 {
       box-shadow: inset 0 0 0 0 #b3b3b3; }
     .asb-facebook__input:focus, .asb-facebook__input:active {
       outline: 0;
-      background: white;
+      background: #FFFFFF;
       box-shadow: inset 0 0 0 0 #3e82f7; }
     .asb-facebook__input::-webkit-input-placeholder {
       color: #AAAAAA; }
@@ -971,8 +979,8 @@ h3 {
     .asb-facebook__submit:focus {
       outline: 0; }
     .asb-facebook__submit svg {
-      height: 12.5px;
-      width: 12.5px;
+      height: 14px;
+      width: 14px;
       vertical-align: middle;
       fill: #3C5BA2; }
   .asb-facebook__reset {
@@ -1404,14 +1412,14 @@ h3 {
   width: 0; }
 
 .facebook-theme:before {
-  content: '{"search-namespace": "asb-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "white", "search-input-focus-background": "white", "search-icon-position": "right", "search-placeholder-color": "#AAAAAA", "search-icon-color": "#3C5BA2", "search-icon": "search-icon-8", "search-clear-icon": "clear-icon-4"}';
+  content: '{"search-namespace": "asb-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-icon-position": "right", "search-placeholder-color": "#AAAAAA", "search-icon-color": "#3C5BA2", "search-icon": "search-icon-8", "search-icon-size": "14px", "search-clear-icon": "clear-icon-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .google-theme:before {
-  content: '{"search-namespace": "asb-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#CCCCCC", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#AAAAAA", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "#FFFFFF", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px", "search-icon": "search-icon-13", "search-clear-icon": "clear-icon-3"}';
+  content: '{"search-namespace": "asb-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#CCCCCC", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#AAAAAA", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "#FFFFFF", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px", "search-icon": "search-icon-13", "search-icon-size": "20px", "search-clear-icon": "clear-icon-3"}';
   display: block;
   height: 0;
   overflow: hidden;

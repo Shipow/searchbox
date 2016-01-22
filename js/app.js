@@ -149,7 +149,9 @@ function populate(frm, data) {
   $('select[name="search-namespace"]').on('change', function(){
 
     var val = $(this).val();
-    populate($('form#settings'), themes['asb-google']); //default
+    if (val !== 'asb-custom'){
+      populate($('form#settings'), themes['asb-google']); //default
+    }
     populate($('form#settings'), themes[val]);
     $.map($('.jscolor'), function(data){
       data.jscolor.fromString($(data).val().replace(/#/,''));
