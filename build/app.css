@@ -562,14 +562,14 @@ h3 {
   border-right: 1px #ccc solid;
   height: 2000px; }
 
-.tabs {
+.tabs, .inline-list {
   margin: 0 0 12px 0;
   padding: 20px 0 0 0;
   list-style: none;
   display: inline-block;
   height: 30px;
   line-height: 30px; }
-  .tabs li {
+  .tabs li, .inline-list li {
     display: inline-block;
     margin-right: 8px; }
 
@@ -676,9 +676,8 @@ h3 {
     .asb-default__submit svg {
       height: 20px;
       width: 20px;
-      vertical-align: middle; }
-      .asb-default__submit svg use {
-        fill: white; }
+      vertical-align: middle;
+      fill: white; }
   .asb-default__reset {
     display: none;
     position: absolute;
@@ -770,9 +769,8 @@ h3 {
     .asb-amazon__submit svg {
       height: 20px;
       width: 20px;
-      vertical-align: middle; }
-      .asb-amazon__submit svg use {
-        fill: #202F40; }
+      vertical-align: middle;
+      fill: #202F40; }
   .asb-amazon__reset {
     display: none;
     position: absolute;
@@ -864,9 +862,8 @@ h3 {
     .asb-google__submit svg {
       height: 20px;
       width: 20px;
-      vertical-align: middle; }
-      .asb-google__submit svg use {
-        fill: #FFFFFF; }
+      vertical-align: middle;
+      fill: #FFFFFF; }
   .asb-google__reset {
     display: none;
     position: absolute;
@@ -958,9 +955,8 @@ h3 {
     .asb-facebook__submit svg {
       height: 12.5px;
       width: 12.5px;
-      vertical-align: middle; }
-      .asb-facebook__submit svg use {
-        fill: #3C5BA2; }
+      vertical-align: middle;
+      fill: #3C5BA2; }
   .asb-facebook__reset {
     display: none;
     position: absolute;
@@ -1052,9 +1048,8 @@ h3 {
     .asb-medium__submit svg {
       height: 16px;
       width: 16px;
-      vertical-align: middle; }
-      .asb-medium__submit svg use {
-        fill: #202F40; }
+      vertical-align: middle;
+      fill: #202F40; }
   .asb-medium__reset {
     display: none;
     position: absolute;
@@ -1146,9 +1141,8 @@ h3 {
     .asb-meetup__submit svg {
       height: 24px;
       width: 24px;
-      vertical-align: middle; }
-      .asb-meetup__submit svg use {
-        fill: #505050; }
+      vertical-align: middle;
+      fill: #505050; }
   .asb-meetup__reset {
     display: none;
     position: absolute;
@@ -1240,9 +1234,8 @@ h3 {
     .asb-spotify__submit svg {
       height: 12px;
       width: 12px;
-      vertical-align: middle; }
-      .asb-spotify__submit svg use {
-        fill: #222; }
+      vertical-align: middle;
+      fill: #222; }
   .asb-spotify__reset {
     display: none;
     position: absolute;
@@ -1334,9 +1327,8 @@ h3 {
     .asb-twitter__submit svg {
       height: 12px;
       width: 12px;
-      vertical-align: middle; }
-      .asb-twitter__submit svg use {
-        fill: #73777A; }
+      vertical-align: middle;
+      fill: #73777A; }
   .asb-twitter__reset {
     display: none;
     position: absolute;
