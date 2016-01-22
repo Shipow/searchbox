@@ -369,6 +369,19 @@ body {
 .row {
   font-size: 0; }
 
+.col-6 {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 768px) {
+    .col-6 {
+      width: 50%;
+      vertical-align: top; } }
+
+.text-center {
+  text-align: center; }
+
 .generator-sidebar {
   width: 300px;
   float: left; }
@@ -382,16 +395,6 @@ body {
   padding: 10px 0;
   border-bottom: solid 2px #444;
   height: 150px; }
-
-.col-6 {
-  width: 100%;
-  font-size: 16px;
-  display: inline-block;
-  box-sizing: border-box; }
-  @media only screen and (min-width: 768px) {
-    .col-6 {
-      width: 50%;
-      vertical-align: top; } }
 
 h1 {
   font-size: 80px;
@@ -455,11 +458,21 @@ h3 {
   display: inline-block;
   background-color: #eee;
   color: #000;
-  padding: 8px 12px;
-  margin: 0 12px 24px 0;
+  padding: 0 12px;
+  line-height: 30px;
   border: solid 1px #ccc;
   border-radius: 3px;
   text-decoration: none; }
+
+.download-zip {
+  margin-top: 20px; }
+  .download-zip svg {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: #aaa; }
 
 .settings {
   padding: 0 12px; }
@@ -507,13 +520,15 @@ h3 {
   height: 500px; }
 
 .tabs {
-  margin: 0;
+  margin: 0 0 12px 0;
   padding: 20px 0 0 0;
   list-style: none;
-  display: inline-block; }
+  display: inline-block;
+  height: 30px;
+  line-height: 30px; }
   .tabs li {
     display: inline-block;
-    margin-left: 10px; }
+    margin-right: 8px; }
 
 .tabs-pane {
   display: none;
