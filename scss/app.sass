@@ -42,6 +42,7 @@ body
 .generator-sidebar
   width: 300px
   float: left
+  height: 100%
 
 .main-content
   width: calc( 100% - 300px)
@@ -51,26 +52,25 @@ body
   background-color: $primary-color
   padding: 10px 0
   border-bottom: solid 2px #444
-  height: 150px
 
 // typo
 h1
-  font-size: 80px
+  font-size: 40px
+  line-height: 60px
   font-weight: 300
   background-color: rgba(white,.2)
   color: white
-  margin: 24px auto 0
-  border: solid 2px white
+  margin: 20px
   border-radius: 90px
   text-align: center
-  width: 560px
+  display: inline-block
+  padding: 0 20px
   text-transform: uppercase
   svg
     margin-right: 8px
-    width: 60px
-    height: 60px
-    use
-      fill: white
+    width: 30px
+    height: 30px
+    fill: white
 h2
   font-size: 18px
   font-weight: 300
@@ -96,8 +96,8 @@ h3
   top: 0
   right: 0
   svg
-    width: 120px
-    height: 120px
+    width: 100px
+    height: 100px
     use
       fill: white
 
@@ -118,14 +118,20 @@ h3
   padding: 0 12px
   line-height: 30px
   border: solid 1px #ccc
-  border-radius: 3px
   text-decoration: none
+  font-size: 14px
+  &.active
+    background-color: #ccc
+  &:hover:not(.active)
+    background-color: #fff
+    border: solid 1px #aaa
 
 .download-zip
-  margin-top: 20px
   svg
-    height: 20px
-    width: 20px
+    height: 24px
+    width: 24px
+    position: relative
+    top: -2px
     display: inline-block
     vertical-align: middle
     margin-right: 8px
@@ -174,8 +180,9 @@ h3
       width: inherit
 
 .snippet
-  font-size: 11px
-  height: 500px
+  font-size: 14px
+  border-right: 1px #ccc solid
+  height: 2000px
 
 .tabs
   margin: 0 0 12px 0

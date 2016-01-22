@@ -1,13 +1,14 @@
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+sass+scss&plugins=previewer-base+previewer-color */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss&plugins=show-language+previewer-base+previewer-color */
 /**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
  */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
   text-align: left;
@@ -23,16 +24,30 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none; }
 
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none; } }
+
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
-  overflow: auto;
-  border-radius: 0.3em; }
+  overflow: auto; }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #272822; }
+  background: #f5f2f0; }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
@@ -47,21 +62,19 @@ pre[class*="language-"] {
   color: slategray; }
 
 .token.punctuation {
-  color: #f8f8f2; }
+  color: #999; }
 
 .namespace {
   opacity: .7; }
 
 .token.property,
 .token.tag,
+.token.boolean,
+.token.number,
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #f92672; }
-
-.token.boolean,
-.token.number {
-  color: #ae81ff; }
+  color: #905; }
 
 .token.selector,
 .token.attr-name,
@@ -69,27 +82,28 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #a6e22e; }
+  color: #690; }
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string,
-.token.variable {
-  color: #f8f8f2; }
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5); }
 
 .token.atrule,
 .token.attr-value,
-.token.function {
-  color: #e6db74; }
-
 .token.keyword {
-  color: #66d9ef; }
+  color: #07a; }
+
+.token.function {
+  color: #DD4A68; }
 
 .token.regex,
-.token.important {
-  color: #fd971f; }
+.token.important,
+.token.variable {
+  color: #e90; }
 
 .token.important,
 .token.bold {
@@ -100,6 +114,29 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+div.prism-show-language {
+  position: relative; }
+
+div.prism-show-language > div.prism-show-language-label {
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  bottom: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none;
+  z-index: 1;
+  box-shadow: none;
+  -webkit-transform: none;
+  transform: none; }
 
 .prism-previewer,
 .prism-previewer:before,
@@ -384,7 +421,8 @@ body {
 
 .generator-sidebar {
   width: 300px;
-  float: left; }
+  float: left;
+  height: 100%; }
 
 .main-content {
   width: calc( 100% - 300px);
@@ -393,26 +431,25 @@ body {
 .demo-header {
   background-color: #2FC9E8;
   padding: 10px 0;
-  border-bottom: solid 2px #444;
-  height: 150px; }
+  border-bottom: solid 2px #444; }
 
 h1 {
-  font-size: 80px;
+  font-size: 40px;
+  line-height: 60px;
   font-weight: 300;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  margin: 24px auto 0;
-  border: solid 2px white;
+  margin: 20px;
   border-radius: 90px;
   text-align: center;
-  width: 560px;
+  display: inline-block;
+  padding: 0 20px;
   text-transform: uppercase; }
   h1 svg {
     margin-right: 8px;
-    width: 60px;
-    height: 60px; }
-    h1 svg use {
-      fill: white; }
+    width: 30px;
+    height: 30px;
+    fill: white; }
 
 h2 {
   font-size: 18px;
@@ -439,8 +476,8 @@ h3 {
   top: 0;
   right: 0; }
   .github-source svg {
-    width: 120px;
-    height: 120px; }
+    width: 100px;
+    height: 100px; }
     .github-source svg use {
       fill: white; }
 
@@ -461,18 +498,23 @@ h3 {
   padding: 0 12px;
   line-height: 30px;
   border: solid 1px #ccc;
-  border-radius: 3px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 14px; }
+  .btn.active {
+    background-color: #ccc; }
+  .btn:hover:not(.active) {
+    background-color: #fff;
+    border: solid 1px #aaa; }
 
-.download-zip {
-  margin-top: 20px; }
-  .download-zip svg {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    fill: #aaa; }
+.download-zip svg {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: #aaa; }
 
 .settings {
   padding: 0 12px; }
@@ -516,8 +558,9 @@ h3 {
       width: inherit; }
 
 .snippet {
-  font-size: 11px;
-  height: 500px; }
+  font-size: 14px;
+  border-right: 1px #ccc solid;
+  height: 2000px; }
 
 .tabs {
   margin: 0 0 12px 0;

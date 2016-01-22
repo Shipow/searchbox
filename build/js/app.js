@@ -63,6 +63,11 @@ function updateSnippet(){
 };
 
 tabby.init();
+$('#snippets .tabs a').on('click', function(e){
+  $('#snippets .tabs a').removeClass('active');
+  $(this).addClass('active');
+
+})
 
 updateSnippet();
 

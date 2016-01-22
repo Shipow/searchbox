@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     %meta{content: "ie=edge", http-equiv: "x-ua-compatible"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %meta{content: "Some content", name: "description"}
+    %meta{content: "Searchbox is an html/css/scss/svg generator for your search input.", name: "description"}
     %title Searchbox Generator
     %link{rel: "shortcut icon", type: "image/x-icon", href: "favicon.ico?"}
     %link{href: "app.css", rel: "stylesheet"}
@@ -19,7 +19,7 @@
           %use{xlink:href: "#github-banner"}
       %h1
         %svg
-          %use{xlink:href: "#search-icon-17"}
+          %use{xlink:href: "#search-icon-7"}
         SearchBox
     %aside.generator-sidebar
       .settings
@@ -144,12 +144,6 @@
             %svg
               %use{xlink:href: "#clear-icon-3"}
 
-      %p.text-center
-        %a.btn.download-zip{href: "javascript:void(0);"}
-          %svg
-            %use{xlink:href: "#download-icon"}
-          Download
-
       %section#snippets
 
         %h2 Snippets
@@ -157,87 +151,32 @@
           .col-6
             %ul.tabs{data-tabs: true}
               %li
-                %a.btn{data-tab: true, href: "#tabscss"} SCSS
+                %a.btn.active{data-tab: true, href: "#tabprefix"} Prefixed CSS
               %li
                 %a.btn{data-tab: true, href: "#tabcss"} CSS
               %li
-                %a.btn{data-tab: true, href: "#tabprefix"} Prefixed CSS
+                %a.btn{data-tab: true, href: "#tabscss"} SCSS
             %div{data-tabs-content: true}
-              #tabcss.tabs-pane.active{data-tabs-pane: true}
+              #tabcss.tabs-pane{data-tabs-pane: true}
                 %pre.snippet
                   %code#css.language-css
+              #tabprefix.tabs-pane.active{data-tabs-pane: true}
+                %pre.snippet
+                  %code#css-prefix.language-css
               #tabscss.tabs-pane{data-tabs-pane: true}
                 %pre.snippet
                   %code#scss.language-scss
-              #tabprefix.tabs-pane{data-tabs-pane: true}
-                %pre.snippet
-                  %code#css-prefix.language-css
           .col-6
             %ul.tabs
-              %li HTML
+              %li HTML + SVG symbols
+              %li
+                %a.btn.download-zip{href: "javascript:void(0);"}
+                  %svg
+                    %use{xlink:href: "#download-icon"}
+                  Download
             %pre.snippet
               %code#html.language-markup
 
-        .row
-          %h2 Search icons
-          .icons
-            %svg
-              %use{xlink:href: "#search-icon-1"}
-            %svg
-              %use{xlink:href: "#search-icon-2"}
-            %svg
-              %use{xlink:href: "#search-icon-3"}
-            %svg
-              %use{xlink:href: "#search-icon-4"}
-            %svg
-              %use{xlink:href: "#search-icon-5"}
-            %svg
-              %use{xlink:href: "#search-icon-6"}
-            %svg
-              %use{xlink:href: "#search-icon-7"}
-            %svg
-              %use{xlink:href: "#search-icon-8"}
-            %svg
-              %use{xlink:href: "#search-icon-9"}
-            %svg
-              %use{xlink:href: "#search-icon-10"}
-            %svg
-              %use{xlink:href: "#search-icon-11"}
-            %br
-            %svg
-              %use{xlink:href: "#search-icon-12"}
-            %svg
-              %use{xlink:href: "#search-icon-13"}
-            %svg
-              %use{xlink:href: "#search-icon-14"}
-            %svg
-              %use{xlink:href: "#search-icon-15"}
-            %svg
-              %use{xlink:href: "#search-icon-16"}
-            %svg
-              %use{xlink:href: "#search-icon-17"}
-            %svg
-              %use{xlink:href: "#search-icon-18"}
-            %svg
-              %use{xlink:href: "#search-icon-19"}
-            %svg
-              %use{xlink:href: "#search-icon-20"}
-            %svg
-              %use{xlink:href: "#search-icon-21"}
-            %svg
-              %use{xlink:href: "#search-icon-22"}
-          %h2 Clear icons
-          .icons
-            %svg
-              %use{xlink:href: "#clear-icon-1"}
-            %svg
-              %use{xlink:href: "#clear-icon-2"}
-            %svg
-              %use{xlink:href: "#clear-icon-3"}
-            %svg
-              %use{xlink:href: "#clear-icon-4"}
-            %svg
-              %use{xlink:href: "#clear-icon-5"}
 
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->
