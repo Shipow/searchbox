@@ -154,19 +154,19 @@
   <main class="main-content">
     <h2>Preview</h2>
     <div class="asb-custom_demo hide" id="demo">
-      <div role="search" class="awesome-searchbox asb-custom">
-        <input type="search" name="search" placeholder="Search your website" autocomplete="off" class="asb-custom__input js-search-input" />
-        <div class="asb-custom__submit js-search-submit">
+      <form role="search" novalidate="novalidate" class="awesome-searchbox asb-custom">
+        <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="asb-custom__input" />
+        <button type="submit" class="asb-custom__submit">
           <svg>
             <use xlink:href="#search-icon-10"></use>
           </svg>
-        </div>
-        <div class="asb-custom__reset hide js-search-reset">
+        </button>
+        <button type="reset" class="asb-custom__reset">
           <svg>
             <use xlink:href="#clear-icon-3"></use>
           </svg>
-        </div>
-      </div>
+        </button>
+      </form>
     </div><a href="javascript:void(0);" class="btn download-zip">Download</a>
     <section class="hide" id="snippets">
       <h2>Snippets</h2>
@@ -448,7 +448,6 @@
   <script src="js/vendors/FileSaver.min.js"></script>
   <script src="js/vendors/sass.js"></script>
   <script src="js/vendors/autoprefixer.js"></script>
-  <script src="js/awesome-searchbox.js"></script>
   <script src="js/app.js"></script>
 </body>
 

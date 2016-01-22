@@ -136,12 +136,12 @@
 
       %h2 Preview
       #demo.asb-custom_demo.hide
-        .awesome-searchbox.asb-custom{role: "search"}
-          %input.asb-custom__input.js-search-input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off"}>
-          .asb-custom__submit.js-search-submit
+        %form.awesome-searchbox.asb-custom{role: "search", novalidate: true}
+          %input.asb-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
+          %button.asb-custom__submit{type: "submit"}
             %svg
               %use{xlink:href: "#search-icon-10"}
-          .asb-custom__reset.hide.js-search-reset
+          %button.asb-custom__reset{type: "reset"}
             %svg
               %use{xlink:href: "#clear-icon-3"}
 
@@ -173,10 +173,6 @@
               %li HTML
             %pre.snippet
               %code#html.language-markup
-
-            -# %h2 Snippet Javascript
-            -# %pre.snippet
-            -#   %code#js.language-js
 
         .row
           %h2 Search icons
@@ -261,7 +257,7 @@
     %script{src: "js/vendors/sass.js"}
     %script{src: "js/vendors/autoprefixer.js"}
 
-    %script{src: "js/awesome-searchbox.js"}
+    -# %script{src: "js/awesome-searchbox.js"}
 
     %script{src: "js/app.js"}
 
