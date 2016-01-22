@@ -6,6 +6,7 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
     %meta{content: "Some content", name: "description"}
     %title Searchbox Generator
+    %link{rel: "shortcut icon", type: "image/x-icon", href: "favicon.ico?"}
     %link{href: "app.css", rel: "stylesheet"}
     %script{src: "https://use.typekit.net/rwx3htg.js"}
     :javascript
@@ -26,7 +27,7 @@
         %p
           %label Select a Theme
           %select.select{name: "search-namespace"}
-            %option{value: "asb-custom", selected:true} Custom
+            %option{value: "asb-custom", selected: true} Custom
             %option{value: "asb-google"} Google
             %option{value: "asb-amazon"} Amazon
             %option{value: "asb-facebook"} Facebook
@@ -82,7 +83,7 @@
               %option{value: "search-icon-14"} 14
               %option{value: "search-icon-15"} 15
               %option{value: "search-icon-16"} 16
-              %option{value: "search-icon-17", selected:true} 17
+              %option{value: "search-icon-17", selected: true} 17
               %option{value: "search-icon-18"} 18
               %option{value: "search-icon-19"} 19
               %option{value: "search-icon-20"} 20
@@ -98,7 +99,7 @@
                 %input{type: "radio", name: "search-icon-position", value: "right"}
                 Right
               %label.label-radio
-                %input{type: "radio", name: "search-icon-position", value: "left", checked:true}
+                %input{type: "radio", name: "search-icon-position", value: "left", checked: true}
                 Left
           %p
             %label icon-color
@@ -126,7 +127,7 @@
               %option{value: "clear-icon-2"} 2
               %option{value: "clear-icon-3"} 3
               %option{value: "clear-icon-4"} 4
-              %option{value: "clear-icon-5", selected:true} 5
+              %option{value: "clear-icon-5", selected: true} 5
           %p
             %label icon-clear-size (px)
             %input{type: "number", name: "search-clear-size-px", value: "18"}
