@@ -20,221 +20,223 @@
         %svg
           %use{xlink:href: "#search-icon-17"}
         SearchBox
-    .row
-      .col-3
-        .settings
-          %h2 Generator
+    %aside.generator-sidebar
+      .settings
+        %h2 Generator
+        %p
+          %label Select a Theme
+          %select.select{name: "search-namespace"}
+            %option{value: "asb-custom", selected:true} Custom
+            %option{value: "asb-google"} Google
+            %option{value: "asb-amazon"} Amazon
+            %option{value: "asb-facebook"} Facebook
+            %option{value: "asb-medium"} Medium
+            %option{value: "asb-meetup"} Meetup
+            %option{value: "asb-spotify"} Spotify
+            %option{value: "asb-twitter"} Twitter
+
+        %form#settings
+          %h3 Appearance
           %p
-            %label Select a Theme
-            %select.select{name: "search-namespace"}
-              %option{value: "asb-custom", selected:true} Custom
-              %option{value: "asb-google"} Google
-              %option{value: "asb-amazon"} Amazon
-              %option{value: "asb-facebook"} Facebook
-              %option{value: "asb-medium"} Medium
-              %option{value: "asb-meetup"} Meetup
-              %option{value: "asb-spotify"} Spotify
-              %option{value: "asb-twitter"} Twitter
+            %label width (px)
+            %input{type: "number", name: "search-input-width-px", value: "250"}
+          %p
+            %label height (px)
+            %input{type: "number", name: "search-input-height-px", value: "50"}
+          %p
+            %label font-size (px)
+            %input{type: "number", name: "search-font-size-px", value: "14"}
+          %p
+            %label border-width (px)
+            %input{type: "number", name: "search-border-width-px", value: "2"}
+          %p
+            %label border-radius (px)
+            %input{type: "number", name: "search-border-radius-px", value: "25"}
+          %p
+            %label border-color
+            %input.jscolor{type: "text", name: "search-input-border-color", value: "#ccc"}
+          %p
+            %label bg-color
+            %input.jscolor{type: "text", name: "search-input-background", value: "white"}
+          %p
+            %label placeholder-color
+            %input.jscolor{type: "text", name: "search-placeholder-color", value: "#aaa"}
 
-          %form#settings
-            %h3 Appearance
-            %p
-              %label width (px)
-              %input{type: "number", name: "search-input-width-px", value: "250"}
-            %p
-              %label height (px)
-              %input{type: "number", name: "search-input-height-px", value: "50"}
-            %p
-              %label font-size (px)
-              %input{type: "number", name: "search-font-size-px", value: "14"}
-            %p
-              %label border-width (px)
-              %input{type: "number", name: "search-border-width-px", value: "2"}
-            %p
-              %label border-radius (px)
-              %input{type: "number", name: "search-border-radius-px", value: "25"}
-            %p
-              %label border-color
-              %input.jscolor{type: "text", name: "search-input-border-color", value: "#ccc"}
-            %p
-              %label bg-color
-              %input.jscolor{type: "text", name: "search-input-background", value: "white"}
-            %p
-              %label placeholder-color
-              %input.jscolor{type: "text", name: "search-placeholder-color", value: "#aaa"}
+          %h3 Search icon
+          %p
+            %label icon-img
+            %select.select-icon{name: "search-icon"}
+              %option{value: "search-icon-1"} 1
+              %option{value: "search-icon-2"} 2
+              %option{value: "search-icon-3"} 3
+              %option{value: "search-icon-4"} 4
+              %option{value: "search-icon-5"} 5
+              %option{value: "search-icon-6"} 6
+              %option{value: "search-icon-7"} 7
+              %option{value: "search-icon-8"} 8
+              %option{value: "search-icon-9"} 9
+              %option{value: "search-icon-10"} 10
+              %option{value: "search-icon-11"} 11
+              %option{value: "search-icon-12"} 12
+              %option{value: "search-icon-13"} 13
+              %option{value: "search-icon-14"} 14
+              %option{value: "search-icon-15"} 15
+              %option{value: "search-icon-16"} 16
+              %option{value: "search-icon-17", selected:true} 17
+              %option{value: "search-icon-18"} 18
+              %option{value: "search-icon-19"} 19
+              %option{value: "search-icon-20"} 20
+              %option{value: "search-icon-21"} 21
+              %option{value: "search-icon-22"} 22
+          %p
+            %label icon-size (px)
+            %input{type: "number", name: "search-icon-size-px", value: "28"}
+          %p
+            %label icon-position
+            %span.radio-control
+              %label.label-radio
+                %input{type: "radio", name: "search-icon-position", value: "right"}
+                Right
+              %label.label-radio
+                %input{type: "radio", name: "search-icon-position", value: "left", checked:}
+                Left
+          %p
+            %label icon-color
+            %input.jscolor{type: "text", name: "search-icon-color", value: "#E5186F"}
+          %p
+            %label icon-bg-color
+            %input.jscolor{type: "text", name: "search-icon-background", value: "#FFFFFF"}
+          %p
+            %label icon-bg-opacity
+            %input{type: "text", name: "search-icon-background-opacity", value: "0"}
 
-            %h3 Search icon
-            %p
-              %label icon-img
-              %select.select-icon{name: "search-icon"}
-                %option{value: "search-icon-1"} 1
-                %option{value: "search-icon-2"} 2
-                %option{value: "search-icon-3"} 3
-                %option{value: "search-icon-4"} 4
-                %option{value: "search-icon-5"} 5
-                %option{value: "search-icon-6"} 6
-                %option{value: "search-icon-7"} 7
-                %option{value: "search-icon-8"} 8
-                %option{value: "search-icon-9"} 9
-                %option{value: "search-icon-10"} 10
-                %option{value: "search-icon-11"} 11
-                %option{value: "search-icon-12"} 12
-                %option{value: "search-icon-13"} 13
-                %option{value: "search-icon-14"} 14
-                %option{value: "search-icon-15"} 15
-                %option{value: "search-icon-16"} 16
-                %option{value: "search-icon-17", selected:true} 17
-                %option{value: "search-icon-18"} 18
-                %option{value: "search-icon-19"} 19
-                %option{value: "search-icon-20"} 20
-                %option{value: "search-icon-21"} 21
-                %option{value: "search-icon-22"} 22
-            %p
-              %label icon-size (px)
-              %input{type: "number", name: "search-icon-size-px", value: "28"}
-            %p
-              %label icon-position
-              %span.radio-control
-                %label.label-radio
-                  %input{type: "radio", name: "search-icon-position", value: "right"}
-                  Right
-                %label.label-radio
-                  %input{type: "radio", name: "search-icon-position", value: "left", checked:}
-                  Left
-            %p
-              %label icon-color
-              %input.jscolor{type: "text", name: "search-icon-color", value: "#E5186F"}
-            %p
-              %label icon-bg-color
-              %input.jscolor{type: "text", name: "search-icon-background", value: "#FFFFFF"}
-            %p
-              %label icon-bg-opacity
-              %input{type: "text", name: "search-icon-background-opacity", value: "0"}
+          %h3 Focus
+          %p
+            %label focus-border-color
+            %input.jscolor{type: "text", name: "search-input-focus-border-color", value: "#E5186F"}
+          %p
+            %label focus-bg-color
+            %input.jscolor{type: "text", name: "search-input-focus-background", value: "white"}
 
-            %h3 Focus
-            %p
-              %label focus-border-color
-              %input.jscolor{type: "text", name: "search-input-focus-border-color", value: "#E5186F"}
-            %p
-              %label focus-bg-color
-              %input.jscolor{type: "text", name: "search-input-focus-background", value: "white"}
+          %h3 Clear
+          %p
+            %label icon-clear-img
+            %select.select-icon{name: "search-clear-icon"}
+              %option{value: "clear-icon-1"} 1
+              %option{value: "clear-icon-2"} 2
+              %option{value: "clear-icon-3"} 3
+              %option{value: "clear-icon-4"} 4
+              %option{value: "clear-icon-5", selected:true} 5
+          %p
+            %label icon-clear-size (px)
+            %input{type: "number", name: "search-clear-size-px", value: "18"}
 
-            %h3 Clear
-            %p
-              %label icon-clear-img
-              %select.select-icon{name: "search-clear-icon"}
-                %option{value: "clear-icon-1"} 1
-                %option{value: "clear-icon-2"} 2
-                %option{value: "clear-icon-3"} 3
-                %option{value: "clear-icon-4"} 4
-                %option{value: "clear-icon-5", selected:true} 5
-            %p
-              %label icon-clear-size (px)
-              %input{type: "number", name: "search-clear-size-px", value: "18"}
+    %main.main-content
 
+      %h2 Preview
+      #demo.asb-custom_demo.hide
+        .awesome-searchbox.asb-custom{role: "search"}
+          %input.asb-custom__input.js-search-input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off"}>
+          .asb-custom__submit.js-search-submit
+            %svg
+              %use{xlink:href: "#search-icon-10"}
+          .asb-custom__reset.hide.js-search-reset
+            %svg
+              %use{xlink:href: "#clear-icon-3"}
 
-      .col-9
-        %h2 Generated Searchbox
-        #demo.asb-custom_demo.hide
-          .awesome-searchbox.asb-custom{role: "search"}
-            %input.asb-custom__input.js-search-input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off"}>
-            .asb-custom__submit.js-search-submit
-              %svg
-                %use{xlink:href: "#search-icon-10"}
-            .asb-custom__reset.hide.js-search-reset
-              %svg
-                %use{xlink:href: "#clear-icon-3"}
+      %a.btn.download-zip{href: "javascript:void(0);"} Download
 
-        %a.btn.download-zip{href: "javascript:void(0);"} Download
-
-        %section#snippets.hide
+      %section#snippets.hide
+        %h2 Snippets
+        .row
           .col-6
-            %h2
-              Snippet
-              %a{href: "#"} Scss
-              \ |
-              %a{href: "#"} Css
-              \ |
-              %a{href: "#"} Css prefixed
-            %pre.snippet
-              %code#css.language-css
+            %ul.tabs{data-tabs: true}
+              %li
+                %a{data-tab: true, href: "#tabscss"} SCSS
+              %li
+                %a{data-tab: true, href: "#tabcss"} CSS
+              %li
+                %a{data-tab: true, href: "#tabprefix"} Prefixed CSS
+            %div{data-tabs-content: true}
+              #tabcss.tabs-pane.active{data-tabs-pane: true}
+                %pre.snippet
+                  %code#css.language-css
+              #tabscss.tabs-pane{data-tabs-pane: true}
+                %pre.snippet
+                  %code#scss.language-scss
+              #tabprefix.tabs-pane{data-tabs-pane: true}
+                %pre.snippet
+                  %code#css-prefix.language-css
           .col-6
-            %h2 Snippet HTML
+            %ul.tabs
+              %li HTML
             %pre.snippet
               %code#html.language-markup
 
-          %h2 Snippet Css prefixed
-          %pre.snippet
-            %code#css-prefix.language-css
+            -# %h2 Snippet Javascript
+            -# %pre.snippet
+            -#   %code#js.language-js
 
-          %h2 Snippet Scss
-          %pre.snippet
-            %code#scss.language-scss
-
-          %h2 Snippet Javascript
-          %pre.snippet
-            %code#js.language-js
-
-    .row
-      %h2 Search icons
-      .icons
-        %svg
-          %use{xlink:href: "#search-icon-1"}
-        %svg
-          %use{xlink:href: "#search-icon-2"}
-        %svg
-          %use{xlink:href: "#search-icon-3"}
-        %svg
-          %use{xlink:href: "#search-icon-4"}
-        %svg
-          %use{xlink:href: "#search-icon-5"}
-        %svg
-          %use{xlink:href: "#search-icon-6"}
-        %svg
-          %use{xlink:href: "#search-icon-7"}
-        %svg
-          %use{xlink:href: "#search-icon-8"}
-        %svg
-          %use{xlink:href: "#search-icon-9"}
-        %svg
-          %use{xlink:href: "#search-icon-10"}
-        %svg
-          %use{xlink:href: "#search-icon-11"}
-        %br
-        %svg
-          %use{xlink:href: "#search-icon-12"}
-        %svg
-          %use{xlink:href: "#search-icon-13"}
-        %svg
-          %use{xlink:href: "#search-icon-14"}
-        %svg
-          %use{xlink:href: "#search-icon-15"}
-        %svg
-          %use{xlink:href: "#search-icon-16"}
-        %svg
-          %use{xlink:href: "#search-icon-17"}
-        %svg
-          %use{xlink:href: "#search-icon-18"}
-        %svg
-          %use{xlink:href: "#search-icon-19"}
-        %svg
-          %use{xlink:href: "#search-icon-20"}
-        %svg
-          %use{xlink:href: "#search-icon-21"}
-        %svg
-          %use{xlink:href: "#search-icon-22"}
-      %h2 Clear icons
-      .icons
-        %svg
-          %use{xlink:href: "#clear-icon-1"}
-        %svg
-          %use{xlink:href: "#clear-icon-2"}
-        %svg
-          %use{xlink:href: "#clear-icon-3"}
-        %svg
-          %use{xlink:href: "#clear-icon-4"}
-        %svg
-          %use{xlink:href: "#clear-icon-5"}
+        .row
+          %h2 Search icons
+          .icons
+            %svg
+              %use{xlink:href: "#search-icon-1"}
+            %svg
+              %use{xlink:href: "#search-icon-2"}
+            %svg
+              %use{xlink:href: "#search-icon-3"}
+            %svg
+              %use{xlink:href: "#search-icon-4"}
+            %svg
+              %use{xlink:href: "#search-icon-5"}
+            %svg
+              %use{xlink:href: "#search-icon-6"}
+            %svg
+              %use{xlink:href: "#search-icon-7"}
+            %svg
+              %use{xlink:href: "#search-icon-8"}
+            %svg
+              %use{xlink:href: "#search-icon-9"}
+            %svg
+              %use{xlink:href: "#search-icon-10"}
+            %svg
+              %use{xlink:href: "#search-icon-11"}
+            %br
+            %svg
+              %use{xlink:href: "#search-icon-12"}
+            %svg
+              %use{xlink:href: "#search-icon-13"}
+            %svg
+              %use{xlink:href: "#search-icon-14"}
+            %svg
+              %use{xlink:href: "#search-icon-15"}
+            %svg
+              %use{xlink:href: "#search-icon-16"}
+            %svg
+              %use{xlink:href: "#search-icon-17"}
+            %svg
+              %use{xlink:href: "#search-icon-18"}
+            %svg
+              %use{xlink:href: "#search-icon-19"}
+            %svg
+              %use{xlink:href: "#search-icon-20"}
+            %svg
+              %use{xlink:href: "#search-icon-21"}
+            %svg
+              %use{xlink:href: "#search-icon-22"}
+          %h2 Clear icons
+          .icons
+            %svg
+              %use{xlink:href: "#clear-icon-1"}
+            %svg
+              %use{xlink:href: "#clear-icon-2"}
+            %svg
+              %use{xlink:href: "#clear-icon-3"}
+            %svg
+              %use{xlink:href: "#clear-icon-4"}
+            %svg
+              %use{xlink:href: "#clear-icon-5"}
 
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
     <!-- inject:svg --><!-- endinject -->
@@ -249,7 +251,8 @@
     .theme-json.twitter-theme
 
     %script{src: "js/vendors/jquery-2.2.0.min.js"}
-    %script{src: "js/vendors/prism.js",data-manual}
+    %script{src: "js/vendors/tabby.min.js"}
+    %script{src: "js/vendors/prism.js", data-manual}
     %script{src: "js/vendors/jscolor.min.js"}
     %script{src: "js/vendors/jquery.selectric.min.js"}
     %script{src: "js/vendors/jszip.min.js"}

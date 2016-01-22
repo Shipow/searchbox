@@ -65,7 +65,9 @@ function updateSnippet(){
 
 };
 
+tabby.init();
 updateSnippet();
+
 
 $.get('js/awesome-searchbox.js', function(data){
   $('#js').text(data);
