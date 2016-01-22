@@ -8,6 +8,7 @@ var livereload = require('gulp-livereload');
 var ghPages = require('gulp-gh-pages');
 
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var haml = require('gulp-haml');
 var prettify = require('gulp-html-prettify');
 
@@ -77,6 +78,10 @@ gulp.task('svgfallback', function () {
 gulp.task('sass', function () {
   gulp.src('scss/**/*.sass')
   .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
   .pipe(gulp.dest('build'))
   .pipe(livereload());
 });
