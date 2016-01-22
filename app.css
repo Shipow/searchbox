@@ -505,10 +505,12 @@ h3 {
   line-height: 30px;
   border: solid 1px #ccc;
   text-decoration: none;
-  font-size: 14px; }
-  .btn.active {
-    background-color: #ccc; }
-  .btn:hover:not(.active) {
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .btn.active, .btn:hover {
     background-color: #fff;
     border: solid 1px #aaa; }
 
@@ -587,9 +589,8 @@ h3 {
     visibility: visible; }
 
 #demo {
-  box-sizing: border-box;
   padding: 14px;
-  margin: 0 0 20px 0;
+  margin: 60px 0;
   width: 100%;
   text-align: center; }
   #demo.asb-google_demo {
@@ -682,8 +683,8 @@ h3 {
     .asb-default__submit:focus {
       outline: 0; }
     .asb-default__submit svg {
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
       vertical-align: middle;
       fill: white; }
   .asb-default__reset {
