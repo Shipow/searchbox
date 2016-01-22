@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
     <title>clear-icon-4</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-103.000000, -1082.000000)" fill="#000000">
-            <g id="sizing" sketch:type="MSLayerGroup" transform="translate(51.000000, 388.000000)">
-                <path d="M99.9030458,734 L120,754.096954 L113.096954,761 L93,740.903046 L72.9030458,761 L66,754.096954 L86.0969542,734 L66,713.903046 L72.9030458,707 L93,727.096954 L113.096954,707 L120,713.903046 L99.9030458,734 Z M92.5,775 C114.867532,775 133,756.867532 133,734.5 C133,712.132468 114.867532,694 92.5,694 C70.1324676,694 52,712.132468 52,734.5 C52,756.867532 70.1324676,775 92.5,775 Z" id="clear-icon-4" sketch:type="MSShapeGroup"></path>
-            </g>
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-448.000000, -628.000000)" fill="#000000">
+            <path d="M459.663989,637.876543 L464.148968,642.361522 L462.608435,643.902054 L458.123457,639.417076 L453.638478,643.902054 L452.097946,642.361522 L456.582924,637.876543 L452.097946,633.391565 L453.638478,631.851032 L458.123457,636.336011 L462.608435,631.851032 L464.148968,633.391565 L459.663989,637.876543 Z M458,648 C463.522847,648 468,643.522847 468,638 C468,632.477153 463.522847,628 458,628 C452.477153,628 448,632.477153 448,638 C448,643.522847 452.477153,648 458,648 Z" id="clear-icon-4" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>
