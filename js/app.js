@@ -43,8 +43,8 @@ function updateSnippet(){
     Sass.compile(scss, function(result) {
       css = result.text;
       $('head style').last().remove();
-      $("<style>" + css + "</style>").appendTo( "head" );
       var prefixed = autoprefixer.process(css);
+      $("<style>" + prefixed + "</style>").appendTo( "head" );
       $('.snippet code.language-css').text(prefixed.css);
       $('.snippet code.language-scss').text(scss);
       Prism.highlightAll(false);
