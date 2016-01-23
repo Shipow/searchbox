@@ -318,7 +318,7 @@ h3 {
 
 .message-demo {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -381,4 +381,22 @@ h3 {
 
 .twitter-theme::before {
   @include json-encode($twitter);
+}
+
+@keyframes flash {
+
+  0% {
+    background-color: rgba(#fff, 1);
+  }
+
+  100% {
+  background-color: rgba(#fff, 0);
+  }
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }

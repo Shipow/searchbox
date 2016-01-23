@@ -198,6 +198,11 @@ $("form.searchbox").submit(function(e){
 
 var clipboard = new Clipboard('.copy');
 clipboard.on('success', function(e) {
+  $( $(e.trigger).data('clipboard-target')).parent().removeClass("flash");
+  setTimeout(function() {
+      $( $(e.trigger).data('clipboard-target')).parent().addClass('flash');
+  }, 1);
+
   $('.message-demo').flash_message({
       text: 'Snippet copied in your clipboard!',
       how: 'append'
