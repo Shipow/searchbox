@@ -15,6 +15,27 @@ $.fn.regex = function(pattern, fn, fn_a){
   });
 };
 
+$.fn.flash_message = function(options) {
+  options = $.extend({
+    text: 'Done',
+    time: 1000,
+    how: 'before',
+    class_name: ''
+  }, options);
+  return $(this).each(function() {
+    if( $(this).parent().find('.flash_message').get(0) )
+      return;
+    var message = $('<span />', {
+      'class': 'flash_message ' + options.class_name,
+      html: options.text
+    }).hide().fadeIn('fast');
+    $(this)[options.how](message);
+    message.delay(options.time).fadeOut('normal', function() {
+      $(this).remove();
+    });
+  });
+};
+
 function updateSnippet(){
   $.get('scss/searchbox.scss', function(data){
     var config = {};
@@ -59,15 +80,8 @@ function updateSnippet(){
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
   $('.snippet code.language-markup').text( svgWrapper + $('.searchbox').parent().html());
 
-  $('.select-icon').selectric({
-    optionsItemBuilder: function(itemData, element, index) {
-      return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
-    },
-    labelBuilder: function(itemData) {
-      return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
-    }
-  });
-
+  $('.select-icon').selectric('refresh');
+  $('.select').selectric('refresh');
 };
 
 tabby.init();
@@ -76,6 +90,15 @@ $('#snippets .tabs a').on('click', function(e){
   $(this).addClass('active');
 
 })
+
+$('.select-icon').selectric({
+  optionsItemBuilder: function(itemData, element, index) {
+    return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
+  },
+  labelBuilder: function(itemData) {
+    return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
+  }
+});
 
 updateSnippet();
 
@@ -134,8 +157,9 @@ function populate(frm, data) {
       break;
       case "radio" : case "checkbox":
       $ctrl.each(function(){
+        $(this).removeAttr("checked");
         if($(this).attr('value') == value) {
-          $(this).attr("checked",value);
+          $(this).attr("checked", value);
         }
       });
       break;
@@ -154,20 +178,29 @@ $('select[name="search-namespace"]').on('change', function(){
   $.map($('.jscolor'), function(data){
     data.jscolor.fromString($(data).val().replace(/#/,''));
   });
-
   applyTheme(val,'#demo','_demo');
   applyTheme(val,'.searchbox');
   applyTheme(val,'[type="search"]','__input');
   applyTheme(val,'[type="reset"]','__reset');
   applyTheme(val,'[type="submit"]','__submit');
-
   updateSnippet();
+});
 
-  });
+// catch submit
+$("form.searchbox").submit(function(e){
+    e.preventDefault();
+    var form = this;
+    $('.message-demo').flash_message({
+        text: 'The query "<strong class="query">'+$('[type="search"]').val()+'</strong>" has been triggered.',
+        how: 'append'
+    });
+});
 
-  $("form.searchbox").submit(function(e){
-      e.preventDefault();
-      var form = this;
-      $('.message-demo').removeClass('hide')
-      $('.query').text($('[type="search"]').val());
-  });
+var clipboard = new Clipboard('.copy');
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
