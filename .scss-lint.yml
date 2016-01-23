@@ -1,7 +1,7 @@
 # Default application configuration that all configurations inherit from.
 # Documentation: https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
 exclude: 'scss/vendors/*'
-exclude: 'scss/app.scss'
+# exclude: 'scss/app.scss'
 
 linters:
   BorderZero:
@@ -15,3 +15,18 @@ linters:
 
   PropertySortOrder:
     order: concentric
+
+  DeclarationOrder:
+    enabled: true
+
+  DuplicateProperty:
+    enabled: true
+
+  EmptyLineBetweenBlocks:
+    enabled: true
+
+  EmptyRule:
+    enabled: true
+
+  MergeableSelector:
+    force_nesting: true
