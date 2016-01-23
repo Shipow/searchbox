@@ -55,11 +55,6 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #f5f2f0;
-}
-
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
@@ -253,4 +248,3 @@ div.prism-show-language > div.prism-show-language-label {
 	background-color: inherit;
 	background-clip: padding-box;
 }
-

@@ -231,8 +231,8 @@ h3 {
 
 .snippet {
   border-top: 1px #cdd4d7 solid;
-  background-color: transparent !important;
-  padding-top: 50px !important;
+  background-color: transparent;
+  padding-top: 50px;
   height: 800px;
   font-size: 14px;
 
@@ -270,7 +270,7 @@ h3 {
   }
 }
 
-#preview {
+.preview {
   margin-right: 20px;
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
@@ -280,7 +280,7 @@ h3 {
   box-sizing: border-box;
 }
 
-#demo {
+.searchbox-demo {
   margin-bottom: 0;
   padding: 18px;
   width: 100%;

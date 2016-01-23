@@ -45,10 +45,6 @@ pre[class*="language-"] {
   margin: .5em 0;
   overflow: auto; }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0; }
-
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
@@ -570,8 +566,8 @@ h3 {
 
 .snippet {
   border-top: 1px #cdd4d7 solid;
-  background-color: transparent !important;
-  padding-top: 50px !important;
+  background-color: transparent;
+  padding-top: 50px;
   height: 800px;
   font-size: 14px; }
   .snippet.bordered {
@@ -600,7 +596,7 @@ h3 {
     display: block;
     visibility: visible; }
 
-#preview {
+.preview {
   margin-right: 20px;
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
@@ -609,25 +605,25 @@ h3 {
   overflow: hidden;
   box-sizing: border-box; }
 
-#demo {
+.searchbox-demo {
   margin-bottom: 0;
   padding: 18px;
   width: 100%;
   text-align: center;
   box-sizing: border-box; }
-  #demo.sbx-google-demo {
+  .searchbox-demo.sbx-google-demo {
     background-color: #fff; }
-  #demo.sbx-twitter-demo {
+  .searchbox-demo.sbx-twitter-demo {
     background-color: #fff; }
-  #demo.sbx-amazon-demo {
+  .searchbox-demo.sbx-amazon-demo {
     background-color: #202f40; }
-  #demo.sbx-spotify-demo {
+  .searchbox-demo.sbx-spotify-demo {
     background-color: #272727; }
-  #demo.sbx-meetup-demo {
+  .searchbox-demo.sbx-meetup-demo {
     background-color: #505050; }
-  #demo.sbx-medium-demo {
+  .searchbox-demo.sbx-medium-demo {
     background-color: #fff; }
-  #demo.sbx-facebook-demo {
+  .searchbox-demo.sbx-facebook-demo {
     background-color: #3e5da0; }
 
 .message-demo {
