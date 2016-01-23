@@ -1434,49 +1434,49 @@ h3 {
       height: 10px; }
 
 .amazon-theme::before {
-  content: '{"search-namespace": "sbx-amazon", "search-input-height": "38px", "search-border-radius": "3px", "search-icon-background": "#FFBF58", "search-icon-background-opacity": 1, "search-font-size": "14px", "search-icon-size": "20px", "search-icon-position": "right", "search-input-border-color": "#FFFFFF", "search-input-focus-border-color": "#FFBF58", "search-icon-color": "#202F40", "search-icon": "sbx-icon-search-11", "search-icon-clear": "sbx-icon-clear-2"}';
+  content: '{"namespace": "sbx-amazon", "input-height": "38px", "border-radius": "3px", "icon-background": "#FFBF58", "icon-background-opacity": 1, "font-size": "14px", "icon-size": "20px", "icon-position": "right", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFBF58", "icon-color": "#202F40", "icon": "sbx-icon-search-11", "icon-clear": "sbx-icon-clear-2"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .facebook-theme::before {
-  content: '{"search-namespace": "sbx-facebook", "search-input-height": "25px", "search-input-width": "500px", "search-clear-size": "12px", "search-border-width": 0, "search-border-radius": "3px", "search-icon-background": "#F6F7F8", "search-icon-background-opacity": 1, "search-font-size": "13px", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-icon-position": "right", "search-placeholder-color": "#AAAAAA", "search-icon-color": "#3C5BA2", "search-icon": "sbx-icon-search-8", "search-icon-size": "14px", "search-icon-clear": "sbx-icon-clear-4"}';
+  content: '{"namespace": "sbx-facebook", "input-height": "25px", "input-width": "500px", "clear-size": "12px", "border-width": 0, "border-radius": "3px", "icon-background": "#F6F7F8", "icon-background-opacity": 1, "font-size": "13px", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "icon-position": "right", "placeholder-color": "#AAAAAA", "icon-color": "#3C5BA2", "icon": "sbx-icon-search-8", "icon-size": "14px", "icon-clear": "sbx-icon-clear-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .google-theme::before {
-  content: '{"search-namespace": "sbx-google", "search-input-height": "40px", "search-input-width": "500px", "search-input-border-color": "#CCCCCC", "search-input-background": "#FFFFFF", "search-input-focus-background": "#FFFFFF", "search-input-focus-border-color": "#3E82F7", "search-font-size": "14px", "search-placeholder-color": "#AAAAAA", "search-border-width": "1px", "search-border-radius": "3px", "search-icon-position": "right", "search-icon-color": "#FFFFFF", "search-icon-background": "#3E82F7", "search-icon-background-opacity": 1, "search-clear-size": "12px", "search-icon": "sbx-icon-search-13", "search-icon-size": "20px", "search-icon-clear": "sbx-icon-clear-3"}';
+  content: '{"namespace": "sbx-google", "input-height": "40px", "input-width": "500px", "input-border-color": "#CCCCCC", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "input-focus-border-color": "#3E82F7", "font-size": "14px", "placeholder-color": "#AAAAAA", "border-width": "1px", "border-radius": "3px", "icon-position": "right", "icon-color": "#FFFFFF", "icon-background": "#3E82F7", "icon-background-opacity": 1, "clear-size": "12px", "icon": "sbx-icon-search-13", "icon-size": "20px", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .medium-theme::before {
-  content: '{"search-namespace": "sbx-medium", "search-input-height": "36px", "search-border-radius": "30px", "search-input-width": "200px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "13px", "search-icon-size": "16px", "search-icon-position": "left", "search-input-border-color": "#D9D9D9", "search-input-focus-border-color": "#AAAAAA", "search-icon-color": "#202F40", "search-icon": "sbx-icon-search-11", "search-icon-clear": "sbx-icon-clear-1"}';
+  content: '{"namespace": "sbx-medium", "input-height": "36px", "border-radius": "30px", "input-width": "200px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "13px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#D9D9D9", "input-focus-border-color": "#AAAAAA", "icon-color": "#202F40", "icon": "sbx-icon-search-11", "icon-clear": "sbx-icon-clear-1"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .meetup-theme::before {
-  content: '{"search-namespace": "sbx-meetup", "search-input-height": "44px", "search-input-width": "300px", "search-border-radius": "3px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "16px", "search-input-background": "#F5F8FA", "search-icon-size": "24px", "search-icon-position": "right", "search-input-border-color": "#444444", "search-input-focus-border-color": "#000000", "search-icon-color": "#505050", "search-placeholder-color": "#BBBBBB", "search-icon": "sbx-icon-search-13", "search-icon-clear": "sbx-icon-clear-3"}';
+  content: '{"namespace": "sbx-meetup", "input-height": "44px", "input-width": "300px", "border-radius": "3px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "16px", "input-background": "#F5F8FA", "icon-size": "24px", "icon-position": "right", "input-border-color": "#444444", "input-focus-border-color": "#000000", "icon-color": "#505050", "placeholder-color": "#BBBBBB", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .spotify-theme::before {
-  content: '{"search-namespace": "sbx-spotify", "search-input-height": "24px", "search-input-width": "200px", "search-border-radius": "12px", "search-icon-background": "#FFFFFF", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-icon-size": "12px", "search-icon-position": "left", "search-input-border-color": "#FFFFFF", "search-input-focus-border-color": "#FFFFFF", "search-icon-color": "#222", "search-icon": "sbx-icon-search-9", "search-icon-clear": "sbx-icon-clear-4"}';
+  content: '{"namespace": "sbx-spotify", "input-height": "24px", "input-width": "200px", "border-radius": "12px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "12px", "icon-size": "12px", "icon-position": "left", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFFFFF", "icon-color": "#222", "icon": "sbx-icon-search-9", "icon-clear": "sbx-icon-clear-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .twitter-theme::before {
-  content: '{"search-namespace": "sbx-twitter", "search-input-height": "30px", "search-input-width": "200px", "search-border-radius": "15px", "search-icon-background-opacity": 0, "search-font-size": "12px", "search-input-background": "#F5F8FA", "search-icon-size": "12px", "search-icon-position": "right", "search-input-border-color": "#D6DEE3", "search-input-focus-border-color": "#D6DEE3", "search-icon-color": "#73777A", "search-clear-size": "10px", "search-icon": "sbx-icon-search-8", "search-icon-clear": "sbx-icon-clear-3"}';
+  content: '{"namespace": "sbx-twitter", "input-height": "30px", "input-width": "200px", "border-radius": "15px", "icon-background-opacity": 0, "font-size": "12px", "input-background": "#F5F8FA", "icon-size": "12px", "icon-position": "right", "input-border-color": "#D6DEE3", "input-focus-border-color": "#D6DEE3", "icon-color": "#73777A", "clear-size": "10px", "icon": "sbx-icon-search-8", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;

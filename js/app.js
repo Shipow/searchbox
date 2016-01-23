@@ -5,7 +5,7 @@ var themes = {};
 $('.json').each(function(){
   var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
   theme = JSON.parse(theme);
-  themes[theme['search-namespace']] = theme;
+  themes[theme['namespace']] = theme;
 });
 
 $.fn.regex = function(pattern, fn, fn_a){
@@ -56,7 +56,7 @@ function updateSnippet(){
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
-    scss = '$custom:(\n\tsearch-namespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
     scss += '\n@include searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
@@ -70,8 +70,8 @@ function updateSnippet(){
       $('.main-content').removeClass('hide');
     });
   });
-  var searchIcon = $('select[name="search-icon"]').val();
-  var clearIcon = $('select[name="search-icon-clear"]').val();
+  var searchIcon = $('select[name="icon"]').val();
+  var clearIcon = $('select[name="icon-clear"]').val();
   $('[type="submit"] use').attr('xlink:href','#' + searchIcon);
   $('[type="reset"] use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
@@ -106,7 +106,7 @@ $('form#settings').on('input change', function(){
     updateSnippet();
     var val = "sbx-custom";
     if (!$('.searchbox-demo').hasClass('sbx-custom-demo')){
-      $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
+      $('select[name="namespace"]').prop('selectedIndex', 0).selectric('refresh');
       applyTheme(val,'.searchbox');
       applyTheme(val,'[type="search"]','__input');
       applyTheme(val,'[type="reset"]','__reset');
@@ -169,7 +169,7 @@ function populate(frm, data) {
   });
 }
 
-$('select[name="search-namespace"]').on('change', function(){
+$('select[name="namespace"]').on('change', function(){
   var val = $(this).val();
   if (val !== 'sbx-custom'){
     populate($('form#settings'), themes['sbx-google']); //default

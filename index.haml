@@ -26,7 +26,7 @@
       .settings
         %p
           %label Select a Theme
-          %select.select{name: "search-namespace"}
+          %select.select{name: "namespace"}
             %option{value: "sbx-custom", selected: true} Custom
             %option{value: "sbx-google"} Google
             %option{value: "sbx-amazon"} Amazon
@@ -40,33 +40,33 @@
           %h3 Appearance
           %p
             %label width (px)
-            %input{type: "number", name: "search-input-width-px", value: "250"}
+            %input{type: "number", name: "input-width-px", value: "250"}
           %p
             %label height (px)
-            %input{type: "number", name: "search-input-height-px", value: "50"}
+            %input{type: "number", name: "input-height-px", value: "50"}
           %p
             %label font-size (px)
-            %input{type: "number", name: "search-font-size-px", value: "14"}
+            %input{type: "number", name: "font-size-px", value: "14"}
           %p
             %label border-width (px)
-            %input{type: "number", name: "search-border-width-px", value: "2"}
+            %input{type: "number", name: "border-width-px", value: "2"}
           %p
             %label border-radius (px)
-            %input{type: "number", name: "search-border-radius-px", value: "25"}
+            %input{type: "number", name: "border-radius-px", value: "25"}
           %p
             %label border-color
-            %input.jscolor{type: "text", name: "search-input-border-color", value: "#ccc"}
+            %input.jscolor{type: "text", name: "input-border-color", value: "#ccc"}
           %p
             %label bg-color
-            %input.jscolor{type: "text", name: "search-input-background", value: "white"}
+            %input.jscolor{type: "text", name: "input-background", value: "white"}
           %p
             %label placeholder-color
-            %input.jscolor{type: "text", name: "search-placeholder-color", value: "#aaa"}
+            %input.jscolor{type: "text", name: "placeholder-color", value: "#aaa"}
 
           %h3 Search icon
           %p
             %label icon-img
-            %select.select-icon{name: "search-icon"}
+            %select.select-icon{name: "icon"}
               %option{value: "sbx-icon-search-1"} 1
               %option{value: "sbx-icon-search-2"} 2
               %option{value: "sbx-icon-search-3"} 3
@@ -91,35 +91,35 @@
               %option{value: "sbx-icon-search-22"} 22
           %p
             %label icon-size (px)
-            %input{type: "number", name: "search-icon-size-px", value: "28"}
+            %input{type: "number", name: "icon-size-px", value: "28"}
           %p
             %label icon-position
-            %select.select{name: "search-icon-position"}
+            %select.select{name: "icon-position"}
               %option{value: "left", selected: true} Left
               %option{ value: "right"} Right
 
           %p
             %label icon-color
-            %input.jscolor{type: "text", name: "search-icon-color", value: "#E5186F"}
+            %input.jscolor{type: "text", name: "icon-color", value: "#E5186F"}
           %p
             %label icon-bg-color
-            %input.jscolor{type: "text", name: "search-icon-background", value: "#FFFFFF"}
+            %input.jscolor{type: "text", name: "icon-background", value: "#FFFFFF"}
           %p
             %label icon-bg-opacity
-            %input{type: "text", name: "search-icon-background-opacity", value: "0"}
+            %input{type: "text", name: "icon-background-opacity", value: "0"}
 
           %h3 Focus
           %p
             %label focus-border-color
-            %input.jscolor{type: "text", name: "search-input-focus-border-color", value: "#E5186F"}
+            %input.jscolor{type: "text", name: "input-focus-border-color", value: "#E5186F"}
           %p
             %label focus-bg-color
-            %input.jscolor{type: "text", name: "search-input-focus-background", value: "white"}
+            %input.jscolor{type: "text", name: "input-focus-background", value: "white"}
 
           %h3 Clear
           %p
             %label icon-clear-img
-            %select.select-icon{name: "search-icon-clear"}
+            %select.select-icon{name: "icon-clear"}
               %option{value: "sbx-icon-clear-1"} 1
               %option{value: "sbx-icon-clear-2"} 2
               %option{value: "sbx-icon-clear-3"} 3
@@ -127,7 +127,7 @@
               %option{value: "sbx-icon-clear-5", selected: true} 5
           %p
             %label icon-clear-size (px)
-            %input{type: "number", name: "search-clear-size-px", value: "18"}
+            %input{type: "number", name: "clear-size-px", value: "18"}
 
     %main.main-content.hide
       %h2 Preview
@@ -137,7 +137,7 @@
             %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
             %button.sbx-custom__submit{type: "submit"}
               %svg
-                %use{xlink:href: "#search-icon-10"}
+                %use{xlink:href: "#sbx-search-icon-10"}
             %button.sbx-custom__reset{type: "reset"}
               %svg
                 %use{xlink:href: "#sbx-icon-clear-3"}

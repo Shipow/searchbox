@@ -32,7 +32,7 @@
     <div class="settings">
       <p>
         <label>Select a Theme</label>
-        <select name="search-namespace" class="select">
+        <select name="namespace" class="select">
           <option value="sbx-custom" selected="selected">Custom</option>
           <option value="sbx-google">Google</option>
           <option value="sbx-amazon">Amazon</option>
@@ -47,40 +47,40 @@
         <h3>Appearance</h3>
         <p>
           <label>width (px)</label>
-          <input type="number" name="search-input-width-px" value="250" />
+          <input type="number" name="input-width-px" value="250" />
         </p>
         <p>
           <label>height (px)</label>
-          <input type="number" name="search-input-height-px" value="50" />
+          <input type="number" name="input-height-px" value="50" />
         </p>
         <p>
           <label>font-size (px)</label>
-          <input type="number" name="search-font-size-px" value="14" />
+          <input type="number" name="font-size-px" value="14" />
         </p>
         <p>
           <label>border-width (px)</label>
-          <input type="number" name="search-border-width-px" value="2" />
+          <input type="number" name="border-width-px" value="2" />
         </p>
         <p>
           <label>border-radius (px)</label>
-          <input type="number" name="search-border-radius-px" value="25" />
+          <input type="number" name="border-radius-px" value="25" />
         </p>
         <p>
           <label>border-color</label>
-          <input type="text" name="search-input-border-color" value="#ccc" class="jscolor" />
+          <input type="text" name="input-border-color" value="#ccc" class="jscolor" />
         </p>
         <p>
           <label>bg-color</label>
-          <input type="text" name="search-input-background" value="white" class="jscolor" />
+          <input type="text" name="input-background" value="white" class="jscolor" />
         </p>
         <p>
           <label>placeholder-color</label>
-          <input type="text" name="search-placeholder-color" value="#aaa" class="jscolor" />
+          <input type="text" name="placeholder-color" value="#aaa" class="jscolor" />
         </p>
         <h3>Search icon</h3>
         <p>
           <label>icon-img</label>
-          <select name="search-icon" class="select-icon">
+          <select name="icon" class="select-icon">
             <option value="sbx-icon-search-1">1</option>
             <option value="sbx-icon-search-2">2</option>
             <option value="sbx-icon-search-3">3</option>
@@ -107,40 +107,40 @@
         </p>
         <p>
           <label>icon-size (px)</label>
-          <input type="number" name="search-icon-size-px" value="28" />
+          <input type="number" name="icon-size-px" value="28" />
         </p>
         <p>
           <label>icon-position</label>
-          <select name="search-icon-position" class="select">
+          <select name="icon-position" class="select">
             <option value="left" selected="selected">Left</option>
             <option value="right">Right</option>
           </select>
         </p>
         <p>
           <label>icon-color</label>
-          <input type="text" name="search-icon-color" value="#E5186F" class="jscolor" />
+          <input type="text" name="icon-color" value="#E5186F" class="jscolor" />
         </p>
         <p>
           <label>icon-bg-color</label>
-          <input type="text" name="search-icon-background" value="#FFFFFF" class="jscolor" />
+          <input type="text" name="icon-background" value="#FFFFFF" class="jscolor" />
         </p>
         <p>
           <label>icon-bg-opacity</label>
-          <input type="text" name="search-icon-background-opacity" value="0" />
+          <input type="text" name="icon-background-opacity" value="0" />
         </p>
         <h3>Focus</h3>
         <p>
           <label>focus-border-color</label>
-          <input type="text" name="search-input-focus-border-color" value="#E5186F" class="jscolor" />
+          <input type="text" name="input-focus-border-color" value="#E5186F" class="jscolor" />
         </p>
         <p>
           <label>focus-bg-color</label>
-          <input type="text" name="search-input-focus-background" value="white" class="jscolor" />
+          <input type="text" name="input-focus-background" value="white" class="jscolor" />
         </p>
         <h3>Clear</h3>
         <p>
           <label>icon-clear-img</label>
-          <select name="search-icon-clear" class="select-icon">
+          <select name="icon-clear" class="select-icon">
             <option value="sbx-icon-clear-1">1</option>
             <option value="sbx-icon-clear-2">2</option>
             <option value="sbx-icon-clear-3">3</option>
@@ -150,7 +150,7 @@
         </p>
         <p>
           <label>icon-clear-size (px)</label>
-          <input type="number" name="search-clear-size-px" value="18" />
+          <input type="number" name="clear-size-px" value="18" />
         </p>
       </form>
     </div>
@@ -163,7 +163,7 @@
           <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" />
           <button type="submit" class="sbx-custom__submit">
             <svg>
-              <use xlink:href="#search-icon-10"></use>
+              <use xlink:href="#sbx-search-icon-10"></use>
             </svg>
           </button>
           <button type="reset" class="sbx-custom__reset">
