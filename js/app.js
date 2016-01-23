@@ -2,7 +2,7 @@ var Sass = new Sass();
 var html, scss, css, prefixed;
 var themes = {};
 
-$('.theme-json').each(function(){
+$('.json').each(function(){
   var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
   theme = JSON.parse(theme);
   themes[theme['search-namespace']] = theme;
