@@ -1,5 +1,5 @@
-@mixin awesome-searchbox(
-    $search-namespace: 'asb-default',
+@mixin searchbox(
+    $search-namespace: 'sbx-default',
     $search-input-height: 40px,
     $search-input-width: 500px,
     $search-input-border-color: rgb(204, 204, 204),
@@ -10,13 +10,13 @@
     $search-placeholder-color: rgb(170, 170, 170),
     $search-border-width: 1px,
     $search-border-radius: 3px,
-    $search-icon: 'search-icon-1',
+    $search-icon: 'sbx-icon-search-1',
     $search-icon-position: right,
     $search-icon-size: 18px,
     $search-icon-color: rgb(255, 255, 255),
     $search-icon-background: rgb(62, 130, 247),
     $search-icon-background-opacity: 1,
-    $search-clear-icon: 'search-clear-icon-1',
+    $search-icon-clear: 'sbx-icon-clear-1',
     $search-clear-size: 12px
   ) {
   .#{$search-namespace} {
