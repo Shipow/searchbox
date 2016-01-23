@@ -9,3 +9,9 @@ linters:
 
   CapitalizationInSelector:
     enabled: true
+
+  ColorVariable:
+    enabled: false
+
+  PropertySortOrder:
+    order: concentric
