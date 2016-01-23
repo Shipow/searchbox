@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+$primary-color: #2fc9e8;
+
+@import "vendors/prism";
+@import "vendors/selectric";
+@import "vendors/SassyJSON";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin row {
+  font-size: 0;
+}
+
+@mixin col($col, $sum, $gap: 1em) {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  @media only screen and (min-width: 768px) {
+    width: percentage($col / $sum);
+    vertical-align: top;
+  }
+}
+
+body {
+  position: relative;
+  font-family: "canada-type-gibson";
+  margin: 0;
+  width: 100%;
+  min-width: 1000px;
+  background-color: #f3f5f6;
+  color: #7e94a2;
+}
+
+.row {
+  @include row;
+}
+
+.col-6 {
+  @include col(6, 12);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.generator-sidebar {
+  padding: 30px 0;
+  width: 300px;
+  float: left;
+  height: 100%;
+  margin: 20px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #cdd4d7;
+}
+
+.main-content {
+  width: calc(100% - 340px);
+  float: left;
+}
+
+.demo-header {
+  background-color: $primary-color;
+  padding: 10px 0;
+}
+
+// typo
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 300;
+  background-color: rgba(white, 0.2);
+  color: white;
+  margin: 20px;
+  border-radius: 90px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 20px;
+  text-transform: uppercase;
+  svg {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 40px 0 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: #cdd4d7;
+  margin: 20px 10px 10px;
+  border-bottom: solid 1px #cdd4d7;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.github-source {
+  position: absolute;
+  top: 0;
+  right: 0;
+  svg {
+    width: 100px;
+    height: 100px;
+    fill: white;
+  }
+}
+
+.icon {
+  height: 22px;
+  width: 22px;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: #7e94a2;
+  transition: all 0.2s ease;
+}
+
+.btn {
+  display: inline-block;
+  color: #7e94a2;
+  padding: 0 12px;
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 3px;
+  user-select: none;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 0 1px darken(#cdd4d7, 15%);
+  &.active, &:hover, &:focus {
+    background-color: white;
+    color: #7e94a2;
+    outline: 0;
+    box-shadow: 0 0 5px #cdd4d7;
+    .icon {
+      fill: #7e94a2;
+    }
+  }
+}
+
+.copy {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-size: 12px;
+}
+
+.tabs-pane, .pane {
+  position: relative;
+}
+
+.settings {
+  padding: 0 12px;
+  .icon-select-option,
+  .icon-select-label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+  }
+  p {
+    padding: 0;
+    margin: 0 0 4px 0;
+    &.warning {
+      background-color: #ffdd78;
+      padding: 8px;
+      display: block;
+    }
+  }
+  label {
+    display: inline-block;
+    font-size: 12px;
+    padding-right: 4px;
+    letter-spacing: 1px;
+    line-height: 34px;
+    text-align: right;
+    width: 160px;
+    text-transform: uppercase;
+  }
+  input[type='text'], input[type="number"] {
+    box-shadow: inset 0 0 0 1px white;
+    padding: 0 12px;
+    line-height: 28px;
+    border: solid 1px #cdd4d7;
+    width: 56px;
+    font-size: 12px;
+    &:focus {
+      border-color: black;
+      outline: 0;
+    }
+  }
+}
+
+.snippet {
+  font-size: 14px;
+  height: 800px;
+  padding-top: 50px !important;
+  background-color: transparent !important;
+  border-top: 1px #cdd4d7 solid;
+  &.bordered {
+    border-right: 1px #cdd4d7 solid;
+  }
+}
+
+.tabs, .inline-list {
+  margin: 0 0 12px 0;
+  padding: 20px 0 0 0;
+  list-style: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  li {
+    display: inline-block;
+    margin-right: 8px;
+    &.right {
+      float: right;
+    }
+  }
+}
+
+.tabs-pane {
+  display: none;
+  visibility: hidden;
+  &.active {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#preview {
+  margin-right: 20px;
+  padding: 8px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #cdd4d7;
+}
+
+#demo {
+  padding: 18px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  &.sbx-google_demo {
+    background-color: white;
+  }
+  &.sbx-twitter_demo {
+    background-color: white;
+  }
+  &.sbx-amazon_demo {
+    background-color: #202f40;
+  }
+  &.sbx-spotify_demo {
+    background-color: #272727;
+  }
+  &.sbx-meetup_demo {
+    background-color: #505050;
+  }
+  &.sbx-medium_demo {
+    background-color: white;
+  }
+  &.sbx-facebook_demo {
+    background-color: #3e5da0;
+  }
+}
+
+.message-demo {
+  text-align: center;
+  color: #aaaaaa;
+  position: absolute;
+  display: block;
+  line-height: 26px;
+  color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(white, 0.3);
+  strong {
+    color: black;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@import "searchbox";
+
+@import "sbx-themes/amazon";
+@import "sbx-themes/google";
+@import "sbx-themes/facebook";
+@import "sbx-themes/medium";
+@import "sbx-themes/meetup";
+@import "sbx-themes/spotify";
+@import "sbx-themes/twitter";
+
+
+@include searchbox();
+@include searchbox(($amazon)...);
+@include searchbox(($google)...);
+@include searchbox(($facebook)...);
+@include searchbox(($medium)...);
+@include searchbox(($meetup)...);
+@include searchbox(($spotify)...);
+@include searchbox(($twitter)...);
+
+.amazon-theme:before{
+  @include json-encode($amazon);
+}
+.facebook-theme:before{
+  @include json-encode($facebook);
+}
+
+.google-theme:before{
+  @include json-encode($google);
+}
+.medium-theme:before{
+  @include json-encode($medium);
+}
+.meetup-theme:before{
+  @include json-encode($meetup);
+}
+.spotify-theme:before{
+  @include json-encode($spotify);
+}
+.twitter-theme:before{
+  @include json-encode($twitter);
+}

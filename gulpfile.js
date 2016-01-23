@@ -8,6 +8,7 @@ var livereload = require('gulp-livereload');
 var ghPages = require('gulp-gh-pages');
 
 var sass = require('gulp-sass');
+var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
 var haml = require('gulp-haml');
 var prettify = require('gulp-html-prettify');
@@ -16,7 +17,6 @@ var inject = require('gulp-inject');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var cheerio = require('gulp-cheerio');
-var svgfallback = require('gulp-svgfallback');
 
 gulp.task('clean', function() {
   return del("build");
@@ -77,7 +77,7 @@ gulp.task('svgfallback', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src('scss/**/*.sass')
+  gulp.src('scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
@@ -105,7 +105,7 @@ gulp.task('copy', function () {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(['scss/**/*.sass','scss/**/*.scss'], ['sass','copy']);
+  gulp.watch('scss/**/*.scss', ['sass','copy','scss-lint']);
   gulp.watch('*.haml', ['build']);
   gulp.watch('js/**/*.js', ['js']);
 });
@@ -132,4 +132,11 @@ gulp.task('dev', function(callback) {
 gulp.task('deploy', function() {
   return gulp.src('build/**/*')
     .pipe(ghPages());
+});
+
+gulp.task('scss-lint', function() {
+  return gulp.src('scss/*.scss')
+    .pipe(scsslint({
+      'config': '.scss-lint.yml'
+    }));
 });
