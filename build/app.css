@@ -597,6 +597,7 @@ h3 {
 
 .preview {
   margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
   background: #fff;
@@ -1110,7 +1111,7 @@ h3 {
       width: 16px;
       height: 16px;
       vertical-align: middle;
-      fill: #202F40; }
+      fill: #666666; }
   .sbx-medium__reset {
     display: none;
     position: absolute;
@@ -1305,8 +1306,8 @@ h3 {
     .sbx-spotify__submit:focus {
       outline: 0; }
     .sbx-spotify__submit svg {
-      width: 12px;
-      height: 12px;
+      width: 15px;
+      height: 15px;
       vertical-align: middle;
       fill: #222; }
   .sbx-spotify__reset {
@@ -1347,7 +1348,7 @@ h3 {
     margin: 0;
     border: 0;
     border-radius: 15px;
-    box-shadow: inset 0 0 0 1px #D6DEE3;
+    box-shadow: inset 0 0 0 1px #E1E8ED;
     background: #F5F8FA;
     padding: 0;
     padding-left: 12.75px;
@@ -1363,7 +1364,7 @@ h3 {
     .sbx-twitter__input::-webkit-search-decoration, .sbx-twitter__input::-webkit-search-cancel-button, .sbx-twitter__input::-webkit-search-results-button, .sbx-twitter__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-twitter__input:hover {
-      box-shadow: inset 0 0 0 1px #b8c6ce; }
+      box-shadow: inset 0 0 0 1px #c1d0da; }
     .sbx-twitter__input:focus, .sbx-twitter__input:active {
       outline: 0;
       box-shadow: inset 0 0 0 1px #D6DEE3;
@@ -1407,7 +1408,7 @@ h3 {
       width: 12px;
       height: 12px;
       vertical-align: middle;
-      fill: #73777A; }
+      fill: #657580; }
   .sbx-twitter__reset {
     display: none;
     position: absolute;
@@ -1455,7 +1456,7 @@ h3 {
   width: 0; }
 
 .medium-theme::before {
-  content: '{"namespace": "sbx-medium", "input-height": "36px", "border-radius": "30px", "input-width": "200px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "13px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#D9D9D9", "input-focus-border-color": "#AAAAAA", "icon-color": "#202F40", "icon": "sbx-icon-search-11", "icon-clear": "sbx-icon-clear-1"}';
+  content: '{"namespace": "sbx-medium", "input-height": "36px", "border-radius": "30px", "input-width": "200px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "13px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#D9D9D9", "input-focus-border-color": "#AAAAAA", "icon-color": "#666666", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-2"}';
   display: block;
   height: 0;
   overflow: hidden;
@@ -1469,14 +1470,14 @@ h3 {
   width: 0; }
 
 .spotify-theme::before {
-  content: '{"namespace": "sbx-spotify", "input-height": "24px", "input-width": "200px", "border-radius": "12px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "12px", "icon-size": "12px", "icon-position": "left", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFFFFF", "icon-color": "#222", "icon": "sbx-icon-search-9", "icon-clear": "sbx-icon-clear-4"}';
+  content: '{"namespace": "sbx-spotify", "input-height": "24px", "input-width": "200px", "border-radius": "12px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "12px", "icon-size": "15px", "icon-position": "left", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFFFFF", "icon-color": "#222", "icon": "sbx-icon-search-7", "icon-clear": "sbx-icon-clear-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .twitter-theme::before {
-  content: '{"namespace": "sbx-twitter", "input-height": "30px", "input-width": "200px", "border-radius": "15px", "icon-background-opacity": 0, "font-size": "12px", "input-background": "#F5F8FA", "icon-size": "12px", "icon-position": "right", "input-border-color": "#D6DEE3", "input-focus-border-color": "#D6DEE3", "icon-color": "#73777A", "clear-size": "10px", "icon": "sbx-icon-search-8", "icon-clear": "sbx-icon-clear-3"}';
+  content: '{"namespace": "sbx-twitter", "input-height": "30px", "input-width": "200px", "border-radius": "15px", "icon-background-opacity": 0, "font-size": "12px", "input-background": "#F5F8FA", "icon-size": "12px", "icon-position": "right", "input-border-color": "#E1E8ED", "input-focus-border-color": "#D6DEE3", "icon-color": "#657580", "clear-size": "10px", "icon": "sbx-icon-search-8", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
