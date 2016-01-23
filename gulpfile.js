@@ -50,6 +50,7 @@ gulp.task('inlineSvg', function () {
   .pipe(cheerio({
     run: function ($) {
       $('[fill]').removeAttr('fill');
+      $('title').remove();
     },
     parserOptions: { xmlMode: true }
   }))
