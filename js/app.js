@@ -16,7 +16,7 @@ $.fn.regex = function(pattern, fn, fn_a){
 };
 
 function updateSnippet(){
-  $.get('scss/awesome-searchbox.scss', function(data){
+  $.get('scss/searchbox.scss', function(data){
     var config = {};
     $('form#settings').serializeArray().map(function(item) {
       if ( config[item.name] ) {
@@ -35,8 +35,8 @@ function updateSnippet(){
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
-    scss = '$custom:(\n\tsearch-namespace:\'asb-custom\',\n\t' + config + '\n);\n\n' + data;
-    scss += '\n@include awesome-searchbox(($custom)...);'
+    scss = '$custom:(\n\tsearch-namespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss += '\n@include searchbox(($custom)...);'
 
     Sass.compile(scss, function(result) {
       css = result.text;
@@ -57,7 +57,7 @@ function updateSnippet(){
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
-  $('.snippet code.language-markup').text( svgWrapper + $('.awesome-searchbox').parent().html());
+  $('.snippet code.language-markup').text( svgWrapper + $('.searchbox').parent().html());
 
   $('.select-icon').selectric({
     optionsItemBuilder: function(itemData, element, index) {
@@ -81,10 +81,10 @@ updateSnippet();
 
 $('form#settings').on('input change', function(){
     updateSnippet();
-    var val = "asb-custom";
-    if (!$('#demo').hasClass('asb-custom_demo')){
+    var val = "sbx-custom";
+    if (!$('#demo').hasClass('sbx-custom_demo')){
       $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
-      applyTheme(val,'.awesome-searchbox');
+      applyTheme(val,'.searchbox');
       applyTheme(val,'[type="search"]','__input');
       applyTheme(val,'[type="reset"]','__reset');
       applyTheme(val,'[type="submit"]','__submit');
@@ -107,7 +107,7 @@ $('.download-zip').on('click',function(){
   zip.file("index.html", html);
   zip.file("style.css", prefixed.content );
   var content = zip.generate({type:"blob"});
-  saveAs(content, "awesome-searchbox.zip");
+  saveAs(content, "searchbox.zip");
 });
 
 $('.jscolor').addClass('{hash:true}')
@@ -116,8 +116,8 @@ $('.select').selectric();
 
 function applyTheme(val, el, suf){
   suf = typeof suf !== 'undefined' ? suf : '';
-  $(' ' + el).regex(/asb-/, $.fn.attr, ['class']).removeClass(function (index, css) {
-    return (css.match (/(^|\s)asb-\S+/g) || []).join(' ');
+  $(' ' + el).regex(/sbx-/, $.fn.attr, ['class']).removeClass(function (index, css) {
+    return (css.match (/(^|\s)sbx-\S+/g) || []).join(' ');
   }).addClass(val + suf);
 }
 
@@ -147,8 +147,8 @@ function populate(frm, data) {
 
 $('select[name="search-namespace"]').on('change', function(){
   var val = $(this).val();
-  if (val !== 'asb-custom'){
-    populate($('form#settings'), themes['asb-google']); //default
+  if (val !== 'sbx-custom'){
+    populate($('form#settings'), themes['sbx-google']); //default
   }
   populate($('form#settings'), themes[val]);
   $.map($('.jscolor'), function(data){
@@ -156,7 +156,7 @@ $('select[name="search-namespace"]').on('change', function(){
   });
 
   applyTheme(val,'#demo','_demo');
-  applyTheme(val,'.awesome-searchbox');
+  applyTheme(val,'.searchbox');
   applyTheme(val,'[type="search"]','__input');
   applyTheme(val,'[type="reset"]','__reset');
   applyTheme(val,'[type="submit"]','__submit');
@@ -165,7 +165,7 @@ $('select[name="search-namespace"]').on('change', function(){
 
   });
 
-  $("form.awesome-searchbox").submit(function(e){
+  $("form.searchbox").submit(function(e){
       e.preventDefault();
       var form = this;
       $('.message-demo').removeClass('hide')

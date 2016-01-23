@@ -26,14 +26,14 @@
         %p
           %label Select a Theme
           %select.select{name: "search-namespace"}
-            %option{value: "asb-custom", selected: true} Custom
-            %option{value: "asb-google"} Google
-            %option{value: "asb-amazon"} Amazon
-            %option{value: "asb-facebook"} Facebook
-            %option{value: "asb-medium"} Medium
-            %option{value: "asb-meetup"} Meetup
-            %option{value: "asb-spotify"} Spotify
-            %option{value: "asb-twitter"} Twitter
+            %option{value: "sbx-custom", selected: true} Custom
+            %option{value: "sbx-google"} Google
+            %option{value: "sbx-amazon"} Amazon
+            %option{value: "sbx-facebook"} Facebook
+            %option{value: "sbx-medium"} Medium
+            %option{value: "sbx-meetup"} Meetup
+            %option{value: "sbx-spotify"} Spotify
+            %option{value: "sbx-twitter"} Twitter
 
         %form#settings
           %h3 Appearance
@@ -133,17 +133,17 @@
 
     %main.main-content.hide
       %h2 Preview
-      #demo.asb-custom_demo
-        %form.awesome-searchbox.asb-custom{role: "search", novalidate: true}
-          %input.asb-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
-          %button.asb-custom__submit{type: "submit"}
+      #demo.sbx-custom_demo
+        %form.searchbox.sbx-custom{role: "search", novalidate: true}
+          %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
+          %button.sbx-custom__submit{type: "submit"}
             %svg
               %use{xlink:href: "#search-icon-10"}
-          %button.asb-custom__reset{type: "reset"}
+          %button.sbx-custom__reset{type: "reset"}
             %svg
               %use{xlink:href: "#clear-icon-3"}
-        %p.message-demo.hide
-          The query "<strong class="query"></strong>" has been triggered.
+      %p.message-demo.hide
+        The query "<strong class="query"></strong>" has been triggered.
       %section#snippets
 
         %h2 Snippets
@@ -195,6 +195,6 @@
     %script{src: "js/vendors/sass.js"}
     %script{src: "js/vendors/autoprefixer.js"}
 
-    %script{src: "js/awesome-searchbox.js"}
+    %script{src: "js/searchbox.js"}
 
     %script{src: "js/app.js"}

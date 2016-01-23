@@ -1,5 +1,5 @@
-@mixin awesome-searchbox(
-    $search-namespace: 'asb-default',
+@mixin searchbox(
+    $search-namespace: 'sbx-default',
     $search-input-height: 40px,
     $search-input-width: 500px,
     $search-input-border-color: rgb(204, 204, 204),

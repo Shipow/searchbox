@@ -213,27 +213,35 @@ h3
   margin: 60px 0
   width: 100%
   text-align: center
-  &.asb-google_demo
+  &.sbx-google_demo
     background-color: #F1F1F1
-  &.asb-twitter_demo
+  &.sbx-twitter_demo
     background-color: white
     border-top: solid 1px #D6DEE3
-  &.asb-amazon_demo
+  &.sbx-amazon_demo
     background-color: #202F40
-  &.asb-spotify_demo
+  &.sbx-spotify_demo
     background-color: #272727
-  &.asb-meetup_demo
+  &.sbx-meetup_demo
     background-color: #505050
-  &.asb-medium_demo
+  &.sbx-medium_demo
     background-color: white
     border-top: solid 1px #D9D9D9
-  &.asb-facebook_demo
+  &.sbx-facebook_demo
     background-color: #3E5DA0
+
+.message-demo
+  text-align: center
+  color: #aaa
+  position: relative
+  top: -40px
+  strong
+    color: #000
 
 .hide
   display: none
 
-@import 'awesome-searchbox'
+@import 'searchbox'
 //themes
 @import 'themes/theme-amazon'
 @import 'themes/theme-google'
@@ -243,14 +251,14 @@ h3
 @import 'themes/theme-spotify'
 @import 'themes/theme-twitter'
 
-@include awesome-searchbox()
-@include awesome-searchbox(($amazon)...)
-@include awesome-searchbox(($google)...)
-@include awesome-searchbox(($facebook)...)
-@include awesome-searchbox(($medium)...)
-@include awesome-searchbox(($meetup)...)
-@include awesome-searchbox(($spotify)...)
-@include awesome-searchbox(($twitter)...)
+@include searchbox()
+@include searchbox(($amazon)...)
+@include searchbox(($google)...)
+@include searchbox(($facebook)...)
+@include searchbox(($medium)...)
+@include searchbox(($meetup)...)
+@include searchbox(($spotify)...)
+@include searchbox(($twitter)...)
 
 .amazon-theme:before
   +json-encode($amazon);

@@ -93,8 +93,8 @@ gulp.task('js', function () {
 });
 
 gulp.task('copy', function () {
-  gulp.src('scss/_awesome-searchbox.scss')
-  .pipe(rename('awesome-searchbox.scss'))
+  gulp.src('scss/_searchbox.scss')
+  .pipe(rename('searchbox.scss'))
   .pipe(gulp.dest('build/scss'));
   gulp.src('scss/themes/*.scss')
   .pipe(gulp.dest('build/scss/themes'));
