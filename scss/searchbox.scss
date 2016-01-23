@@ -1,29 +1,29 @@
 @mixin searchbox(
-    $search-namespace: 'sbx-default',
-    $search-input-height: 40px,
-    $search-input-width: 500px,
-    $search-input-border-color: rgb(204, 204, 204),
-    $search-input-background: rgb(255, 255, 255),
-    $search-input-focus-background: rgb(255, 255, 255),
-    $search-input-focus-border-color: rgb(62, 130, 247),
-    $search-font-size: 14px,
-    $search-placeholder-color: rgb(170, 170, 170),
-    $search-border-width: 1px,
-    $search-border-radius: 3px,
-    $search-icon: 'sbx-icon-search-1',
-    $search-icon-position: right,
-    $search-icon-size: 18px,
-    $search-icon-color: rgb(255, 255, 255),
-    $search-icon-background: rgb(62, 130, 247),
-    $search-icon-background-opacity: 1,
-    $search-icon-clear: 'sbx-icon-clear-1',
-    $search-clear-size: 12px
+    $namespace: 'sbx-default',
+    $input-height: 40px,
+    $input-width: 500px,
+    $input-border-color: rgb(204, 204, 204),
+    $input-background: rgb(255, 255, 255),
+    $input-focus-background: rgb(255, 255, 255),
+    $input-focus-border-color: rgb(62, 130, 247),
+    $font-size: 14px,
+    $placeholder-color: rgb(170, 170, 170),
+    $border-width: 1px,
+    $border-radius: 3px,
+    $icon: 'sbx-icon-search-1',
+    $icon-position: right,
+    $icon-size: 18px,
+    $icon-color: rgb(255, 255, 255),
+    $icon-background: rgb(62, 130, 247),
+    $icon-background-opacity: 1,
+    $icon-clear: 'sbx-icon-clear-1',
+    $clear-size: 12px
   ) {
-  .#{$search-namespace} {
+  .#{$namespace} {
     display: inline-block;
     position: relative;
-    width: $search-input-width;
-    height: $search-input-height;
+    width: $input-width;
+    height: $input-height;
     white-space: nowrap;
 
     * {
@@ -34,16 +34,16 @@
       display: inline-block;
       margin: 0;
       border: 0;
-      border-radius: $search-border-radius;
-      box-shadow: inset 0 0 0 $search-border-width $search-input-border-color;
-      background: $search-input-background;
+      border-radius: $border-radius;
+      box-shadow: inset 0 0 0 $border-width $input-border-color;
+      background: $input-background;
       padding: 0;
-      padding-left: if($search-icon-position == 'right', ($search-input-height - $search-font-size) / 2 + $search-border-radius / 4, $search-input-height);
+      padding-left: if($icon-position == 'right', ($input-height - $font-size) / 2 + $border-radius / 4, $input-height);
       width: 100%;
       height: 100%;
       vertical-align: middle;
       white-space: normal;
-      font-size: $search-font-size;
+      font-size: $font-size;
       box-sizing: border-box;
       appearance: none;
 
@@ -55,21 +55,21 @@
       }
 
       &:hover {
-        box-shadow: inset 0 0 0 $search-border-width darken($search-input-border-color, 10%);
+        box-shadow: inset 0 0 0 $border-width darken($input-border-color, 10%);
       }
 
       &:focus,
       &:active {
         outline: 0;
-        box-shadow: inset 0 0 0 $search-border-width $search-input-focus-border-color;
-        background: $search-input-focus-background;
+        box-shadow: inset 0 0 0 $border-width $input-focus-border-color;
+        background: $input-focus-background;
       }
 
       &::placeholder {
-        color: $search-placeholder-color;
+        color: $placeholder-color;
       }
 
-      &:valid ~ .#{$search-namespace}__reset {
+      &:valid ~ .#{$namespace}__reset {
         display: block;
       }
 
@@ -78,11 +78,11 @@
     &__submit {
       position: absolute;
       top: 0;
-      #{$search-icon-position}: 0;
+      #{$icon-position}: 0;
       border: 0;
-      border-radius: if($search-icon-position == 'right', 0 $search-border-radius $search-border-radius 0, $search-border-radius 0 0 $search-border-radius);
-      background-color: rgba($search-icon-background, $search-icon-background-opacity);
-      width: $search-input-height;
+      border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
+      background-color: rgba($icon-background, $icon-background-opacity);
+      width: $input-height;
       height: 100%;
       vertical-align: middle;
       text-align: center;
@@ -107,24 +107,24 @@
       }
 
       svg {
-        width: $search-icon-size;
-        height: $search-icon-size;
+        width: $icon-size;
+        height: $icon-size;
         vertical-align: middle;
-        fill: $search-icon-color;
+        fill: $icon-color;
       }
     }
 
     &__reset {
       display: none;
       position: absolute;
-      top: ($search-input-height - $search-clear-size) / 2;
-      right: 8px + if($search-icon-position == 'right', $search-input-height, $search-border-radius / 4);
+      top: ($input-height - $clear-size) / 2;
+      right: 8px + if($icon-position == 'right', $input-height, $border-radius / 4);
       opacity: .6;
       border: 0;
       background: none;
       cursor: pointer;
       padding: 0;
-      height: $search-clear-size;
+      height: $clear-size;
       user-select: none;
 
       &:hover {
@@ -140,8 +140,8 @@
       }
 
       svg {
-        width: $search-clear-size;
-        height: $search-clear-size;
+        width: $clear-size;
+        height: $clear-size;
       }
     }
   }
