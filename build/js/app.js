@@ -15,6 +15,27 @@ $.fn.regex = function(pattern, fn, fn_a){
   });
 };
 
+$.fn.flash_message = function(options) {
+  options = $.extend({
+    text: 'Done',
+    time: 1000,
+    how: 'before',
+    class_name: ''
+  }, options);
+  return $(this).each(function() {
+    if( $(this).parent().find('.flash_message').get(0) )
+      return;
+    var message = $('<span />', {
+      'class': 'flash_message ' + options.class_name,
+      html: options.text
+    }).hide().fadeIn('fast');
+    $(this)[options.how](message);
+    message.delay(options.time).fadeOut('normal', function() {
+      $(this).remove();
+    });
+  });
+};
+
 function updateSnippet(){
   $.get('scss/searchbox.scss', function(data){
     var config = {};
@@ -157,20 +178,29 @@ $('select[name="search-namespace"]').on('change', function(){
   $.map($('.jscolor'), function(data){
     data.jscolor.fromString($(data).val().replace(/#/,''));
   });
-
   applyTheme(val,'#demo','_demo');
   applyTheme(val,'.searchbox');
   applyTheme(val,'[type="search"]','__input');
   applyTheme(val,'[type="reset"]','__reset');
   applyTheme(val,'[type="submit"]','__submit');
-
   updateSnippet();
+});
 
-  });
+// catch submit
+$("form.searchbox").submit(function(e){
+    e.preventDefault();
+    var form = this;
+    $('.message-demo').flash_message({
+        text: 'The query "<strong class="query">'+$('[type="search"]').val()+'</strong>" has been triggered.',
+        how: 'append'
+    });
+});
 
-  $("form.searchbox").submit(function(e){
-      e.preventDefault();
-      var form = this;
-      $('.message-demo').removeClass('hide')
-      $('.query').text($('[type="search"]').val());
-  });
+var clipboard = new Clipboard('.copy');
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});

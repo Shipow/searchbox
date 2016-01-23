@@ -156,24 +156,25 @@
   </aside>
   <main class="main-content hide">
     <h2>Preview</h2>
-    <div class="sbx-custom_demo" id="demo">
-      <form role="search" novalidate="novalidate" class="searchbox sbx-custom">
-        <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" />
-        <button type="submit" class="sbx-custom__submit">
-          <svg>
-            <use xlink:href="#search-icon-10"></use>
-          </svg>
-        </button>
-        <button type="reset" class="sbx-custom__reset">
-          <svg>
-            <use xlink:href="#sbx-icon-clear-3"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
-    <p class="message-demo hide">The query "<strong class="query"></strong>" has been triggered.</p>
+    <section id="preview">
+      <div class="sbx-custom_demo" id="demo">
+        <form role="search" novalidate="novalidate" class="searchbox sbx-custom">
+          <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" />
+          <button type="submit" class="sbx-custom__submit">
+            <svg>
+              <use xlink:href="#search-icon-10"></use>
+            </svg>
+          </button>
+          <button type="reset" class="sbx-custom__reset">
+            <svg>
+              <use xlink:href="#sbx-icon-clear-3"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <p class="message-demo"></p>
+    </section>
     <section id="snippets">
-      <h2>Snippets</h2>
       <div class="row">
         <div class="col-6">
           <ul data-tabs="data-tabs" class="tabs">
@@ -183,9 +184,17 @@
             </li>
           </ul>
           <div data-tabs-content="data-tabs-content">
-            <div data-tabs-pane="data-tabs-pane" class="tabs-pane active" id="tabprefix"><pre class="snippet"><code class="language-css" id="css-prefix"></code></pre>
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane active" id="tabprefix">
+              <a href="javascript:void(0);" data-clipboard-target="#css-prefix" class="btn copy">
+                <svg class="icon">
+                  <use xlink:href="#copy-icon"></use>
+                </svg>Copy</a><pre class="snippet bordered"><code class="language-css" id="css-prefix"></code></pre>
             </div>
-            <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabscss"><pre class="snippet"><code class="language-scss" id="scss"></code></pre>
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabscss">
+              <a href="javascript:void(0);" data-clipboard-target="#scss" class="btn copy">
+                <svg class="icon">
+                  <use xlink:href="#copy-icon"></use>
+                </svg>Copy</a><pre class="snippet bordered"><code class="language-scss" id="scss"></code></pre>
             </div>
           </div>
         </div>
@@ -194,11 +203,17 @@
             <li>HTML + Images (SVG)</li>
             <li class="right">
               <a href="javascript:void(0);" class="btn download-zip">
-                <svg>
+                <svg class="icon">
                   <use xlink:href="#download-icon"></use>
                 </svg>Download .zip</a>
             </li>
-          </ul><pre class="snippet"><code class="language-markup" id="html"></code></pre>
+          </ul>
+          <div class="pane">
+            <a href="javascript:void(0);" data-clipboard-target="#html" class="btn copy">
+              <svg class="icon">
+                <use xlink:href="#copy-icon"></use>
+              </svg>Copy</a><pre class="snippet"><code class="language-markup" id="html"></code></pre>
+          </div>
         </div>
       </div>
     </section>
@@ -206,6 +221,9 @@
   <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="svg-icons"></div>
   <!-- inject:svg -->
   <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="copy-icon" viewBox="0 0 44 43">
+      <path d="M10 29v3H0V0h32v9h-3V3H3v26h7zm2-18h32v32H12V11zm3 3h26v26H15V14z" fill-rule="evenodd" />
+    </symbol>
     <symbol id="download-icon" viewBox="0 0 34 34">
       <path d="M21 17V7h-8v10H8l9 11 9-11h-5zm-4 17c9.39 0 17-7.61 17-17S26.39 0 17 0 0 7.61 0 17s7.61 17 17 17zm.042-2.958c7.732 0 14-6.268 14-14s-6.268-14-14-14-14 6.268-14 14 6.268 14 14 14z" fill-rule="evenodd" />
     </symbol>
@@ -332,6 +350,7 @@
   <script src="js/vendors/prism.js"></script>
   <script src="js/vendors/jscolor.min.js"></script>
   <script src="js/vendors/jquery.selectric.min.js"></script>
+  <script src="js/vendors/clipboard.min.js"></script>
   <script src="js/vendors/jszip.min.js"></script>
   <script src="js/vendors/FileSaver.min.js"></script>
   <script src="js/vendors/sass.js"></script>

@@ -130,20 +130,19 @@
 
     %main.main-content.hide
       %h2 Preview
-      #demo.sbx-custom_demo
-        %form.searchbox.sbx-custom{role: "search", novalidate: true}
-          %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
-          %button.sbx-custom__submit{type: "submit"}
-            %svg
-              %use{xlink:href: "#search-icon-10"}
-          %button.sbx-custom__reset{type: "reset"}
-            %svg
-              %use{xlink:href: "#sbx-icon-clear-3"}
-      %p.message-demo.hide
-        The query "<strong class="query"></strong>" has been triggered.
-      %section#snippets
+      %section#preview
+        #demo.sbx-custom_demo
+          %form.searchbox.sbx-custom{role: "search", novalidate: true}
+            %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true}
+            %button.sbx-custom__submit{type: "submit"}
+              %svg
+                %use{xlink:href: "#search-icon-10"}
+            %button.sbx-custom__reset{type: "reset"}
+              %svg
+                %use{xlink:href: "#sbx-icon-clear-3"}
+        %p.message-demo
 
-        %h2 Snippets
+      %section#snippets
         .row
           .col-6
             %ul.tabs{data-tabs: true}
@@ -153,21 +152,34 @@
                 %a.btn{data-tab: true, href: "#tabscss"} SCSS
             %div{data-tabs-content: true}
               #tabprefix.tabs-pane.active{data-tabs-pane: true}
-                %pre.snippet
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#css-prefix"}
+                  %svg.icon
+                    %use{xlink:href: "#copy-icon"}
+                  Copy
+                %pre.snippet.bordered
                   %code#css-prefix.language-css
               #tabscss.tabs-pane{data-tabs-pane: true}
-                %pre.snippet
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#scss"}
+                  %svg.icon
+                    %use{xlink:href: "#copy-icon"}
+                  Copy
+                %pre.snippet.bordered
                   %code#scss.language-scss
           .col-6
             %ul.inline-list
               %li HTML + Images (SVG)
               %li.right
                 %a.btn.download-zip{href: "javascript:void(0);"}
-                  %svg
+                  %svg.icon
                     %use{xlink:href: "#download-icon"}
                   Download .zip
-            %pre.snippet
-              %code#html.language-markup
+            .pane
+              %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
+                %svg.icon
+                  %use{xlink:href: "#copy-icon"}
+                Copy
+              %pre.snippet
+                %code#html.language-markup
 
 
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
@@ -187,6 +199,7 @@
     %script{src: "js/vendors/prism.js", data-manual}
     %script{src: "js/vendors/jscolor.min.js"}
     %script{src: "js/vendors/jquery.selectric.min.js"}
+    %script{src: "js/vendors/clipboard.min.js"}
     %script{src: "js/vendors/jszip.min.js"}
     %script{src: "js/vendors/FileSaver.min.js"}
     %script{src: "js/vendors/sass.js"}
