@@ -155,10 +155,11 @@ h3 {
   &.active,
   &:hover,
   &:focus {
-    background-color: #fff;
-    color: #7e94a2;
     outline: 0;
     box-shadow: 0 0 5px #cdd4d7;
+    background-color: #fff;
+    color: #7e94a2;
+
     .icon {
       fill: #7e94a2;
     }
@@ -179,55 +180,62 @@ h3 {
 
 .settings {
   padding: 0 12px;
+
   .icon-select-option,
   .icon-select-label {
     display: inline-block;
-    width: 24px;
-    height: 24px;
     position: relative;
     top: 4px;
     margin-right: 8px;
+    width: 24px;
+    height: 24px;
   }
+
   p {
+    margin: 0 0 4px;
     padding: 0;
-    margin: 0 0 4px 0;
+
     &.warning {
+      display: block;
       background-color: #ffdd78;
       padding: 8px;
-      display: block;
     }
   }
+
   label {
     display: inline-block;
-    font-size: 12px;
     padding-right: 4px;
-    letter-spacing: 1px;
-    line-height: 34px;
-    text-align: right;
     width: 160px;
+    text-align: right;
     text-transform: uppercase;
+    line-height: 34px;
+    letter-spacing: 1px;
+    font-size: 12px;
   }
-  input[type='text'],
-  input[type='number'] {
+
+  [type='text'],
+  [type='number'] {
+    border: solid 1px #cdd4d7;
     box-shadow: inset 0 0 0 1px #fff;
     padding: 0 12px;
-    line-height: 28px;
-    border: solid 1px #cdd4d7;
     width: 56px;
+    line-height: 28px;
     font-size: 12px;
+
     &:focus {
-      border-color: black;
       outline: 0;
+      border-color: #000;
     }
   }
 }
 
 .snippet {
-  font-size: 14px;
-  height: 800px;
-  padding-top: 50px !important;
-  background-color: transparent !important;
   border-top: 1px #cdd4d7 solid;
+  background-color: transparent !important;
+  padding-top: 50px !important;
+  height: 800px;
+  font-size: 14px;
+
   &.bordered {
     border-right: 1px #cdd4d7 solid;
   }
@@ -235,15 +243,17 @@ h3 {
 
 .tabs,
 .inline-list {
-  margin: 0 0 12px 0;
-  padding: 20px 0 0 0;
-  list-style: none;
   display: block;
+  margin: 0 0 12px;
+  padding: 20px 0 0;
   height: 30px;
+  list-style: none;
   line-height: 30px;
+
   li {
     display: inline-block;
     margin-right: 8px;
+
     &.right {
       float: right;
     }
@@ -253,6 +263,7 @@ h3 {
 .tabs-pane {
   display: none;
   visibility: hidden;
+
   &.active {
     display: block;
     visibility: visible;
@@ -261,56 +272,63 @@ h3 {
 
 #preview {
   margin-right: 20px;
-  padding: 8px;
-  box-sizing: border-box;
-  background: #fff;
   border-radius: 3px;
-  overflow: hidden;
   box-shadow: 0 0 5px #cdd4d7;
+  background: #fff;
+  padding: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 #demo {
-  padding: 18px;
   margin-bottom: 0;
+  padding: 18px;
   width: 100%;
-  box-sizing: border-box;
   text-align: center;
-  &.sbx-google_demo {
+  box-sizing: border-box;
+
+  &.sbx-google-demo {
     background-color: #fff;
   }
-  &.sbx-twitter_demo {
+
+  &.sbx-twitter-demo {
     background-color: #fff;
   }
-  &.sbx-amazon_demo {
+
+  &.sbx-amazon-demo {
     background-color: #202f40;
   }
-  &.sbx-spotify_demo {
+
+  &.sbx-spotify-demo {
     background-color: #272727;
   }
-  &.sbx-meetup_demo {
+
+  &.sbx-meetup-demo {
     background-color: #505050;
   }
-  &.sbx-medium_demo {
+
+  &.sbx-medium-demo {
     background-color: #fff;
   }
-  &.sbx-facebook_demo {
+
+  &.sbx-facebook-demo {
     background-color: #3e5da0;
   }
 }
 
 .message-demo {
-  text-align: center;
-  color: #aaaaaa;
-  position: absolute;
   display: block;
-  line-height: 26px;
-  color: black;
+  position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   background-color: rgba(#fff, .3);
+  text-align: center;
+  line-height: 26px;
+  color: #000;
+
   strong {
-    color: black;
+    color: #000;
   }
 }
 
@@ -328,7 +346,6 @@ h3 {
 @import 'sbx-themes/spotify';
 @import 'sbx-themes/twitter';
 
-
 @include searchbox();
 @include searchbox(($amazon)...);
 @include searchbox(($google)...);
@@ -338,25 +355,30 @@ h3 {
 @include searchbox(($spotify)...);
 @include searchbox(($twitter)...);
 
-.amazon-theme:before{
+.amazon-theme::before {
   @include json-encode($amazon);
 }
-.facebook-theme:before{
+
+.facebook-theme::before {
   @include json-encode($facebook);
 }
 
-.google-theme:before{
+.google-theme::before {
   @include json-encode($google);
 }
-.medium-theme:before{
+
+.medium-theme::before {
   @include json-encode($medium);
 }
-.meetup-theme:before{
+
+.meetup-theme::before {
   @include json-encode($meetup);
 }
-.spotify-theme:before{
+
+.spotify-theme::before {
   @include json-encode($spotify);
 }
-.twitter-theme:before{
+
+.twitter-theme::before {
   @include json-encode($twitter);
 }
