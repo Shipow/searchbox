@@ -50,7 +50,7 @@ function updateSnippet(){
     });
   });
   var searchIcon = $('select[name="search-icon"]').val();
-  var clearIcon = $('select[name="search-clear-icon"]').val();
+  var clearIcon = $('select[name="search-icon-clear"]').val();
   $('[type="submit"] use').attr('xlink:href','#' + searchIcon);
   $('[type="reset"] use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();

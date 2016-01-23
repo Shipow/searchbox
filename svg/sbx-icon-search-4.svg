@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>sbx-icon-search-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-316.000000, -560.000000)" fill="#000000">
+            <path d="M341.538791,588.187833 C338.853637,590.302536 335.465203,591.564189 331.782095,591.564189 C323.065884,591.564189 316,584.498305 316,575.782095 C316,567.065884 323.065884,560 331.782095,560 C340.498305,560 347.564189,567.065884 347.564189,575.782095 C347.564189,580.001642 345.908256,583.834425 343.210799,586.666035 L344.96188,588.417117 L346.023367,587.355631 L356,597.332264 L352.280125,601.05214 L342.303491,591.075506 L343.364978,590.01402 L341.538791,588.187833 Z M331.782095,588.93384 C339.045603,588.93384 344.93384,583.045603 344.93384,575.782095 C344.93384,568.518586 339.045603,562.630349 331.782095,562.630349 C324.518586,562.630349 318.630349,568.518586 318.630349,575.782095 C318.630349,583.045603 324.518586,588.93384 331.782095,588.93384 Z" id="sbx-icon-search-4" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

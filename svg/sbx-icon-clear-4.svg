@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>sbx-icon-clear-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-search" sketch:type="MSArtboardGroup" transform="translate(-320.000000, -656.000000)" fill="#000000">
+            <path d="M331.663989,665.876543 L336.148968,670.361522 L334.608435,671.902054 L330.123457,667.417076 L325.638478,671.902054 L324.097946,670.361522 L328.582924,665.876543 L324.097946,661.391565 L325.638478,659.851032 L330.123457,664.336011 L334.608435,659.851032 L336.148968,661.391565 L331.663989,665.876543 Z M330,676 C335.522847,676 340,671.522847 340,666 C340,660.477153 335.522847,656 330,656 C324.477153,656 320,660.477153 320,666 C320,671.522847 324.477153,676 330,676 Z" id="sbx-icon-clear-4" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
