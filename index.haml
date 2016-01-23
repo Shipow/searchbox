@@ -13,6 +13,7 @@
       try{Typekit.load({ async: false });}catch(e){}
 
   %body.demos
+    .message-demo
     .demo-header
       %a.github-source{href: "https://github.com/Shipow/searchbox"}
         %svg
@@ -140,7 +141,6 @@
             %button.sbx-custom__reset{type: "reset"}
               %svg
                 %use{xlink:href: "#sbx-icon-clear-3"}
-        %p.message-demo
 
       %section#snippets
         .row

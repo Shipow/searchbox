@@ -509,7 +509,8 @@ h3 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  box-shadow: inset 0 0 1px #a3afb5; }
   .btn.active, .btn:hover, .btn:focus {
     background-color: #fff;
     color: #7E94A2;
@@ -566,7 +567,7 @@ h3 {
 
 .snippet {
   font-size: 14px;
-  height: 2200px;
+  height: 800px;
   padding-top: 50px !important;
   background-color: transparent !important;
   border-top: 1px #CDD4D7 solid; }
@@ -603,7 +604,7 @@ h3 {
 
 #demo {
   padding: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   width: 100%;
   box-sizing: border-box;
   text-align: center; }
@@ -625,7 +626,14 @@ h3 {
 .message-demo {
   text-align: center;
   color: #aaa;
-  position: relative; }
+  position: absolute;
+  display: block;
+  line-height: 26px;
+  color: #000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3); }
   .message-demo strong {
     color: #000; }
 

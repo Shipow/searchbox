@@ -198,9 +198,9 @@ $("form.searchbox").submit(function(e){
 
 var clipboard = new Clipboard('.copy');
 clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
+  $('.message-demo').flash_message({
+      text: 'Snippet copied in your clipboard!',
+      how: 'append'
+  });
+  e.clearSelection();
 });
