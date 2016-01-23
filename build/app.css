@@ -560,10 +560,6 @@ h3 {
     .settings input[type='text']:focus, .settings input[type="number"]:focus {
       border-color: #000;
       outline: 0; }
-  .settings .radio-control {
-    display: inline-block; }
-    .settings .radio-control label {
-      width: inherit; }
 
 .snippet {
   font-size: 14px;

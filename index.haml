@@ -93,13 +93,10 @@
             %input{type: "number", name: "search-icon-size-px", value: "28"}
           %p
             %label icon-position
-            %span.radio-control
-              %label.label-radio
-                %input{type: "radio", name: "search-icon-position", value: "right"}
-                Right
-              %label.label-radio
-                %input{type: "radio", name: "search-icon-position", value: "left", checked: true}
-                Left
+            %select.select{name: "search-icon-position"}
+              %option{value: "left", selected: true} Left
+              %option{ value: "right"} Right
+
           %p
             %label icon-color
             %input.jscolor{type: "text", name: "search-icon-color", value: "#E5186F"}

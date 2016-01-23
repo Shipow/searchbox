@@ -59,15 +59,8 @@ function updateSnippet(){
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
   $('.snippet code.language-markup').text( svgWrapper + $('.searchbox').parent().html());
 
-  $('.select-icon').selectric({
-    optionsItemBuilder: function(itemData, element, index) {
-      return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
-    },
-    labelBuilder: function(itemData) {
-      return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
-    }
-  });
-
+  $('.select-icon').selectric('refresh');
+  $('.select').selectric('refresh');
 };
 
 tabby.init();
@@ -76,6 +69,15 @@ $('#snippets .tabs a').on('click', function(e){
   $(this).addClass('active');
 
 })
+
+$('.select-icon').selectric({
+  optionsItemBuilder: function(itemData, element, index) {
+    return element.val().length ? '<svg class="icon-select-option"><use xlink:href="#' + element.val() +  '"></use></svg>' + itemData.text : itemData.text;
+  },
+  labelBuilder: function(itemData) {
+    return '<svg class="icon-select-label"><use xlink:href="#' + itemData.value +  '"></use></svg>';
+  }
+});
 
 updateSnippet();
 
@@ -134,8 +136,9 @@ function populate(frm, data) {
       break;
       case "radio" : case "checkbox":
       $ctrl.each(function(){
+        $(this).removeAttr("checked");
         if($(this).attr('value') == value) {
-          $(this).attr("checked",value);
+          $(this).attr("checked", value);
         }
       });
       break;
