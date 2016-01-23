@@ -105,7 +105,7 @@ updateSnippet();
 $('form#settings').on('input change', function(){
     updateSnippet();
     var val = "sbx-custom";
-    if (!$('#demo').hasClass('sbx-custom_demo')){
+    if (!$('.searchbox-demo').hasClass('sbx-custom-demo')){
       $('select[name="search-namespace"]').prop('selectedIndex', 0).selectric('refresh');
       applyTheme(val,'.searchbox');
       applyTheme(val,'[type="search"]','__input');
@@ -178,7 +178,7 @@ $('select[name="search-namespace"]').on('change', function(){
   $.map($('.jscolor'), function(data){
     data.jscolor.fromString($(data).val().replace(/#/,''));
   });
-  applyTheme(val,'#demo','_demo');
+  applyTheme(val,'.searchbox-demo','-demo');
   applyTheme(val,'.searchbox');
   applyTheme(val,'[type="search"]','__input');
   applyTheme(val,'[type="reset"]','__reset');
