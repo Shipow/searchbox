@@ -39,7 +39,7 @@
       box-shadow: inset 0 0 0 $border-width $input-border-color;
       background: $input-background;
       padding: 0;
-      padding-left: if($icon-position == 'right', ($input-height + $border-radius) / 3, 8px + $input-height);
+      padding-left: if($icon-position == 'right', ($input-height + $border-radius) / 3, $input-height + if($icon-background-opacity == 0, 0, 8px));
       width: 100%;
       height: 100%;
       vertical-align: middle;
@@ -81,7 +81,7 @@
       border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
       background-color: rgba($icon-background, $icon-background-opacity);
       padding: 0;
-      padding-left: if($icon-position == 'right', 0, $border-radius - $icon-size / 2);
+      padding-left: if($icon-position == 'right', 0, ($border-radius) / 3);
       width: $input-height;
       height: 100%;
       vertical-align: middle;
@@ -118,7 +118,7 @@
       display: none;
       position: absolute;
       top: ($input-height - $clear-size) / 2 - 4px;
-      right: if($icon-position == 'right', 8px + $input-height, ($border-radius / 2 + $input-height - $clear-size) / 2) - 4px;
+      right: if($icon-position == 'right', 8px + $input-height, ($input-height - $clear-size) / 2) - 4px;
       opacity: .3;
       border: 0;
       background: none;
@@ -128,7 +128,7 @@
       user-select: none;
 
       &:hover {
-        opacity: 1;
+        opacity: .7;
       }
 
       &:focus {
@@ -160,6 +160,5 @@
 
   to {
     transform: none;
-    opacity: .3;
   }
 }

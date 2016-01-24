@@ -40,10 +40,10 @@
           %h3 Appearance
           %p
             %label width (px)
-            %input{type: "number", name: "input-width-px", value: "250"}
+            %input{type: "number", name: "input-width-px", value: "250", step: "2"}
           %p
             %label height (px)
-            %input{type: "number", name: "input-height-px", value: "50"}
+            %input{type: "number", name: "input-height-px", value: "50", step: "2"}
           %p
             %label font-size (px)
             %input{type: "number", name: "font-size-px", value: "14"}
@@ -91,7 +91,7 @@
               %option{value: "sbx-icon-search-22"} 22
           %p
             %label icon-size (px)
-            %input{type: "number", name: "icon-size-px", value: "28"}
+            %input{type: "number", name: "icon-size-px", value: "28", step: "2"}
           %p
             %label icon-position
             %select.select{name: "icon-position"}
@@ -126,7 +126,7 @@
               %option{value: "sbx-icon-clear-5", selected: true} 5
           %p
             %label icon-clear-size (px)
-            %input{type: "number", name: "clear-size-px", value: "18"}
+            %input{type: "number", name: "clear-size-px", value: "18", step: "2"}
           %p
             %a.btn.download-zip{href: "javascript:void(0);"}
               %svg.icon
