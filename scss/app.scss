@@ -281,7 +281,7 @@ h3 {
 }
 
 .preview {
-  margin-right: 20px;
+  margin-right:12px;
   margin-bottom: 20px;
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
@@ -329,6 +329,48 @@ h3 {
 
   .searchbox {
     transition: all .5s ease;
+  }
+}
+
+.loading-wrapper {
+  float: left;
+  margin: 150px 0 0;
+  width: calc(100% - 340px);
+}
+
+.loading {
+  position: relative;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    margin: -20px 0 0 -20px;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin .6s linear;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border-color: #767676 transparent transparent;
+    border-style: solid;
+    border-width: .2em;
+    box-shadow: 0 0 0 1px transparent;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    margin: -20px 0 0 -20px;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: .2em solid rgba(0,0,0,.1);
   }
 }
 
@@ -415,4 +457,46 @@ h3 {
   animation-duration: 900ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes spin {
+
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes flash {
+
+  0% {
+    background-color: rgba(#fff, 1);
+  }
+
+  100% {
+    background-color: rgba(#fff, 0);
+  }
+}
+
+@keyframes fade {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

@@ -2,11 +2,9 @@ var Sass = new Sass();
 var html, scss, css, prefixed;
 var themes = {};
 
-$('.json').each(function(){
-  var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
-  theme = JSON.parse(theme);
-  themes[theme['namespace']] = theme;
-});
+$('.jscolor').addClass('{hash:true}')
+
+$('.select').selectric();
 
 $.fn.regex = function(pattern, fn, fn_a){
   var fn = fn || $.fn.text;
@@ -68,6 +66,7 @@ function updateSnippet(){
       $('#scss').text(scss);
       Prism.highlightAll(false);
       $('.main-content').removeClass('hide');
+      $('.loading-wrapper').addClass('hide');
     });
   });
   var searchIcon = $('select[name="icon"]').val();
@@ -133,10 +132,6 @@ $('.download-zip').on('click',function(){
   saveAs(content, "searchbox.zip");
 });
 
-$('.jscolor').addClass('{hash:true}')
-
-$('.select').selectric();
-
 function applyTheme(val, el, suf){
   suf = typeof suf !== 'undefined' ? suf : '';
   $(' ' + el).regex(/sbx-/, $.fn.attr, ['class']).removeClass(function (index, css) {
@@ -168,6 +163,13 @@ function populate(frm, data) {
     }
   });
 }
+
+$('.json').each(function(){
+  var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
+  theme = JSON.parse(theme);
+  themes[theme['namespace']] = theme;
+});
+
 
 $('select[name="namespace"]').on('change', function(){
   var val = $(this).val();

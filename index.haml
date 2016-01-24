@@ -22,7 +22,7 @@
         %svg
           %use{xlink:href: "#sbx-icon-search-6"}
         SearchBox
-    %aside.generator-sidebar
+    %aside.generator-sidebar.fade
       .settings
         %p
           %label Select a Theme
@@ -133,7 +133,10 @@
                 %use{xlink:href: "#download-icon"}
               Download .zip
 
-    %main.main-content.hide
+    .loading-wrapper.fade
+      .loading
+
+    %main.main-content.hide.fade
       %h2 Preview
       %section.preview
         .searchbox-demo.sbx-custom-demo
