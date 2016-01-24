@@ -24,6 +24,7 @@
     position: relative;
     width: $input-width;
     height: $input-height;
+    line-height: 1.2em;
     white-space: nowrap;
 
     * {
@@ -38,7 +39,7 @@
       box-shadow: inset 0 0 0 $border-width $input-border-color;
       background: $input-background;
       padding: 0;
-      padding-left: if($icon-position == 'right', $input-height/3  + $border-radius/3, $input-height/2 - $font-size + $input-height);
+      padding-left: if($icon-position == 'right', ($input-height + $border-radius) / 3, 8px + $input-height);
       width: 100%;
       height: 100%;
       vertical-align: middle;
@@ -69,19 +70,18 @@
         color: $placeholder-color;
       }
 
-      &:valid ~ .#{$namespace}__reset {
-        display: block;
-      }
-
     }
 
     &__submit {
       position: absolute;
       top: 0;
+      margin: 0;
       #{$icon-position}: 0;
       border: 0;
       border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
       background-color: rgba($icon-background, $icon-background-opacity);
+      padding: 0;
+      padding-left: if($icon-position == 'right', 0, $border-radius - $icon-size / 2);
       width: $input-height;
       height: 100%;
       vertical-align: middle;
@@ -117,9 +117,9 @@
     &__reset {
       display: none;
       position: absolute;
-      top: ($input-height - $clear-size) / 2;
-      right: if($icon-position == 'right', 8px + $input-height, ($clear-size / 2) + $border-radius / 2);
-      opacity: .6;
+      top: ($input-height - $clear-size) / 2 - 4px;
+      right: if($icon-position == 'right', 8px + $input-height, ($border-radius / 2 + $input-height - $clear-size) / 2) - 4px;
+      opacity: .3;
       border: 0;
       background: none;
       cursor: pointer;
@@ -135,14 +135,31 @@
         outline: 0;
       }
 
-      &.hide {
-        display: none;
-      }
-
       svg {
+        display: block;
+        margin: 4px;
         width: $clear-size;
         height: $clear-size;
       }
+
+      .#{$namespace}__input:valid ~ & {
+        display: block;
+        animation-name: sbx-reset-in;
+        animation-duration: .15s;
+      }
     }
+  }
+}
+
+
+@keyframes sbx-reset-in {
+  from {
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: .3;
   }
 }
