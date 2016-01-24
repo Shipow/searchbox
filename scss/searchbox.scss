@@ -27,19 +27,16 @@
     line-height: 1.2em;
     white-space: nowrap;
 
-    * {
-      transition: all .5s ease;
-    }
-
     &__input {
       display: inline-block;
+      transition: all .4s ease;
       margin: 0;
       border: 0;
       border-radius: $border-radius;
       box-shadow: inset 0 0 0 $border-width $input-border-color;
       background: $input-background;
       padding: 0;
-      padding-left: if($icon-position == 'right', ($input-height + $border-radius) / 3, 8px + $input-height);
+      padding-left: if($icon-position == 'right', $font-size, $input-height + if($icon-background-opacity == 0, 0, 8px));
       width: 100%;
       height: 100%;
       vertical-align: middle;
@@ -81,7 +78,7 @@
       border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
       background-color: rgba($icon-background, $icon-background-opacity);
       padding: 0;
-      padding-left: if($icon-position == 'right', 0, $border-radius - $icon-size / 2);
+      padding-left: if($icon-position == 'right', 0, ($border-radius) / 3);
       width: $input-height;
       height: 100%;
       vertical-align: middle;
@@ -118,18 +115,14 @@
       display: none;
       position: absolute;
       top: ($input-height - $clear-size) / 2 - 4px;
-      right: if($icon-position == 'right', 8px + $input-height, ($border-radius / 2 + $input-height - $clear-size) / 2) - 4px;
-      opacity: .3;
+      right: if($icon-position == 'right', 8px + $input-height, ($input-height - $clear-size) / 2) - 4px;
       border: 0;
       background: none;
       cursor: pointer;
       padding: 0;
       height: $clear-size;
       user-select: none;
-
-      &:hover {
-        opacity: 1;
-      }
+      fill: rgba(#000, .5);
 
       &:focus {
         outline: 0;
@@ -160,6 +153,6 @@
 
   to {
     transform: none;
-    opacity: .3;
+    opacity: 1;
   }
 }
