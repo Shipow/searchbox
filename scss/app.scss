@@ -297,6 +297,7 @@ h3 {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
+  transition: all .5s linear;
 
   &.sbx-google-demo {
     background-color: #fff;
@@ -324,6 +325,10 @@ h3 {
 
   &.sbx-facebook-demo {
     background-color: #3e5da0;
+  }
+
+  .searchbox {
+    transition: all .5s ease;
   }
 }
 
