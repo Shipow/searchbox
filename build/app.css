@@ -215,8 +215,7 @@ div.prism-show-language > div.prism-show-language-label {
 .selectric-wrapper {
   position: relative;
   cursor: pointer;
-  display: inline-block;
-  top: 10px; }
+  display: inline-block; }
 
 .selectric-responsive {
   width: 100%; }
@@ -462,7 +461,10 @@ h2 {
   font-weight: 300; }
 
 h3 {
-  margin: 20px 10px 10px;
+  float: left;
+  width: 100%;
+  clear: both;
+  margin: 10px 0 20px;
   border-bottom: solid 1px #cdd4d7;
   text-align: left;
   text-transform: uppercase;
@@ -533,6 +535,15 @@ h3 {
 
 .settings {
   padding: 0 12px; }
+  .settings .form-group {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 12px;
+    margin: 0 0 12px 0;
+    height: 50px; }
+    .settings .form-group.full {
+      width: 100%; }
   .settings .icon-select-option,
   .settings .icon-select-label {
     display: inline-block;
@@ -541,34 +552,38 @@ h3 {
     margin-right: 8px;
     width: 24px;
     height: 24px; }
-  .settings p {
-    margin: 0 0 4px;
-    padding: 0; }
-    .settings p.warning {
-      display: block;
-      background-color: #ffdd78;
-      padding: 8px; }
+  .settings p.warning {
+    display: block;
+    background-color: #ffdd78;
+    padding: 8px; }
   .settings label {
-    display: inline-block;
-    padding-right: 4px;
-    width: 160px;
-    text-align: right;
+    display: block;
+    width: 100%;
     text-transform: uppercase;
-    line-height: 30px;
     letter-spacing: 1px;
-    font-size: 12px; }
+    font-size: 10px;
+    white-space: nowrap; }
   .settings [type='text'],
-  .settings [type='number'] {
-    border: solid 1px #cdd4d7;
-    box-shadow: inset 0 0 0 1px #fff;
-    padding: 0 8px;
-    width: 70px;
-    line-height: 26px;
-    font-size: 12px; }
+  .settings [type='number'],
+  .settings .selectric {
+    border: none;
+    width: 100px;
+    margin-top: 4px;
+    line-height: 22px;
+    font-size: 15px;
+    border-bottom: solid 1px #ccc;
+    position: relative; }
     .settings [type='text']:focus,
-    .settings [type='number']:focus {
+    .settings [type='number']:focus,
+    .settings .selectric:focus {
       outline: 0;
-      border-color: #7d94a3; }
+      border-bottom: solid 2px #2fc9e8; }
+    .settings [type='text'].jscolor,
+    .settings [type='number'].jscolor,
+    .settings .selectric.jscolor {
+      padding: 0;
+      text-align: center;
+      font-size: 12px; }
 
 .snippet {
   border-top: 1px #cdd4d7 solid;

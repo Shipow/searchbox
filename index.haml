@@ -24,7 +24,7 @@
         SearchBox
     %aside.generator-sidebar.fade
       .settings
-        %p
+        .form-group.full
           %label Select a Theme
           %select.select{name: "namespace"}
             %option{value: "sbx-custom", selected: true} Custom
@@ -37,34 +37,34 @@
             %option{value: "sbx-twitter"} Twitter
 
         %form#settings
-          %h3 Appearance
-          %p
-            %label width (px)
+          %h3 Input
+          .form-group
+            %label width px
             %input{type: "number", name: "input-width-px", value: "250", step: "2"}
-          %p
-            %label height (px)
+          .form-group
+            %label height px
             %input{type: "number", name: "input-height-px", value: "50", step: "2"}
-          %p
-            %label font-size (px)
-            %input{type: "number", name: "font-size-px", value: "14"}
-          %p
-            %label border-width (px)
+          .form-group
+            %label border-width px
             %input{type: "number", name: "border-width-px", value: "2"}
-          %p
-            %label border-radius (px)
+          .form-group
+            %label border-radius px
             %input{type: "number", name: "border-radius-px", value: "25"}
-          %p
-            %label border-color
+          .form-group
+            %label border
             %input.jscolor{type: "text", name: "input-border-color", value: "#ccc"}
-          %p
-            %label bg-color
+          .form-group
+            %label font-size px
+            %input{type: "number", name: "font-size-px", value: "14"}
+          .form-group
+            %label background
             %input.jscolor{type: "text", name: "input-background", value: "white"}
-          %p
-            %label placeholder-color
+          .form-group
+            %label placeholder
             %input.jscolor{type: "text", name: "placeholder-color", value: "#bbb"}
 
-          %h3 Search icon
-          %p
+          %h3 Search
+          .form-group
             %label icon
             %select.select-icon{name: "icon"}
               %option{value: "sbx-icon-search-1"} 1
@@ -89,45 +89,45 @@
               %option{value: "sbx-icon-search-20"} 20
               %option{value: "sbx-icon-search-21"} 21
               %option{value: "sbx-icon-search-22"} 22
-          %p
-            %label icon-size (px)
+          .form-group
+            %label icon-size px
             %input{type: "number", name: "icon-size-px", value: "30", step: "2"}
-          %p
-            %label icon-position
+          .form-group
+            %label position
             %select.select{name: "icon-position"}
               %option{value: "left", selected: true} Left
               %option{ value: "right"} Right
-          %p
-            %label icon-color
+          .form-group
+            %label icon
             %input.jscolor{type: "text", name: "icon-color", value: "#FF2E83"}
-          %p
-            %label icon-bg-color
+          .form-group
+            %label background
             %input.jscolor{type: "text", name: "icon-background", value: "#FFFFFF"}
-          %p
-            %label icon-bg-opacity
+          .form-group
+            %label bg-opacity
             %input{type: "number", name: "icon-background-opacity", value: "0", step: ".1"}
 
           %h3 Focus
-          %p
-            %label focus-border-color
+          .form-group
+            %label focus-border
             %input.jscolor{type: "text", name: "input-focus-border-color", value: "#FF2E83"}
-          %p
-            %label focus-bg-color
+          .form-group
+            %label focus-background
             %input.jscolor{type: "text", name: "input-focus-background", value: "white"}
 
-          %h3 Clear
-          %p
-            %label icon-clear
+          %h3 Reset
+          .form-group
+            %label icon
             %select.select-icon{name: "icon-clear"}
               %option{value: "sbx-icon-clear-1"} 1
               %option{value: "sbx-icon-clear-2"} 2
               %option{value: "sbx-icon-clear-3"} 3
               %option{value: "sbx-icon-clear-4"} 4
               %option{value: "sbx-icon-clear-5", selected: true} 5
-          %p
-            %label icon-clear-size (px)
+          .form-group
+            %label icon-size px
             %input{type: "number", name: "clear-size-px", value: "18", step: "2"}
-          %p
+          .form-group.full
             %a.btn.download-zip{href: "javascript:void(0);"}
               %svg.icon
                 %use{xlink:href: "#download-icon"}

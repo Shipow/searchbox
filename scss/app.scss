@@ -105,7 +105,10 @@ h2 {
 }
 
 h3 {
-  margin: 20px 10px 10px;
+  float: left;
+  width: 100%;
+  clear: both;
+  margin: 10px 0 20px;
   border-bottom: solid 1px #cdd4d7;
   text-align: left;
   text-transform: uppercase;
@@ -189,6 +192,18 @@ h3 {
 .settings {
   padding: 0 12px;
 
+  .form-group {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 12px;
+    margin: 0 0 12px 0;
+    height: 50px;
+    &.full {
+      width: 100%;
+    }
+  }
+
   .icon-select-option,
   .icon-select-label {
     display: inline-block;
@@ -200,8 +215,6 @@ h3 {
   }
 
   p {
-    margin: 0 0 4px;
-    padding: 0;
 
     &.warning {
       display: block;
@@ -211,28 +224,34 @@ h3 {
   }
 
   label {
-    display: inline-block;
-    padding-right: 4px;
-    width: 160px;
-    text-align: right;
+    display: block;
+    width: 100%;
     text-transform: uppercase;
-    line-height: 30px;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 10px;
+    white-space: nowrap;
   }
 
   [type='text'],
-  [type='number'] {
-    border: solid 1px #cdd4d7;
-    box-shadow: inset 0 0 0 1px #fff;
-    padding: 0 8px;
-    width: 70px;
-    line-height: 26px;
-    font-size: 12px;
+  [type='number'],
+  .selectric {
+    border: none;
+    width: 100px;
+    margin-top: 4px;
+    line-height: 22px;
+    font-size: 15px;
+    border-bottom: solid 1px #ccc;
+    position: relative;
 
     &:focus {
       outline: 0;
-      border-color: #7d94a3;
+      border-bottom: solid 2px $primary-color;
+    }
+
+    &.jscolor {
+      padding: 0;
+      text-align: center;
+      font-size: 12px;
     }
   }
 }
