@@ -118,7 +118,7 @@
       display: none;
       position: absolute;
       top: ($input-height - $clear-size) / 2;
-      right: 8px + if($icon-position == 'right', $input-height, $border-radius / 4);
+      right: if($icon-position == 'right', 8px + $input-height, $border-radius - ($clear-size / 2));
       opacity: .6;
       border: 0;
       background: none;

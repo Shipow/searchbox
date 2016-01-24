@@ -129,6 +129,12 @@
             %label icon-clear-size (px)
             %input{type: "number", name: "clear-size-px", value: "18"}
 
+          %p
+            %a.btn.download-zip{href: "javascript:void(0);"}
+              %svg.icon
+                %use{xlink:href: "#download-icon"}
+              Download .zip
+
     %main.main-content.hide
       %h2 Preview
       %section.preview
@@ -144,6 +150,17 @@
 
       %section#snippets
         .row
+          .col-6
+            %ul.inline-list
+              %li HTML + Images (SVG)
+              %li.right
+            .pane
+              %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
+                %svg.icon
+                  %use{xlink:href: "#copy-icon"}
+                Copy
+              %pre.snippet.bordered
+                %code#html.language-markup
           .col-6
             %ul.tabs{data-tabs: true}
               %li
@@ -163,27 +180,11 @@
                   %svg.icon
                     %use{xlink:href: "#copy-icon"}
                   Copy
-                %pre.snippet.bordered
+                %pre.snippet
                   %code#scss.language-scss
-          .col-6
-            %ul.inline-list
-              %li HTML + Images (SVG)
-              %li.right
-                %a.btn.download-zip{href: "javascript:void(0);"}
-                  %svg.icon
-                    %use{xlink:href: "#download-icon"}
-                  Download .zip
-            .pane
-              %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
-                %svg.icon
-                  %use{xlink:href: "#copy-icon"}
-                Copy
-              %pre.snippet
-                %code#html.language-markup
-
 
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
-    <!-- inject:svg --><!-- endinject -->
+      <!-- inject:svg --><!-- endinject -->
 
     .json.amazon-theme
     .json.facebook-theme

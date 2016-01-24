@@ -24,7 +24,7 @@ $primary-color: #2fc9e8;
   display: inline-block;
   box-sizing: border-box;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1200px) {
     width: percentage($col / $sum);
     vertical-align: top;
   }
@@ -150,6 +150,7 @@ h3 {
   line-height: 30px;
   color: #7e94a2;
   font-size: 14px;
+  box-sizing: border-box;
   user-select: none;
 
   &.active,
@@ -166,10 +167,17 @@ h3 {
   }
 }
 
+.download-zip {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+}
+
 .copy {
   position: absolute;
-  top: 8px;
-  right: 20px;
+  top: - 38px;
+  right: 12px;
   font-size: 12px;
 }
 
@@ -232,7 +240,7 @@ h3 {
 .snippet {
   border-top: 1px #cdd4d7 solid;
   background-color: transparent;
-  padding-top: 50px;
+  padding: 20px;
   height: 800px;
   font-size: 14px;
 
@@ -244,10 +252,12 @@ h3 {
 .tabs,
 .inline-list {
   display: block;
-  margin: 0 0 12px;
-  padding: 20px 0 0;
+  margin: 0;
+  border-top: 1px #cdd4d7 solid;
+  padding: 10px 0 0;
   height: 30px;
   list-style: none;
+  text-align: center;
   line-height: 30px;
 
   li {
