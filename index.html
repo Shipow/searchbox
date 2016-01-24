@@ -30,7 +30,7 @@
   </div>
   <aside class="generator-sidebar fade">
     <div class="settings">
-      <p>
+      <div class="form-group full">
         <label>Select a Theme</label>
         <select name="namespace" class="select">
           <option value="sbx-custom" selected="selected">Custom</option>
@@ -42,43 +42,43 @@
           <option value="sbx-spotify">Spotify</option>
           <option value="sbx-twitter">Twitter</option>
         </select>
-      </p>
+      </div>
       <form id="settings">
-        <h3>Appearance</h3>
-        <p>
-          <label>width (px)</label>
+        <h3>Input</h3>
+        <div class="form-group">
+          <label>width px</label>
           <input type="number" name="input-width-px" value="250" step="2" />
-        </p>
-        <p>
-          <label>height (px)</label>
+        </div>
+        <div class="form-group">
+          <label>height px</label>
           <input type="number" name="input-height-px" value="50" step="2" />
-        </p>
-        <p>
-          <label>font-size (px)</label>
-          <input type="number" name="font-size-px" value="14" />
-        </p>
-        <p>
-          <label>border-width (px)</label>
+        </div>
+        <div class="form-group">
+          <label>border-width px</label>
           <input type="number" name="border-width-px" value="2" />
-        </p>
-        <p>
-          <label>border-radius (px)</label>
+        </div>
+        <div class="form-group">
+          <label>border-radius px</label>
           <input type="number" name="border-radius-px" value="25" />
-        </p>
-        <p>
-          <label>border-color</label>
+        </div>
+        <div class="form-group">
+          <label>border</label>
           <input type="text" name="input-border-color" value="#ccc" class="jscolor" />
-        </p>
-        <p>
-          <label>bg-color</label>
+        </div>
+        <div class="form-group">
+          <label>font-size px</label>
+          <input type="number" name="font-size-px" value="14" />
+        </div>
+        <div class="form-group">
+          <label>background</label>
           <input type="text" name="input-background" value="white" class="jscolor" />
-        </p>
-        <p>
-          <label>placeholder-color</label>
+        </div>
+        <div class="form-group">
+          <label>placeholder</label>
           <input type="text" name="placeholder-color" value="#bbb" class="jscolor" />
-        </p>
-        <h3>Search icon</h3>
-        <p>
+        </div>
+        <h3>Search</h3>
+        <div class="form-group">
           <label>icon</label>
           <select name="icon" class="select-icon">
             <option value="sbx-icon-search-1">1</option>
@@ -104,42 +104,42 @@
             <option value="sbx-icon-search-21">21</option>
             <option value="sbx-icon-search-22">22</option>
           </select>
-        </p>
-        <p>
-          <label>icon-size (px)</label>
+        </div>
+        <div class="form-group">
+          <label>icon-size px</label>
           <input type="number" name="icon-size-px" value="30" step="2" />
-        </p>
-        <p>
-          <label>icon-position</label>
+        </div>
+        <div class="form-group">
+          <label>position</label>
           <select name="icon-position" class="select">
             <option value="left" selected="selected">Left</option>
             <option value="right">Right</option>
           </select>
-        </p>
-        <p>
-          <label>icon-color</label>
+        </div>
+        <div class="form-group">
+          <label>icon</label>
           <input type="text" name="icon-color" value="#FF2E83" class="jscolor" />
-        </p>
-        <p>
-          <label>icon-bg-color</label>
+        </div>
+        <div class="form-group">
+          <label>background</label>
           <input type="text" name="icon-background" value="#FFFFFF" class="jscolor" />
-        </p>
-        <p>
-          <label>icon-bg-opacity</label>
+        </div>
+        <div class="form-group">
+          <label>bg-opacity</label>
           <input type="number" name="icon-background-opacity" value="0" step=".1" />
-        </p>
+        </div>
         <h3>Focus</h3>
-        <p>
-          <label>focus-border-color</label>
+        <div class="form-group">
+          <label>focus-border</label>
           <input type="text" name="input-focus-border-color" value="#FF2E83" class="jscolor" />
-        </p>
-        <p>
-          <label>focus-bg-color</label>
+        </div>
+        <div class="form-group">
+          <label>focus-background</label>
           <input type="text" name="input-focus-background" value="white" class="jscolor" />
-        </p>
-        <h3>Clear</h3>
-        <p>
-          <label>icon-clear</label>
+        </div>
+        <h3>Reset</h3>
+        <div class="form-group">
+          <label>icon</label>
           <select name="icon-clear" class="select-icon">
             <option value="sbx-icon-clear-1">1</option>
             <option value="sbx-icon-clear-2">2</option>
@@ -147,17 +147,17 @@
             <option value="sbx-icon-clear-4">4</option>
             <option value="sbx-icon-clear-5" selected="selected">5</option>
           </select>
-        </p>
-        <p>
-          <label>icon-clear-size (px)</label>
+        </div>
+        <div class="form-group">
+          <label>icon-size px</label>
           <input type="number" name="clear-size-px" value="18" step="2" />
-        </p>
-        <p>
+        </div>
+        <div class="form-group full">
           <a href="javascript:void(0);" class="btn download-zip">
             <svg class="icon">
               <use xlink:href="#download-icon"></use>
             </svg>Download .zip</a>
-        </p>
+        </div>
       </form>
     </div>
   </aside>
