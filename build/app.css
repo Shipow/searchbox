@@ -812,12 +812,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-default__input:valid ~ .sbx-custom__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-custom__input:valid ~ .sbx-custom__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @-webkit-keyframes sbx-reset-in {
   from {
@@ -934,12 +934,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-amazon__input:valid ~ .sbx-amazon__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-amazon__input:valid ~ .sbx-amazon__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1046,12 +1046,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-google__input:valid ~ .sbx-google__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-google__input:valid ~ .sbx-google__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1158,12 +1158,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-facebook__input:valid ~ .sbx-facebook__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-facebook__input:valid ~ .sbx-facebook__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1270,12 +1270,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-medium__input:valid ~ .sbx-medium__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-medium__input:valid ~ .sbx-medium__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1382,12 +1382,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-meetup__input:valid ~ .sbx-meetup__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-meetup__input:valid ~ .sbx-meetup__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1494,12 +1494,12 @@ h3 {
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-spotify__input:valid ~ .sbx-spotify__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-spotify__input:valid ~ .sbx-spotify__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1606,12 +1606,12 @@ h3 {
       margin: 4px;
       width: 10px;
       height: 10px; }
-    .sbx-twitter__input:valid ~ .sbx-twitter__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-twitter__input:valid ~ .sbx-twitter__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1718,12 +1718,12 @@ h3 {
       margin: 4px;
       width: 10px;
       height: 10px; }
-    .sbx-airbnb__input:valid ~ .sbx-airbnb__reset {
-      display: block;
-      -webkit-animation-name: sbx-reset-in;
-      animation-name: sbx-reset-in;
-      -webkit-animation-duration: .15s;
-      animation-duration: .15s; }
+  .sbx-airbnb__input:valid ~ .sbx-airbnb__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
 
 @keyframes sbx-reset-in {
   from {
@@ -1736,56 +1736,56 @@ h3 {
     opacity: 1; } }
 
 .amazon-theme::before {
-  content: '{"namespace": "sbx-amazon", "input-width": "600px", "input-height": "38px", "border-radius": "3px", "icon-background": "#FFBF58", "icon-background-opacity": 1, "font-size": "14px", "icon-size": "20px", "icon-position": "right", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFBF58", "icon-color": "#202F40", "icon": "sbx-icon-search-11", "icon-clear": "sbx-icon-clear-2"}';
+  content: '{"input-width": "600px", "input-height": "38px", "border-radius": "3px", "icon-background": "#FFBF58", "icon-background-opacity": 1, "font-size": "14px", "icon-size": "20px", "icon-position": "right", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFBF58", "icon-color": "#202F40", "icon": "sbx-icon-search-11", "icon-clear": "sbx-icon-clear-2"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .facebook-theme::before {
-  content: '{"namespace": "sbx-facebook", "input-height": "26px", "input-width": "450px", "clear-size": "12px", "border-width": "0px", "border-radius": "3px", "icon-background": "#F6F7F8", "icon-background-opacity": 1, "font-size": "13px", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "icon-position": "right", "placeholder-color": "#AAAAAA", "icon-color": "#3C5BA2", "icon": "sbx-icon-search-8", "icon-size": "14px", "icon-clear": "sbx-icon-clear-4"}';
+  content: '{"input-height": "26px", "input-width": "450px", "clear-size": "12px", "border-width": "0px", "border-radius": "3px", "icon-background": "#F6F7F8", "icon-background-opacity": 1, "font-size": "13px", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "icon-position": "right", "placeholder-color": "#AAAAAA", "icon-color": "#3C5BA2", "icon": "sbx-icon-search-8", "icon-size": "14px", "icon-clear": "sbx-icon-clear-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .google-theme::before {
-  content: '{"namespace": "sbx-google", "input-height": "40px", "input-width": "500px", "input-border-color": "#CCCCCC", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "input-focus-border-color": "#3E82F7", "font-size": "14px", "placeholder-color": "#AAAAAA", "border-width": "1px", "border-radius": "3px", "icon-position": "right", "icon-color": "#FFFFFF", "icon-background": "#3E82F7", "icon-background-opacity": 1, "clear-size": "12px", "icon": "sbx-icon-search-13", "icon-size": "20px", "icon-clear": "sbx-icon-clear-3"}';
+  content: '{"input-height": "40px", "input-width": "500px", "input-border-color": "#CCCCCC", "input-background": "#FFFFFF", "input-focus-background": "#FFFFFF", "input-focus-border-color": "#3E82F7", "font-size": "14px", "placeholder-color": "#AAAAAA", "border-width": "1px", "border-radius": "3px", "icon-position": "right", "icon-color": "#FFFFFF", "icon-background": "#3E82F7", "icon-background-opacity": 1, "clear-size": "12px", "icon": "sbx-icon-search-13", "icon-size": "20px", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .medium-theme::before {
-  content: '{"namespace": "sbx-medium", "input-height": "36px", "border-radius": "18px", "input-width": "200px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "13px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#D9D9D9", "input-focus-border-color": "#AAAAAA", "icon-color": "#666666", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-2"}';
+  content: '{"input-height": "36px", "border-radius": "18px", "input-width": "200px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "13px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#D9D9D9", "input-focus-border-color": "#AAAAAA", "icon-color": "#666666", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-2"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .meetup-theme::before {
-  content: '{"namespace": "sbx-meetup", "input-height": "44px", "input-width": "300px", "border-radius": "3px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "16px", "input-background": "#F5F8FA", "icon-size": "24px", "icon-position": "right", "input-border-color": "#444444", "input-focus-border-color": "#000000", "icon-color": "#505050", "placeholder-color": "#BBBBBB", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-3"}';
+  content: '{"input-height": "44px", "input-width": "300px", "border-radius": "3px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "16px", "input-background": "#F5F8FA", "icon-size": "24px", "icon-position": "right", "input-border-color": "#444444", "input-focus-border-color": "#000000", "icon-color": "#505050", "placeholder-color": "#BBBBBB", "icon": "sbx-icon-search-13", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .spotify-theme::before {
-  content: '{"namespace": "sbx-spotify", "input-height": "24px", "input-width": "200px", "border-width": "0px", "border-radius": "12px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "12px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFFFFF", "icon-color": "#222", "icon": "sbx-icon-search-7", "icon-clear": "sbx-icon-clear-4"}';
+  content: '{"input-height": "24px", "input-width": "200px", "border-width": "0px", "border-radius": "12px", "icon-background": "#FFFFFF", "icon-background-opacity": 0, "font-size": "12px", "icon-size": "16px", "icon-position": "left", "input-border-color": "#FFFFFF", "input-focus-border-color": "#FFFFFF", "icon-color": "#222", "icon": "sbx-icon-search-7", "icon-clear": "sbx-icon-clear-4"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .twitter-theme::before {
-  content: '{"namespace": "sbx-twitter", "input-height": "32px", "input-width": "200px", "border-radius": "16px", "icon-background-opacity": 0, "font-size": "12px", "input-background": "#F5F8FA", "icon-size": "12px", "icon-position": "right", "input-border-color": "#E1E8ED", "input-focus-border-color": "#D6DEE3", "placeholder-color": "#9AAEB5", "icon-color": "#657580", "clear-size": "10px", "icon": "sbx-icon-search-8", "icon-clear": "sbx-icon-clear-3"}';
+  content: '{"input-height": "32px", "input-width": "200px", "border-radius": "16px", "icon-background-opacity": 0, "font-size": "12px", "input-background": "#F5F8FA", "icon-size": "12px", "icon-position": "right", "input-border-color": "#E1E8ED", "input-focus-border-color": "#D6DEE3", "placeholder-color": "#9AAEB5", "icon-color": "#657580", "clear-size": "10px", "icon": "sbx-icon-search-8", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;
   width: 0; }
 
 .airbnb-theme::before {
-  content: '{"namespace": "sbx-airbnb", "input-height": "32px", "input-width": "200px", "border-radius": "0px", "border-width": "0px", "icon-background-opacity": 1, "icon-background": "#FFFFFF", "font-size": "14px", "icon-size": "26px", "icon-position": "left", "input-focus-border-color": "#D6DEE3", "placeholder-color": "#9AAEB5", "icon-color": "#CDD0CC", "clear-size": "10px", "icon": "sbx-icon-search-23", "icon-clear": "sbx-icon-clear-3"}';
+  content: '{"input-height": "32px", "input-width": "200px", "border-radius": "0px", "border-width": "0px", "icon-background-opacity": 1, "icon-background": "#FFFFFF", "font-size": "14px", "icon-size": "26px", "icon-position": "left", "input-focus-border-color": "#D6DEE3", "placeholder-color": "#9AAEB5", "icon-color": "#CDD0CC", "clear-size": "10px", "icon": "sbx-icon-search-23", "icon-clear": "sbx-icon-clear-3"}';
   display: block;
   height: 0;
   overflow: hidden;

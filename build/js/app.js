@@ -54,7 +54,7 @@ function updateSnippet(){
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
-    scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\t' + config + '\n);\n\n' + data;
     scss += '\n.' + $('[name="namespace"]').val() + '{\n\t@include searchbox($custom...);\n}';
 
     Sass.options({
@@ -175,7 +175,8 @@ function populate(frm, data) {
 $('.json').each(function(){
   var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
   theme = JSON.parse(theme);
-  themes[theme['namespace']] = theme;
+  var themeKey = $(this).data("theme");
+  themes[themeKey] = theme;
 });
 
 

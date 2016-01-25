@@ -198,21 +198,21 @@
                 %a.btn{data-tab: true, href: "#tabscss"} SCSS
             %div{data-tabs-content: true}
               #tabprefix.tabs-pane.active{data-tabs-pane: true}
-                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#css-prefix"}
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target: "#css-prefix"}
                   %svg.icon
                     %use{xlink:href: "#copy-icon"}
                   Copy
                 %pre.snippet.bordered
                   %code#css-prefix.language-css
               #tabcss.tabs-pane{data-tabs-pane: true}
-                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#css"}
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target: "#css"}
                   %svg.icon
                     %use{xlink:href: "#copy-icon"}
                   Copy
                 %pre.snippet
                   %code#css.language-css
               #tabscss.tabs-pane{data-tabs-pane: true}
-                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#scss"}
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target: "#scss"}
                   %svg.icon
                     %use{xlink:href: "#copy-icon"}
                   Copy
@@ -223,14 +223,14 @@
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
       <!-- inject:svg --><!-- endinject -->
 
-    .json.amazon-theme
-    .json.facebook-theme
-    .json.google-theme
-    .json.medium-theme
-    .json.meetup-theme
-    .json.spotify-theme
-    .json.twitter-theme
-    .json.airbnb-theme
+    .json.amazon-theme{data-theme: "sbx-amazon"}
+    .json.facebook-theme{data-theme: "sbx-facebook"}
+    .json.google-theme{data-theme: "sbx-google"}
+    .json.medium-theme{data-theme: "sbx-medium"}
+    .json.meetup-theme{data-theme: "sbx-meetup"}
+    .json.spotify-theme{data-theme: "sbx-spotify"}
+    .json.twitter-theme{data-theme: "sbx-twitter"}
+    .json.airbnb-theme{data-theme: "sbx-airbnb"}
 
     %script{src: "js/vendors/jquery-2.2.0.min.js"}
     %script{src: "js/vendors/tabby.min.js"}
