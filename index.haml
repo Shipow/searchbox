@@ -145,10 +145,12 @@
           %form.searchbox.sbx-custom{role: "search", novalidate: true}
             %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true, spellcheck: false}
             %button.sbx-custom__submit{type: "submit"}
-              %svg
+              %svg{role: "img", aria-label: "Icon Search"}
+                %title Icon Search
                 %use{xlink:href: "#sbx-search-icon-10"}
             %button.sbx-custom__reset{type: "reset"}
-              %svg
+              %svg{role: "img", aria-label: "Icon Reset"}
+                %title Icon Reset
                 %use{xlink:href: "#sbx-icon-clear-3"}
 
       %section#snippets
