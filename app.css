@@ -421,7 +421,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
   background: #fff;
-  padding: 30px 0;
+  padding: 20px 0 30px;
   width: 300px;
   height: 100%; }
 
@@ -517,8 +517,8 @@ h3 {
       fill: #7e94a2; }
 
 .download-zip {
-  margin-top: 40px;
-  width: 100%;
+  margin: 30px 12px 0 0;
+  display: block;
   text-align: center;
   line-height: 40px; }
 
@@ -583,6 +583,10 @@ h3 {
       padding: 0;
       text-align: center;
       font-size: 12px; }
+    .settings [type='text'].jscolor:focus,
+    .settings [type='number'].jscolor:focus,
+    .settings .selectric.jscolor:focus {
+      border: none; }
 
 .snippet {
   border-top: 1px #cdd4d7 solid;
@@ -810,7 +814,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -914,7 +917,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1018,7 +1020,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1122,7 +1123,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1226,7 +1226,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1330,7 +1329,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1434,7 +1432,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1538,7 +1535,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1642,7 +1638,6 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
-    height: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
