@@ -29,7 +29,7 @@
 
     &__input {
       display: inline-block;
-      transition: all .4s ease;
+      transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
       margin: 0;
       border: 0;
       border-radius: $border-radius;

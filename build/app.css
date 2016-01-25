@@ -739,7 +739,7 @@ h3 {
   white-space: nowrap; }
   .sbx-default__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 3px;
@@ -842,7 +842,7 @@ h3 {
   white-space: nowrap; }
   .sbx-amazon__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 3px;
@@ -945,7 +945,7 @@ h3 {
   white-space: nowrap; }
   .sbx-google__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 3px;
@@ -1048,7 +1048,7 @@ h3 {
   white-space: nowrap; }
   .sbx-facebook__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 3px;
@@ -1151,7 +1151,7 @@ h3 {
   white-space: nowrap; }
   .sbx-medium__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 18px;
@@ -1254,7 +1254,7 @@ h3 {
   white-space: nowrap; }
   .sbx-meetup__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 3px;
@@ -1357,7 +1357,7 @@ h3 {
   white-space: nowrap; }
   .sbx-spotify__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 12px;
@@ -1460,7 +1460,7 @@ h3 {
   white-space: nowrap; }
   .sbx-twitter__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 16px;
@@ -1563,7 +1563,7 @@ h3 {
   white-space: nowrap; }
   .sbx-airbnb__input {
     display: inline-block;
-    transition: all .4s ease;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     margin: 0;
     border: 0;
     border-radius: 0px;
