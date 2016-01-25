@@ -42,16 +42,16 @@
           %h3 Input
           .form-group
             %label width px
-            %input{type: "number", name: "input-width-px", value: "250", step: "2"}
+            %input{type: "number", name: "input-width-px", value: "250", step: "2", min: "22", max: "800"}
           .form-group
             %label height px
-            %input{type: "number", name: "input-height-px", value: "50", step: "2"}
+            %input{type: "number", name: "input-height-px", value: "50", step: "2", min: "22", max: "60"}
           .form-group
             %label border-width px
-            %input{type: "number", name: "border-width-px", value: "2"}
+            %input{type: "number", name: "border-width-px", value: "2", min: "0", max: "6"}
           .form-group
             %label border-radius px
-            %input{type: "number", name: "border-radius-px", value: "25"}
+            %input{type: "number", name: "border-radius-px", value: "25", min: "0", max: "30"}
           .form-group
             %label border
             %input.jscolor{type: "text", name: "input-border-color", value: "#ccc"}
@@ -66,7 +66,7 @@
             %input.jscolor{type: "text", name: "input-focus-background", value: "white"}
           .form-group
             %label font-size px
-            %input{type: "number", name: "font-size-px", value: "14"}
+            %input{type: "number", name: "font-size-px", value: "14", min: "12", max: "18"}
           .form-group
             %label placeholder
             %input.jscolor{type: "text", name: "placeholder-color", value: "#bbb"}
@@ -100,7 +100,7 @@
               %option{value: "sbx-icon-search-23"} 23
           .form-group
             %label icon-size px
-            %input{type: "number", name: "icon-size-px", value: "30", step: "2"}
+            %input{type: "number", name: "icon-size-px", value: "30", step: "2", min: "12", max: "40"}
           .form-group
             %label position
             %select.select{name: "icon-position"}
@@ -114,7 +114,7 @@
             %input.jscolor{type: "text", name: "icon-background", value: "#FFFFFF"}
           .form-group
             %label bg-opacity
-            %input{type: "number", name: "icon-background-opacity", value: "0", step: ".1"}
+            %input{type: "number", name: "icon-background-opacity", value: "0", step: ".1", min: "0", max: "1"}
 
 
           %h3 Reset
@@ -128,7 +128,7 @@
               %option{value: "sbx-icon-clear-5", selected: true} 5
           .form-group
             %label icon-size px
-            %input{type: "number", name: "clear-size-px", value: "18", step: "2"}
+            %input{type: "number", name: "clear-size-px", value: "18", step: "2", min: "8"}
           .form-group.full
             %a.btn.download-zip{href: "javascript:void(0);"}
               %svg.icon
