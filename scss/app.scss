@@ -429,14 +429,14 @@ h3 {
 @import 'sbx-themes/airbnb';
 
 @include searchbox();
-@include searchbox(($amazon)...);
-@include searchbox(($google)...);
-@include searchbox(($facebook)...);
-@include searchbox(($medium)...);
-@include searchbox(($meetup)...);
-@include searchbox(($spotify)...);
-@include searchbox(($twitter)...);
-@include searchbox(($airbnb)...);
+@include searchbox($amazon...);
+@include searchbox($google...);
+@include searchbox($facebook...);
+@include searchbox($medium...);
+@include searchbox($meetup...);
+@include searchbox($spotify...);
+@include searchbox($twitter...);
+@include searchbox($airbnb...);
 
 .amazon-theme::before {
   @include json-encode($amazon);
