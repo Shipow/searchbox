@@ -54,7 +54,7 @@ function updateSnippet(){
     });
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
-    scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
+    scss = '$custom:(\n\t' + config + '\n);\n\n' + data;
     scss += '\n.' + $('[name="namespace"]').val() + '{\n\t@include searchbox($custom...);\n}';
 
     Sass.options({
@@ -82,7 +82,10 @@ function updateSnippet(){
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
-  $('.snippet code.language-markup').text( svgWrapper + $('.searchbox').parent().html());
+  $('.snippet code.language-markup').text( html_beautify( svgWrapper + $('.searchbox').parent().html(),{
+    indent_size: 2,
+    indent_char: " "
+  }));
 
   $('.select-icon').selectric('refresh');
   $('.select').selectric('refresh');
@@ -172,7 +175,8 @@ function populate(frm, data) {
 $('.json').each(function(){
   var theme = window.getComputedStyle(this,':before').content.replace(/\\"/g,'"').replace(/"{/g,'{').replace(/\}"/g,'}').replace(/'/g,'');
   theme = JSON.parse(theme);
-  themes[theme['namespace']] = theme;
+  var themeKey = $(this).data("theme");
+  themes[themeKey] = theme;
 });
 
 
