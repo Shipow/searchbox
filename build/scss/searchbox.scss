@@ -24,13 +24,12 @@
     position: relative;
     width: $input-width;
     height: $input-height;
-    line-height: 1.2em;
     white-space: nowrap;
+    box-sizing: border-box;
 
     &__input {
       display: inline-block;
       transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-      margin: 0;
       border: 0;
       border-radius: $border-radius;
       box-shadow: inset 0 0 0 $border-width $input-border-color;
@@ -42,7 +41,6 @@
       vertical-align: middle;
       white-space: normal;
       font-size: $font-size;
-      box-sizing: border-box;
       appearance: none;
 
       &::-webkit-search-decoration,
@@ -72,8 +70,8 @@
     &__submit {
       position: absolute;
       top: 0;
-      margin: 0;
       #{$icon-position}: 0;
+      margin: 0;
       border: 0;
       border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
       background-color: rgba($icon-background, $icon-background-opacity);
@@ -116,6 +114,7 @@
       position: absolute;
       top: ($input-height - $clear-size) / 2 - 4px;
       right: if($icon-position == 'right', 8px + $input-height, ($input-height - $clear-size) / 2) - 4px;
+      margin: 0;
       border: 0;
       background: none;
       cursor: pointer;
