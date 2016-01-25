@@ -171,6 +171,8 @@
               %li
                 %a.btn.active{data-tab: true, href: "#tabprefix"} CSS
               %li
+                %a.btn{data-tab: true, href: "#tabcss"} Unprefixed CSS
+              %li
                 %a.btn{data-tab: true, href: "#tabscss"} SCSS
             %div{data-tabs-content: true}
               #tabprefix.tabs-pane.active{data-tabs-pane: true}
@@ -180,6 +182,13 @@
                   Copy
                 %pre.snippet.bordered
                   %code#css-prefix.language-css
+              #tabcss.tabs-pane{data-tabs-pane: true}
+                %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#css"}
+                  %svg.icon
+                    %use{xlink:href: "#copy-icon"}
+                  Copy
+                %pre.snippet
+                  %code#css.language-css
               #tabscss.tabs-pane{data-tabs-pane: true}
                 %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#scss"}
                   %svg.icon
@@ -187,6 +196,7 @@
                   Copy
                 %pre.snippet
                   %code#scss.language-scss
+
 
     .svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden"}
       <!-- inject:svg --><!-- endinject -->

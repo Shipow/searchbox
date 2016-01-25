@@ -735,12 +735,11 @@ h3 {
   position: relative;
   width: 500px;
   height: 40px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-default__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #cccccc;
@@ -752,7 +751,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -775,8 +773,8 @@ h3 {
   .sbx-default__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #3e82f7;
@@ -810,6 +808,7 @@ h3 {
     position: absolute;
     top: 10px;
     right: 44px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -838,12 +837,11 @@ h3 {
   position: relative;
   width: 600px;
   height: 38px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-amazon__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -855,7 +853,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -878,8 +875,8 @@ h3 {
   .sbx-amazon__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #ffbf58;
@@ -913,6 +910,7 @@ h3 {
     position: absolute;
     top: 9px;
     right: 42px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -941,12 +939,11 @@ h3 {
   position: relative;
   width: 500px;
   height: 40px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-google__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #CCCCCC;
@@ -958,7 +955,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -981,8 +977,8 @@ h3 {
   .sbx-google__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #3e82f7;
@@ -1016,6 +1012,7 @@ h3 {
     position: absolute;
     top: 10px;
     right: 44px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1044,12 +1041,11 @@ h3 {
   position: relative;
   width: 450px;
   height: 26px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-facebook__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 0px #cccccc;
@@ -1061,7 +1057,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 13px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1084,8 +1079,8 @@ h3 {
   .sbx-facebook__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #f6f7f8;
@@ -1119,6 +1114,7 @@ h3 {
     position: absolute;
     top: 3px;
     right: 30px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1147,12 +1143,11 @@ h3 {
   position: relative;
   width: 200px;
   height: 36px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-medium__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 18px;
     box-shadow: inset 0 0 0 1px #D9D9D9;
@@ -1164,7 +1159,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 13px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1187,8 +1181,8 @@ h3 {
   .sbx-medium__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     left: 0;
+    margin: 0;
     border: 0;
     border-radius: 18px 0 0 18px;
     background-color: rgba(255, 255, 255, 0);
@@ -1222,6 +1216,7 @@ h3 {
     position: absolute;
     top: 8px;
     right: 8px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1250,12 +1245,11 @@ h3 {
   position: relative;
   width: 300px;
   height: 44px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-meetup__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #444444;
@@ -1267,7 +1261,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 16px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1290,8 +1283,8 @@ h3 {
   .sbx-meetup__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: rgba(255, 255, 255, 0);
@@ -1325,6 +1318,7 @@ h3 {
     position: absolute;
     top: 12px;
     right: 48px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1353,12 +1347,11 @@ h3 {
   position: relative;
   width: 200px;
   height: 24px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-spotify__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 12px;
     box-shadow: inset 0 0 0 0px #FFFFFF;
@@ -1370,7 +1363,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 12px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1393,8 +1385,8 @@ h3 {
   .sbx-spotify__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     left: 0;
+    margin: 0;
     border: 0;
     border-radius: 12px 0 0 12px;
     background-color: rgba(255, 255, 255, 0);
@@ -1428,6 +1420,7 @@ h3 {
     position: absolute;
     top: 2px;
     right: 2px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1456,12 +1449,11 @@ h3 {
   position: relative;
   width: 200px;
   height: 32px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-twitter__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 16px;
     box-shadow: inset 0 0 0 1px #E1E8ED;
@@ -1473,7 +1465,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 12px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1496,8 +1487,8 @@ h3 {
   .sbx-twitter__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     right: 0;
+    margin: 0;
     border: 0;
     border-radius: 0 16px 16px 0;
     background-color: rgba(62, 130, 247, 0);
@@ -1531,6 +1522,7 @@ h3 {
     position: absolute;
     top: 7px;
     right: 36px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
@@ -1559,12 +1551,11 @@ h3 {
   position: relative;
   width: 200px;
   height: 32px;
-  line-height: 1.2em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  box-sizing: border-box; }
   .sbx-airbnb__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-    margin: 0;
     border: 0;
     border-radius: 0px;
     box-shadow: inset 0 0 0 0px #cccccc;
@@ -1576,7 +1567,6 @@ h3 {
     vertical-align: middle;
     white-space: normal;
     font-size: 14px;
-    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -1599,8 +1589,8 @@ h3 {
   .sbx-airbnb__submit {
     position: absolute;
     top: 0;
-    margin: 0;
     left: 0;
+    margin: 0;
     border: 0;
     border-radius: 0px 0 0 0px;
     background-color: white;
@@ -1634,6 +1624,7 @@ h3 {
     position: absolute;
     top: 7px;
     right: 7px;
+    margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
