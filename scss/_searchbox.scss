@@ -36,6 +36,7 @@
       background: $input-background;
       padding: 0;
       padding-left: if($icon-position == 'right', $font-size, $input-height + if($icon-background-opacity == 0, 0, 8px));
+      padding-right: if($icon-position == 'right', $input-height, 0) + $clear-size * 2 + 8px;
       width: 100%;
       height: 100%;
       vertical-align: middle;
@@ -76,7 +77,6 @@
       border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
       background-color: rgba($icon-background, $icon-background-opacity);
       padding: 0;
-      padding-left: if($icon-position == 'right', 0, ($border-radius) / 3);
       width: $input-height;
       height: 100%;
       vertical-align: middle;
