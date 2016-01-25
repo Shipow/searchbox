@@ -169,12 +169,17 @@
               %svg{role: "img", aria-label: "Reset"}
                 %title Icon Reset
                 %use{xlink:href: "#sbx-icon-clear-3"}
+          / Js: focus search input after reset
+          :javascript
+             document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
+               this.parentNode.querySelector('input').focus();
+             });
 
       %section#snippets
         .row
           .col-6
             %ul.inline-list
-              %li HTML + Images SVG
+              %li HTML + Images SVG + JS
               %li.right
             .pane
               %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
@@ -237,7 +242,5 @@
     %script{src: "js/vendors/FileSaver.min.js"}
     %script{src: "js/vendors/sass.js"}
     %script{src: "js/vendors/autoprefixer.js"}
-
-    %script{src: "js/searchbox.js"}
 
     %script{src: "js/app.js"}
