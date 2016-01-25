@@ -422,6 +422,7 @@ h3 {
 @import 'sbx-themes/meetup';
 @import 'sbx-themes/spotify';
 @import 'sbx-themes/twitter';
+@import 'sbx-themes/airbnb';
 
 @include searchbox();
 @include searchbox(($amazon)...);
@@ -431,6 +432,7 @@ h3 {
 @include searchbox(($meetup)...);
 @include searchbox(($spotify)...);
 @include searchbox(($twitter)...);
+@include searchbox(($airbnb)...);
 
 .amazon-theme::before {
   @include json-encode($amazon);
@@ -458,6 +460,10 @@ h3 {
 
 .twitter-theme::before {
   @include json-encode($twitter);
+}
+
+.airbnb-theme::before {
+  @include json-encode($airbnb);
 }
 
 @keyframes flash {

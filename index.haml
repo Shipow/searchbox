@@ -24,8 +24,9 @@
         SearchBox
     %aside.generator-sidebar.fade
       .settings
+        %h3 Editor
         .form-group.full
-          %label Select a Theme
+          %label Theme
           %select.select{name: "namespace"}
             %option{value: "sbx-custom", selected: true} Custom
             %option{value: "sbx-google"} Google
@@ -35,6 +36,7 @@
             %option{value: "sbx-meetup"} Meetup
             %option{value: "sbx-spotify"} Spotify
             %option{value: "sbx-twitter"} Twitter
+            %option{value: "sbx-airbnb"} AirBnb
 
         %form#settings
           %h3 Input
@@ -89,6 +91,7 @@
               %option{value: "sbx-icon-search-20"} 20
               %option{value: "sbx-icon-search-21"} 21
               %option{value: "sbx-icon-search-22"} 22
+              %option{value: "sbx-icon-search-23"} 23
           .form-group
             %label icon-size px
             %input{type: "number", name: "icon-size-px", value: "30", step: "2"}
@@ -194,6 +197,7 @@
     .json.meetup-theme
     .json.spotify-theme
     .json.twitter-theme
+    .json.airbnb-theme
 
     %script{src: "js/vendors/jquery-2.2.0.min.js"}
     %script{src: "js/vendors/tabby.min.js"}
