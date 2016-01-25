@@ -203,13 +203,22 @@
             </svg>
           </button>
         </form>
+        <!--Js: focus search input after reset-->
+        <script type="text/javascript">
+          //<![CDATA[
+           document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
+             this.parentNode.querySelector('input').focus();
+           });
+          
+          //]]>
+        </script>
       </div>
     </section>
     <section id="snippets">
       <div class="row">
         <div class="col-6">
           <ul class="inline-list">
-            <li>HTML + Images SVG</li>
+            <li>HTML + Images SVG + JS</li>
             <li class="right"></li>
           </ul>
           <div class="pane">
@@ -399,7 +408,6 @@
   <script src="js/vendors/FileSaver.min.js"></script>
   <script src="js/vendors/sass.js"></script>
   <script src="js/vendors/autoprefixer.js"></script>
-  <script src="js/searchbox.js"></script>
   <script src="js/app.js"></script>
 </body>
 
