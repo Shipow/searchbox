@@ -137,19 +137,17 @@
       animation-name: sbx-reset-in;
       animation-duration: .15s;
     }
-  }
-}
+    
+    @keyframes sbx-reset-in {
+      from {
+        transform: translate3d(-20%, 0, 0);
+        opacity: 0;
+      }
 
-
-
-@keyframes sbx-reset-in {
-  from {
-    transform: translate3d(-20%, 0, 0);
-    opacity: 0;
-  }
-
-  to {
-    transform: none;
-    opacity: 1;
+      to {
+        transform: none;
+        opacity: 1;
+      }
+    }
   }
 }
