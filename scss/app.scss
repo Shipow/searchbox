@@ -58,7 +58,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
   background: #fff;
-  padding: 30px 0;
+  padding: 20px 0 30px;
   width: 300px;
   height: 100%;
 }
@@ -171,8 +171,8 @@ h3 {
 }
 
 .download-zip {
-  margin-top: 40px;
-  width: 100%;
+  margin: 30px 12px 0 0;
+  display: block;
   text-align: center;
   line-height: 40px;
 }
@@ -252,6 +252,10 @@ h3 {
       padding: 0;
       text-align: center;
       font-size: 12px;
+    }
+
+    &.jscolor:focus {
+      border: none;
     }
   }
 }

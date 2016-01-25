@@ -56,11 +56,17 @@
             %label border
             %input.jscolor{type: "text", name: "input-border-color", value: "#ccc"}
           .form-group
-            %label font-size px
-            %input{type: "number", name: "font-size-px", value: "14"}
+            %label border-focus
+            %input.jscolor{type: "text", name: "input-focus-border-color", value: "#FF2E83"}
           .form-group
             %label background
             %input.jscolor{type: "text", name: "input-background", value: "white"}
+          .form-group
+            %label background-focus
+            %input.jscolor{type: "text", name: "input-focus-background", value: "white"}
+          .form-group
+            %label font-size px
+            %input{type: "number", name: "font-size-px", value: "14"}
           .form-group
             %label placeholder
             %input.jscolor{type: "text", name: "placeholder-color", value: "#bbb"}
@@ -110,13 +116,6 @@
             %label bg-opacity
             %input{type: "number", name: "icon-background-opacity", value: "0", step: ".1"}
 
-          %h3 Focus
-          .form-group
-            %label focus-border
-            %input.jscolor{type: "text", name: "input-focus-border-color", value: "#FF2E83"}
-          .form-group
-            %label focus-background
-            %input.jscolor{type: "text", name: "input-focus-background", value: "white"}
 
           %h3 Reset
           .form-group
@@ -156,7 +155,7 @@
         .row
           .col-6
             %ul.inline-list
-              %li HTML + Images (SVG)
+              %li HTML + Images SVG
               %li.right
             .pane
               %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
