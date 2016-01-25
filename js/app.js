@@ -82,7 +82,10 @@ function updateSnippet(){
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
   var svgWrapper = '  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">\n\t' + searchSymbol + '\n\t' + clearSymbol + '\n  </svg>\n';
-  $('.snippet code.language-markup').text( svgWrapper + $('.searchbox').parent().html());
+  $('.snippet code.language-markup').text( html_beautify( svgWrapper + $('.searchbox').parent().html(),{
+    indent_size: 2,
+    indent_char: " "
+  }));
 
   $('.select-icon').selectric('refresh');
   $('.select').selectric('refresh');
