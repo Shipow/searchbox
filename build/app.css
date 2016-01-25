@@ -730,14 +730,14 @@ h3 {
     transform: none;
     opacity: 1; } }
 
-.sbx-default {
+.sbx-custom {
   display: inline-block;
   position: relative;
   width: 500px;
   height: 40px;
   white-space: nowrap;
   box-sizing: border-box; }
-  .sbx-default__input {
+  .sbx-custom__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
     border: 0;
@@ -755,23 +755,23 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
-    .sbx-default__input::-webkit-search-decoration, .sbx-default__input::-webkit-search-cancel-button, .sbx-default__input::-webkit-search-results-button, .sbx-default__input::-webkit-search-results-decoration {
+    .sbx-custom__input::-webkit-search-decoration, .sbx-custom__input::-webkit-search-cancel-button, .sbx-custom__input::-webkit-search-results-button, .sbx-custom__input::-webkit-search-results-decoration {
       display: none; }
-    .sbx-default__input:hover {
+    .sbx-custom__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
-    .sbx-default__input:focus, .sbx-default__input:active {
+    .sbx-custom__input:focus, .sbx-custom__input:active {
       outline: 0;
       box-shadow: inset 0 0 0 1px #3e82f7;
       background: white; }
-    .sbx-default__input::-webkit-input-placeholder {
+    .sbx-custom__input::-webkit-input-placeholder {
       color: #aaaaaa; }
-    .sbx-default__input::-moz-placeholder {
+    .sbx-custom__input::-moz-placeholder {
       color: #aaaaaa; }
-    .sbx-default__input:-ms-input-placeholder {
+    .sbx-custom__input:-ms-input-placeholder {
       color: #aaaaaa; }
-    .sbx-default__input::placeholder {
+    .sbx-custom__input::placeholder {
       color: #aaaaaa; }
-  .sbx-default__submit {
+  .sbx-custom__submit {
     position: absolute;
     top: 0;
     right: 0;
@@ -788,22 +788,22 @@ h3 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-    .sbx-default__submit::before {
+    .sbx-custom__submit::before {
       display: inline-block;
       margin-right: -4px;
       height: 100%;
       vertical-align: middle;
       content: ''; }
-    .sbx-default__submit:hover, .sbx-default__submit:active {
+    .sbx-custom__submit:hover, .sbx-custom__submit:active {
       cursor: pointer; }
-    .sbx-default__submit:focus {
+    .sbx-custom__submit:focus {
       outline: 0; }
-    .sbx-default__submit svg {
+    .sbx-custom__submit svg {
       width: 18px;
       height: 18px;
       vertical-align: middle;
       fill: white; }
-  .sbx-default__reset {
+  .sbx-custom__reset {
     display: none;
     position: absolute;
     top: 10px;
@@ -818,14 +818,14 @@ h3 {
     -ms-user-select: none;
     user-select: none;
     fill: rgba(0, 0, 0, 0.5); }
-    .sbx-default__reset:focus {
+    .sbx-custom__reset:focus {
       outline: 0; }
-    .sbx-default__reset svg {
+    .sbx-custom__reset svg {
       display: block;
       margin: 4px;
       width: 12px;
       height: 12px; }
-    .sbx-default__input:valid ~ .sbx-default__reset {
+    .sbx-default__input:valid ~ .sbx-custom__reset {
       display: block;
       -webkit-animation-name: sbx-reset-in;
       animation-name: sbx-reset-in;

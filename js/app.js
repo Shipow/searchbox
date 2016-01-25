@@ -55,7 +55,7 @@ function updateSnippet(){
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
     scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
-    scss += '\n@include searchbox($custom...);'
+    scss += '\n.sbx-custom{\n\t@include searchbox($custom...);\n}'
 
     Sass.options({
       style: Sass.style.expanded

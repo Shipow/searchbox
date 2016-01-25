@@ -428,15 +428,41 @@ h3 {
 @import 'sbx-themes/twitter';
 @import 'sbx-themes/airbnb';
 
-@include searchbox();
-@include searchbox($amazon...);
-@include searchbox($google...);
-@include searchbox($facebook...);
-@include searchbox($medium...);
-@include searchbox($meetup...);
-@include searchbox($spotify...);
-@include searchbox($twitter...);
-@include searchbox($airbnb...);
+.sbx-custom{
+  @include searchbox();
+}
+
+.sbx-amazon{
+  @include searchbox($amazon...);
+}
+
+.sbx-google{
+  @include searchbox($google...);
+}
+
+.sbx-facebook{
+  @include searchbox($facebook...);
+}
+
+.sbx-medium{
+  @include searchbox($medium...);
+}
+
+.sbx-meetup{
+  @include searchbox($meetup...);
+}
+
+.sbx-spotify{
+  @include searchbox($spotify...);
+}
+
+.sbx-twitter{
+  @include searchbox($twitter...);
+}
+
+.sbx-airbnb{
+  @include searchbox($airbnb...);
+}
 
 .amazon-theme::before {
   @include json-encode($amazon);
