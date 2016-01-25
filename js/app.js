@@ -55,7 +55,7 @@ function updateSnippet(){
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
     scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
-    scss += '\n@include searchbox($custom...);'
+    scss += '\n.' + $('[name="namespace"]').val() + '{\n\t@include searchbox($custom...);\n}';
 
     Sass.options({
       style: Sass.style.expanded
@@ -76,8 +76,8 @@ function updateSnippet(){
   });
   var searchIcon = $('select[name="icon"]').val();
   var clearIcon = $('select[name="icon-clear"]').val();
-  $('[type="submit"] use').attr('xlink:href','#' + searchIcon);
-  $('[type="reset"] use').attr('xlink:href','#' + clearIcon);
+  $('.searchbox [type="submit"] use').attr('xlink:href','#' + searchIcon);
+  $('.searchbox [type="reset"] use').attr('xlink:href','#' + clearIcon);
   var serializer = new XMLSerializer();
   var searchSymbol = serializer.serializeToString($('#' + searchIcon)[0]);
   var clearSymbol = serializer.serializeToString($('#' + clearIcon)[0]);
@@ -215,4 +215,23 @@ clipboard.on('success', function(e) {
       how: 'append'
   });
   e.clearSelection();
+});
+
+$('.edit-fidddle').on('click', function(e){
+  e.preventDefault;
+  html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n'+
+  '<html lang="en">\n'+
+  '<head>\n' +
+  '<meta http-equiv="content-type" content="text/html; charset=utf-8">\n'+
+  '<title>title</title>\n'+
+  '<link rel="stylesheet" type="text/css" href="style.css">\n' +
+  '</head>\n' +
+  '<body>\n' +
+  $('.snippet code.language-markup').text() +
+  '</body>\n'+
+  '</html>';
+  $('#jsfiddle [name="html"]').val(html);
+  $('#jsfiddle [name="css"]').val(prefixed);
+
+  $('#jsfiddle').submit();
 });

@@ -1,156 +1,153 @@
 @mixin searchbox(
-    $namespace: 'sbx-default',
-    $input-width: 500px,
-    $input-height: 40px,
-    $border-width: 1px,
-    $border-radius: 3px,
-    $input-border-color: rgb(204, 204, 204),
-    $input-focus-border-color: rgb(62, 130, 247),
-    $input-background: rgb(255, 255, 255),
-    $input-focus-background: rgb(255, 255, 255),
-    $font-size: 14px,
-    $placeholder-color: rgb(170, 170, 170),
-    $icon: 'sbx-icon-search-1',
-    $icon-size: 18px,
-    $icon-position: right,
-    $icon-color: rgb(255, 255, 255),
-    $icon-background: rgb(62, 130, 247),
-    $icon-background-opacity: 1,
-    $icon-clear: 'sbx-icon-clear-1',
-    $clear-size: 12px
-  ) {
-  .#{$namespace} {
+  $namespace: 'sbx-default',
+  $input-width: 500px,
+  $input-height: 40px,
+  $border-width: 1px,
+  $border-radius: 3px,
+  $input-border-color: rgb(204, 204, 204),
+  $input-focus-border-color: rgb(62, 130, 247),
+  $input-background: rgb(255, 255, 255),
+  $input-focus-background: rgb(255, 255, 255),
+  $font-size: 14px,
+  $placeholder-color: rgb(170, 170, 170),
+  $icon: 'sbx-icon-search-1',
+  $icon-size: 18px,
+  $icon-position: right,
+  $icon-color: rgb(255, 255, 255),
+  $icon-background: rgb(62, 130, 247),
+  $icon-background-opacity: 1,
+  $icon-clear: 'sbx-icon-clear-1',
+  $clear-size: 12px
+) {
+  display: inline-block;
+  position: relative;
+  width: $input-width;
+  height: $input-height;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  &__input {
     display: inline-block;
-    position: relative;
-    width: $input-width;
-    height: $input-height;
-    white-space: nowrap;
-    box-sizing: border-box;
+    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: inset 0 0 0 $border-width $input-border-color;
+    background: $input-background;
+    padding: 0;
+    padding-left: if($icon-position == 'right', $font-size, $input-height + if($icon-background-opacity == 0, 0, 8px));
+    padding-right: if($icon-position == 'right', $input-height, 0) + $clear-size * 2 + 8px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: $font-size;
+    appearance: none;
 
-    &__input {
-      display: inline-block;
-      transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
-      border: 0;
-      border-radius: $border-radius;
-      box-shadow: inset 0 0 0 $border-width $input-border-color;
-      background: $input-background;
-      padding: 0;
-      padding-left: if($icon-position == 'right', $font-size, $input-height + if($icon-background-opacity == 0, 0, 8px));
-      padding-right: if($icon-position == 'right', $input-height, 0) + $clear-size * 2 + 8px;
-      width: 100%;
-      height: 100%;
-      vertical-align: middle;
-      white-space: normal;
-      font-size: $font-size;
-      appearance: none;
-
-      &::-webkit-search-decoration,
-      &::-webkit-search-cancel-button,
-      &::-webkit-search-results-button,
-      &::-webkit-search-results-decoration {
-        display: none;
-      }
-
-      &:hover {
-        box-shadow: inset 0 0 0 $border-width darken($input-border-color, 10%);
-      }
-
-      &:focus,
-      &:active {
-        outline: 0;
-        box-shadow: inset 0 0 0 $border-width $input-focus-border-color;
-        background: $input-focus-background;
-      }
-
-      &::placeholder {
-        color: $placeholder-color;
-      }
-
-    }
-
-    &__submit {
-      position: absolute;
-      top: 0;
-      #{$icon-position}: 0;
-      margin: 0;
-      border: 0;
-      border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
-      background-color: rgba($icon-background, $icon-background-opacity);
-      padding: 0;
-      width: $input-height;
-      height: 100%;
-      vertical-align: middle;
-      text-align: center;
-      user-select: none;
-
-      // Helper for vertical alignement of the icon
-      &::before {
-        display: inline-block;
-        margin-right: -4px;
-        height: 100%;
-        vertical-align: middle;
-        content: '';
-      }
-
-      &:hover,
-      &:active {
-        cursor: pointer;
-      }
-
-      &:focus {
-        outline: 0;
-      }
-
-      svg {
-        width: $icon-size;
-        height: $icon-size;
-        vertical-align: middle;
-        fill: $icon-color;
-      }
-    }
-
-    &__reset {
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
       display: none;
-      position: absolute;
-      top: ($input-height - $clear-size) / 2 - 4px;
-      right: if($icon-position == 'right', 8px + $input-height, ($input-height - $clear-size) / 2) - 4px;
-      margin: 0;
-      border: 0;
-      background: none;
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 $border-width darken($input-border-color, 10%);
+    }
+
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: inset 0 0 0 $border-width $input-focus-border-color;
+      background: $input-focus-background;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    #{$icon-position}: 0;
+    margin: 0;
+    border: 0;
+    border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
+    background-color: rgba($icon-background, $icon-background-opacity);
+    padding: 0;
+    width: $input-height;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    user-select: none;
+
+    // Helper for vertical alignement of the icon
+    &::before {
+      display: inline-block;
+      margin-right: -4px;
+      height: 100%;
+      vertical-align: middle;
+      content: '';
+    }
+
+    &:hover,
+    &:active {
       cursor: pointer;
-      padding: 0;
-      user-select: none;
-      fill: rgba(#000, .5);
+    }
 
-      &:focus {
-        outline: 0;
-      }
+    &:focus {
+      outline: 0;
+    }
 
-      svg {
-        display: block;
-        margin: 4px;
-        width: $clear-size;
-        height: $clear-size;
-      }
-
-      .#{$namespace}__input:valid ~ & {
-        display: block;
-        animation-name: sbx-reset-in;
-        animation-duration: .15s;
-      }
+    svg {
+      width: $icon-size;
+      height: $icon-size;
+      vertical-align: middle;
+      fill: $icon-color;
     }
   }
-}
 
+  &__reset {
+    display: none;
+    position: absolute;
+    top: ($input-height - $clear-size) / 2 - 4px;
+    right: if($icon-position == 'right', 8px + $input-height, ($input-height - $clear-size) / 2) - 4px;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    user-select: none;
+    fill: rgba(#000, .5);
 
-@keyframes sbx-reset-in {
-  from {
-    transform: translate3d(-20%, 0, 0);
-    opacity: 0;
-  }
+    &:focus {
+      outline: 0;
+    }
 
-  to {
-    transform: none;
-    opacity: 1;
+    svg {
+      display: block;
+      margin: 4px;
+      width: $clear-size;
+      height: $clear-size;
+    }
+
+    .#{$namespace}__input:valid ~ & {
+      display: block;
+      animation-name: sbx-reset-in;
+      animation-duration: .15s;
+    }
+    
+    @keyframes sbx-reset-in {
+      from {
+        transform: translate3d(-20%, 0, 0);
+        opacity: 0;
+      }
+
+      to {
+        transform: none;
+        opacity: 1;
+      }
+    }
   }
 }
