@@ -55,7 +55,11 @@ function updateSnippet(){
     config = JSON.stringify(config).replace(/"|{|}/g, '').replace(/,/g,',\n\t').replace(/:/g,': ');
 
     scss = '$custom:(\n\tnamespace:\'sbx-custom\',\n\t' + config + '\n);\n\n' + data;
-    scss += '\n@include searchbox(($custom)...);'
+    scss += '\n@include searchbox($custom...);'
+
+    Sass.options({
+      style: Sass.style.expanded
+    });
 
     Sass.compile(scss, function(result) {
       css = result.text;
@@ -63,6 +67,7 @@ function updateSnippet(){
       prefixed = autoprefixer.process(css);
       $("<style>" + prefixed + "</style>").appendTo( "head" );
       $('#css-prefix').text(prefixed.css);
+      $('#css').text(css);
       $('#scss').text(scss);
       Prism.highlightAll(false);
       $('.main-content').removeClass('hide');

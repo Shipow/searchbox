@@ -49,19 +49,19 @@
         <h3>Input</h3>
         <div class="form-group">
           <label>width px</label>
-          <input type="number" name="input-width-px" value="250" step="2" />
+          <input type="number" name="input-width-px" value="250" step="2" min="22" max="800" />
         </div>
         <div class="form-group">
           <label>height px</label>
-          <input type="number" name="input-height-px" value="50" step="2" />
+          <input type="number" name="input-height-px" value="50" step="2" min="22" max="60" />
         </div>
         <div class="form-group">
           <label>border-width px</label>
-          <input type="number" name="border-width-px" value="2" />
+          <input type="number" name="border-width-px" value="2" min="0" max="6" />
         </div>
         <div class="form-group">
           <label>border-radius px</label>
-          <input type="number" name="border-radius-px" value="25" />
+          <input type="number" name="border-radius-px" value="25" min="0" max="30" />
         </div>
         <div class="form-group">
           <label>border</label>
@@ -81,7 +81,7 @@
         </div>
         <div class="form-group">
           <label>font-size px</label>
-          <input type="number" name="font-size-px" value="14" />
+          <input type="number" name="font-size-px" value="14" min="12" max="18" />
         </div>
         <div class="form-group">
           <label>placeholder</label>
@@ -118,7 +118,7 @@
         </div>
         <div class="form-group">
           <label>icon-size px</label>
-          <input type="number" name="icon-size-px" value="30" step="2" />
+          <input type="number" name="icon-size-px" value="30" step="2" min="12" max="40" />
         </div>
         <div class="form-group">
           <label>position</label>
@@ -137,7 +137,7 @@
         </div>
         <div class="form-group">
           <label>bg-opacity</label>
-          <input type="number" name="icon-background-opacity" value="0" step=".1" />
+          <input type="number" name="icon-background-opacity" value="0" step=".1" min="0" max="1" />
         </div>
         <h3>Reset</h3>
         <div class="form-group">
@@ -152,7 +152,7 @@
         </div>
         <div class="form-group">
           <label>icon-size px</label>
-          <input type="number" name="clear-size-px" value="18" step="2" />
+          <input type="number" name="clear-size-px" value="18" step="2" min="8" />
         </div>
         <div class="form-group full">
           <a href="javascript:void(0);" class="btn download-zip">
@@ -173,12 +173,14 @@
         <form role="search" novalidate="novalidate" class="searchbox sbx-custom">
           <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" />
           <button type="submit" class="sbx-custom__submit">
-            <svg>
+            <svg role="img" aria-label="Icon Search">
+              <title>Icon Search</title>
               <use xlink:href="#sbx-search-icon-10"></use>
             </svg>
           </button>
           <button type="reset" class="sbx-custom__reset">
-            <svg>
+            <svg role="img" aria-label="Icon Reset">
+              <title>Icon Reset</title>
               <use xlink:href="#sbx-icon-clear-3"></use>
             </svg>
           </button>
@@ -203,6 +205,8 @@
           <ul data-tabs="data-tabs" class="tabs">
             <li><a data-tab="data-tab" href="#tabprefix" class="btn active">CSS</a>
             </li>
+            <li><a data-tab="data-tab" href="#tabcss" class="btn">Unprefixed CSS</a>
+            </li>
             <li><a data-tab="data-tab" href="#tabscss" class="btn">SCSS</a>
             </li>
           </ul>
@@ -212,6 +216,12 @@
                 <svg class="icon">
                   <use xlink:href="#copy-icon"></use>
                 </svg>Copy</a><pre class="snippet bordered"><code class="language-css" id="css-prefix"></code></pre>
+            </div>
+            <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabcss">
+              <a href="javascript:void(0);" data-clipboard-target="#css" class="btn copy">
+                <svg class="icon">
+                  <use xlink:href="#copy-icon"></use>
+                </svg>Copy</a><pre class="snippet"><code class="language-css" id="css"></code></pre>
             </div>
             <div data-tabs-pane="data-tabs-pane" class="tabs-pane" id="tabscss">
               <a href="javascript:void(0);" data-clipboard-target="#scss" class="btn copy">
