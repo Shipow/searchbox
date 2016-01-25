@@ -135,6 +135,23 @@
                 %use{xlink:href: "#download-icon"}
               Download .zip
 
+      %form#jsfiddle.settings{action: "http://jsfiddle.net/api/post/jquery/2/", method: "post", target: "check"}
+        .form-group.full
+          %button.btn.edit-fidddle{type: "submit"}
+            %svg.icon
+              %use{xlink:href: "#jsfiddle-logo"}
+            Save/Edit on JsFiddle
+          %input{type: "hidden", name: "panel_html", value: "0"}
+          %input{type: "hidden", name: "html", value: ""}
+          %input{type: "hidden", name: "panel_js", value: "0"}
+          %input{type: "hidden", name: "js", value: ""}
+          %input{type: "hidden", name: "panel_css", value: "0"}
+          %input{type: "hidden", name: "css", value: ""}
+          %input{type: "hidden", name: "title", value: "Searchbox"}
+          %input{type: "hidden", name: "description", value: ""}
+          %input{type: "hidden", name: "dtd", value: "html 5"}
+          %input{type: "hidden", name: "wrap", value: "l"}
+
     .loading-wrapper.fade
       .loading
 

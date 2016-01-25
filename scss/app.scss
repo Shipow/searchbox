@@ -144,9 +144,9 @@ h3 {
 }
 
 .btn {
-  display: inline-block;
   transition: all .2s ease;
   border-radius: 3px;
+  border: 0;
   box-shadow: inset 0 0 1px darken(#cdd4d7, 15%);
   padding: 0 12px;
   text-decoration: none;
@@ -170,11 +170,15 @@ h3 {
   }
 }
 
-.download-zip {
+.download-zip,
+.edit-fidddle {
   margin: 30px 12px 0 0;
   display: block;
+  width: 100%;
   text-align: center;
   line-height: 40px;
+  background: #FFF;
+  cursor: pointer;
 }
 
 .copy {
