@@ -611,6 +611,9 @@ h3 {
   list-style: none;
   text-align: center;
   line-height: 30px; }
+  .tabs a,
+  .inline-list a {
+    padding: 8px; }
   .tabs li,
   .inline-list li {
     display: inline-block;
