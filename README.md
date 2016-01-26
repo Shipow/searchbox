@@ -1,4 +1,4 @@
-# searchbox
+# SEARCHBOX
 Just a searchbox generator
 
 ## use the generator
