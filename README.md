@@ -9,7 +9,7 @@ https://github.com/Shipow/searchbox/blob/master/scss/_searchbox.scss
 
 ### html
 
-```
+```html
 <form role="search" novalidate="novalidate" class="searchbox sbx-custom">
   <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input">
   <button type="submit" class="sbx-custom__submit">
@@ -28,7 +28,7 @@ https://github.com/Shipow/searchbox/blob/master/scss/_searchbox.scss
 ```
 
 ### scss
-```
+```scss
 @import 'searchbox';
 
 $custom: (
@@ -56,15 +56,19 @@ $custom: (
 
 
 ### js (optionnal)
-```
+```javascript
 document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
   this.parentNode.querySelector('input').focus();
 });
 ```
+
+### Icons
+#### Reset
+#### Search
+
 
 ## run the generator
 
 - npm install
 - gulp dev
 
-## Icons
