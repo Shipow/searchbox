@@ -64,11 +64,6 @@ gulp.task('inlineSvg', function () {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('inlineSass', function () {
-  return gulp.src('build/*.html')
-    .pipe(injectfile({pattern: '<!--\\sinject:<filename>-->'}));
-});
-
 gulp.task('svgfallback', function () {
   return gulp
   .src('svg/*.svg', {base: 'src/icons'})
