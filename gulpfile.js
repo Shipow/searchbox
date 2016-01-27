@@ -64,13 +64,6 @@ gulp.task('inlineSvg', function () {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('svgfallback', function () {
-  return gulp
-  .src('svg/*.svg', {base: 'src/icons'})
-  .pipe(svgfallback())
-  .pipe(gulp.dest('build'));
-});
-
 gulp.task('sass', function () {
   gulp.src('scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
