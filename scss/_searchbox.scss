@@ -138,15 +138,17 @@
     animation-duration: .15s;
   }
 
-  @at-root @keyframes sbx-reset-in {
-    0% {
-      transform: translate3d(-20%, 0, 0);
-      opacity: 0;
-    }
+  @at-root{
+    @keyframes sbx-reset-in {
+      0% {
+        transform: translate3d(-20%, 0, 0);
+        opacity: 0;
+      }
 
-    100% {
-      transform: none;
-      opacity: 1;
+      100% {
+        transform: none;
+        opacity: 1;
+      }
     }
   }
 }
