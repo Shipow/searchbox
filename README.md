@@ -62,6 +62,18 @@ document.querySelector('.searchbox [type="reset"]').addEventListener('click', fu
 });
 ```
 
+### With Instantsearch.js
+```javascript
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search',
+    placeholder: 'Search for product, brands, SKU, ...',
+    wrapInput: false
+  })
+);
+```
+
+
 ### Icons
 #### Reset
 #### Search
@@ -71,4 +83,3 @@ document.querySelector('.searchbox [type="reset"]').addEventListener('click', fu
 
 - npm install
 - gulp dev
-
