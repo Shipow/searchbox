@@ -733,23 +733,23 @@ h3 {
     box-shadow: inset 0 0 0 1px #ccc;
     background: #f8f8f8;
     padding: 0;
-    padding-right: 42px;
+    padding-right: 44px;
     padding-left: 54px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-custom__input::-webkit-search-decoration, .sbx-custom__input::-webkit-search-cancel-button, .sbx-custom__input::-webkit-search-results-button, .sbx-custom__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-custom__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
     .sbx-custom__input:focus, .sbx-custom__input:active {
       outline: 0;
-      box-shadow: inset 0 0 0 1px #1EC9EA;
+      box-shadow: inset 0 0 0 1px #1ec9ea;
       background: #fff; }
     .sbx-custom__input::-webkit-input-placeholder {
       color: #aaa; }
@@ -762,7 +762,6 @@ h3 {
   .sbx-custom__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: inherit;
     left: 0;
     margin: 0;
@@ -774,6 +773,7 @@ h3 {
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -789,13 +789,12 @@ h3 {
     .sbx-custom__submit:focus {
       outline: 0; }
     .sbx-custom__submit svg {
-      width: 22px;
-      height: 22px;
+      width: 23px;
+      height: 23px;
       vertical-align: middle;
       fill: #888; }
   .sbx-custom__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 7px;
     right: 7px;
@@ -804,6 +803,7 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -847,7 +847,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 600px;
-  height: 38px;
+  height: 39px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
@@ -859,16 +859,16 @@ h3 {
     box-shadow: inset 0 0 0 1px #FFFFFF;
     background: #f8f8f8;
     padding: 0;
-    padding-right: 74px;
-    padding-left: 10px;
+    padding-right: 76px;
+    padding-left: 11px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-amazon__input::-webkit-search-decoration, .sbx-amazon__input::-webkit-search-cancel-button, .sbx-amazon__input::-webkit-search-results-button, .sbx-amazon__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-amazon__input:hover {
@@ -888,7 +888,6 @@ h3 {
   .sbx-amazon__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: 0;
     left: inherit;
     margin: 0;
@@ -896,10 +895,11 @@ h3 {
     border-radius: 0 3px 3px 0;
     background-color: #ffbf58;
     padding: 0;
-    width: 46px;
+    width: 47px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -915,21 +915,21 @@ h3 {
     .sbx-amazon__submit:focus {
       outline: 0; }
     .sbx-amazon__submit svg {
-      width: 20px;
-      height: 20px;
+      width: 21px;
+      height: 21px;
       vertical-align: middle;
       fill: #202F40; }
   .sbx-amazon__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
-    top: 8px;
-    right: 52px;
+    top: 8.5px;
+    right: 54px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -963,7 +963,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 500px;
-  height: 40px;
+  height: 41px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
@@ -975,16 +975,16 @@ h3 {
     box-shadow: inset 0 0 0 1px #CCCCCC;
     background: #FFFFFF;
     padding: 0;
-    padding-right: 74px;
-    padding-left: 10px;
+    padding-right: 77px;
+    padding-left: 11px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-google__input::-webkit-search-decoration, .sbx-google__input::-webkit-search-cancel-button, .sbx-google__input::-webkit-search-results-button, .sbx-google__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-google__input:hover {
@@ -1004,7 +1004,6 @@ h3 {
   .sbx-google__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: 0;
     left: inherit;
     margin: 0;
@@ -1012,10 +1011,11 @@ h3 {
     border-radius: 0 3px 3px 0;
     background-color: #3e82f7;
     padding: 0;
-    width: 48px;
+    width: 49px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1031,21 +1031,21 @@ h3 {
     .sbx-google__submit:focus {
       outline: 0; }
     .sbx-google__submit svg {
-      width: 20px;
-      height: 20px;
+      width: 21px;
+      height: 21px;
       vertical-align: middle;
       fill: #FFFFFF; }
   .sbx-google__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 10px;
-    right: 54px;
+    right: 56px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1056,8 +1056,8 @@ h3 {
     .sbx-google__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 13px;
+      height: 13px; }
   .sbx-google__input:valid ~ .sbx-google__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -1079,7 +1079,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 450px;
-  height: 26px;
+  height: 27px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 13px; }
@@ -1091,23 +1091,23 @@ h3 {
     box-shadow: inset 0 0 0 0px #ccc;
     background: #FFFFFF;
     padding: 0;
-    padding-right: 60px;
-    padding-left: 10px;
+    padding-right: 62px;
+    padding-left: 11px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-facebook__input::-webkit-search-decoration, .sbx-facebook__input::-webkit-search-cancel-button, .sbx-facebook__input::-webkit-search-results-button, .sbx-facebook__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-facebook__input:hover {
       box-shadow: inset 0 0 0 0px #b3b3b3; }
     .sbx-facebook__input:focus, .sbx-facebook__input:active {
       outline: 0;
-      box-shadow: inset 0 0 0 0px #1EC9EA;
+      box-shadow: inset 0 0 0 0px #1ec9ea;
       background: #FFFFFF; }
     .sbx-facebook__input::-webkit-input-placeholder {
       color: #AAAAAA; }
@@ -1120,7 +1120,6 @@ h3 {
   .sbx-facebook__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: 0;
     left: inherit;
     margin: 0;
@@ -1128,10 +1127,11 @@ h3 {
     border-radius: 0 3px 3px 0;
     background-color: #f6f7f8;
     padding: 0;
-    width: 34px;
+    width: 35px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1147,21 +1147,21 @@ h3 {
     .sbx-facebook__submit:focus {
       outline: 0; }
     .sbx-facebook__submit svg {
-      width: 14px;
-      height: 14px;
+      width: 15px;
+      height: 15px;
       vertical-align: middle;
       fill: #3C5BA2; }
   .sbx-facebook__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 3px;
-    right: 40px;
+    right: 41px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1172,8 +1172,8 @@ h3 {
     .sbx-facebook__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 13px;
+      height: 13px; }
   .sbx-facebook__input:valid ~ .sbx-facebook__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -1195,7 +1195,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 200px;
-  height: 36px;
+  height: 37px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 13px; }
@@ -1203,20 +1203,20 @@ h3 {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 18px;
+    border-radius: 19px;
     box-shadow: inset 0 0 0 1px #D9D9D9;
     background: #f8f8f8;
     padding: 0;
     padding-right: 30px;
-    padding-left: 36px;
+    padding-left: 37px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-medium__input::-webkit-search-decoration, .sbx-medium__input::-webkit-search-cancel-button, .sbx-medium__input::-webkit-search-results-button, .sbx-medium__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-medium__input:hover {
@@ -1236,7 +1236,6 @@ h3 {
   .sbx-medium__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: inherit;
     left: 0;
     margin: 0;
@@ -1244,10 +1243,11 @@ h3 {
     border-radius: 18px 0 0 18px;
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
-    width: 36px;
+    width: 37px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1263,13 +1263,12 @@ h3 {
     .sbx-medium__submit:focus {
       outline: 0; }
     .sbx-medium__submit svg {
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       vertical-align: middle;
       fill: #666666; }
   .sbx-medium__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1278,6 +1277,7 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1288,8 +1288,8 @@ h3 {
     .sbx-medium__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 13px;
+      height: 13px; }
   .sbx-medium__input:valid ~ .sbx-medium__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -1311,7 +1311,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 300px;
-  height: 44px;
+  height: 45px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 16px; }
@@ -1323,16 +1323,16 @@ h3 {
     box-shadow: inset 0 0 0 1px #444444;
     background: #F5F8FA;
     padding: 0;
-    padding-right: 68px;
-    padding-left: 10px;
+    padding-right: 69px;
+    padding-left: 12px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-meetup__input::-webkit-search-decoration, .sbx-meetup__input::-webkit-search-cancel-button, .sbx-meetup__input::-webkit-search-results-button, .sbx-meetup__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-meetup__input:hover {
@@ -1352,7 +1352,6 @@ h3 {
   .sbx-meetup__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: 0;
     left: inherit;
     margin: 0;
@@ -1360,10 +1359,11 @@ h3 {
     border-radius: 0 3px 3px 0;
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
-    width: 44px;
+    width: 45px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1379,21 +1379,21 @@ h3 {
     .sbx-meetup__submit:focus {
       outline: 0; }
     .sbx-meetup__submit svg {
-      width: 24px;
-      height: 24px;
+      width: 25px;
+      height: 25px;
       vertical-align: middle;
       fill: #505050; }
   .sbx-meetup__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
-    top: 10px;
-    right: 44px;
+    top: 10.5px;
+    right: 45px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1427,7 +1427,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 200px;
-  height: 24px;
+  height: 25px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 12px; }
@@ -1435,20 +1435,20 @@ h3 {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 12px;
+    border-radius: 13px;
     box-shadow: inset 0 0 0 0px #FFFFFF;
     background: #f8f8f8;
     padding: 0;
     padding-right: 20px;
-    padding-left: 24px;
+    padding-left: 25px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-spotify__input::-webkit-search-decoration, .sbx-spotify__input::-webkit-search-cancel-button, .sbx-spotify__input::-webkit-search-results-button, .sbx-spotify__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-spotify__input:hover {
@@ -1468,7 +1468,6 @@ h3 {
   .sbx-spotify__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: inherit;
     left: 0;
     margin: 0;
@@ -1476,10 +1475,11 @@ h3 {
     border-radius: 12px 0 0 12px;
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
-    width: 24px;
+    width: 25px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1495,21 +1495,21 @@ h3 {
     .sbx-spotify__submit:focus {
       outline: 0; }
     .sbx-spotify__submit svg {
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       vertical-align: middle;
       fill: #222; }
   .sbx-spotify__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 2.5px;
+    right: 2.5px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1543,7 +1543,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 200px;
-  height: 32px;
+  height: 33px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 12px; }
@@ -1551,20 +1551,20 @@ h3 {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 16px;
+    border-radius: 17px;
     box-shadow: inset 0 0 0 1px #E1E8ED;
     background: #F5F8FA;
     padding: 0;
-    padding-right: 50px;
-    padding-left: 14px;
+    padding-right: 52px;
+    padding-left: 16px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-twitter__input::-webkit-search-decoration, .sbx-twitter__input::-webkit-search-cancel-button, .sbx-twitter__input::-webkit-search-results-button, .sbx-twitter__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-twitter__input:hover {
@@ -1584,7 +1584,6 @@ h3 {
   .sbx-twitter__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: 0;
     left: inherit;
     margin: 0;
@@ -1592,10 +1591,11 @@ h3 {
     border-radius: 0 16px 16px 0;
     background-color: rgba(214, 222, 227, 0);
     padding: 0;
-    width: 32px;
+    width: 33px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1611,21 +1611,21 @@ h3 {
     .sbx-twitter__submit:focus {
       outline: 0; }
     .sbx-twitter__submit svg {
-      width: 12px;
-      height: 12px;
+      width: 13px;
+      height: 13px;
       vertical-align: middle;
       fill: #657580; }
   .sbx-twitter__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 7px;
-    right: 32px;
+    right: 33px;
     margin: 0;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1636,8 +1636,8 @@ h3 {
     .sbx-twitter__reset svg {
       display: block;
       margin: 4px;
-      width: 10px;
-      height: 10px; }
+      width: 11px;
+      height: 11px; }
   .sbx-twitter__input:valid ~ .sbx-twitter__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -1659,7 +1659,7 @@ h3 {
   display: inline-block;
   position: relative;
   width: 280px;
-  height: 32px;
+  height: 33px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
@@ -1667,20 +1667,20 @@ h3 {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 0px;
+    border-radius: 1px;
     box-shadow: inset 0 0 0 0px #ccc;
     background: #f8f8f8;
     padding: 0;
-    padding-right: 40px;
-    padding-left: 50px;
+    padding-right: 42px;
+    padding-left: 51px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
+    font-size: inherit;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    font-size: inherit; }
+    appearance: none; }
     .sbx-airbnb__input::-webkit-search-decoration, .sbx-airbnb__input::-webkit-search-cancel-button, .sbx-airbnb__input::-webkit-search-results-button, .sbx-airbnb__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-airbnb__input:hover {
@@ -1700,7 +1700,6 @@ h3 {
   .sbx-airbnb__submit {
     position: absolute;
     top: 0;
-    font-size: inherit;
     right: inherit;
     left: 0;
     margin: 0;
@@ -1708,10 +1707,11 @@ h3 {
     border-radius: 0px 0 0 0px;
     background-color: white;
     padding: 0;
-    width: 40px;
+    width: 41px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1727,13 +1727,12 @@ h3 {
     .sbx-airbnb__submit:focus {
       outline: 0; }
     .sbx-airbnb__submit svg {
-      width: 26px;
-      height: 26px;
+      width: 27px;
+      height: 27px;
       vertical-align: middle;
       fill: #CDD0CC; }
   .sbx-airbnb__reset {
     display: none;
-    font-size: inherit;
     position: absolute;
     top: 7px;
     right: 7px;
@@ -1742,6 +1741,7 @@ h3 {
     background: none;
     cursor: pointer;
     padding: 0;
+    font-size: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1752,8 +1752,8 @@ h3 {
     .sbx-airbnb__reset svg {
       display: block;
       margin: 4px;
-      width: 10px;
-      height: 10px; }
+      width: 11px;
+      height: 11px; }
   .sbx-airbnb__input:valid ~ .sbx-airbnb__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
