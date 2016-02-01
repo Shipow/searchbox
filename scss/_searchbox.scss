@@ -1,22 +1,67 @@
+@function em($value, $base: 16px) {
+  @if type-of($value) == "number" {
+    @if (unitless($value)) {
+        @return $value * 1em;
+      }
+    @else if unit($value) == "em" {
+        @return $value;
+      }
+    @else if unit($value) == "px" {
+      @return ($value / $base) * 1em;
+    }
+  }
+  @else {
+    @warn "Not a number value: #{$value}";
+    @return $value;
+  }
+}
+@function px($value, $base: 16px) {
+  @if type-of($value) == "number" {
+    @if (unitless($value)) {
+        @return $value * 1px;
+      }
+    @else if unit($value) == "px" {
+        @return $value;
+      }
+    @else if unit($value) == "em" {
+      @return ($value / 1em * $base);
+    }
+  }
+  @else {
+    @warn "Not a number value: #{$value}";
+    @return $value;
+  }
+}
+
+@function evenPx($value) {
+  $value: round(px($value));
+  @if ($value%2 != 0px) {
+    @return $value + 1;
+  }
+  @else {
+    @return $value;
+  }
+}
+
 @mixin searchbox(
-  $input-width: 500px,
-  $input-height: 40px,
+  $font-size: 1em,
+  $input-width: 350px,
+  $input-height: evenPx($font-size*2.4),
   $border-width: 1px,
-  $border-radius: 3px,
+  $border-radius: $input-height/2,
   $input-border-color: #ccc,
-  $input-focus-border-color: darken($input-border-color, 15%),
-  $input-background: #fff,
-  $input-focus-background: $input-background,
-  $font-size: 14px,
+  $input-focus-border-color: #1EC9EA,
+  $input-background: #f8f8f8,
+  $input-focus-background: #fff,
   $placeholder-color: #aaa,
   $icon: 'sbx-icon-search-1',
-  $icon-size: 18px,
+  $icon-size: evenPx($input-height/1.6),
   $icon-position: right,
-  $icon-color: #fff,
-  $icon-background: #3e82f7,
-  $icon-background-opacity: 1,
+  $icon-color: #888,
+  $icon-background: $input-focus-border-color,
+  $icon-background-opacity: 0.1,
   $icon-clear: 'sbx-icon-clear-1',
-  $icon-clear-size: 12px
+  $icon-clear-size: evenPx($font-size/1.1)
 ) {
   display: inline-block;
   position: relative;
@@ -25,7 +70,6 @@
   white-space: nowrap;
   box-sizing: border-box;
   font-size: $font-size;
-
   &__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -34,14 +78,17 @@
     box-shadow: inset 0 0 0 $border-width $input-border-color;
     background: $input-background;
     padding: 0;
-    padding-right: if($icon-position == 'right', $input-height, 0) + $icon-clear-size * 2 + 8px;
-    padding-left: if($icon-position == 'right', 1em, $input-height + if($icon-background-opacity == 0, 0, 8px));
+    padding-right: if($icon-position == 'right', evenPx($input-height + $icon-clear-size + 8px), evenPx($input-height*.8))
+              + if($icon-background-opacity == 0, 0px, evenPx($font-size));
+    padding-left: if($icon-position == 'right',
+              evenPx($font-size),
+              evenPx($input-height) + if($icon-background-opacity == 0, 4px, evenPx($font-size/2)));
     width: 100%;
     height: 100%;
     vertical-align: middle;
     white-space: normal;
     appearance: none;
-    font-size: 1em;
+    font-size: inherit;
 
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -70,13 +117,14 @@
   &__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     #{$icon-position}: 0;
     margin: 0;
     border: 0;
     border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
     background-color: rgba($icon-background, $icon-background-opacity);
     padding: 0;
-    width: $input-height;
+    width: evenPx($input-height) + if($icon-background-opacity == 0, 0px, evenPx($font-size/2));
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -101,8 +149,8 @@
     }
 
     svg {
-      width: $icon-size;
-      height: $icon-size;
+      width: px($icon-size);
+      height: px($icon-size);
       vertical-align: middle;
       fill: $icon-color;
     }
@@ -110,9 +158,12 @@
 
   &__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
-    top: ($input-height - $icon-clear-size) / 2 - 4px;
-    right: if($icon-position == 'right', 8px + $input-height, ($input-height - $icon-clear-size) / 2) - 4px;
+    top: evenPx($input-height - $icon-clear-size ) / 2 - 4px;
+    right: if($icon-position == 'right',
+      evenPx($input-height) + if($icon-background-opacity == 0, 0px , evenPx($font-size)),
+      evenPx($input-height - $icon-clear-size) / 2 - 4px);
     margin: 0;
     border: 0;
     background: none;
