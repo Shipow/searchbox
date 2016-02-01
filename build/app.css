@@ -461,10 +461,10 @@ h2 {
 
 h3 {
   float: left;
-  width: 100%;
   clear: both;
   margin: 10px 0 20px;
   border-bottom: solid 1px #cdd4d7;
+  width: 100%;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -495,8 +495,8 @@ h3 {
 
 .btn {
   transition: all .2s ease;
-  border-radius: 3px;
   border: 0;
+  border-radius: 3px;
   box-shadow: inset 0 0 1px #a3afb5;
   padding: 0 12px;
   text-decoration: none;
@@ -518,13 +518,13 @@ h3 {
 
 .download-zip,
 .edit-fidddle {
-  margin: 30px 12px 0 0;
   display: block;
+  margin: 30px 12px 0 0;
+  background: #fff;
+  cursor: pointer;
   width: 100%;
   text-align: center;
-  line-height: 40px;
-  background: #FFF;
-  cursor: pointer; }
+  line-height: 40px; }
 
 .copy {
   position: absolute;
@@ -540,11 +540,11 @@ h3 {
   padding: 0 12px; }
   .settings .form-group {
     float: left;
-    width: 50%;
-    box-sizing: border-box;
+    margin: 0 0 12px;
     padding: 0 0 0 12px;
-    margin: 0 0 12px 0;
-    height: 50px; }
+    width: 50%;
+    height: 50px;
+    box-sizing: border-box; }
     .settings .form-group.full {
       width: 100%; }
   .settings .icon-select-option,
@@ -564,18 +564,18 @@ h3 {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 10px;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-size: 10px; }
   .settings [type='text'],
   .settings [type='number'],
   .settings .selectric {
-    border: none;
-    width: 100px;
+    position: relative;
     margin-top: 4px;
-    line-height: 22px;
-    font-size: 15px;
+    border: 0;
     border-bottom: solid 1px #ccc;
-    position: relative; }
+    width: 100px;
+    line-height: 22px;
+    font-size: 15px; }
     .settings [type='text']:focus,
     .settings [type='number']:focus,
     .settings .selectric:focus {
@@ -590,7 +590,7 @@ h3 {
     .settings [type='text'].jscolor:focus,
     .settings [type='number'].jscolor:focus,
     .settings .selectric.jscolor:focus {
-      border: none; }
+      border: 0; }
 
 .snippet {
   border-top: 1px #cdd4d7 solid;
@@ -640,12 +640,12 @@ h3 {
   box-sizing: border-box; }
 
 .searchbox-demo {
+  transition: all .5s linear;
   margin-bottom: 0;
   padding: 18px;
   width: 100%;
   text-align: center;
-  box-sizing: border-box;
-  transition: all .5s linear; }
+  box-sizing: border-box; }
   .searchbox-demo.sbx-google-demo {
     background-color: #fff; }
   .searchbox-demo.sbx-twitter-demo {
@@ -675,31 +675,31 @@ h3 {
   height: 40px; }
   .loading::before {
     position: absolute;
-    content: '';
-    margin: -20px 0 0 -20px;
     top: 50%;
     left: 50%;
-    width: 40px;
-    height: 40px;
     -webkit-animation: spin .6s linear;
     animation: spin .6s linear;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    margin: -20px 0 0 -20px;
+    border-width: .2em;
+    border-style: solid;
     border-radius: 50%;
     border-color: #767676 transparent transparent;
-    border-style: solid;
-    border-width: .2em;
-    box-shadow: 0 0 0 1px transparent; }
-  .loading::after {
-    position: absolute;
-    content: '';
-    margin: -20px 0 0 -20px;
-    top: 50%;
-    left: 50%;
+    box-shadow: 0 0 0 1px transparent;
     width: 40px;
     height: 40px;
+    content: ''; }
+  .loading::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    border: 0.2em solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border: 0.2em solid rgba(0, 0, 0, 0.1); }
+    width: 40px;
+    height: 40px;
+    content: ''; }
 
 .message-demo {
   display: block;
@@ -1860,18 +1860,18 @@ h3 {
   animation-iteration-count: 1; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0);
     transform: rotate(0); }
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0);
     transform: rotate(0); }
-  to {
+  100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 

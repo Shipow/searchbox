@@ -106,10 +106,10 @@ h2 {
 
 h3 {
   float: left;
-  width: 100%;
   clear: both;
   margin: 10px 0 20px;
   border-bottom: solid 1px #cdd4d7;
+  width: 100%;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -145,8 +145,8 @@ h3 {
 
 .btn {
   transition: all .2s ease;
-  border-radius: 3px;
   border: 0;
+  border-radius: 3px;
   box-shadow: inset 0 0 1px darken(#cdd4d7, 15%);
   padding: 0 12px;
   text-decoration: none;
@@ -172,13 +172,13 @@ h3 {
 
 .download-zip,
 .edit-fidddle {
-  margin: 30px 12px 0 0;
   display: block;
+  margin: 30px 12px 0 0;
+  background: #fff;
+  cursor: pointer;
   width: 100%;
   text-align: center;
   line-height: 40px;
-  background: #FFF;
-  cursor: pointer;
 }
 
 .copy {
@@ -198,11 +198,12 @@ h3 {
 
   .form-group {
     float: left;
-    width: 50%;
-    box-sizing: border-box;
+    margin: 0 0 12px;
     padding: 0 0 0 12px;
-    margin: 0 0 12px 0;
+    width: 50%;
     height: 50px;
+    box-sizing: border-box;
+
     &.full {
       width: 100%;
     }
@@ -219,7 +220,6 @@ h3 {
   }
 
   p {
-
     &.warning {
       display: block;
       background-color: #ffdd78;
@@ -232,20 +232,20 @@ h3 {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 10px;
     white-space: nowrap;
+    font-size: 10px;
   }
 
   [type='text'],
   [type='number'],
   .selectric {
-    border: none;
-    width: 100px;
+    position: relative;
     margin-top: 4px;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    width: 100px;
     line-height: 22px;
     font-size: 15px;
-    border-bottom: solid 1px #ccc;
-    position: relative;
 
     &:focus {
       outline: 0;
@@ -259,7 +259,7 @@ h3 {
     }
 
     &.jscolor:focus {
-      border: none;
+      border: 0;
     }
   }
 }
@@ -286,6 +286,7 @@ h3 {
   list-style: none;
   text-align: center;
   line-height: 30px;
+
   a {
     padding: 8px;
   }
@@ -311,7 +312,7 @@ h3 {
 }
 
 .preview {
-  margin-right:12px;
+  margin-right: 12px;
   margin-bottom: 20px;
   border-radius: 3px;
   box-shadow: 0 0 5px #cdd4d7;
@@ -322,12 +323,12 @@ h3 {
 }
 
 .searchbox-demo {
+  transition: all .5s linear;
   margin-bottom: 0;
   padding: 18px;
   width: 100%;
   text-align: center;
   box-sizing: border-box;
-  transition: all .5s linear;
 
   &.sbx-google-demo {
     background-color: #fff;
@@ -376,31 +377,31 @@ h3 {
 
   &::before {
     position: absolute;
-    content: '';
-    margin: -20px 0 0 -20px;
     top: 50%;
     left: 50%;
-    width: 40px;
-    height: 40px;
     animation: spin .6s linear;
     animation-iteration-count: infinite;
+    margin: -20px 0 0 -20px;
+    border-width: .2em;
+    border-style: solid;
     border-radius: 50%;
     border-color: #767676 transparent transparent;
-    border-style: solid;
-    border-width: .2em;
     box-shadow: 0 0 0 1px transparent;
+    width: 40px;
+    height: 40px;
+    content: '';
   }
 
   &::after {
     position: absolute;
-    content: '';
-    margin: -20px 0 0 -20px;
     top: 50%;
     left: 50%;
+    margin: -20px 0 0 -20px;
+    border: .2em solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: .2em solid rgba(0,0,0,.1);
+    content: '';
   }
 }
 
@@ -435,39 +436,39 @@ h3 {
 @import 'sbx-themes/twitter';
 @import 'sbx-themes/airbnb';
 
-.sbx-custom{
+.sbx-custom {
   @include searchbox();
 }
 
-.sbx-amazon{
+.sbx-amazon {
   @include searchbox($amazon...);
 }
 
-.sbx-google{
+.sbx-google {
   @include searchbox($google...);
 }
 
-.sbx-facebook{
+.sbx-facebook {
   @include searchbox($facebook...);
 }
 
-.sbx-medium{
+.sbx-medium {
   @include searchbox($medium...);
 }
 
-.sbx-meetup{
+.sbx-meetup {
   @include searchbox($meetup...);
 }
 
-.sbx-spotify{
+.sbx-spotify {
   @include searchbox($spotify...);
 }
 
-.sbx-twitter{
+.sbx-twitter {
   @include searchbox($twitter...);
 }
 
-.sbx-airbnb{
+.sbx-airbnb {
   @include searchbox($airbnb...);
 }
 
@@ -530,13 +531,13 @@ h3 {
 
 @keyframes spin {
 
-    from {
-        transform: rotate(0)
-    }
+  0% {
+    transform: rotate(0);
+  }
 
-    to {
-        transform: rotate(360deg)
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes flash {
