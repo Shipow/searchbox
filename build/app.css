@@ -763,6 +763,7 @@ h3 {
     position: absolute;
     top: 0;
     font-size: inherit;
+    right: inherit;
     left: 0;
     margin: 0;
     border: 0;
@@ -889,6 +890,7 @@ h3 {
     top: 0;
     font-size: inherit;
     right: 0;
+    left: inherit;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
@@ -1004,6 +1006,7 @@ h3 {
     top: 0;
     font-size: inherit;
     right: 0;
+    left: inherit;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
@@ -1119,6 +1122,7 @@ h3 {
     top: 0;
     font-size: inherit;
     right: 0;
+    left: inherit;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
@@ -1233,6 +1237,7 @@ h3 {
     position: absolute;
     top: 0;
     font-size: inherit;
+    right: inherit;
     left: 0;
     margin: 0;
     border: 0;
@@ -1349,6 +1354,7 @@ h3 {
     top: 0;
     font-size: inherit;
     right: 0;
+    left: inherit;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
@@ -1463,6 +1469,7 @@ h3 {
     position: absolute;
     top: 0;
     font-size: inherit;
+    right: inherit;
     left: 0;
     margin: 0;
     border: 0;
@@ -1579,6 +1586,7 @@ h3 {
     top: 0;
     font-size: inherit;
     right: 0;
+    left: inherit;
     margin: 0;
     border: 0;
     border-radius: 0 16px 16px 0;
@@ -1693,6 +1701,7 @@ h3 {
     position: absolute;
     top: 0;
     font-size: inherit;
+    right: inherit;
     left: 0;
     margin: 0;
     border: 0;
