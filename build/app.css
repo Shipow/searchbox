@@ -721,20 +721,20 @@ h3 {
   display: inline-block;
   position: relative;
   width: 350px;
-  height: 38px;
+  height: 36px;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: 1em; }
+  font-size: 0.9em; }
   .sbx-custom__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 19px;
+    border-radius: 18px;
     box-shadow: inset 0 0 0 1px #ccc;
     background: #f8f8f8;
     padding: 0;
-    padding-right: 78px;
-    padding-left: 16px;
+    padding-right: 72px;
+    padding-left: 18px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -766,10 +766,10 @@ h3 {
     right: 0;
     margin: 0;
     border: 0;
-    border-radius: 0 19px 19px 0;
+    border-radius: 0 18px 18px 0;
     background-color: rgba(30, 201, 234, 0.1);
     padding: 0;
-    width: 46px;
+    width: 44px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -797,7 +797,7 @@ h3 {
     font-size: inherit;
     position: absolute;
     top: 7px;
-    right: 54px;
+    right: 50px;
     margin: 0;
     border: 0;
     background: none;
@@ -813,8 +813,8 @@ h3 {
     .sbx-custom__reset svg {
       display: block;
       margin: 4px;
-      width: 16px;
-      height: 16px; }
+      width: 14px;
+      height: 14px; }
   .sbx-custom__input:valid ~ .sbx-custom__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -846,20 +846,20 @@ h3 {
   display: inline-block;
   position: relative;
   width: 350px;
-  height: 38px;
+  height: 36px;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: 1em; }
+  font-size: 0.9em; }
   .sbx-default__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 19px;
+    border-radius: 18px;
     box-shadow: inset 0 0 0 1px #ccc;
     background: #f8f8f8;
     padding: 0;
-    padding-right: 78px;
-    padding-left: 16px;
+    padding-right: 72px;
+    padding-left: 18px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -891,10 +891,10 @@ h3 {
     right: 0;
     margin: 0;
     border: 0;
-    border-radius: 0 19px 19px 0;
+    border-radius: 0 18px 18px 0;
     background-color: rgba(30, 201, 234, 0.1);
     padding: 0;
-    width: 46px;
+    width: 44px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -922,7 +922,7 @@ h3 {
     font-size: inherit;
     position: absolute;
     top: 7px;
-    right: 54px;
+    right: 50px;
     margin: 0;
     border: 0;
     background: none;
@@ -938,8 +938,8 @@ h3 {
     .sbx-default__reset svg {
       display: block;
       margin: 4px;
-      width: 16px;
-      height: 16px; }
+      width: 14px;
+      height: 14px; }
   .sbx-default__input:valid ~ .sbx-default__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -974,7 +974,7 @@ h3 {
     background: #f8f8f8;
     padding: 0;
     padding-right: 74px;
-    padding-left: 14px;
+    padding-left: 10px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1089,7 +1089,7 @@ h3 {
     background: #FFFFFF;
     padding: 0;
     padding-right: 74px;
-    padding-left: 14px;
+    padding-left: 10px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1204,7 +1204,7 @@ h3 {
     background: #FFFFFF;
     padding: 0;
     padding-right: 60px;
-    padding-left: 14px;
+    padding-left: 10px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1434,7 +1434,7 @@ h3 {
     background: #F5F8FA;
     padding: 0;
     padding-right: 68px;
-    padding-left: 16px;
+    padding-left: 10px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1664,7 +1664,7 @@ h3 {
     background: #F5F8FA;
     padding: 0;
     padding-right: 50px;
-    padding-left: 12px;
+    padding-left: 14px;
     width: 100%;
     height: 100%;
     vertical-align: middle;

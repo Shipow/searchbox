@@ -1,50 +1,30 @@
-@function em($value, $base: 16px) {
-  @if type-of($value) == "number" {
-    @if (unitless($value)) {
-        @return $value * 1em;
-      }
-    @else if unit($value) == "em" {
-        @return $value;
-      }
-    @else if unit($value) == "px" {
-      @return ($value / $base) * 1em;
-    }
-  }
-  @else {
-    @warn "Not a number value: #{$value}";
-    @return $value;
-  }
-}
 @function px($value, $base: 16px) {
-  @if type-of($value) == "number" {
+  @if type-of($value) == 'number' {
     @if (unitless($value)) {
         @return $value * 1px;
-      }
-    @else if unit($value) == "px" {
+      } @else if unit($value) == 'px' {
         @return $value;
-      }
-    @else if unit($value) == "em" {
+      } @else if unit($value) == 'em' {
       @return ($value / 1em * $base);
     }
-  }
-  @else {
-    @warn "Not a number value: #{$value}";
+  } @else {
     @return $value;
   }
 }
 
 @function evenPx($value) {
-  $value: round(px($value));
-  @if ($value%2 != 0px) {
-    @return $value + 1;
-  }
-  @else {
-    @return $value;
+  @if type-of($value) == 'number' {
+    $value: round(px($value));
+    @if ($value%2 != 0px) {
+      @return $value + 1;
+    } @else {
+      @return $value;
+    }
   }
 }
 
 @mixin searchbox(
-  $font-size: 1em,
+  $font-size: .9em,
   $input-width: 350px,
   $input-height: evenPx($font-size*2.4),
   $border-width: 1px,
@@ -81,7 +61,7 @@
     padding-right: if($icon-position == 'right', evenPx($input-height + $icon-clear-size + 8px), evenPx($input-height*.8))
               + if($icon-background-opacity == 0, 0px, evenPx($font-size));
     padding-left: if($icon-position == 'right',
-              evenPx($font-size/2 + border-radius/2),
+              evenPx($font-size/2) + evenPx($border-radius/2),
               evenPx($input-height) + if($icon-background-opacity == 0, 4px, evenPx($font-size/2)));
     width: 100%;
     height: 100%;
