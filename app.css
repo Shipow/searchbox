@@ -20,6 +20,7 @@ pre[class*="language-"] {
   -moz-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
+  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
 
@@ -719,21 +720,21 @@ h3 {
 .sbx-custom {
   display: inline-block;
   position: relative;
-  width: 500px;
-  height: 40px;
+  width: 350px;
+  height: 38px;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: 14px; }
+  font-size: 1em; }
   .sbx-custom__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: 3px;
+    border-radius: 19px;
     box-shadow: inset 0 0 0 1px #ccc;
-    background: #fff;
+    background: #f8f8f8;
     padding: 0;
-    padding-right: 72px;
-    padding-left: 1em;
+    padding-right: 78px;
+    padding-left: 16px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -741,14 +742,14 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-custom__input::-webkit-search-decoration, .sbx-custom__input::-webkit-search-cancel-button, .sbx-custom__input::-webkit-search-results-button, .sbx-custom__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-custom__input:hover {
       box-shadow: inset 0 0 0 1px #b3b3b3; }
     .sbx-custom__input:focus, .sbx-custom__input:active {
       outline: 0;
-      box-shadow: inset 0 0 0 1px #a6a6a6;
+      box-shadow: inset 0 0 0 1px #1EC9EA;
       background: #fff; }
     .sbx-custom__input::-webkit-input-placeholder {
       color: #aaa; }
@@ -761,13 +762,14 @@ h3 {
   .sbx-custom__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
-    border-radius: 0 3px 3px 0;
-    background-color: #3e82f7;
+    border-radius: 0 19px 19px 0;
+    background-color: rgba(30, 201, 234, 0.1);
     padding: 0;
-    width: 40px;
+    width: 46px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -786,15 +788,16 @@ h3 {
     .sbx-custom__submit:focus {
       outline: 0; }
     .sbx-custom__submit svg {
-      width: 18px;
-      height: 18px;
+      width: 24px;
+      height: 24px;
       vertical-align: middle;
-      fill: #fff; }
+      fill: #888; }
   .sbx-custom__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
-    top: 10px;
-    right: 44px;
+    top: 7px;
+    right: 54px;
     margin: 0;
     border: 0;
     background: none;
@@ -810,8 +813,8 @@ h3 {
     .sbx-custom__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 16px;
+      height: 16px; }
   .sbx-custom__input:valid ~ .sbx-custom__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -839,6 +842,121 @@ h3 {
     transform: none;
     opacity: 1; } }
 
+.sbx-default {
+  display: inline-block;
+  position: relative;
+  width: 350px;
+  height: 38px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  font-size: 1em; }
+  .sbx-default__input {
+    display: inline-block;
+    transition: box-shadow .4s ease, background .4s ease;
+    border: 0;
+    border-radius: 19px;
+    box-shadow: inset 0 0 0 1px #ccc;
+    background: #f8f8f8;
+    padding: 0;
+    padding-right: 78px;
+    padding-left: 16px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    white-space: normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: inherit; }
+    .sbx-default__input::-webkit-search-decoration, .sbx-default__input::-webkit-search-cancel-button, .sbx-default__input::-webkit-search-results-button, .sbx-default__input::-webkit-search-results-decoration {
+      display: none; }
+    .sbx-default__input:hover {
+      box-shadow: inset 0 0 0 1px #b3b3b3; }
+    .sbx-default__input:focus, .sbx-default__input:active {
+      outline: 0;
+      box-shadow: inset 0 0 0 1px #1EC9EA;
+      background: #fff; }
+    .sbx-default__input::-webkit-input-placeholder {
+      color: #aaa; }
+    .sbx-default__input::-moz-placeholder {
+      color: #aaa; }
+    .sbx-default__input:-ms-input-placeholder {
+      color: #aaa; }
+    .sbx-default__input::placeholder {
+      color: #aaa; }
+  .sbx-default__submit {
+    position: absolute;
+    top: 0;
+    font-size: inherit;
+    right: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0 19px 19px 0;
+    background-color: rgba(30, 201, 234, 0.1);
+    padding: 0;
+    width: 46px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .sbx-default__submit::before {
+      display: inline-block;
+      margin-right: -4px;
+      height: 100%;
+      vertical-align: middle;
+      content: ''; }
+    .sbx-default__submit:hover, .sbx-default__submit:active {
+      cursor: pointer; }
+    .sbx-default__submit:focus {
+      outline: 0; }
+    .sbx-default__submit svg {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      fill: #888; }
+  .sbx-default__reset {
+    display: none;
+    font-size: inherit;
+    position: absolute;
+    top: 7px;
+    right: 54px;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    fill: rgba(0, 0, 0, 0.5); }
+    .sbx-default__reset:focus {
+      outline: 0; }
+    .sbx-default__reset svg {
+      display: block;
+      margin: 4px;
+      width: 16px;
+      height: 16px; }
+  .sbx-default__input:valid ~ .sbx-default__reset {
+    display: block;
+    -webkit-animation-name: sbx-reset-in;
+    animation-name: sbx-reset-in;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s; }
+
+@keyframes sbx-reset-in {
+  0% {
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
 .sbx-amazon {
   display: inline-block;
   position: relative;
@@ -849,14 +967,14 @@ h3 {
   font-size: 14px; }
   .sbx-amazon__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #FFFFFF;
-    background: #fff;
+    background: #f8f8f8;
     padding: 0;
-    padding-right: 70px;
-    padding-left: 1em;
+    padding-right: 74px;
+    padding-left: 14px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -864,7 +982,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-amazon__input::-webkit-search-decoration, .sbx-amazon__input::-webkit-search-cancel-button, .sbx-amazon__input::-webkit-search-results-button, .sbx-amazon__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-amazon__input:hover {
@@ -884,13 +1002,14 @@ h3 {
   .sbx-amazon__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #ffbf58;
     padding: 0;
-    width: 38px;
+    width: 46px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -915,9 +1034,10 @@ h3 {
       fill: #202F40; }
   .sbx-amazon__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
-    top: 9px;
-    right: 42px;
+    top: 8px;
+    right: 52px;
     margin: 0;
     border: 0;
     background: none;
@@ -933,8 +1053,8 @@ h3 {
     .sbx-amazon__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 14px;
+      height: 14px; }
   .sbx-amazon__input:valid ~ .sbx-amazon__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -962,14 +1082,14 @@ h3 {
   font-size: 14px; }
   .sbx-google__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #CCCCCC;
     background: #FFFFFF;
     padding: 0;
-    padding-right: 72px;
-    padding-left: 1em;
+    padding-right: 74px;
+    padding-left: 14px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -977,7 +1097,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-google__input::-webkit-search-decoration, .sbx-google__input::-webkit-search-cancel-button, .sbx-google__input::-webkit-search-results-button, .sbx-google__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-google__input:hover {
@@ -997,13 +1117,14 @@ h3 {
   .sbx-google__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #3e82f7;
     padding: 0;
-    width: 40px;
+    width: 48px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -1028,9 +1149,10 @@ h3 {
       fill: #FFFFFF; }
   .sbx-google__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 10px;
-    right: 44px;
+    right: 54px;
     margin: 0;
     border: 0;
     background: none;
@@ -1075,14 +1197,14 @@ h3 {
   font-size: 13px; }
   .sbx-facebook__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 0px #ccc;
     background: #FFFFFF;
     padding: 0;
-    padding-right: 58px;
-    padding-left: 1em;
+    padding-right: 60px;
+    padding-left: 14px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1090,14 +1212,14 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-facebook__input::-webkit-search-decoration, .sbx-facebook__input::-webkit-search-cancel-button, .sbx-facebook__input::-webkit-search-results-button, .sbx-facebook__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-facebook__input:hover {
       box-shadow: inset 0 0 0 0px #b3b3b3; }
     .sbx-facebook__input:focus, .sbx-facebook__input:active {
       outline: 0;
-      box-shadow: inset 0 0 0 0px #a6a6a6;
+      box-shadow: inset 0 0 0 0px #1EC9EA;
       background: #FFFFFF; }
     .sbx-facebook__input::-webkit-input-placeholder {
       color: #AAAAAA; }
@@ -1110,13 +1232,14 @@ h3 {
   .sbx-facebook__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
     border-radius: 0 3px 3px 0;
     background-color: #f6f7f8;
     padding: 0;
-    width: 26px;
+    width: 34px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -1141,9 +1264,10 @@ h3 {
       fill: #3C5BA2; }
   .sbx-facebook__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 3px;
-    right: 30px;
+    right: 40px;
     margin: 0;
     border: 0;
     background: none;
@@ -1188,14 +1312,14 @@ h3 {
   font-size: 13px; }
   .sbx-medium__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 18px;
     box-shadow: inset 0 0 0 1px #D9D9D9;
-    background: #fff;
+    background: #f8f8f8;
     padding: 0;
-    padding-right: 32px;
-    padding-left: 36px;
+    padding-right: 30px;
+    padding-left: 40px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1203,7 +1327,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-medium__input::-webkit-search-decoration, .sbx-medium__input::-webkit-search-cancel-button, .sbx-medium__input::-webkit-search-results-button, .sbx-medium__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-medium__input:hover {
@@ -1223,6 +1347,7 @@ h3 {
   .sbx-medium__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     left: 0;
     margin: 0;
     border: 0;
@@ -1254,6 +1379,7 @@ h3 {
       fill: #666666; }
   .sbx-medium__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1301,14 +1427,14 @@ h3 {
   font-size: 16px; }
   .sbx-meetup__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px #444444;
     background: #F5F8FA;
     padding: 0;
-    padding-right: 76px;
-    padding-left: 1em;
+    padding-right: 68px;
+    padding-left: 16px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1316,7 +1442,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-meetup__input::-webkit-search-decoration, .sbx-meetup__input::-webkit-search-cancel-button, .sbx-meetup__input::-webkit-search-results-button, .sbx-meetup__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-meetup__input:hover {
@@ -1324,7 +1450,7 @@ h3 {
     .sbx-meetup__input:focus, .sbx-meetup__input:active {
       outline: 0;
       box-shadow: inset 0 0 0 1px #000000;
-      background: #F5F8FA; }
+      background: #fff; }
     .sbx-meetup__input::-webkit-input-placeholder {
       color: #BBBBBB; }
     .sbx-meetup__input::-moz-placeholder {
@@ -1336,6 +1462,7 @@ h3 {
   .sbx-meetup__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
@@ -1367,9 +1494,10 @@ h3 {
       fill: #505050; }
   .sbx-meetup__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
-    top: 12px;
-    right: 48px;
+    top: 10px;
+    right: 44px;
     margin: 0;
     border: 0;
     background: none;
@@ -1385,8 +1513,8 @@ h3 {
     .sbx-meetup__reset svg {
       display: block;
       margin: 4px;
-      width: 12px;
-      height: 12px; }
+      width: 16px;
+      height: 16px; }
   .sbx-meetup__input:valid ~ .sbx-meetup__reset {
     display: block;
     -webkit-animation-name: sbx-reset-in;
@@ -1414,14 +1542,14 @@ h3 {
   font-size: 12px; }
   .sbx-spotify__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 12px;
     box-shadow: inset 0 0 0 0px #FFFFFF;
-    background: #fff;
+    background: #f8f8f8;
     padding: 0;
-    padding-right: 32px;
-    padding-left: 24px;
+    padding-right: 20px;
+    padding-left: 28px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1429,7 +1557,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-spotify__input::-webkit-search-decoration, .sbx-spotify__input::-webkit-search-cancel-button, .sbx-spotify__input::-webkit-search-results-button, .sbx-spotify__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-spotify__input:hover {
@@ -1449,6 +1577,7 @@ h3 {
   .sbx-spotify__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     left: 0;
     margin: 0;
     border: 0;
@@ -1480,6 +1609,7 @@ h3 {
       fill: #222; }
   .sbx-spotify__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 2px;
     right: 2px;
@@ -1527,14 +1657,14 @@ h3 {
   font-size: 12px; }
   .sbx-twitter__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 16px;
     box-shadow: inset 0 0 0 1px #E1E8ED;
     background: #F5F8FA;
     padding: 0;
-    padding-right: 60px;
-    padding-left: 1em;
+    padding-right: 50px;
+    padding-left: 12px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -1542,7 +1672,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-twitter__input::-webkit-search-decoration, .sbx-twitter__input::-webkit-search-cancel-button, .sbx-twitter__input::-webkit-search-results-button, .sbx-twitter__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-twitter__input:hover {
@@ -1550,7 +1680,7 @@ h3 {
     .sbx-twitter__input:focus, .sbx-twitter__input:active {
       outline: 0;
       box-shadow: inset 0 0 0 1px #D6DEE3;
-      background: #F5F8FA; }
+      background: #fff; }
     .sbx-twitter__input::-webkit-input-placeholder {
       color: #9AAEB5; }
     .sbx-twitter__input::-moz-placeholder {
@@ -1562,11 +1692,12 @@ h3 {
   .sbx-twitter__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     right: 0;
     margin: 0;
     border: 0;
     border-radius: 0 16px 16px 0;
-    background-color: rgba(62, 130, 247, 0);
+    background-color: rgba(214, 222, 227, 0);
     padding: 0;
     width: 32px;
     height: 100%;
@@ -1593,9 +1724,10 @@ h3 {
       fill: #657580; }
   .sbx-twitter__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 7px;
-    right: 36px;
+    right: 32px;
     margin: 0;
     border: 0;
     background: none;
@@ -1640,13 +1772,13 @@ h3 {
   font-size: 14px; }
   .sbx-airbnb__input {
     display: inline-block;
-    transition: box-shadow .4s ease, background .4s ease, padding .4s ease;
+    transition: box-shadow .4s ease, background .4s ease;
     border: 0;
     border-radius: 0px;
     box-shadow: inset 0 0 0 0px #ccc;
-    background: #fff;
+    background: #f8f8f8;
     padding: 0;
-    padding-right: 28px;
+    padding-right: 40px;
     padding-left: 40px;
     width: 100%;
     height: 100%;
@@ -1655,7 +1787,7 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 1em; }
+    font-size: inherit; }
     .sbx-airbnb__input::-webkit-search-decoration, .sbx-airbnb__input::-webkit-search-cancel-button, .sbx-airbnb__input::-webkit-search-results-button, .sbx-airbnb__input::-webkit-search-results-decoration {
       display: none; }
     .sbx-airbnb__input:hover {
@@ -1675,13 +1807,14 @@ h3 {
   .sbx-airbnb__submit {
     position: absolute;
     top: 0;
+    font-size: inherit;
     left: 0;
     margin: 0;
     border: 0;
     border-radius: 0px 0 0 0px;
     background-color: white;
     padding: 0;
-    width: 32px;
+    width: 40px;
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -1706,6 +1839,7 @@ h3 {
       fill: #CDD0CC; }
   .sbx-airbnb__reset {
     display: none;
+    font-size: inherit;
     position: absolute;
     top: 7px;
     right: 7px;
