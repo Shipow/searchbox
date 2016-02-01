@@ -12,7 +12,7 @@
   }
 }
 
-@function evenPx($value) {
+@function even-px($value) {
   @if type-of($value) == 'number' {
     $value: round(px($value));
     @if ($value%2 != 0px) {
@@ -26,7 +26,7 @@
 @mixin searchbox(
   $font-size: .9em,
   $input-width: 350px,
-  $input-height: evenPx($font-size*2.4),
+  $input-height: $font-size*2.4,
   $border-width: 1px,
   $border-radius: $input-height/2,
   $input-border-color: #ccc,
@@ -35,18 +35,18 @@
   $input-focus-background: #fff,
   $placeholder-color: #aaa,
   $icon: 'sbx-icon-search-1',
-  $icon-size: evenPx($input-height/1.6),
-  $icon-position: right,
+  $icon-size: $input-height/1.6,
+  $icon-position: left,
   $icon-color: #888,
   $icon-background: $input-focus-border-color,
   $icon-background-opacity: 0.1,
   $icon-clear: 'sbx-icon-clear-1',
-  $icon-clear-size: evenPx($font-size/1.1)
+  $icon-clear-size: $font-size/1.1
 ) {
   display: inline-block;
   position: relative;
   width: $input-width;
-  height: $input-height;
+  height: even-px($input-height);
   white-space: nowrap;
   box-sizing: border-box;
   font-size: $font-size;
@@ -54,15 +54,15 @@
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
     border: 0;
-    border-radius: $border-radius;
+    border-radius: even-px($border-radius);
     box-shadow: inset 0 0 0 $border-width $input-border-color;
     background: $input-background;
     padding: 0;
-    padding-right: if($icon-position == 'right', evenPx($input-height + $icon-clear-size + 8px), evenPx($input-height*.8))
-              + if($icon-background-opacity == 0, 0px, evenPx($font-size));
+    padding-right: if($icon-position == 'right', even-px($input-height) + even-px($icon-clear-size) + 8px, even-px($input-height*.8))
+              + if($icon-background-opacity == 0, 0px, even-px($font-size));
     padding-left: if($icon-position == 'right',
-              evenPx($font-size/2) + evenPx($border-radius/2),
-              evenPx($input-height) + if($icon-background-opacity == 0, 4px, evenPx($font-size/2)));
+              even-px($font-size/2) + even-px($border-radius/2),
+              even-px($input-height) + if($icon-background-opacity == 0, 0px, even-px($font-size*1.2)));
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -104,7 +104,7 @@
     border-radius: if($icon-position == 'right', 0 $border-radius $border-radius 0, $border-radius 0 0 $border-radius);
     background-color: rgba($icon-background, $icon-background-opacity);
     padding: 0;
-    width: evenPx($input-height) + if($icon-background-opacity == 0, 0px, evenPx($font-size/2));
+    width: even-px($input-height) + if($icon-background-opacity == 0, 0px, even-px($font-size/2));
     height: 100%;
     vertical-align: middle;
     text-align: center;
@@ -129,8 +129,8 @@
     }
 
     svg {
-      width: px($icon-size);
-      height: px($icon-size);
+      width: even-px($icon-size);
+      height: even-px($icon-size);
       vertical-align: middle;
       fill: $icon-color;
     }
@@ -140,10 +140,10 @@
     display: none;
     font-size: inherit;
     position: absolute;
-    top: evenPx($input-height - $icon-clear-size ) / 2 - 4px;
+    top: (even-px($input-height) - even-px($icon-clear-size)) / 2 - 4px;
     right: if($icon-position == 'right',
-      evenPx($input-height) + if($icon-background-opacity == 0, 0px , evenPx($font-size)),
-      evenPx($input-height - $icon-clear-size) / 2 - 4px);
+      even-px($input-height) + if($icon-background-opacity == 0, 0px , even-px($font-size)),
+      ( even-px($input-height) - even-px($icon-clear-size)) / 2 - 4px);
     margin: 0;
     border: 0;
     background: none;
@@ -159,8 +159,8 @@
     svg {
       display: block;
       margin: 4px;
-      width: $icon-clear-size;
-      height: $icon-clear-size;
+      width: even-px($icon-clear-size);
+      height: even-px($icon-clear-size);
     }
   }
 
