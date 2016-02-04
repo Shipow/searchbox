@@ -1,30 +1,25 @@
-@function px($value, $base: 16px) {
+
+@function even-px($value) {
   @if type-of($value) == 'number' {
     @if (unitless($value)) {
-        @return $value * 1px;
-      } @else if unit($value) == 'px' {
-        @return $value;
-      } @else if unit($value) == 'em' {
-      @return ($value / 1em * $base);
+      $value: $value * 1px;
+    } @else if unit($value) == 'em' {
+      $value: ($value / 1em * 16px);
+    } @else if unit($value) == 'pts' {
+      $value: $value * 1.3333 * 1px;
+    } @else if unit($value) == '%' {
+      $value: $value * 16 / 100% * 1px;
+    };
+    $value: round($value);
+    @if ($value % 2 != 0) {
+      $value: $value + 1;
     }
-  } @else {
     @return $value;
   }
 }
 
-@function even-px($value) {
-  @if type-of($value) == 'number' {
-    $value: round(px($value));
-    @if ($value % 2 != 0) {
-      @return $value + 1;
-    } @else {
-      @return $value;
-    }
-  }
-}
-
 @mixin searchbox(
-  $font-size: .9em,
+  $font-size: 90%,
   $input-width: 350px,
   $input-height: $font-size * 2.4,
   $border-width: 1px,
@@ -50,6 +45,11 @@
   white-space: nowrap;
   box-sizing: border-box;
   font-size: $font-size;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
 
   &__input {
     display: inline-block;
