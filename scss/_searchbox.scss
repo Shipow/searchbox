@@ -46,6 +46,11 @@
   box-sizing: border-box;
   font-size: $font-size;
 
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
   &__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;

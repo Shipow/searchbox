@@ -311,16 +311,6 @@ h3 {
   }
 }
 
-.preview {
-  margin-right: 12px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  box-shadow: 0 0 5px #cdd4d7;
-  background: #fff;
-  padding: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
 
 .searchbox-demo {
   transition: all .5s linear;
@@ -329,7 +319,12 @@ h3 {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
-
+  margin-right: 12px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #cdd4d7;
+  background: #fff;
+  
   &.sbx-google-demo {
     background-color: #fff;
   }

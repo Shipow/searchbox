@@ -629,23 +629,18 @@ h3 {
     display: block;
     visibility: visible; }
 
-.preview {
-  margin-right: 12px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  box-shadow: 0 0 5px #cdd4d7;
-  background: #fff;
-  padding: 8px;
-  overflow: hidden;
-  box-sizing: border-box; }
-
 .searchbox-demo {
   transition: all .5s linear;
   margin-bottom: 0;
   padding: 18px;
   width: 100%;
   text-align: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #cdd4d7;
+  background: #fff; }
   .searchbox-demo.sbx-google-demo {
     background-color: #fff; }
   .searchbox-demo.sbx-twitter-demo {
@@ -725,6 +720,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 90%; }
+  .sbx-custom__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-custom__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -851,6 +849,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
+  .sbx-amazon__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-amazon__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -967,6 +968,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
+  .sbx-google__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-google__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1083,6 +1087,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 13px; }
+  .sbx-facebook__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-facebook__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1199,6 +1206,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 13px; }
+  .sbx-medium__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-medium__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1315,6 +1325,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 16px; }
+  .sbx-meetup__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-meetup__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1431,6 +1444,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 12px; }
+  .sbx-spotify__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-spotify__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1547,6 +1563,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 12px; }
+  .sbx-twitter__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-twitter__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -1663,6 +1682,9 @@ h3 {
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px; }
+  .sbx-airbnb__wrapper {
+    width: 100%;
+    height: 100%; }
   .sbx-airbnb__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;

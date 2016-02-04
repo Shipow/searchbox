@@ -114,7 +114,7 @@
             %input.jscolor{type: "text", name: "icon-background", value: "#FFFFFF"}
           .form-group
             %label bg-opacity
-            %input{type: "number", name: "icon-background-opacity", value: "0", step: ".1", min: "0", max: "1"}
+            %input{type: "number", name: "icon-background-opacity", value: "0", step: "0.1", min: "0", max: "1"}
 
 
           %h3 Reset
@@ -156,17 +156,18 @@
       .loading
 
     %main.main-content.hide.fade
-      %h2 Preview
-      %section.preview
+      %section
+        %h2 Preview
         .searchbox-demo.sbx-custom-demo
-          %form.searchbox.sbx-custom{role: "search", novalidate: true}
-            %input.sbx-custom__input{role: "textbox", type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true, spellcheck: false}
-            %button.sbx-custom__submit{role:"button", type: "submit", title:"Submit your search query."}
-              %svg{role: "img", aria-label: "Search"}
-                %use{xlink:href: "#sbx-icon-search-10"}
-            %button.sbx-custom__reset{role:"button", type: "reset", title:"Clear the search query."}
-              %svg{role: "img", aria-label: "Reset"}
-                %use{xlink:href: "#sbx-icon-clear-3"}
+          %form.searchbox.sbx-custom{action: "return false;", novalidate: true}
+            .sbx-custom__wrapper{role: "search"}
+              %input.sbx-custom__input{type: "search", name: "search", placeholder: "Search your website", autocomplete: "off", required: true, spellcheck: false}
+              %button.sbx-custom__submit{type: "submit", title:"Submit your search query."}
+                %svg{role: "img", aria-label: "Search"}
+                  %use{xlink:href: "#sbx-icon-search-10"}
+              %button.sbx-custom__reset{type: "reset", title:"Clear the search query."}
+                %svg{role: "img", aria-label: "Reset"}
+                  %use{xlink:href: "#sbx-icon-clear-3"}
           / Js: focus search input after reset
           :javascript
              document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
@@ -174,10 +175,12 @@
              });
 
       %section#snippets
+        %h2 Code Snippets
         .row
           .col-6
             %ul.inline-list
-              %li HTML + Images SVG + JS
+              %li
+                HTML + Images SVG + JS
               %li.right
             .pane
               %a.btn.copy{href: "javascript:void(0);", data-clipboard-target:"#html"}
