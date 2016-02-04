@@ -724,7 +724,7 @@ h3 {
   height: 36px;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: 0.9em; }
+  font-size: 90%; }
   .sbx-custom__input {
     display: inline-block;
     transition: box-shadow .4s ease, background .4s ease;
@@ -766,7 +766,7 @@ h3 {
     left: 0;
     margin: 0;
     border: 0;
-    border-radius: 1.08em 0 0 1.08em;
+    border-radius: 108% 0 0 108%;
     background-color: rgba(30, 201, 234, 0.1);
     padding: 0;
     width: 44px;
