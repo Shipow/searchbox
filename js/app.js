@@ -191,6 +191,7 @@ $('select[name="namespace"]').on('change', function(){
   });
   applyTheme(val,'.searchbox-demo','-demo');
   applyTheme(val,'.searchbox');
+  applyTheme(val,'[role="search"]','__wrapper');
   applyTheme(val,'[type="search"]','__input');
   applyTheme(val,'[type="reset"]','__reset');
   applyTheme(val,'[type="submit"]','__submit');

@@ -9,13 +9,7 @@
   <title>Searchbox Generator</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
   <link href="app.css" rel="stylesheet" />
-  <script src="https://use.typekit.net/rwx3htg.js"></script>
-  <script type="text/javascript">
-    //<![CDATA[
-    try{Typekit.load({ async: false });}catch(e){}
-    
-    //]]>
-  </script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 </head>
 
 <body class="demos">
@@ -162,7 +156,7 @@
         </div>
       </form>
     </div>
-    <form action="http://jsfiddle.net/api/post/jquery/2/" method="post" target="check" class="settings" id="jsfiddle">
+    <form action="//jsfiddle.net/api/post/jquery/2/" method="post" target="check" class="settings" id="jsfiddle">
       <div class="form-group full">
         <button type="submit" class="btn edit-fidddle">
           <svg class="icon">
@@ -188,7 +182,7 @@
     <section>
       <h2>Preview</h2>
       <div class="searchbox-demo sbx-custom-demo">
-        <form action="void(0);" novalidate="novalidate" class="searchbox sbx-custom">
+        <form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-custom">
           <div role="search" class="sbx-custom__wrapper">
             <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" />
             <button type="submit" title="Submit your search query." class="sbx-custom__submit">
@@ -203,14 +197,8 @@
             </button>
           </div>
         </form>
-        <!--Js: focus search input after reset-->
         <script type="text/javascript">
-          //<![CDATA[
-           document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
-             this.parentNode.querySelector('input').focus();
-           });
-          
-          //]]>
+          document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
         </script>
       </div>
     </section>
