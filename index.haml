@@ -8,9 +8,7 @@
     %title Searchbox Generator
     %link{rel: "shortcut icon", type: "image/x-icon", href: "favicon.ico?"}
     %link{href: "app.css", rel: "stylesheet"}
-    %script{src: "https://use.typekit.net/rwx3htg.js"}
-    :javascript
-      try{Typekit.load({ async: false });}catch(e){}
+    %link{href: "https://fonts.googleapis.com/css?family=Open+Sans", rel: "stylesheet"}
 
   %body.demos
     .message-demo
@@ -168,11 +166,11 @@
               %button.sbx-custom__reset{type: "reset", title:"Clear the search query."}
                 %svg{role: "img", aria-label: "Reset"}
                   %use{xlink:href: "#sbx-icon-clear-3"}
-          / Js: focus search input after reset
-          :javascript
-             document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
-               this.parentNode.querySelector('input').focus();
-             });
+          
+          %script{type:"text/javascript"}
+            document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
+              this.parentNode.querySelector('input').focus();
+            });
 
       %section#snippets
         %h2 Code Snippets
